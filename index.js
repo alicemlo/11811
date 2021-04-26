@@ -22,15 +22,16 @@ const routes = {
   '/train-model': TrainModel,
 };
 
+
 /**
  * The router code. Takes a URL, checks against the list of
  * supported routes and then renders the corresponding content page.
  */
 const router = async () => {
   // Lazy load view element:
-  const header = null || document.getElementById('header_root');
-  const content = null || document.getElementById('page_root');
-  const footer = null || document.getElementById('footer_root');
+  const header = document.getElementById('header_root');
+  const content = document.getElementById('page_root');
+  const footer = document.getElementById('footer_root');
 
   // Render the header and footer of the page.
   header.innerHTML = await Header.render();

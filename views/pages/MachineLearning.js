@@ -1,18 +1,15 @@
 const MachineLearning = {
-  /**
-   * Render the page content.
-   */
-  render: async () => {
+  slug: "/machine-learning",
+  name: 'Machine Learning',
+
+  async render() {
+    lastStory = this.slug
     return /*html*/ `
       <section>
         <h1 class="text-center">MachineLearning</h1>
       </section>
     `;
   },
-  /**
-   * All the code related to DOM interactions and controls go in here.
-   * This is a separate call as these can be registered only after the DOM has been painted.
-   */
   after_render: async () => {}
 };
 export default MachineLearning;

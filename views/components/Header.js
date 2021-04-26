@@ -17,10 +17,9 @@ const links = [
 ]
 
 const Header = {
-  /**
-   * Render the component content.
-   */
   render: async () => {
+    let isStory = routes__story.includes(window.location.hash.substring(1))
+    if(!isStory) return ''
     const navLinks = links
       .map(
         link => `<li class="${link.class}"><a class="nav-link" href="/#/${link.ref}">${link.id}</a></li>`
@@ -38,7 +37,9 @@ const Header = {
    * All the code related to DOM interactions and controls go in here.
    * This is a separate call as these can be registered only after the DOM has been painted.
    */
-  after_render: async () => {}
+  after_render: async () => {
+
+  }
 };
 
 export default Header;

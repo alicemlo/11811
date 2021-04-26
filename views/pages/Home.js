@@ -16,6 +16,8 @@ const Home = {
         <h1 class="text-center"><a href="/#/items">Check out</a></h1>
         <button class="enable-gi">enable gesture interface</button>
         <button class="disable-gi">disable gesture interface</button>
+        
+        <a href="#/machine-learning">Enter</a>
       </section>
     `;
   },

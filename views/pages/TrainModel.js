@@ -1,9 +1,10 @@
 const TrainModel = {
-  /**
-   * Render the page content.
-   */
-  render: async () => {
-    return /*html*/ `
+  slug: "/train-model",
+  name: 'Train Model',
+
+  async render(){
+    lastStory = this.slug
+    return `
       <section>
         <h1 class="text-center">TrainModel</h1>
       </section>

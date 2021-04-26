@@ -1,18 +1,17 @@
 const Buzzwords = {
-  /**
-   * Render the page content.
-   */
-  render: async () => {
-    return /*html*/ `
+  slug: "/buzzwords",
+  name: 'Buzzwords',
+
+  async render(){
+    lastStory = this.slug
+
+    return `
       <section>
         <h1 class="text-center">Buzzwords</h1>
       </section>
     `;
   },
-  /**
-   * All the code related to DOM interactions and controls go in here.
-   * This is a separate call as these can be registered only after the DOM has been painted.
-   */
+
   after_render: async () => {}
 };
 export default Buzzwords;

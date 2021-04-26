@@ -1,5 +1,10 @@
 let create_poseLabels = []
 
+const routes__story = ['/machine-learning', '/train-model', '/buzzwords']
+const routes__info = ['/project', '/home']
+
+let lastStory = ''
+
 const createModelContent = [
   {
     'title': 'Bringe dem Modell deine Gesten bei',
