@@ -94,7 +94,7 @@ a {
   color: #527D6F;
   text-decoration: none;
   padding: 0.1rem 0.2rem; }
-  a:hover, a.route--active {
+  a:hover, a.exact-link {
     background: rgba(82, 125, 111, 0.3);
     color: #3BBA7D; }
 

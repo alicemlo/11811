@@ -35,7 +35,7 @@ a{
   color: $col--main-02;
   text-decoration: none;
   padding: 0.1rem 0.2rem;
-  &:hover, &.route--active{
+  &:hover, &.exact-link{
     background: rgba(82, 125, 111, 0.3);
     color: $col--main-01;
   }

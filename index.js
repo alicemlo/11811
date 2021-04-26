@@ -22,6 +22,7 @@ const routes = {
   '/train-model': TrainModel,
 };
 
+let links = null
 
 /**
  * The router code. Takes a URL, checks against the list of
@@ -47,6 +48,11 @@ const router = async () => {
     (resource ? '/' + resource : '/') +
     (id ? '/:id' : '') +
     (verb ? '/' + verb : '');
+
+  // set links active
+  let rewriteResource = resource || ''
+  let activeLinks = document.querySelectorAll(`a[href='/#/${rewriteResource}']`)
+  activeLinks.forEach(link => link.classList.add('exact-link'))
 
   // Render the page from map of supported routes or render 404 page.
   const page = routes[parsedUrl] || Error404;
