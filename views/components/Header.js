@@ -1,12 +1,29 @@
-const Navbar = {
+const links = [
+  {
+    'id': 'Buzzwords',
+    'ref': 'buzzwords',
+    'class': 'nav-item'
+  },
+  {
+    'id': 'Machine Learning',
+    'ref': 'machine-learning',
+    'class': 'nav-item'
+  },
+  {
+    'id': 'Training',
+    'ref': 'train-model',
+    'class': 'nav-item on-gi'
+  }
+]
+
+const Header = {
   /**
    * Render the component content.
    */
   render: async () => {
-    const links = ['Buzzwords', 'Machine-Learning', 'Training'];
     const navLinks = links
       .map(
-        link => `<li class="nav-item"><a class="nav-link" href="/#/${link.toLowerCase()}">${link}</a></li>`
+        link => `<li class="${link.class}"><a class="nav-link" href="/#/${link.ref}">${link.id}</a></li>`
       )
       .join('\n');
     return /*html*/ `
@@ -24,4 +41,4 @@ const Navbar = {
   after_render: async () => {}
 };
 
-export default Navbar;
+export default Header;

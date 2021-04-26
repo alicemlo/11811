@@ -1,12 +1,29 @@
+const links = [
+  {
+    'id': 'Home',
+    'ref': '',
+    'class': 'nav-item'
+  },
+  {
+    'id': 'Projekt',
+    'ref': 'project',
+    'class': 'nav-item'
+  },
+  {
+    'id': 'Gesten',
+    'ref': 'gestures',
+    'class': 'nav-item on-gi'
+  }
+]
+
 const Footer = {
   /**
    * Render the component content.
    */
   render: async () => {
-    const links = ['Home', 'Project', 'Gestures'];
     const navLinks = links
       .map(
-        link => `<li class="nav-item"><a class="nav-link" href="/#/${link.toLowerCase()}">${link}</a></li>`
+        link => `<li class="${link.class}"><a class="nav-link" href="/#/${link.ref}">${link.id}</a></li>`
       )
       .join('\n');
 

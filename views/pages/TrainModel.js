@@ -1,11 +1,11 @@
-const Project = {
+const TrainModel = {
   /**
    * Render the page content.
    */
   render: async () => {
     return /*html*/ `
       <section>
-        <h1 class="text-center">Project</h1>
+        <h1 class="text-center">TrainModel</h1>
       </section>
     `;
   },
@@ -15,4 +15,4 @@ const Project = {
    */
   after_render: async () => {}
 };
-export default Project;
+export default TrainModel;

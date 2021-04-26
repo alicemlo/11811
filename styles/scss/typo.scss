@@ -1,0 +1,117 @@
+body, textarea, input, button{
+  font-family: 'Fira Mono', monospace;
+}
+
+h1{
+  font-size: 2rem;
+  margin: 1rem 0 1.5rem 0;
+  @include mobile-down{
+    font-size: 1.6rem;
+  }
+}
+
+h2{
+  font-size: 1.6rem;
+  margin: 0.4rem 0;
+}
+
+h3{
+  font-size: 1.3rem;
+  margin: 0.3rem 0;
+}
+
+p{
+  font-size: 1.15rem;
+  margin: 0.2rem 0;
+  line-height: 1.5rem;
+  @include mobile-down{
+    font-size: 1.05rem;
+    line-height: 1.4rem;
+  }
+}
+
+
+a{
+  color: $col--main-02;
+  text-decoration: none;
+  padding: 0.1rem 0.2rem;
+  &:hover, &.route--active{
+    background: rgba(82, 125, 111, 0.3);
+    color: $col--main-01;
+  }
+}
+
+li{
+
+  list-style: none;
+}
+
+button{
+  background-color: rgba(82, 125, 111, 0.3);
+  color: $col--main-01;
+  padding: 0.3rem 0.6rem;
+  font-size: 1.1rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  &:hover{
+    border: 2px solid $col--main-02;
+  }
+
+  &.disabled{
+    color: $col--main-02;
+    background-color: rgba(82, 125, 111, 0.1);
+    pointer-events: none;
+  }
+}
+
+.route--back{
+  cursor: pointer;
+}
+
+a.disabled{
+  text-decoration: line-through;
+  pointer-events: none;
+}
+
+// firefox
+::-moz-selection {
+  color: $col--dark-02;
+  background: $col--main-02;
+}
+
+::selection {
+  color: $col--dark-02;
+  background: $col--main-02;
+}
+
+
+input{
+  background: transparent;
+  border: none;
+  color: $col--main-01;
+  border-bottom: 2px solid  $col--main-02;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  font-size: 1.4rem;
+  margin: 0.6rem 0;
+  cursor: pointer;
+  &::placeholder{
+    color: $col--main-02;
+  }
+  &:focus{
+    border-bottom: 2px solid $col--main-01;
+    outline: none;
+  }
+}
+
+.expand-info{
+  background-color: rgba(82, 125, 111, 0.3);
+  color: $col--main-01;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  &:hover::after{
+    content: attr(data-info);
+  }
+}

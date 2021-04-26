@@ -1,11 +1,13 @@
 // Import pages, components and helper functions.
 import Home from './views/pages/Home.js';
-import About from './views/pages/About.js';
-import Items from './views/pages/Items.js';
-import Error404 from './views/pages/Error404.js';
+import Error404 from './views/pages/404.js';
 import Project from './views/pages/Project.js';
+import Gestures from './views/pages/Gestures.js';
+import MachineLearning from './views/pages/MachineLearning.js';
+import Buzzwords from './views/pages/Buzzwords.js';
+import TrainModel from './views/pages/TrainModel.js';
 
-import Header from './views/components/Navbar.js';
+import Header from './views/components/Header.js';
 import Footer from './views/components/Footer.js';
 
 import { parseRequestUrl } from './services/utils.js';
@@ -13,9 +15,11 @@ import { parseRequestUrl } from './services/utils.js';
 // List of supported routes. Any url other than these will render 404 page.
 const routes = {
   '/': Home,
-  '/about': About,
-  '/items': Items,
-  '/project': Project
+  '/project': Project,
+  '/machine-learning': MachineLearning,
+  '/buzzwords': Buzzwords,
+  '/gestures': Gestures,
+  '/train-model': TrainModel,
 };
 
 /**

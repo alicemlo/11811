@@ -1,11 +1,11 @@
-const About = {
+const Buzzwords = {
   /**
    * Render the page content.
    */
   render: async () => {
     return /*html*/ `
       <section>
-        <h1 class="text-center">This can be an about page.</h1>
+        <h1 class="text-center">Buzzwords</h1>
       </section>
     `;
   },
@@ -15,4 +15,4 @@ const About = {
    */
   after_render: async () => {}
 };
-export default About;
+export default Buzzwords;
