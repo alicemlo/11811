@@ -1,0 +1,16 @@
+{
+  "name": "11811",
+  "version": "2.0.0",
+  "description": "11811",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npx live-server --verbose & npm run scss",
+    "scss": "node-sass --watch styles/scss -o styles/css"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "author": "Alice Loher",
+  "license": "ISC"
+}

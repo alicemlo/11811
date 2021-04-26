@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3402ea56-1bd2-48bc-92a4-3e5e2eed21ed" name="host" url="http://sl300.web.hostpoint.ch">
+        <fileTransfer rootFolder="/www/11811.ch" host="sl300.web.hostpoint.ch" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
