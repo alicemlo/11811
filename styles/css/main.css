@@ -5,12 +5,39 @@ header, footer {
   height: 3rem;
   z-index: 1; }
 
+main#page_root::before {
+  content: '';
+  z-index: 1;
+  height: 3.5rem;
+  width: 100%;
+  background: #1C1922;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
 header {
   top: 0;
-  background: #1C1922; }
+  z-index: 10;
+  transition: transform 200ms ease-in-out; }
   @media (max-width: 48em) {
     header {
       height: 3.5rem; } }
+
+header span {
+  display: block;
+  position: absolute;
+  top: 0.8rem;
+  width: 100%;
+  height: 100%; }
+  header span a {
+    color: #1C1922; }
+  header span:first-of-type {
+    left: -35%; }
+  header span:last-of-type {
+    left: 35%;
+    text-align: right; }
+  header span:hover a {
+    color: #3BBA7D; }
 
 footer {
   bottom: 0;
@@ -80,6 +107,15 @@ footer .enable-gi {
 footer .enable-gi.active {
   background-color: #3BBA7D;
   box-shadow: 0 0 7px 1px #527d6f; }
+
+header[data-index='-1'] {
+  transform: translateX(42%); }
+
+header[data-index='0'] {
+  transform: translateX(0); }
+
+header[data-index='1'] {
+  transform: translateX(-42%); }
 
 body, textarea, input, button {
   font-family: 'Fira Mono', monospace; }
@@ -217,7 +253,7 @@ section.machine-learning .ct-fixed {
     height: 2px;
     width: 0;
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     background: #527D6F; }
   section.machine-learning .ct-fixed .expand-info {
@@ -261,9 +297,21 @@ section.machine-learning .btn-gen-btn-text {
   margin: 0 0.5rem 0.5rem 0; }
 
 section.buzzwords {
-  padding: 1rem; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center; }
+  section.buzzwords article {
+    margin: 1rem;
+    max-width: 40rem; }
   section.buzzwords h4, section.buzzwords h5 {
     font-weight: normal; }
+  section.buzzwords h4 {
+    font-size: 0.9rem; }
+  section.buzzwords h5 {
+    font-size: 0.8rem; }
+  section.buzzwords p {
+    font-size: 0.8rem; }
   section.buzzwords .flex {
     display: flex;
     flex-wrap: wrap;
@@ -272,6 +320,8 @@ section.buzzwords {
   section.buzzwords .ct-buzz {
     padding: 1rem;
     background: rgba(82, 125, 111, 0.45); }
+    section.buzzwords .ct-buzz.no-comp {
+      background: transparent; }
     section.buzzwords .ct-buzz > h4 {
       text-align: center; }
   section.buzzwords .component {
@@ -284,13 +334,20 @@ section.buzzwords {
       margin: 1rem 0;
       padding: 0.5rem;
       min-width: 10rem; }
+    section.buzzwords .component.no-mw {
+      min-width: unset; }
   section.buzzwords .ct-hover {
     padding: 0.7rem 1rem;
     position: fixed;
     top: 0;
     left: 0;
     background: rgba(28, 25, 34, 0.82);
-    min-width: 7rem; }
+    min-width: 7rem;
+    max-width: 25rem;
+    transform: translateX(-50%);
+    width: auto; }
+    section.buzzwords .ct-hover > * {
+      font-size: 0.9rem; }
 
 * {
   position: relative;

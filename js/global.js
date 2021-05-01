@@ -34,6 +34,26 @@ const giScripts = [
   }
 ]
 
+const headerLinks = [
+  {
+    'id': 'Buzzwords',
+    'ref': '/buzzwords',
+    'class': 'nav-item',
+    'index': -1
+  },
+  {
+    'id': 'Machine Learning',
+    'ref': '/machine-learning',
+    'class': 'nav-item',
+    'index': 0
+  },
+  {
+    'id': 'Training',
+    'ref': '/train-model',
+    'class': 'nav-item on-gi',
+    'index': 1
+  }
+]
 
 
 let create_poseLabels = []

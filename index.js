@@ -22,7 +22,7 @@ const routes = {
   '/train-model': TrainModel,
 };
 
-let links = null
+let links= null
 
 /**
  * The router code. Takes a URL, checks against the list of
@@ -53,6 +53,13 @@ const router = async () => {
   let rewriteResource = resource || ''
   let activeLinks = document.querySelectorAll(`a[href='/#/${rewriteResource}']`)
   activeLinks.forEach(link => link.classList.add('exact-link'))
+
+  console.log(parsedUrl)
+  let headerItemIndex = headerLinks.find((item, index)=>{
+    return item.ref===parsedUrl
+  })
+  if(headerItemIndex) header.setAttribute('data-index', headerItemIndex?.index)
+
 
   // Render the page from map of supported routes or render 404 page.
   const page = routes[parsedUrl] || Error404;

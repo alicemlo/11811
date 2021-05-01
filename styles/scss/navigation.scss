@@ -1,18 +1,49 @@
-
 header, footer{
   position: fixed;
   left: 0;
   width: 100%;
   height: 3rem;
   z-index: 1;
+}
 
+main#page_root::before{
+  content: '';
+  z-index: 1;
+  height: 3.5rem;
+  width: 100%;
+  background: $col--dark-01;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 header {
   top: 0;
-  background: $col--dark-01;
+  z-index: 10;
+  transition: transform 200ms ease-in-out;
   @include mobile-down{
     height: 3.5rem;
+  }
+}
+
+header span{
+  display: block;
+  position: absolute;
+  top: 0.8rem;
+  width: 100%;
+  height: 100%;
+  a{
+    color: $col--dark-01;
+  }
+  &:first-of-type{
+    left: -35%;
+  }
+  &:last-of-type{
+    left: 35%;
+    text-align: right;
+  }
+  &:hover{
+    a{color: $col--main-01;}
   }
 }
 
@@ -27,7 +58,6 @@ nav{
     padding: 0 2rem;
     height: 100%;
     align-content: center;
-
   }
 
   li.active{
@@ -38,7 +68,6 @@ nav{
     margin: 0.2rem 1rem;
     font-size: 0.9rem;
   }
-
 
   @include mobile-down{
     ul{
@@ -52,33 +81,37 @@ nav{
 
 }
 
-header nav{
-  ul{
+header nav {
+  ul {
     padding: 0 2rem;
     justify-content: space-between;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  li{
+
+  li {
     text-align: center;
     font-size: 1rem;
   }
-  li:first-of-type{
+
+  li:first-of-type {
     text-align: left;
   }
-  li:last-of-type{
+
+  li:last-of-type {
     text-align: right;
   }
-  @include mobile-down{
-    ul{
+
+  @include mobile-down {
+    ul {
       padding: 0 1rem;
       grid-template-columns: repeat(2, 1fr);
     }
-    li{
+    li {
       text-align: left;
       margin: 0;
     }
-    #create{
+    #create {
       display: none;
     }
   }
@@ -111,4 +144,17 @@ footer{
     background-color: $col--main-01;
     box-shadow: 0 0 7px 1px #527d6f;
   }
+}
+
+// header index translation
+header[data-index='-1']{
+  transform: translateX(42%);
+}
+
+header[data-index='0'] {
+  transform: translateX(0);
+}
+
+header[data-index='1']{
+  transform: translateX(-42%);
 }
