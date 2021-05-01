@@ -4,8 +4,11 @@ const Gestures = {
    */
   render: async () => {
     return /*html*/ `
-      <section>
-        <h1 class="text-center">Gesten</h1>
+      <section class="gestures fixed">
+      <article>
+        <h1 class="">Gesten</h1>
+      </article>
+        
       </section>
     `;
   },

@@ -1,7 +1,7 @@
 const Project = {
   render: async () => {
     return /*html*/ `
-      <section>
+      <section class="project fixed">
       <article class="container">
         <h1 class="text-center">Projekt</h1>
         <p>Mit diesem Projekt möchte ich auf eine experimentelle Art veranschaulichen, was Machine Learning ist. Denn ich finde, dass heute jeder wenigstens die Grundlagen verstehen sollte, um das Thema KI besser verstehen zu können. </p>

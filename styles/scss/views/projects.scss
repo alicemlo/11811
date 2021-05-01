@@ -1,0 +1,12 @@
+section.project{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  @include page-padding;
+  >article:first-of-type{
+    margin-top: 5rem;
+  }
+}

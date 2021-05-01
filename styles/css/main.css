@@ -41,7 +41,8 @@ header span {
 
 footer {
   bottom: 0;
-  background: #1C1922; }
+  background: #1C1922;
+  z-index: 13; }
 
 nav {
   height: 100%; }
@@ -242,13 +243,37 @@ section.home a:last-of-type {
   top: 15rem;
   left: 20%; }
 
+section.project {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11; }
+  @media (min-width: 88em) {
+    section.project {
+      padding: 0 4rem; } }
+  @media (max-width: 88em) {
+    section.project {
+      padding: 0 3rem; } }
+  @media (max-width: 62em) {
+    section.project {
+      padding: 0 2rem; } }
+  @media (max-width: 48em) {
+    section.project {
+      padding: 0 1rem; } }
+  section.project > article:first-of-type {
+    margin-top: 5rem; }
+
 section.machine-learning .ct-ml {
   padding: 3rem 0; }
+  section.machine-learning .ct-ml:first-of-type {
+    padding: 0 0 3rem 0; }
 
 section.machine-learning .ct-fixed {
   position: sticky;
   top: 2.8rem;
-  z-index: 10; }
+  z-index: 8; }
   section.machine-learning .ct-fixed .progress-bar {
     height: 2px;
     width: 0;
@@ -378,10 +403,43 @@ body {
   background: #1C1922; }
 
 main#page_root {
-  padding: 4rem 0 2rem 0; }
+  padding: 4rem 0 2rem 0;
+  min-height: 90vh; }
 
 article.container {
   max-width: 30rem; }
 
 .invisible {
   display: none; }
+
+header[data-index='no-index'] + main#page_root section {
+  animation-name: pageUp;
+  animation-duration: 400ms; }
+
+@keyframes pageUp {
+  from {
+    transform: translateY(3rem); }
+  to {
+    transform: translateY(0); } }
+
+section.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11; }
+  @media (min-width: 88em) {
+    section.fixed {
+      padding: 0 4rem; } }
+  @media (max-width: 88em) {
+    section.fixed {
+      padding: 0 3rem; } }
+  @media (max-width: 62em) {
+    section.fixed {
+      padding: 0 2rem; } }
+  @media (max-width: 48em) {
+    section.fixed {
+      padding: 0 1rem; } }
+  section.fixed > article:first-of-type {
+    margin-top: 5rem; }

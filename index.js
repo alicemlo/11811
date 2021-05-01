@@ -57,8 +57,9 @@ const router = async () => {
   console.log(parsedUrl)
   let headerItemIndex = headerLinks.find((item, index)=>{
     return item.ref===parsedUrl
-  })
-  if(headerItemIndex) header.setAttribute('data-index', headerItemIndex?.index)
+  })?.index ?? 'no-index'
+  console.log(headerItemIndex)
+  header.setAttribute('data-index', headerItemIndex)
 
 
   // Render the page from map of supported routes or render 404 page.
