@@ -3,7 +3,7 @@ body, textarea, input, button{
 }
 
 h1{
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin: 1rem 0 1.5rem 0;
   font-weight: normal;
   @include mobile-down{
@@ -12,7 +12,7 @@ h1{
 }
 
 h2{
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin: 0.4rem 0;
 }
 
@@ -22,7 +22,7 @@ h3{
 }
 
 p{
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   margin: 0.2rem 0;
   line-height: 1.5rem;
   @include mobile-down{
@@ -51,10 +51,10 @@ button{
   background-color: rgba(82, 125, 111, 0.3);
   color: $col--main-01;
   padding: 0.3rem 0.6rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border: 2px solid transparent;
   cursor: pointer;
-  &:hover{
+  &:hover, &.active{
     border: 2px solid $col--main-02;
   }
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "npx live-server --verbose & npm run scss",
+    "dev": "npx live-server --verbose",
     "scss": "node-sass --watch styles/scss -o styles/css"
   },
   "devDependencies": {

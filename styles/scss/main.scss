@@ -23,12 +23,25 @@
   }
 }
 
+html {
+  @include scrollbars(5px, $col--main-02, rgba(0,0,0,0));
+  cursor: crosshair;
+}
+
 body{
   color: $col--main-01;
   background: $col--dark-01;
 }
 
-main{
+main#page_root{
   padding: 4rem 0 2rem 0;
+
 }
 
+article.container{
+  max-width: 30rem;
+}
+
+.invisible{
+  display: none;
+}

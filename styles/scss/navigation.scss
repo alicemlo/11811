@@ -36,6 +36,7 @@ nav{
 
   li{
     margin: 0.2rem 1rem;
+    font-size: 0.9rem;
   }
 
 
@@ -88,5 +89,26 @@ footer nav{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  li.back{
+    cursor: pointer;
+  }
+}
+
+footer{
+  .enable-gi{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    //background-color: $col--dark-01;
+    background-color: $col--main-02;
+  }
+  .enable-gi.active{
+    background-color: $col--main-01;
+    box-shadow: 0 0 7px 1px #527d6f;
   }
 }

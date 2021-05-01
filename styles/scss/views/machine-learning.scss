@@ -1,0 +1,73 @@
+section.machine-learning {
+  .ct-ml {
+    padding: 3rem 0;
+  }
+
+  .ct-fixed {
+    position: sticky;
+    top: 2.8rem;
+    z-index: 10;
+
+    .progress-bar {
+      height: 2px;
+      width: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $col--main-02;
+    }
+
+    .expand-info {
+      background-color: #2D373A;
+    }
+  }
+
+  .ct-content {
+    padding: 0 3rem;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5rem 0 3rem 0;
+    grid-gap: 2rem;
+  }
+
+  h1 {
+    font-weight: normal;
+    margin: 0 0 2.3rem 0;
+
+    &::before {
+      content: '-';
+      position: absolute;
+      margin-left: -3.4rem;
+    }
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  button {
+    margin-bottom: 1rem;
+  }
+
+  .randomised {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  @include mobile-down {
+    .content {
+      display: block;
+    }
+  }
+
+
+  .btn-gen-btn-text{
+    margin: 0 0.5rem 0.5rem 0;
+  }
+}

@@ -1,3 +1,41 @@
+let giEnabled = false
+
+enableGi = (item, button) => {
+  giEnabled = !giEnabled;
+  if(button) giEnabled ? button.classList.add('active') : button.classList.remove('active')
+  if(giEnabled){
+    giScripts.forEach(itm =>{
+      const script = document.createElement('script');
+      script.id = itm.id;
+      script.src = itm.src;
+      item.append(script);
+    })
+  }else{
+    const canvas = document.querySelector('CANVAS')
+    const video = document.querySelector('VIDEO')
+    if (canvas) document.body.removeChild(canvas)
+    if(video) document.body.removeChild(canvas)
+    giScripts.forEach(itm => {
+      // TODO fix parent error
+      let i = document.getElementById(itm.id)
+      i.parentNode.removeChild(i);
+    })
+  }
+}
+
+const giScripts = [
+  {
+    'src': 'js/create-model.js',
+    'id': 'create'
+  },
+  {
+    'src': 'js/gi.js',
+    'id': 'gi',
+  }
+]
+
+
+
 let create_poseLabels = []
 
 const routes__story = ['/machine-learning', '/train-model', '/buzzwords']

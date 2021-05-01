@@ -1,18 +1,19 @@
 const Project = {
-  /**
-   * Render the page content.
-   */
   render: async () => {
     return /*html*/ `
       <section>
-        <h1 class="text-center">Project</h1>
+      <article class="container">
+        <h1 class="text-center">Projekt</h1>
+        <p>Mit diesem Projekt möchte ich auf eine experimentelle Art veranschaulichen, was Machine Learning ist. Denn ich finde, dass heute jeder wenigstens die Grundlagen verstehen sollte, um das Thema KI besser verstehen zu können. </p>
+        <p>Dieses Webseite entstand als Lehrprojekt für meine Bachelorarbeit über Gestengesteuerte Interfaces.</p>
+      </article>
+      <article class="container">
+        <h1>Über mich</h1>
+      </article>
       </section>
     `;
   },
-  /**
-   * All the code related to DOM interactions and controls go in here.
-   * This is a separate call as these can be registered only after the DOM has been painted.
-   */
-  after_render: async () => {}
+  after_render: async () => {
+  }
 };
 export default Project;

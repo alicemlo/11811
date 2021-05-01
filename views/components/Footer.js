@@ -31,12 +31,13 @@ const Footer = {
         <footer>
           <nav class="nav-footer">
             <ul>${navLinks}</ul>
-
           </nav>
+          <span class="enable-gi"></span>
         </footer>
     `;
   },
   after_render: async () => {
+    let giEnabler = document.querySelector('.enable-gi');
     let isStory = routes__story.includes(window.location.hash.substring(1))
     if(!isStory && lastStory){
       let elUl =document.querySelector('.nav-footer ul')
@@ -46,6 +47,9 @@ const Footer = {
       elUl.appendChild(elBack)
       elBack.onclick = () => window.location.href = '/#'+lastStory
     }
+
+    giEnabler.onclick = () => enableGi(document.body, giEnabler);
+    giEnabled ? giEnabler.classList.add('active')  : giEnabler.classList.remove('active')
   }
 };
 

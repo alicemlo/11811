@@ -1,4 +1,28 @@
-body{
-  background: blue;
-  font-family: monospace;
+section.home{
+  >*{
+    position: absolute;
+    left: 10%;
+    max-width: 40rem;
+    font-weight: normal;
+  }
+  h1{
+    top: 0;
+  }
+  h5{
+    left: 5%;
+    top: 5rem;
+  }
+  h3{
+    top: 20rem;
+    left: 55%;
+    max-width: 35%;
+  }
+  a:first-of-type{
+    top: 7rem;
+    left: 60%;
+  }
+  a:last-of-type{
+    top: 15rem;
+    left: 20%;
+  }
 }
