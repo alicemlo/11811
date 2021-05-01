@@ -200,7 +200,7 @@ let gestureSwipeRightStates = [false, false, false]
 let width = window.innerWidth
 let height = window.innerHeight
 const breakpoints = [160, 480] // 0 - 640
-const story = ['create', 'machine-learning', 'buzzwords']
+const story = ['buzzwords', 'machine-learning', 'train-model']
 let storyIndex = story.indexOf(window.location.hash.substring(1)) < 0 ? 0 : story.indexOf(window.location.hash.substring(1))
 let create_poseLabel_active = ''
 let poseCollected = false
@@ -314,28 +314,11 @@ window.onresize = () => {
 }
 
 
-popState = (slug) => {
-  setLinksActive(slug)
-  setBodyHash(oldHash, slug)
-  elementReady('#app')
-    .then(r =>{
-      if (slug === 'create') wait(250).then(() => initCreate())
-    })
+swipeToRoute = (route) => {
+  console.log(route)
+  window.location.hash = `/${route}`
 }
 
-swipeToRoute = (viewName) => {
-  history.pushState(null, null, `#${viewName}`);
-  let xhttp = new XMLHttpRequest();
-  let url = 'views/' + viewName + '.html';
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      app.innerHTML = xhttp.responseText;
-    }
-  };
-  xhttp.open("GET", url, true);
-  xhttp.send();
-  popState(viewName);
-}
 
 detectSwipe = () => {
   let x = xAvg / 22
@@ -416,7 +399,7 @@ gotResultBrainCreated = (error, results) => {
   }
 }
 
-function wait(ms) {
+wait = (ms) => {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
@@ -427,4 +410,8 @@ hide = (el) => {
 
 show = (el) => {
   el.style.display = 'inline-block'
+}
+
+randomNumber = (min, max) => {
+  return Math.random() * (max - min) + min;
 }

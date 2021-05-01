@@ -103,6 +103,7 @@ const Buzzwords = {
   after_render: async () => {
     const cps = document.querySelectorAll('.component')
     const hoverCt = document.querySelector('.ct-hover')
+    const articles = document.querySelectorAll('ARTICLE')
     hoverItem = document.querySelector('.hover')
     document.onmousemove = (e) => {
       hoverCt.style.top = e.y + 20 + 'px';
@@ -113,6 +114,9 @@ const Buzzwords = {
       let content = buzzwords.find(item => item.title === title)
       let cp = new BuzzComponent(item, title, content?.content);
       cp.run();
+    })
+    articles.forEach(item =>{
+      item.style.animationDelay = randomNumber(0,-10)+'s'
     })
   }
 };

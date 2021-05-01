@@ -74,6 +74,7 @@ const router = async () => {
 
 // Listen on hash change.
 window.addEventListener('hashchange', router);
+window.addEventListener('popstate', router);
 
 // Listen on page load.
 window.addEventListener('load', router);

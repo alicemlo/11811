@@ -9,7 +9,7 @@ header, footer{
 main#page_root::before{
   content: '';
   z-index: 1;
-  height: 3.5rem;
+  height: 3rem;
   width: 100%;
   background: $col--dark-01;
   position: fixed;

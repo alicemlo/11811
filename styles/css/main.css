@@ -8,7 +8,7 @@ header, footer {
 main#page_root::before {
   content: '';
   z-index: 1;
-  height: 3.5rem;
+  height: 3rem;
   width: 100%;
   background: #1C1922;
   position: fixed;
@@ -285,13 +285,17 @@ section.machine-learning .ct-fixed {
     background-color: #2D373A; }
 
 section.machine-learning .ct-content {
-  padding: 0 3rem; }
+  padding: 0 3rem;
+  max-width: 76rem; }
 
 section.machine-learning .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 5rem 0 3rem 0;
   grid-gap: 2rem; }
+  @media (min-width: 62em) {
+    section.machine-learning .content {
+      grid-gap: 3rem; } }
 
 section.machine-learning h1 {
   font-weight: normal;
@@ -328,7 +332,8 @@ section.buzzwords {
   align-items: center; }
   section.buzzwords article {
     margin: 1rem;
-    max-width: 40rem; }
+    max-width: 40rem;
+    animation: wiggle 25s ease-in-out infinite; }
   section.buzzwords h4, section.buzzwords h5 {
     font-weight: normal; }
   section.buzzwords h4 {
@@ -373,6 +378,18 @@ section.buzzwords {
     width: auto; }
     section.buzzwords .ct-hover > * {
       font-size: 0.9rem; }
+
+@keyframes wiggle {
+  0% {
+    transform: translateY(0); }
+  30% {
+    transform: translateY(-10px); }
+  50% {
+    transform: translateY(4px); }
+  70% {
+    transform: translateY(-15px); }
+  100% {
+    transform: translateY(0); } }
 
 * {
   position: relative;

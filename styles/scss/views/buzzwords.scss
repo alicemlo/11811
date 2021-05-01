@@ -9,6 +9,8 @@ section.buzzwords{
   article{
     margin: 1rem;
     max-width: 40rem;
+    animation: wiggle 25s ease-in-out infinite;
+
   }
 
   h4, h5{
@@ -76,5 +78,24 @@ section.buzzwords{
       font-size: 0.9rem;
     }
 
+  }
+}
+
+
+@keyframes wiggle {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  70% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

@@ -27,6 +27,7 @@ section.machine-learning {
 
   .ct-content {
     padding: 0 3rem;
+    max-width: 76rem;
   }
 
   .content {
@@ -34,6 +35,9 @@ section.machine-learning {
     grid-template-columns: repeat(2, 1fr);
     margin: 5rem 0 3rem 0;
     grid-gap: 2rem;
+    @include tablet-up{
+      grid-gap: 3rem;
+    }
   }
 
   h1 {
