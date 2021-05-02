@@ -104,10 +104,21 @@ footer .enable-gi {
   border-radius: 50%;
   cursor: pointer;
   background-color: #527D6F; }
+  footer .enable-gi::before {
+    content: '';
+    position: absolute;
+    font-size: 0.7rem;
+    top: -2px;
+    text-align: center;
+    left: -12.3rem; }
+  footer .enable-gi:hover::before {
+    content: 'Gestensteuerung aktivieren'; }
 
 footer .enable-gi.active {
   background-color: #3BBA7D;
   box-shadow: 0 0 7px 1px #527d6f; }
+  footer .enable-gi.active:hover::before {
+    content: 'Gestensteuerung deaktivieren'; }
 
 header[data-index='-1'] {
   transform: translateX(42%); }
@@ -326,14 +337,29 @@ section.machine-learning .btn-gen-btn-text {
   margin: 0 0.5rem 0.5rem 0; }
 
 section.buzzwords {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center; }
+  display: grid;
+  grid-template-columns: 70% 30%; }
+  section.buzzwords > div.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; }
+  section.buzzwords aside {
+    height: 80%;
+    width: 100%;
+    position: fixed;
+    top: 10%;
+    left: 70%;
+    display: flex;
+    align-items: center; }
+    section.buzzwords aside > div {
+      width: 25%; }
+    section.buzzwords aside i, section.buzzwords aside p {
+      font-size: 0.9rem;
+      margin: 0.5rem 0; }
   section.buzzwords article {
     margin: 1rem;
-    max-width: 40rem;
-    animation: wiggle 25s ease-in-out infinite; }
+    max-width: 40rem; }
   section.buzzwords h4, section.buzzwords h5 {
     font-weight: normal; }
   section.buzzwords h4 {

@@ -140,10 +140,25 @@ footer{
     cursor: pointer;
     //background-color: $col--dark-01;
     background-color: $col--main-02;
+
+    &::before{
+      content: '';
+      position: absolute;
+      font-size: 0.7rem;
+      top: -2px;
+      text-align: center;
+      left: -12.3rem;
+    }
+    &:hover::before{
+      content: 'Gestensteuerung aktivieren';
+    }
   }
   .enable-gi.active{
     background-color: $col--main-01;
     box-shadow: 0 0 7px 1px #527d6f;
+    &:hover::before{
+      content: 'Gestensteuerung deaktivieren';
+    }
   }
 }
 

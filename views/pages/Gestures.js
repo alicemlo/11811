@@ -7,6 +7,7 @@ const Gestures = {
       <section class="gestures fixed">
       <article>
         <h1 class="">Gesten</h1>
+        <p>Video->Licht überprüfen</p>
       </article>
         
       </section>
