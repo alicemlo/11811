@@ -54,13 +54,18 @@ const router = async () => {
   let activeLinks = document.querySelectorAll(`a[href='/#/${rewriteResource}']`)
   activeLinks.forEach(link => link.classList.add('exact-link'))
 
-  console.log(parsedUrl)
+  // add header attribute
   let headerItemIndex = headerLinks.find((item, index)=>{
     return item.ref===parsedUrl
   })?.index ?? 'no-index'
-  console.log(headerItemIndex)
   header.setAttribute('data-index', headerItemIndex)
 
+  // mobile-link
+  let mobileLink = document.querySelector('.mobile-link a')
+  let routeIndex = routes__story_mobile.indexOf(lastStory)
+  let mobileIndex = routeIndex===1 ? 0 : 1
+  mobileLink.innerHTML='>'
+  mobileLink.href="/#"+routes__story_mobile[mobileIndex]
 
   // Render the page from map of supported routes or render 404 page.
   const page = routes[parsedUrl] || Error404;
@@ -68,9 +73,6 @@ const router = async () => {
   await page.after_render();
 };
 
-/**
- * Add event listeners
- */
 
 // Listen on hash change.
 window.addEventListener('hashchange', router);

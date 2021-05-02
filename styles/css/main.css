@@ -14,14 +14,24 @@ main#page_root::before {
   position: fixed;
   top: 0;
   left: 0; }
+  @media (max-width: 48em) {
+    main#page_root::before {
+      background: transparent; } }
 
 header {
   top: 0;
   z-index: 10;
   transition: transform 200ms ease-in-out; }
-  @media (max-width: 48em) {
-    header {
-      height: 3.5rem; } }
+  header .mobile-nav {
+    position: fixed;
+    right: 1rem;
+    top: 2rem;
+    display: none; }
+    header .mobile-nav a {
+      background: rgba(82, 125, 111, 0.6); }
+    @media (max-width: 48em) {
+      header .mobile-nav {
+        display: block; } }
 
 header span {
   display: block;
@@ -40,7 +50,7 @@ header span {
     color: #3BBA7D; }
 
 footer {
-  bottom: 0;
+  bottom: -1px;
   background: #1C1922;
   z-index: 13; }
 
@@ -59,7 +69,9 @@ nav {
     nav ul {
       padding: 0 1rem; }
     nav li {
-      margin: 0 2rem 0 0; } }
+      margin: 0 2rem 0 0; }
+    nav li.on-gi {
+      display: none; } }
 
 header nav ul {
   padding: 0 2rem;
@@ -78,13 +90,7 @@ header nav li:last-of-type {
   text-align: right; }
 
 @media (max-width: 48em) {
-  header nav ul {
-    padding: 0 1rem;
-    grid-template-columns: repeat(2, 1fr); }
-  header nav li {
-    text-align: left;
-    margin: 0; }
-  header nav #create {
+  header nav {
     display: none; } }
 
 footer nav ul {
@@ -113,12 +119,24 @@ footer .enable-gi {
     left: -12.3rem; }
   footer .enable-gi:hover::before {
     content: 'Gestensteuerung aktivieren'; }
+  @media (max-width: 48em) {
+    footer .enable-gi {
+      display: none; } }
 
 footer .enable-gi.active {
   background-color: #3BBA7D;
   box-shadow: 0 0 7px 1px #527d6f; }
   footer .enable-gi.active:hover::before {
     content: 'Gestensteuerung deaktivieren'; }
+
+footer .mobile-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: none; }
+  @media (max-width: 48em) {
+    footer .mobile-link {
+      display: block; } }
 
 header[data-index='-1'] {
   transform: translateX(42%); }
@@ -297,10 +315,19 @@ section.machine-learning .ct-fixed {
     background: #527D6F; }
   section.machine-learning .ct-fixed .expand-info {
     background-color: #2D373A; }
+  @media (max-width: 48em) {
+    section.machine-learning .ct-fixed {
+      top: 1px; } }
 
 section.machine-learning .ct-content {
   padding: 0 3rem;
   max-width: 76rem; }
+  @media (max-width: 62em) {
+    section.machine-learning .ct-content {
+      padding: 0 2.2rem; } }
+  @media (max-width: 48em) {
+    section.machine-learning .ct-content {
+      padding: 0 1.7rem; } }
 
 section.machine-learning .content {
   display: grid;
@@ -332,6 +359,9 @@ section.machine-learning .randomised {
   align-items: center;
   justify-content: space-around; }
 
+section.machine-learning .ct-svg {
+  max-width: 25rem; }
+
 @media (max-width: 48em) {
   section.machine-learning .content {
     display: block; } }
@@ -342,6 +372,9 @@ section.machine-learning .btn-gen-btn-text {
 section.buzzwords {
   display: grid;
   grid-template-columns: 70% 30%; }
+  @media (max-width: 48em) {
+    section.buzzwords {
+      display: block; } }
   section.buzzwords > div.container {
     display: flex;
     flex-wrap: wrap;
@@ -390,8 +423,9 @@ section.buzzwords {
     cursor: pointer;
     border: 1.5px solid transparent;
     transition: all 150ms; }
-    section.buzzwords .component:hover {
-      background: rgba(59, 186, 125, 0.2); }
+    section.buzzwords .component:hover, section.buzzwords .component:focus {
+      background: rgba(59, 186, 125, 0.2);
+      -webkit-tap-highlight-color: transparent; }
     section.buzzwords .component.active-buzz {
       border: 1.5px solid rgba(59, 186, 125, 0.6); }
     section.buzzwords .component > .component {

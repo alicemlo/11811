@@ -23,11 +23,21 @@ section.machine-learning {
     .expand-info {
       background-color: #2D373A;
     }
+
+    @include mobile-down{
+      top: 1px;
+    }
   }
 
   .ct-content {
     padding: 0 3rem;
     max-width: 76rem;
+    @include tablet-down{
+      padding: 0 2.2rem;
+    }
+    @include mobile-down{
+      padding: 0 1.7rem;
+    }
   }
 
   .content {
@@ -65,6 +75,10 @@ section.machine-learning {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+  }
+
+  .ct-svg{
+    max-width: 25rem;
   }
 
   @include mobile-down {

@@ -56,6 +56,9 @@ const MachineLearning = {
           Prognosen
         </button>
         <button class="disabled">
+          Suchmaschinen
+        </button>
+        <button class="disabled">
           Bots
         </button>
         <button class="disabled">
@@ -133,7 +136,7 @@ const MachineLearning = {
         </div>
         <div class="language-processing gen-btn-text" data-title="Sprachliche Intelligenz">
           Auch bekannt unter Natural Language Processing. Gemeint ist die maschinelle Verarbeitung von natürlicher Sprache: Texte aber auch
-          gesprochene Sprache wird vom Algorithmus erkannt und analysiert. -> Eher neu und am Anfang der Entwicklung, Sinn / Kontext, ..
+          gesprochene Sprache wird vom Algorithmus erkannt und analysiert. -> Eher neu und am Anfang der Entwicklung, Sinn / Kontext, Weltwissen mit Logik ..
         </div>
       </div>
     </div>
@@ -177,7 +180,7 @@ const MachineLearning = {
         </p>
       </div>
       <div class="col-2">
-        <div class="svg-songs"></div>
+        <div class="svg-songs ct-svg"></div>
         <div class="info"></div>
       </div>
     </div>
@@ -350,7 +353,7 @@ const MachineLearning = {
 
     // songs
     let svgSong = document.querySelector('.svg-songs')
-    let svg1 = new SvgKlickItem('svg-songs', svgSong,SVG__SONG, ['klick','klick', 'alksdm'] )
+    let svg1 = new SvgKlickItem('svg-songs', svgSong,SVG__SONG, ['>','alle Daten darstellen', 'Daten trainieren', 'KI Vorhersage', 'zurücksetzen'] )
     svg1.run()
 
     // gen-btn-text
@@ -373,9 +376,7 @@ class SvgKlickItem{
     this.base = source
     this.indications = indications;
     this.btn = document.createElement('BUTTON')
-    this.reset = document.createElement('BUTTON')
     this.btn.classList.add('btn-svg')
-    this.reset.innerText='Zurücksetzen'
     this.index = -1
     this.layers = null
     this.length = null
@@ -383,17 +384,17 @@ class SvgKlickItem{
   create(){
     this.btn.innerText=this.indications[this.index+1]
     this.container.innerHTML = this.base
-    this.container.appendChild(this.reset)
     this.container.appendChild(this.btn)
     this.btn.onclick = () => this.update(this.index++)
-    this.reset.onclick = () => this.update(this.index=-1)
     this.layers = document.querySelectorAll(`.${this.id}-layer`)
     this.length = this.layers.length
   }
   update(){
     this.layers.forEach(layer => layer.classList.remove('visible'))
-    if(this.index>this.length) this.index=0
+    if(this.index>=this.length) this.index=-1
+    this.btn.innerText=this.indications[this.index+1]
     let it = this.layers[this.index]
+    console.log(this.index)
     if(it) it.classList.add('visible')
   }
   run(){

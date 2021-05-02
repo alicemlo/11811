@@ -15,14 +15,27 @@ main#page_root::before{
   position: fixed;
   top: 0;
   left: 0;
+  @include mobile-down{
+    background: transparent;
+  }
 }
 
 header {
   top: 0;
   z-index: 10;
   transition: transform 200ms ease-in-out;
-  @include mobile-down{
-    height: 3.5rem;
+
+  .mobile-nav{
+    position: fixed;
+    right: 1rem;
+    top: 2rem;
+    display: none;
+    a{
+      background: rgba(82, 125, 111, 0.6);
+    }
+    @include mobile-down(){
+      display: block;
+    }
   }
 }
 
@@ -48,7 +61,7 @@ header span{
 }
 
 footer{
-  bottom: 0;
+  bottom: -1px;
   background: $col--dark-01;
   z-index: 13;
 }
@@ -78,6 +91,9 @@ nav{
       margin: 0 2rem 0 0;
     }
 
+    li.on-gi{
+      display: none;
+    }
   }
 
 }
@@ -104,17 +120,7 @@ header nav {
   }
 
   @include mobile-down {
-    ul {
-      padding: 0 1rem;
-      grid-template-columns: repeat(2, 1fr);
-    }
-    li {
-      text-align: left;
-      margin: 0;
-    }
-    #create {
-      display: none;
-    }
+    display: none;
   }
 }
 
@@ -152,12 +158,25 @@ footer{
     &:hover::before{
       content: 'Gestensteuerung aktivieren';
     }
+    @include mobile-down{
+      display: none;
+    }
   }
   .enable-gi.active{
     background-color: $col--main-01;
     box-shadow: 0 0 7px 1px #527d6f;
     &:hover::before{
       content: 'Gestensteuerung deaktivieren';
+    }
+  }
+
+  .mobile-link{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: none;
+    @include mobile-down{
+      display: block;
     }
   }
 }

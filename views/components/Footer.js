@@ -33,6 +33,7 @@ const Footer = {
             <ul>${navLinks}</ul>
           </nav>
           <span class="enable-gi"></span>
+          <span class="mobile-link"><a href="/"></a></span>
         </footer>
     `;
   },
@@ -50,6 +51,7 @@ const Footer = {
 
     giEnabler.onclick = () => enableGi(document.body, giEnabler);
     giEnabled ? giEnabler.classList.add('active')  : giEnabler.classList.remove('active')
+
   }
 };
 
