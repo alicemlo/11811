@@ -8,6 +8,8 @@ section.buzzwords{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    //transform: scale(0.9);
+    //transform-origin: 0% 0% 0;
   }
 
   aside{
@@ -21,15 +23,14 @@ section.buzzwords{
     >div{
       width: 25%;
     }
-    i, p{
+    i.keyword, .def-content{
       font-size: 0.9rem;
-      margin: 0.5rem 0;
+      margin: 0.8rem 0;
     }
   }
 
   article{
     margin: 1rem;
-    max-width: 40rem;
    // animation: wiggle 25s ease-in-out infinite;
   }
 
@@ -58,9 +59,10 @@ section.buzzwords{
 
   .ct-buzz{
     padding: 1rem;
-    background: rgba(82, 125, 111, 0.45);
+    //background: rgba(82, 125, 111, 0.45);
+    border: 1.5px solid rgba(82, 125, 111, 0.45);
     &.no-comp{
-      background: transparent;
+      border: 1px solid transparent;
     }
     >h4{
       text-align: center;
@@ -69,15 +71,31 @@ section.buzzwords{
 
   .component{
     padding: 0.7rem 1rem;
-    background: rgba(82, 125, 111, 0.35);
+    background: rgba(82, 125, 111, 0.25);
     margin: 1rem;
     min-width: 17rem;
     cursor: pointer;
+    border: 1.5px solid transparent;
+    transition: all 150ms;
+
+    &:hover{
+    //  box-shadow: 0 0 8px 3px rgba(59, 186, 125, 0.55);
+      background: rgba(59, 186, 125, 0.2);
+    }
+
+    &.active-buzz{
+      border: 1.5px solid rgba(59, 186, 125, 0.6);
+    }
 
     >.component{
       margin: 1rem 0;
       padding: 0.5rem;
       min-width: 10rem;
+      &.active-buzz{
+        border: 1.5px solid transparent;
+        background: rgba(59, 186, 125, 0.6);
+        color: $col--dark-01;
+      }
     }
     &.no-mw{
       min-width: unset;

@@ -113,17 +113,15 @@ const Buzzwords = {
     keyword = document.querySelector('.keyword')
     cps.forEach(item => {
       let title = item.firstElementChild.innerText;
-      console.log(item)
       let content = buzzwords.find(item => item.title === title)
-      let cp = new BuzzComponent(item, title, content?.content);
+      let cp = new BuzzComponent(item, title, content?.content || '', content?.keyword || '');
       cp.run()
     })
     ct.onclick = (e) => {
       let el=e.target
       if(e.target.tagName==='H5' || e.target.tagName==='H4')el = e.target.parentElement
-      let attr = el.getAttribute('data-id')
-      e.dispatchEvent(buzz);
-      console.log(attr)
+      document.querySelectorAll('.active-buzz').forEach(item => item.classList.remove('active-buzz'))
+      el.dispatchEvent(buzz);
     }
   }
 };
@@ -131,28 +129,21 @@ const Buzzwords = {
 let defContainer, keyword;
 
 class BuzzComponent {
-  constructor(item, title, content) {
+  constructor(item, title, content, keyword) {
     this.item = item;
     this.title = title;
+    this.keyword = keyword;
     this.content = content || 'ist not defined';
   }
   showContent() {
-    defContainer.innerHTML = this.title;
-    this.item.addEventListener('buzz', function (e) {
-      console.log(e)
-      console.log("buzzed")
+    this.item.addEventListener('buzz', ()  => {
+      this.item.classList.add('active-buzz')
+      defContainer.innerHTML = this.title;
+      keyword.innerText = '- '+this.keyword;
     }, false);
-
   }
 
-  hideContent() {
-    defContainer.innerHTML = ''
-  }
-  addAttribute(){
-    this.item.setAttribute('data-id', this.title)
-  }
   run(){
-    this.addAttribute()
     this.showContent()
   }
 }

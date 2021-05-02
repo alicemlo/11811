@@ -2,6 +2,10 @@ body, textarea, input, button{
   font-family: 'Fira Mono', monospace;
 }
 
+h1, h2, h3, h4, h5, h6{
+  font-weight: normal;
+}
+
 h1{
   font-size: 1.7rem;
   margin: 1rem 0 1.5rem 0;
@@ -22,9 +26,9 @@ h3{
 }
 
 p{
-  font-size: 1.05rem;
+  font-size: 1.0rem;
   margin: 0.2rem 0;
-  line-height: 1.5rem;
+  line-height: 1.4rem;
   @include mobile-down{
     font-size: 1.05rem;
     line-height: 1.4rem;

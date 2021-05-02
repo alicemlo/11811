@@ -72,8 +72,7 @@ const MachineLearning = {
   
     <div class="content">
       <div class="col-1">
-        <h3>du willst die zuerst einen Überblick über die wichtigsten Begriffe verschafffen?</h3>
-        <h3><a href="#/buzzwords">-> Schaue dir die Buzzword Grafik an</a></h3>
+        <h3><a href="#/buzzwords">-> du willst die zuerst einen Überblick über die wichtigsten Begriffe verschafffen?</a></h3>
       </div>
     </div>
   
@@ -83,7 +82,7 @@ const MachineLearning = {
         <h1>Was ist Intelligenz?</h1>
         <p>Damit man weiss, wie man Intelligenz künstlich erschaffen kann, muss zuerst geklärt sein, wie man Intelligenz definiert.</p>
         <p>
-          Jedoch ist dies nicht ganz so einfach, da sich diese Defintion immer wieder veränder. Wir selber verstehen noch nicht ganz, was Intelligenz ist.
+          Jedoch ist dies nicht ganz so einfach, da sich diese Defintion immer wieder verändert. Wir selber verstehen noch nicht ganz, was Intelligenz ist.
           Grunsätzlich beschreibt Intelligenz jedoch ein lernfähiges System, dass an das menschliche Denken herankommt. Wir Menschen lernen zum Beispiel aus den Erfahrungen, 
           die wir in unserer Vergangenheit erlebt haben. Künstlich generierte Intelligenz basiert genau auf diesem Prinzip. 
         </p>
@@ -170,35 +169,16 @@ const MachineLearning = {
         <p>
           Ziel: Du möchtest ein System generieren, dass dir vorhersagen kann, ob du einen Song magst oder nicht. 
         </p>
+        <p>
+          Ausganslage: Du hörst dir 14 Songs an und kannst sie jeweils mit "gut" oder "schlecht" bewerten. 
+        </p>
+        <p>
+          -> Songs bewerten
+        </p>
       </div>
       <div class="col-2">
-        <p>
-          Schritt 1: Du erstellst eine Liste mit Songs, die du nicht magst und eine andere Liste, mit Songs die du magst. Dabei musst du die Songs noch 
-          nach einem Schema definieren. Zum Beispiel erhalten alle Songs eine Eigenschaft "Tempo" und eine Eigenschaft "Lautstärke". Beide Eigenschaften können von 0 - 10 bewertet werden. 
-        </p>
-        <p>
-           Deine Input Daten könnte also folgendermassen aussehen: 
-           Song 1: Lautstärke: 5, Tempo 8
-           Song 2: Lautstärke: 7, Tempo 9
-           Song 3: Lautstärke: 4, Tempo 2
-           Song 4: Lautstärke: 1, Tempo 4
-        </p>
-        <p>
-          Regression: 
-          Jetzt musst du nur noch den Output festlegen. Jedem Song gibst du eine Bewertung von 1 bis 10 (10 heisst, dass du den Song liebst)
-          Song 1: 8
-          Song 1: 9
-          Song 1: 5
-          Song 1: 3
-        </p>
-        <p>
-          Klassifikation: 
-          Jetzt musst du nur noch den Output festlegen. Jedem Song gibst du eine Bewertung von 1 bis 10 (10 heisst, dass du den Song liebst)
-          Song 1: x
-          Song 1: x
-          Song 1: y
-          Song 1: y
-        </p>
+        <div class="svg-songs"></div>
+        <div class="info"></div>
       </div>
     </div>
   
@@ -368,6 +348,11 @@ const MachineLearning = {
       setProgressbar(window.scrollY)
     }
 
+    // songs
+    let svgSong = document.querySelector('.svg-songs')
+    let svg1 = new SvgKlickItem('svg-songs', svgSong,SVG__SONG, ['klick','klick', 'alksdm'] )
+    svg1.run()
+
     // gen-btn-text
     let genBtnTex = document.querySelectorAll('.gen-btn-text')
     genBtnTex.forEach(btn => {
@@ -379,6 +364,42 @@ const MachineLearning = {
     })
   }
 };
+
+
+class SvgKlickItem{
+  constructor(id, container, source, indications) {
+    this.id = id;
+    this.container = container;
+    this.base = source
+    this.indications = indications;
+    this.btn = document.createElement('BUTTON')
+    this.reset = document.createElement('BUTTON')
+    this.btn.classList.add('btn-svg')
+    this.reset.innerText='Zurücksetzen'
+    this.index = -1
+    this.layers = null
+    this.length = null
+  }
+  create(){
+    this.btn.innerText=this.indications[this.index+1]
+    this.container.innerHTML = this.base
+    this.container.appendChild(this.reset)
+    this.container.appendChild(this.btn)
+    this.btn.onclick = () => this.update(this.index++)
+    this.reset.onclick = () => this.update(this.index=-1)
+    this.layers = document.querySelectorAll(`.${this.id}-layer`)
+    this.length = this.layers.length
+  }
+  update(){
+    this.layers.forEach(layer => layer.classList.remove('visible'))
+    if(this.index>this.length) this.index=0
+    let it = this.layers[this.index]
+    if(it) it.classList.add('visible')
+  }
+  run(){
+    this.create()
+  }
+}
 
 let iteral = [];
 

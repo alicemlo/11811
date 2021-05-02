@@ -132,6 +132,9 @@ header[data-index='1'] {
 body, textarea, input, button {
   font-family: 'Fira Mono', monospace; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
 h1 {
   font-size: 1.7rem;
   margin: 1rem 0 1.5rem 0;
@@ -149,9 +152,9 @@ h3 {
   margin: 0.3rem 0; }
 
 p {
-  font-size: 1.05rem;
+  font-size: 1.0rem;
   margin: 0.2rem 0;
-  line-height: 1.5rem; }
+  line-height: 1.4rem; }
   @media (max-width: 48em) {
     p {
       font-size: 1.05rem;
@@ -354,12 +357,11 @@ section.buzzwords {
     align-items: center; }
     section.buzzwords aside > div {
       width: 25%; }
-    section.buzzwords aside i, section.buzzwords aside p {
+    section.buzzwords aside i.keyword, section.buzzwords aside .def-content {
       font-size: 0.9rem;
-      margin: 0.5rem 0; }
+      margin: 0.8rem 0; }
   section.buzzwords article {
-    margin: 1rem;
-    max-width: 40rem; }
+    margin: 1rem; }
   section.buzzwords h4, section.buzzwords h5 {
     font-weight: normal; }
   section.buzzwords h4 {
@@ -375,21 +377,31 @@ section.buzzwords {
     justify-content: space-evenly; }
   section.buzzwords .ct-buzz {
     padding: 1rem;
-    background: rgba(82, 125, 111, 0.45); }
+    border: 1.5px solid rgba(82, 125, 111, 0.45); }
     section.buzzwords .ct-buzz.no-comp {
-      background: transparent; }
+      border: 1px solid transparent; }
     section.buzzwords .ct-buzz > h4 {
       text-align: center; }
   section.buzzwords .component {
     padding: 0.7rem 1rem;
-    background: rgba(82, 125, 111, 0.35);
+    background: rgba(82, 125, 111, 0.25);
     margin: 1rem;
     min-width: 17rem;
-    cursor: pointer; }
+    cursor: pointer;
+    border: 1.5px solid transparent;
+    transition: all 150ms; }
+    section.buzzwords .component:hover {
+      background: rgba(59, 186, 125, 0.2); }
+    section.buzzwords .component.active-buzz {
+      border: 1.5px solid rgba(59, 186, 125, 0.6); }
     section.buzzwords .component > .component {
       margin: 1rem 0;
       padding: 0.5rem;
       min-width: 10rem; }
+      section.buzzwords .component > .component.active-buzz {
+        border: 1.5px solid transparent;
+        background: rgba(59, 186, 125, 0.6);
+        color: #1C1922; }
     section.buzzwords .component.no-mw {
       min-width: unset; }
   section.buzzwords .ct-hover {
