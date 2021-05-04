@@ -62,10 +62,13 @@ const router = async () => {
 
   // mobile-link
   let mobileLink = document.querySelector('.mobile-link a')
+  let mobileNav = document.querySelector('.mobile-nav')
   let routeIndex = routes__story_mobile.indexOf(lastStory)
   let mobileIndex = routeIndex===1 ? 0 : 1
+  let mobileIndexInverted = routeIndex===1 ? 1 : 0
   mobileLink.innerHTML='>'
   mobileLink.href="/#"+routes__story_mobile[mobileIndex]
+  if(mobileNav) mobileNav.innerHTML = routes__story_mobile[mobileIndexInverted]
 
   // Render the page from map of supported routes or render 404 page.
   const page = routes[parsedUrl] || Error404;

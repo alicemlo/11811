@@ -49,7 +49,7 @@ const Footer = {
       elBack.onclick = () => window.location.href = '/#'+lastStory
     }
 
-    giEnabler.onclick = () => enableGi(document.body, giEnabler);
+    giEnabler.onclick = () => toggleGi(document.body, giEnabler);
     giEnabled ? giEnabler.classList.add('active')  : giEnabler.classList.remove('active')
 
   }

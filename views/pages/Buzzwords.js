@@ -16,6 +16,8 @@ const Buzzwords = {
     </div>
   </article>
   
+
+  
   <article class="ct-buzz no-comp">
     <div class="flex">
         <div class="component">
@@ -26,7 +28,7 @@ const Buzzwords = {
           </div>
     </div>
   </article>
-  
+    
   <article class="ct-buzz no-comp">
     <div class="flex">
       <div class="component">
@@ -45,7 +47,7 @@ const Buzzwords = {
     <h4>Künstliche Intelligenz</h4>
     
     <div class="flex">
-      
+          
       <div class="component">
         <h4>Machine Learning</h4>
         <div class="component">
@@ -77,11 +79,13 @@ const Buzzwords = {
           <h5>Bildverarbeitung</h5>
         </div>
       </div>   
-  
+ 
+
       <div class="component">
         <h4>Turing Test</h4>
       </div>
       
+
       <div class="component">
         <h4>Robotik</h4>
       </div>

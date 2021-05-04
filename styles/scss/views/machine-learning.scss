@@ -73,6 +73,7 @@ section.machine-learning {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 0 1rem;
     align-items: center;
     justify-content: space-around;
   }
@@ -81,14 +82,14 @@ section.machine-learning {
     max-width: 25rem;
   }
 
+  .btn-gen-btn-text{
+    margin: 0 0.5rem 0.5rem 0;
+  }
+
+
   @include mobile-down {
     .content {
       display: block;
     }
-  }
-
-
-  .btn-gen-btn-text{
-    margin: 0 0.5rem 0.5rem 0;
   }
 }

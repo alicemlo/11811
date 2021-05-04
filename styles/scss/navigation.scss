@@ -95,7 +95,6 @@ nav{
       display: none;
     }
   }
-
 }
 
 header nav {
@@ -140,8 +139,8 @@ footer{
     position: fixed;
     bottom: 1rem;
     right: 1rem;
-    width: 0.6rem;
-    height: 0.6rem;
+    width: 0.8rem;
+    height: 0.8rem;
     border-radius: 50%;
     cursor: pointer;
     //background-color: $col--dark-01;
@@ -182,14 +181,16 @@ footer{
 }
 
 // header index translation
-header[data-index='-1']{
-  transform: translateX(42%);
-}
+@include mobile-up{
+  header[data-index='-1']{
+    transform: translateX(42%);
+  }
 
-header[data-index='0'] {
-  transform: translateX(0);
-}
+  header[data-index='0'] {
+    transform: translateX(0);
+  }
 
-header[data-index='1']{
-  transform: translateX(-42%);
+  header[data-index='1']{
+    transform: translateX(-42%);
+  }
 }

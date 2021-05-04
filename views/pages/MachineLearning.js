@@ -27,7 +27,7 @@ const MachineLearning = {
           kein Informatik Nerd bist.
         </p>
       </div>
-      <div class="col-2 randomised" style="padding: 2rem">
+      <div class="col-2 randomised" style="padding: 2rem 0">
         <button class="disabled">
           Netflix Algorithmus
         </button>
@@ -41,7 +41,7 @@ const MachineLearning = {
           Roboter
         </button>
         <button class="disabled">
-          Assistenzsysteme (bsp. Fahrassistenz)
+          Assistenzsysteme
         </button>
         <button class="disabled">
           Marketing

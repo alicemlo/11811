@@ -4,6 +4,7 @@
 @import "navigation.scss";
 @import "typo.scss";
 @import "canvas.scss";
+@import "loader.scss";
 
 @import "views/404.scss";
 @import "views/home.scss";
@@ -32,7 +33,6 @@ body{
   color: $col--main-01;
   background: $col--dark-01;
 }
-
 main#page_root{
   padding: 4rem 0 2rem 0;
   min-height: 90vh;

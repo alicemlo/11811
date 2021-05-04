@@ -12,7 +12,7 @@ const Home = {
   },
   after_render: async () => {
     let toggleGI = document.querySelector('.toggle-gi');
-    toggleGI.onclick = () => enableGi(document.body, toggleGI)
+    toggleGI.onclick = () => toggleGi(document.body, toggleGI)
   }
 };
 export default Home;

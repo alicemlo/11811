@@ -38,8 +38,19 @@ function draw() {
   classifyPose();
 
 
+  let beforeSwipe = detectBeforeSwipe();
+  let swipe = detectSwipe();
 
-  let swipe = detectSwipe()
+  if(beforeSwipe){
+    noStroke()
+    fill(255, 255, 255, 30)
+    if(beforeSwipe==='beforeLeft'){
+      ellipse(0, height/2, 400, height)
+    }else if(beforeSwipe==='beforeRight'){
+      ellipse(width,height/2, 400, height)
+    }
+  }
+
   if(swipe){
     if(swipe==='swipeLeft'){
       if(storyIndex<story.length-1) storyIndex++
@@ -50,5 +61,6 @@ function draw() {
       swipeToRoute(story[storyIndex])
     }
   }
+
 }
 

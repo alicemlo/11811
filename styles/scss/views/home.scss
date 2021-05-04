@@ -25,4 +25,16 @@ section.home{
     top: 15rem;
     left: 20%;
   }
+  @include mobile-down{
+    h3{
+      left: 20%;
+      max-width: 70%;
+    }
+    a:first-of-type{
+      left: 40%;
+    }
+    a:last-of-type{
+      left: 5%;
+    }
+  }
 }

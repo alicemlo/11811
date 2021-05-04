@@ -15,7 +15,7 @@ const Header = {
           ${navLinks}
         </ul>
       </nav>
-      <nav class="mobile-nav"><a href="/#/machine-learning">Machine Learning</a></nav>
+      <nav class="mobile-nav">Machine Learning</nav>
     `;
   },
 

@@ -1,9 +1,12 @@
 let giEnabled = false
-
-enableGi = (item, button) => {
+let loader;
+toggleGi = (item, button) => {
+  loader = document.querySelector('#loader')
   giEnabled = !giEnabled;
   if(button) giEnabled ? button.classList.add('active') : button.classList.remove('active')
+
   if(giEnabled){
+    loader.classList.remove('invisible')
     giScripts.forEach(itm =>{
       const script = document.createElement('script');
       script.id = itm.id;
@@ -11,6 +14,7 @@ enableGi = (item, button) => {
       item.append(script);
     })
   }else{
+    loader.classList.add('invisible')
     const canvas = document.querySelector('CANVAS')
     const video = document.querySelector('VIDEO')
     if (canvas) document.body.removeChild(canvas)
@@ -193,14 +197,19 @@ let yAvg = 0
 
 
 // gestures
-let gestureSwipeLeftStates = [false, false, false]
-let gestureSwipeRightStates = [false, false, false]
-
+let gestureSwipeLeftIndex = 0
+let gestureSwipeRightIndex = 0
+let gestureBox = {
+  x0: 0,
+  y0: 0,
+  x1: 0,
+  y1: 0,
+}
 
 // variables
 let width = window.innerWidth
 let height = window.innerHeight
-const breakpoints = [160, 480] // 0 - 640
+const breakpoints = [250, 390] // 0 - 640
 const story = ['buzzwords', 'machine-learning', 'train-model']
 let storyIndex = story.indexOf(window.location.hash.substring(1)) < 0 ? 0 : story.indexOf(window.location.hash.substring(1))
 let create_poseLabel_active = ''
@@ -286,9 +295,9 @@ const col__accent = [251, 136, 141]
 
 // functions
 modelLoaded = () => {
+  loader = document.querySelector('#loader')
+  loader.classList.add('invisible')
   modelIsLoaded = true;
-  loadingScreen.innerHTML = ''
-  loadingScreen.style.display = 'none'
   console.log('ml5js model ready');
 }
 
@@ -321,38 +330,51 @@ swipeToRoute = (route) => {
 }
 
 
+let gesturePushStates = [false, false, false];
+
+gestureSize = () =>{
+  return dist(gestureBox.x0, gestureBox.y0, gestureBox.x1, gestureBox.y1)
+}
+
+
+
 detectSwipe = () => {
   let x = xAvg / 22
   if (labelHandPose === 'X') {
-    gestureSwipeRightStates = [false, false, false]
-    gestureSwipeLeftStates = [false, false, false]
+    gestureSwipeLeftIndex = 0
+    gestureSwipeRightIndex = 0
   } else {
-    if (!gestureSwipeRightStates[0]) {
-      if (x > breakpoints[1]) gestureSwipeRightStates[0] = true
-    } else if (!gestureSwipeRightStates[1]) {
-      if (x < breakpoints[1] && x > breakpoints[0]) gestureSwipeRightStates[1] = true
-    } else if (!gestureSwipeRightStates[2]) {
-      if (x < breakpoints[0]) gestureSwipeRightStates[2] = true
-    }
 
-    if (!gestureSwipeLeftStates[0]) {
-      if (x < breakpoints[0]) gestureSwipeLeftStates[0] = true
-    } else if (!gestureSwipeLeftStates[1]) {
-      if (x < breakpoints[1] && x > breakpoints[0]) gestureSwipeLeftStates[1] = true
-    } else if (!gestureSwipeLeftStates[2]) {
-      if (x > breakpoints[1]) gestureSwipeLeftStates[2] = true
+    if(x > breakpoints[1]){
+      if(gestureSwipeLeftIndex===1) gestureSwipeLeftIndex = 2
+      gestureSwipeRightIndex = 0
+    }else if(x < breakpoints[0]){
+      gestureSwipeLeftIndex = 0
+      if(gestureSwipeRightIndex===1) gestureSwipeRightIndex = 2
+    }else{
+      if(gestureSwipeLeftIndex===0) gestureSwipeLeftIndex = 1
+      if(gestureSwipeRightIndex===0) gestureSwipeRightIndex = 1
     }
   }
-  if (gestureSwipeRightStates.every(e => e === true)) {
-    gestureSwipeRightStates = [false, false, false]
+  if (gestureSwipeRightIndex===2) {
+    gestureSwipeRightIndex = 0
     return "swipeRight"
   }
-  if (gestureSwipeLeftStates.every(e => e === true)) {
-    gestureSwipeLeftStates = [false, false, false]
+  if (gestureSwipeLeftIndex===2) {
+    gestureSwipeLeftIndex = 0
     return "swipeLeft"
   }
   return null
 }
+
+
+
+detectBeforeSwipe = () =>{
+  if(gestureSwipeLeftIndex===2) return "beforeLeft"
+  if(gestureSwipeRightIndex===2) return "beforeRight"
+  else return false
+}
+
 
 
 classifyPose = () => {
@@ -368,6 +390,20 @@ classifyPose = () => {
       inputs.push(y);
     })
     brain.classify(inputs, gotResult);
+
+    gestureBox = {
+      x0: pose[0].boundingBox.topLeft[0],
+      y0: pose[0].boundingBox.topLeft[1],
+      x1: pose[0].boundingBox.bottomRight[0],
+      y1: pose[0].boundingBox.bottomRight[1],
+    }
+  }else{
+    gestureBox = {
+      x0: 0,
+      y0: 0,
+      x1: 0,
+      y1: 0,
+    }
   }
 }
 
