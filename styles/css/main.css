@@ -101,42 +101,43 @@ footer nav ul {
 footer nav li.back {
   cursor: pointer; }
 
-footer .enable-gi {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 50%;
-  cursor: pointer;
-  background-color: #527D6F; }
-  footer .enable-gi::before {
-    content: '';
+footer {
+  background-color: #1C1922;
+  border-top: 1.5px solid #527D6F; }
+  footer .enable-gi {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #527D6F; }
+    footer .enable-gi::before {
+      content: '';
+      position: absolute;
+      font-size: 0.7rem;
+      top: -2px;
+      text-align: center;
+      left: -12.3rem; }
+    footer .enable-gi:hover::before {
+      content: 'Gestensteuerung aktivieren'; }
+    @media (max-width: 48em) {
+      footer .enable-gi {
+        display: none; } }
+  footer .enable-gi.active {
+    background-color: #3BBA7D;
+    box-shadow: 0 0 7px 1px #527d6f; }
+    footer .enable-gi.active:hover::before {
+      content: 'Gestensteuerung deaktivieren'; }
+  footer .mobile-link {
     position: absolute;
-    font-size: 0.7rem;
-    top: -2px;
-    text-align: center;
-    left: -12.3rem; }
-  footer .enable-gi:hover::before {
-    content: 'Gestensteuerung aktivieren'; }
-  @media (max-width: 48em) {
-    footer .enable-gi {
-      display: none; } }
-
-footer .enable-gi.active {
-  background-color: #3BBA7D;
-  box-shadow: 0 0 7px 1px #527d6f; }
-  footer .enable-gi.active:hover::before {
-    content: 'Gestensteuerung deaktivieren'; }
-
-footer .mobile-link {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  display: none; }
-  @media (max-width: 48em) {
-    footer .mobile-link {
-      display: block; } }
+    bottom: 1rem;
+    right: 1rem;
+    display: none; }
+    @media (max-width: 48em) {
+      footer .mobile-link {
+        display: block; } }
 
 @media (min-width: 48em) {
   header[data-index='-1'] {
@@ -201,6 +202,11 @@ button {
     color: #527D6F;
     background-color: rgba(82, 125, 111, 0.1);
     pointer-events: none; }
+
+strong {
+  font-weight: normal;
+  background-color: rgba(82, 125, 111, 0.3);
+  color: #3BBA7D; }
 
 .route--back {
   cursor: pointer; }
@@ -412,6 +418,21 @@ section.machine-learning .btn-gen-btn-text {
   section.machine-learning .content {
     display: block; } }
 
+.panel {
+  padding: 0.5rem;
+  background: rgba(82, 125, 111, 0.3); }
+  .panel .panel-header {
+    display: flex; }
+  .panel .panel-header > div {
+    color: #527D6F;
+    transition: color 150ms;
+    padding-bottom: 0.5rem; }
+    .panel .panel-header > div.active {
+      border-bottom: 1px solid #3BBA7D;
+      color: #3BBA7D; }
+  .panel .panel-body {
+    margin-top: 1rem; }
+
 @media (max-width: 48em) {
   section.buzzwords {
     display: block; } }
@@ -463,7 +484,8 @@ section.buzzwords .flex {
 
 section.buzzwords .ct-buzz {
   padding: 1rem;
-  border: 1.5px solid rgba(82, 125, 111, 0.45); }
+  border: 1.5px solid rgba(82, 125, 111, 0.45);
+  max-width: 72rem; }
   section.buzzwords .ct-buzz.no-comp {
     border: 1px solid transparent; }
   section.buzzwords .ct-buzz > h4 {

@@ -1,5 +1,7 @@
 let giEnabled = false
 let loader;
+let hash;
+
 toggleGi = (item, button) => {
   loader = document.querySelector('#loader')
   giEnabled = !giEnabled;
@@ -209,7 +211,7 @@ let gestureBox = {
 // variables
 let width = window.innerWidth
 let height = window.innerHeight
-const breakpoints = [250, 390] // 0 - 640
+const breakpoints = [180, 320, 460] // 0 - 640
 const story = ['buzzwords', 'machine-learning', 'train-model']
 let storyIndex = story.indexOf(window.location.hash.substring(1)) < 0 ? 0 : story.indexOf(window.location.hash.substring(1))
 let create_poseLabel_active = ''
@@ -222,13 +224,6 @@ let elStatus, loadingScreen,
   counter, createContentTitle, createContentText, createContentInfo, createEvent, createEventBack, createCol2,
   trainingDataEpochs, trainingDataLoss, trainingDataAccuracy, trainingSaveData
 
-initDom = () => {
-  elStatus = document.getElementById('model-status')
-  loadingScreen = document.querySelector('.loading')
-  collectedDataFile = document.getElementById("data-collection");
-  if (hash === 'create') wait(250).then(() => initCreate())
-  counter = 0;
-}
 
 initCreate = () => {
   createContentTitle = document.querySelector('.col-1-title')
@@ -284,15 +279,6 @@ const col__accent = [251, 136, 141]
 
 
 
-//init
-// document.addEventListener('DOMContentLoaded', initDom);
-
-// window.addEventListener('popstate', function () {
-//   hash = window.location.hash.substring(1) || 'home';
-//   popState(hash)
-// })
-
-
 // functions
 modelLoaded = () => {
   loader = document.querySelector('#loader')
@@ -345,22 +331,29 @@ detectSwipe = () => {
     gestureSwipeRightIndex = 0
   } else {
 
-    if(x > breakpoints[1]){
-      if(gestureSwipeLeftIndex===1) gestureSwipeLeftIndex = 2
+    if(x > breakpoints[2]){
+      // area 3
+      if(gestureSwipeLeftIndex===2) gestureSwipeLeftIndex = 3
       gestureSwipeRightIndex = 0
     }else if(x < breakpoints[0]){
+      // area 0
       gestureSwipeLeftIndex = 0
-      if(gestureSwipeRightIndex===1) gestureSwipeRightIndex = 2
-    }else{
+      if(gestureSwipeRightIndex===2) gestureSwipeRightIndex = 3
+    }else if(x >= breakpoints[0] && x<breakpoints[1]){
+      // area 1
       if(gestureSwipeLeftIndex===0) gestureSwipeLeftIndex = 1
+      if(gestureSwipeRightIndex===1) gestureSwipeRightIndex = 2
+    }else if(x >= breakpoints[1] && x<breakpoints[2]){
+      // area 2
+      if(gestureSwipeLeftIndex===1) gestureSwipeLeftIndex = 2
       if(gestureSwipeRightIndex===0) gestureSwipeRightIndex = 1
     }
   }
-  if (gestureSwipeRightIndex===2) {
+  if (gestureSwipeRightIndex===3) {
     gestureSwipeRightIndex = 0
     return "swipeRight"
   }
-  if (gestureSwipeLeftIndex===2) {
+  if (gestureSwipeLeftIndex===3) {
     gestureSwipeLeftIndex = 0
     return "swipeLeft"
   }

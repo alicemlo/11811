@@ -135,6 +135,9 @@ footer nav{
 }
 
 footer{
+  background-color: $col--dark-01;
+  border-top: 1.5px solid $col--main-02;
+
   .enable-gi{
     position: fixed;
     bottom: 1rem;

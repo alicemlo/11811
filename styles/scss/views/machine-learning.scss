@@ -93,3 +93,28 @@ section.machine-learning {
     }
   }
 }
+
+
+// panels
+.panel{
+  padding: 0.5rem;
+  background: rgba(82, 125, 111, 0.3);
+
+  .panel-header{
+    display: flex;
+  }
+
+  .panel-header>div{
+    color: $col--main-02;
+    transition: color 150ms;
+    padding-bottom: 0.5rem;
+    &.active{
+      border-bottom: 1px solid $col--main-01;
+      color: $col--main-01;
+    }
+  }
+
+  .panel-body{
+    margin-top: 1rem;
+  }
+}

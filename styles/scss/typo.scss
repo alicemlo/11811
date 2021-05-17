@@ -69,6 +69,12 @@ button{
   }
 }
 
+strong{
+  font-weight: normal;
+  background-color: rgba(82, 125, 111, 0.3);
+  color: $col--main-01;
+}
+
 .route--back{
   cursor: pointer;
 }

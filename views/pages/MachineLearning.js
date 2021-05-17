@@ -5,6 +5,7 @@ const MachineLearning = {
   async render() {
     lastStory = this.slug
     return `
+
 <section class="machine-learning">
   <article class="ct-ml story-1">
   
@@ -27,49 +28,8 @@ const MachineLearning = {
           kein Informatik Nerd bist.
         </p>
       </div>
-      <div class="col-2 randomised" style="padding: 2rem 0">
-        <button class="disabled">
-          Netflix Algorithmus
-        </button>
-        <button class="disabled">
-          Sprachverarbeitung
-        </button>
-        <button class="disabled">
-          Hund oder Katze
-        </button>
-        <button class="disabled">
-          Roboter
-        </button>
-        <button class="disabled">
-          Assistenzsysteme
-        </button>
-        <button class="disabled">
-          Marketing
-        </button>
-        <button class="disabled">
-          Deep Learning
-        </button>
-        <button class="disabled">
-          Smart Home
-        </button>
-        <button class="disabled">
-          Prognosen
-        </button>
-        <button class="disabled">
-          Suchmaschinen
-        </button>
-        <button class="disabled">
-          Bots
-        </button>
-        <button class="disabled">
-          Kundenanalyse
-        </button>
-        <button class="disabled">
-          Maschinelle Übersetzungstools
-        </button>
-        <button class="disabled">
-          Schachgegner
-        </button>
+      <div class="col-2" style="padding: 2rem 0">
+        <div class="term-collection" data-name="collection-0"></div>
       </div>
     </div>
   
@@ -99,21 +59,11 @@ const MachineLearning = {
       <div class="content">
       <div class="col-1">
         <h1>Für was brauchen wir künstliche generierte Intelligenz?</h1>
-        <p>Schlussendlich bringt uns KI Effizienz. Um dir das zu veranschaulichen, stelle dir folgendes Szenario vor:</p>
-        <p>
-           Du erhälst den Auftrag, eine Wetterprognose an deinen Wohnort für die nächste Woche zu erstellen. Als Ausgangslage erhältst du ausführliche Wetterdaten der letzten 10 Jahre.
-           Dir steht ausserdem ein Computer für die Auswertung zur Verfügung. 
-        </p>
-        <p>
-           1. Heransgehensweise (die langsame Variante): 
-           Du analysierst die Wetterdaten sehr genau an und erkennst Muster und Häufigkeiten. Dir fällt aus, dass es im Sommer wärmer ist wie im Winter oder dass nach einem langsamen Aufstieg des Luftdrucks sonniges Wetter folgt. 
-           Du stellst also ganz viele solcher Regeln und Gesetzmässigkeiten auf, anhand deren du dir eine Prognose für die kommenden Tage aufstellen kannst. Du beschreibst einem Computer diese Regeln, damit der Rechner die die genauen Zahlen ausrechnen kann.
-        </p>
-        <p>
-           2. Heransgehensweise (der effiziente Weg):
-           Du gehst direkt an den Computer und generierst dein eigenes künstliches Modell. Dafür übergibst du dem System deine Daten. Es braucht jetzt eine Weile, bis das Modell fertig trainiert ist. 
-           Sobald es die Wetterdaten analysiert hat und daraus gelernt hat, kann es dir innert Sekunden eine Wetterprognose aufstellen. Ausserdem bleibt es weiterhin lernfähig: Die Prognosen werden immer besser, weil es seine Vorhersage wieder mit den 
-           den echten Daten vergleichen kann und so seinen Algorithmus ständig anpasst. Aus diesem Prozess hast du vielleicht nicht gelernt, dass auf eine klare Nacht ein kalter Morgen folgt, jedoch konntest du in dieser Zeit viel effiziereter anderes lernen.  
+        <p>Schlussendlich bringt uns KI Effizienz. Um dir das zu veranschaulichen, stelle dir folgendes Szenario vor:</p> 
+        <p>Du erhälst den Auftrag, eine Wetterprognose an deinen Wohnort für die nächste Woche zu erstellen. Als Ausgangslage erhältst du ausführliche Wetterdaten der letzten 10 Jahre. Dir steht ausserdem ein Computer für die Auswertung zur Verfügung.</p>
+      </div>
+      <div class="col-2">
+         <div class="panel" data-name="panel-0"></div>
       </div>
     </div>
     
@@ -126,18 +76,7 @@ const MachineLearning = {
         </p>
       </div>
       <div class="col-2">
-        <div class="robotics gen-btn-text" data-title="Robotics">
-          Bsp. Roboter, der Unkraut jätten kann.
-        </div>
-        <div class="visual-intelligence gen-btn-text" data-title="Visuelle Intelligenz">
-          Visuelle Intelligenz kann man auch als intelligente Bildverarbeitung beschreiben: Ein Algorithmus ist dabei fähig, Formen bzw.
-          Muster auf Bildern zu erkennen. Ein einfach Beispiel dafür ist die Unterscheidung zwischen Hund und Katze (Objekterkennung) auf
-          einem Bild. Visuelle Intelligenz kann aber auch für Gesichtserkennung eingesetzt werden.
-        </div>
-        <div class="language-processing gen-btn-text" data-title="Sprachliche Intelligenz">
-          Auch bekannt unter Natural Language Processing. Gemeint ist die maschinelle Verarbeitung von natürlicher Sprache: Texte aber auch
-          gesprochene Sprache wird vom Algorithmus erkannt und analysiert. -> Eher neu und am Anfang der Entwicklung, Sinn / Kontext, Weltwissen mit Logik ..
-        </div>
+        <div class="panel" data-name="panel-1"></div>
       </div>
     </div>
   
@@ -200,21 +139,7 @@ const MachineLearning = {
         </p>
       </div>
       <div class="col-2">
-        <button>
-          Überwachtes Lernen
-        </button>
-        <button>
-          Unüberwachtes Lernen
-        </button>
-        <button class="disabled">
-          Deep Learning
-        </button>
-        <button class="disabled">
-          Reinforcement Learning
-        </button>
-        <button class="disabled">
-          Semi-Supervised Learning
-        </button>
+        <div class="term-collection" data-name="collection-1"></div>   
       </div>
     </div>
   
@@ -338,18 +263,36 @@ const MachineLearning = {
   },
   after_render: async () => {
     // progress bar
-    let container = document.querySelectorAll('.ct-ml')
-    let progressBars = document.querySelectorAll('.progress-bar')
+    // let container = document.querySelectorAll('.ct-ml')
+    // let progressBars = document.querySelectorAll('.progress-bar')
+    //
+    // container.forEach((item, index) => {
+    //   let box = item.getBoundingClientRect()
+    //   iteral.push({index: index, progressBar: progressBars[index], width: 0, y0: box.top, y1: box.top + box.height,})
+    // })
+    //
+    // setProgressbar(window.scrollY)
+    // window.onscroll = () => {
+    //   setProgressbar(window.scrollY)
+    // }
 
-    container.forEach((item, index) => {
-      let box = item.getBoundingClientRect()
-      iteral.push({index: index, progressBar: progressBars[index], width: 0, y0: box.top, y1: box.top + box.height,})
+    // term collection
+    const termCollections = document.querySelectorAll('.term-collection')
+    termCollections.forEach(collection=>{
+      const name = collection.getAttribute('data-name')
+      const data = dataTerms.find(term => term.name === name)
+      const item = new Term(collection, data);
+      item.run()
     })
 
-    setProgressbar(window.scrollY)
-    window.onscroll = () => {
-      setProgressbar(window.scrollY)
-    }
+    // panels
+    const panels = document.querySelectorAll('.panel')
+    panels.forEach(panel => {
+      const name = panel.getAttribute('data-name')
+      const data = dataPanels.find(panel => panel.name === name)
+      const item = new Panel(panel, data);
+      item.run()
+    })
 
     // songs
     let svgSong = document.querySelector('.svg-songs')

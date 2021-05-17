@@ -3,6 +3,7 @@ import Home from './views/pages/Home.js';
 import Error404 from './views/pages/404.js';
 import Project from './views/pages/Project.js';
 import Gestures from './views/pages/Gestures.js';
+import GesturesViews from './views/pages/GesturesID.js';
 import MachineLearning from './views/pages/MachineLearning.js';
 import Buzzwords from './views/pages/Buzzwords.js';
 import TrainModel from './views/pages/TrainModel.js';
@@ -19,6 +20,7 @@ const routes = {
   '/machine-learning': MachineLearning,
   '/buzzwords': Buzzwords,
   '/gestures': Gestures,
+  '/gestures/:id': GesturesViews,
   '/train-model': TrainModel,
 };
 
