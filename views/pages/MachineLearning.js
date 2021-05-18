@@ -10,7 +10,6 @@ const MachineLearning = {
   <article class="ct-ml story-1">
   
   <div class="ct-fixed">    
-    <span class="progress-bar"></span>
     <div class="chapter"><p><span class="expand-info" data-info=": Künstliche Intelligenz">Kapitel 1</span></p></div>
   </div>
   
@@ -86,7 +85,6 @@ const MachineLearning = {
   <article class="ct-ml story-2">
   
   <div class="ct-fixed">
-    <span class="progress-bar"></span>
     <div class="chapter"><p><span class="expand-info" data-info=": Machine Learning">Kapitel 2</span></p></div>
   </div>
   
@@ -118,9 +116,8 @@ const MachineLearning = {
           -> Songs bewerten
         </p>
       </div>
-      <div class="col-2">
-        <div class="svg-songs ct-svg"></div>
-        <div class="info"></div>
+      <div class="col-2">   
+        <div class="collection--image" data-name="svg-songs"></div>   
       </div>
     </div>
   
@@ -175,7 +172,6 @@ const MachineLearning = {
   <article class="ct-ml story-3">
   
   <div class="ct-fixed">
-    <span class="progress-bar"></span>
     <div class="chapter"><p><span class="expand-info" data-info=": Datenproblematik">Kapitel 3</span></p></div>
   </div>
   
@@ -222,7 +218,6 @@ const MachineLearning = {
   <article class="ct-ml story-4">
   
   <div class="ct-fixed">
-    <span class="progress-bar" data-width="60"></span>
     <div class="chapter"><p><span class="expand-info" data-info=": Zukunft">Kapitel 4</span></p></div>
   </div>
   
@@ -262,141 +257,38 @@ const MachineLearning = {
     `;
   },
   after_render: async () => {
-    // progress bar
-    // let container = document.querySelectorAll('.ct-ml')
-    // let progressBars = document.querySelectorAll('.progress-bar')
-    //
-    // container.forEach((item, index) => {
-    //   let box = item.getBoundingClientRect()
-    //   iteral.push({index: index, progressBar: progressBars[index], width: 0, y0: box.top, y1: box.top + box.height,})
-    // })
-    //
-    // setProgressbar(window.scrollY)
-    // window.onscroll = () => {
-    //   setProgressbar(window.scrollY)
-    // }
 
     // term collection
     const termCollections = document.querySelectorAll('.term-collection')
     termCollections.forEach(collection=>{
       const name = collection.getAttribute('data-name')
-      const data = dataTerms.find(term => term.name === name)
-      const item = new Term(collection, data);
+      const data = COLLECTION_TERMS.find(term => term.name === name)
+      const item = new CollectionTerm(collection, data);
       item.run()
     })
 
     // panels
-    const panels = document.querySelectorAll('.panel')
-    panels.forEach(panel => {
-      const name = panel.getAttribute('data-name')
-      const data = dataPanels.find(panel => panel.name === name)
-      const item = new Panel(panel, data);
+    const collection_panels = document.querySelectorAll('.panel')
+    collection_panels.forEach(collection => {
+      const name = collection.getAttribute('data-name')
+      const data = COLLECTION_PANELS.find(panel => panel.name === name)
+      const item = new CollectionPanel(collection, data);
       item.run()
     })
 
     // songs
-    let svgSong = document.querySelector('.svg-songs')
-    let svg1 = new SvgKlickItem('svg-songs', svgSong,SVG__SONG, ['>','alle Daten darstellen', 'Daten trainieren', 'KI Vorhersage', 'zurücksetzen'] )
-    svg1.run()
-
-    // gen-btn-text
-    let genBtnTex = document.querySelectorAll('.gen-btn-text')
-    genBtnTex.forEach(btn => {
-      let ct = btn.parentElement.previousElementSibling
-      let parent = btn.parentElement;
-      let title = btn.getAttribute('data-title')
-      let item = new GenBtnText(title, ct, parent, btn);
+    const collection_image = document.querySelectorAll('.collection--image')
+    collection_image.forEach(collection => {
+      const name = collection.getAttribute('data-name')
+      const data = COLLECTION_IMAGES.find(item => item.name === name)
+      const item = new CollectionImage(collection, data);
       item.run()
     })
+
+
   }
 };
 
-
-class SvgKlickItem{
-  constructor(id, container, source, indications) {
-    this.id = id;
-    this.container = container;
-    this.base = source
-    this.indications = indications;
-    this.btn = document.createElement('BUTTON')
-    this.btn.classList.add('btn-svg')
-    this.index = -1
-    this.layers = null
-    this.length = null
-  }
-  create(){
-    this.btn.innerText=this.indications[this.index+1]
-    this.container.innerHTML = this.base
-    this.container.appendChild(this.btn)
-    this.btn.onclick = () => this.update(this.index++)
-    this.layers = document.querySelectorAll(`.${this.id}-layer`)
-    this.length = this.layers.length
-  }
-  update(){
-    this.layers.forEach(layer => layer.classList.remove('visible'))
-    if(this.index>=this.length) this.index=-1
-    this.btn.innerText=this.indications[this.index+1]
-    let it = this.layers[this.index]
-    console.log(this.index)
-    if(it) it.classList.add('visible')
-  }
-  run(){
-    this.create()
-  }
-}
-
-let iteral = [];
-
-
-function setProgressbar(pos) {
-  let active = iteral.find(item => {
-    return pos >= item.y0 && pos <= item.y1
-  })
-  if (active?.progressBar) {
-    let width = 100 / (active.y1 - active.y0) * (pos - active.y0)
-    active.progressBar.style.width = width + '%';
-  }
-}
-
-
-class GenBtnText {
-  constructor(title, container, parent, self) {
-    this.title = title
-    this.container = container
-    this.parent = parent
-    this.self = self;
-    this.el = document.createElement('BUTTON');
-    this.text = this.self.innerHTML;
-  }
-
-  hide() {
-    this.self.classList.add('invisible')
-  }
-
-  create() {
-    this.el.innerText = this.title;
-    this.el.classList.add('btn-gen-btn-text')
-    this.container.appendChild(this.el)
-  }
-
-  event() {
-    this.el.onclick = () => this.click()
-  }
-
-  click() {
-    Array.from(this.container.children).forEach(btn => {
-      if (btn.tagName === 'BUTTON') btn.classList.remove('active')
-    })
-    this.parent.innerHTML = this.text
-    this.el.classList.add('active')
-  }
-
-  run() {
-    this.hide();
-    this.create();
-    this.event()
-  }
-}
 
 
 export default MachineLearning;

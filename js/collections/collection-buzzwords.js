@@ -1,4 +1,4 @@
-const dataBuzzwords = [
+const COLLECTION_BUZZWORDS = [
   {
     title: 'Künstliche Intelligenz',
     keyword: 'Theorie, Forschungsbereich',

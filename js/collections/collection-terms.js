@@ -1,9 +1,9 @@
-class Term {
+class CollectionTerm {
   constructor(parent, data) {
     this.parent = parent;
     this.data = data;
   }
-  init(){
+  create(){
     this.parent.classList.add('randomised')
     this.data.content.forEach(item => {
       const el = document.createElement('BUTTON')
@@ -12,16 +12,12 @@ class Term {
       this.parent.appendChild(el)
     })
   }
-  create(){
-    console.log("term create")
-  }
   run(){
-    this.init();
     this.create();
   }
 }
 
-const dataTerms = [
+const COLLECTION_TERMS = [
   {
     name: "collection-0",
     content: ['Netflix Algorithmus', 'Sprachverarbeitung', 'Hund oder Katze', 'Roboter', 'Assistenzsysteme', 'Marketing', 'Deep Learning',

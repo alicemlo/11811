@@ -405,8 +405,9 @@ section.machine-learning .randomised {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0 1rem;
-  align-items: center;
-  justify-content: space-around; }
+  align-content: center;
+  justify-content: space-around;
+  height: 100%; }
 
 section.machine-learning .ct-svg {
   max-width: 25rem; }
@@ -420,9 +421,12 @@ section.machine-learning .btn-gen-btn-text {
 
 .panel {
   padding: 0.5rem;
-  background: rgba(82, 125, 111, 0.3); }
+  background: rgba(82, 125, 111, 0.3);
+  font-size: 0.9rem; }
   .panel .panel-header {
     display: flex; }
+    .panel .panel-header > div {
+      margin-right: 0.5rem; }
   .panel .panel-header > div {
     color: #527D6F;
     transition: color 150ms;

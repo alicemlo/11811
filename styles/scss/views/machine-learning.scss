@@ -74,8 +74,9 @@ section.machine-learning {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0 1rem;
-    align-items: center;
+    align-content: center;
     justify-content: space-around;
+    height: 100%;
   }
 
   .ct-svg{
@@ -99,9 +100,13 @@ section.machine-learning {
 .panel{
   padding: 0.5rem;
   background: rgba(82, 125, 111, 0.3);
+  font-size: 0.9rem;
 
   .panel-header{
     display: flex;
+    >div{
+      margin-right: 0.5rem;
+    }
   }
 
   .panel-header>div{

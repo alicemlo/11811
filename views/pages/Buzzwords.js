@@ -117,7 +117,7 @@ const Buzzwords = {
     keyword = document.querySelector('.keyword')
     cps.forEach(item => {
       let title = item.firstElementChild.innerText;
-      let content = dataBuzzwords.find(item => item.title === title)
+      let content = COLLECTION_BUZZWORDS.find(item => item.title === title)
       let cp = new BuzzComponent(item, title, content?.content || '', content?.keyword || '');
       cp.run()
     })

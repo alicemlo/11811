@@ -1,4 +1,4 @@
-class Panel{
+class CollectionPanel{
   constructor(parent, data) {
     this.parent = parent;
     this.data = data;
@@ -44,7 +44,7 @@ class Panel{
   }
 }
 
-const dataPanels = [
+const COLLECTION_PANELS = [
   {
     name: 'panel-0',
     content: [
