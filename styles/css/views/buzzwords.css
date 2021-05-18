@@ -1,0 +1,84 @@
+section.buzzwords {
+  display: grid;
+  grid-template-columns: 70% 30%; }
+  section.buzzwords > div.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; }
+  section.buzzwords aside {
+    height: 80%;
+    width: 100%;
+    position: fixed;
+    top: 10%;
+    left: 70%;
+    display: flex;
+    align-items: center; }
+    section.buzzwords aside > div {
+      width: 25%; }
+    section.buzzwords aside i.keyword, section.buzzwords aside .def-content {
+      font-size: 0.9rem;
+      margin: 0.8rem 0; }
+  section.buzzwords article {
+    margin: 1rem;
+    max-width: 40rem; }
+  section.buzzwords h4, section.buzzwords h5 {
+    font-weight: normal; }
+  section.buzzwords h4 {
+    font-size: 0.9rem; }
+  section.buzzwords h5 {
+    font-size: 0.8rem; }
+  section.buzzwords p {
+    font-size: 0.8rem; }
+  section.buzzwords .flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly; }
+  section.buzzwords .ct-buzz {
+    padding: 1rem;
+    background: rgba(82, 125, 111, 0.45); }
+    section.buzzwords .ct-buzz.no-comp {
+      background: transparent; }
+    section.buzzwords .ct-buzz > h4 {
+      text-align: center; }
+  section.buzzwords .component {
+    padding: 0.7rem 1rem;
+    background: rgba(82, 125, 111, 0.35);
+    margin: 1rem;
+    min-width: 17rem;
+    cursor: pointer; }
+    section.buzzwords .component:hover {
+      box-shadow: 0 0 8px 3px rgba(59, 186, 125, 0.55); }
+    section.buzzwords .component.active-buzz {
+      box-shadow: 0 0 8px 5px rgba(59, 186, 125, 0.55); }
+    section.buzzwords .component > .component {
+      margin: 1rem 0;
+      padding: 0.5rem;
+      min-width: 10rem; }
+    section.buzzwords .component.no-mw {
+      min-width: unset; }
+  section.buzzwords .ct-hover {
+    padding: 0.7rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(28, 25, 34, 0.82);
+    min-width: 7rem;
+    max-width: 25rem;
+    transform: translateX(-50%);
+    width: auto; }
+    section.buzzwords .ct-hover > * {
+      font-size: 0.9rem; }
+
+@keyframes wiggle {
+  0% {
+    transform: translateY(0); }
+  30% {
+    transform: translateY(-10px); }
+  50% {
+    transform: translateY(4px); }
+  70% {
+    transform: translateY(-15px); }
+  100% {
+    transform: translateY(0); } }

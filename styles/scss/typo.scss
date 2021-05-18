@@ -1,6 +1,18 @@
+@import url("https://use.typekit.net/vzp0hqq.css");
+
+
 body, textarea, input, button{
-  font-family: 'Fira Mono', monospace;
+  font-family: droid-sans-mono, monospace;
 }
+
+.machine-learning{
+  .col-1{
+    >*{
+      font-family: droid-sans-mono, 'Helvetica', 'Arial', sans-serif;
+    }
+  }
+}
+
 
 h1, h2, h3, h4, h5, h6{
   font-weight: normal;
@@ -14,6 +26,7 @@ h1{
     font-size: 1.6rem;
   }
 }
+
 
 h2{
   font-size: 1.5rem;

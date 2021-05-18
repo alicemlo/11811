@@ -1,0 +1,21 @@
+article.create{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: calc(100vh - 6rem);
+  padding: 1rem 3rem;
+  grid-gap: 2rem;
+  max-width: 85rem;
+
+
+  .col-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+  }
+
+
+  button{
+    margin-right: 1rem;
+  }
+}

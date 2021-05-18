@@ -1,3 +1,5 @@
+p5.disableFriendlyErrors = true;
+
 let fraction = 1;
 
 window.setup = setup;
@@ -77,6 +79,8 @@ function setup(){
 
   brainCreate = ml5.neuralNetwork(options);
   fraction = 640*width
+
+  frameRate(30);
 }
 
 function draw() {
@@ -137,5 +141,11 @@ function draw() {
     if(tutGestures[tutIndex].completed) tutIndex++
     else tutGestures[tutIndex].perform()
   }
+}
+
+
+window.onresize = () => {
+  width = window.innerWidth
+  height = window.innerHeight
 }
 

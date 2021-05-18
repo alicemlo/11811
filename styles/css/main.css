@@ -1,3 +1,4 @@
+@import url("https://use.typekit.net/vzp0hqq.css");
 header, footer {
   position: fixed;
   left: 0;
@@ -148,7 +149,10 @@ footer {
     transform: translateX(-42%); } }
 
 body, textarea, input, button {
-  font-family: 'Fira Mono', monospace; }
+  font-family: droid-sans-mono, monospace; }
+
+.machine-learning .col-1 > * {
+  font-family: droid-sans-mono, 'Helvetica', 'Arial', sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
@@ -557,6 +561,20 @@ section.buzzwords .ct-hover {
     transform: translateY(-15px); }
   100% {
     transform: translateY(0); } }
+
+article.create {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: calc(100vh - 6rem);
+  padding: 1rem 3rem;
+  grid-gap: 2rem;
+  max-width: 85rem; }
+  article.create .col-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  article.create button {
+    margin-right: 1rem; }
 
 * {
   position: relative;
