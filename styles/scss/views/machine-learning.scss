@@ -127,11 +127,21 @@ section.machine-learning {
   .panel-body{
     margin-top: 1rem;
   }
+
+  .panel-image{
+    margin-top: 2rem;
+    svg{
+      max-width: 25rem;
+    }
+  }
+}
+
+.text-svg{
+
 }
 
 .btn-svg{
   display: inline-block;
   padding: 0.1rem;
-  margin-left: 0.6rem;
   font-size: 0.88rem;
 }

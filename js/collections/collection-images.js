@@ -19,9 +19,10 @@ class CollectionImage{
 
   init(){
     this.nextButton.classList.add('btn-svg')
-    this.nextButton.innerText = this.indications[0]
+    this.ctText.classList.add('text-svg')
+    this.nextButton.innerText = '-> '+this.indications[0]
     this.svgContainer.innerHTML = this.source
-    this.ctText.innerText = this.text[0]
+    this.ctText.innerText = this.text[0] + '  '
     this.parent.appendChild(this.svgContainer)
     this.parent.appendChild(this.ctText)
     this.ctText.appendChild(this.nextButton)
@@ -47,8 +48,8 @@ class CollectionImage{
     const i = this.index
     const activeLayer = this.layers[i]
     if(activeLayer) activeLayer.classList.add('visible')
-    this.nextButton.innerText = this.indications[i+1]
-    this.ctText.innerText = this.text[i+1]
+    this.nextButton.innerText = '-> '+this.indications[i+1]
+    this.ctText.innerText = this.text[i+1]+ '  '
     this.ctText.appendChild(this.nextButton)
   }
 
@@ -62,24 +63,52 @@ const COLLECTION_IMAGES = [
   {
     name: 'svg-songs',
     content: {
-      "indications": ['start','alle Daten darstellen', 'Modell trainieren', 'Erste Vorhersage', 'Ergebnis', 'Mehr Vorhersagen', 'Übersicht', 'neu starten'],
-      'source': 'songs',
-      'text': [
-        "Du erstellst eine Liste mit 14 Songs. 7 Davon magst du, 7 nicht. Die Songs werden nach den Eigenschafen Lautstärke und Tempo auf grafisch darsgestellt.",
+      indications: ['Daten visualisieren','alle Daten darstellen', 'Modell trainieren', 'Erste Vorhersage', 'Ergebnis', 'Mehr Vorhersagen', 'Übersicht', 'neu starten'],
+      source: 'songs',
+      text: [
+        "Du erstellst eine Liste mit 14 Songs. 7 Davon magst du, 7 nicht",
+        "Die Songs werden nach den Eigenschafen Lautstärke und Tempo grafisch darsgestellt",
+        "So sehen alle Daten grafisch dargestellt aus. Mit diesem Datensatz kann das Modell trainiert werden",
         "",
-        "text 3",
-        "text 4",
-        "text 5",
-        "text 6",
-        "text 7",
+        "Wir können nun irgendeinen neuen Song darstellen. Du musst jetzt nicht mehr selber klassifizieren, ob du den Song magst oder nicht. Wir lassen das Modell diese Klassifizierung durchführen",
+        "So wie es aussieht, wirst du diesen Song mögen",
+        "Wie können das Modell mit beliebig vielen Songs austesten.",
         ''
       ]
     }
   },
   {
-    name: '',
+    name: 'svg-cluster',
     content: {
-
+      indications:['Daten darstellen', 'Cluster organisieren', 'neu'],
+      source: 'cluster',
+      text: [
+        "Bei einem Cluster...",
+        "text 2",
+        "text 2",
+      ]
+    }
+  },
+  {
+    name: 'svg-beispiel 1',
+    content: {
+      indications:['clustering', 'reset'],
+      source: 'cluster',
+      text: [
+        "text 1",
+        "text 2",
+      ]
+    }
+  },
+  {
+    name: 'svg-beispiel 2',
+    content: {
+      indications:['clustering', 'reset'],
+      source: 'cluster',
+      text: [
+        "text 1",
+        "text 2",
+      ]
     }
   },
 ]
@@ -90,6 +119,388 @@ const COLLECTION_IMAGES = [
 
 const SVGS = [
   {
+    name: 'cluster',
+    content: ` 
+<svg id="cluster" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330.8072 330.8072">
+  <defs>
+    <style>
+      .clu-1, .clu-3, .clu-5, .clu-7 {
+        fill: none;
+        stroke: #3bba7d;
+        stroke-miterlimit: 10;
+      }
+
+      .clu-1, .clu-3 {
+        stroke-linecap: round;
+      }
+
+      .clu-1 {
+        stroke-width: 0.7702px;
+      }
+
+      .clu-2 {
+        font-size: 9px;
+      }
+
+      .clu-10, .clu-12, .clu-2, .clu-4, .clu-6, .clu-9 {
+        fill: #3bba7d;
+      }
+
+      .clu-2, .clu-4 {
+        font-family: FiraMono-Regular, Fira Mono;
+      }
+
+      .clu-3 {
+        stroke-width: 1.1645px;
+      }
+
+      .clu-4 {
+        font-size: 14px;
+      }
+
+      .clu-5 {
+        stroke-width: 0.7644px;
+      }
+
+      .clu-7 {
+        stroke-width: 0.7168px;
+      }
+
+      .clu-8 {
+        opacity: 0.6;
+      }
+
+      .clu-9 {
+        opacity: 0.57;
+      }
+
+      .clu-10 {
+        opacity: 0.76;
+      }
+
+      .clu-11 {
+        opacity: 0.5;
+      }
+
+      .clu-12 {
+        opacity: 0.34;
+      }
+    </style>
+  </defs>
+  <g id="Base">
+    <g>
+      <line class="clu-1" x1="16.25" y1="23.9539" x2="19.75" y2="23.9539"/>
+      <line class="clu-1" x1="16.25" y1="65.2396" x2="19.75" y2="65.2396"/>
+      <line class="clu-1" x1="16.25" y1="106.5254" x2="19.75" y2="106.5254"/>
+      <line class="clu-1" x1="16.25" y1="147.8111" x2="19.75" y2="147.8111"/>
+      <line class="clu-1" x1="16.25" y1="189.0968" x2="19.75" y2="189.0968"/>
+      <line class="clu-1" x1="16.25" y1="230.3825" x2="19.75" y2="230.3825"/>
+      <line class="clu-1" x1="16.25" y1="271.6682" x2="19.75" y2="271.6682"/>
+      <text class="clu-2" transform="translate(4.7035 273.2344)">1</text>
+      <text class="clu-2" transform="translate(4.7015 25.2343)">7</text>
+      <text class="clu-2" transform="translate(4.7035 66.5683)">6</text>
+      <text class="clu-2" transform="translate(4.7035 107.9023)">5</text>
+      <text class="clu-2" transform="translate(4.7035 149.2343)">4</text>
+      <text class="clu-2" transform="translate(4.7035 190.5683)">3</text>
+      <text class="clu-2" transform="translate(4.7035 231.9023)">2</text>
+      <line class="clu-3" x1="20.0383" y1="311.9617" x2="20.0383" y2="11.4543"/>
+    </g>
+    <g>
+      <line class="clu-1" x1="308.5004" y1="312.5008" x2="308.5004" y2="316.0008"/>
+      <line class="clu-1" x1="267.2147" y1="312.5008" x2="267.2147" y2="316.0008"/>
+      <line class="clu-1" x1="225.929" y1="312.5008" x2="225.929" y2="316.0008"/>
+      <line class="clu-1" x1="184.6432" y1="312.5008" x2="184.6432" y2="316.0008"/>
+      <line class="clu-1" x1="143.3575" y1="312.5008" x2="143.3575" y2="316.0008"/>
+      <line class="clu-1" x1="102.0718" y1="312.5008" x2="102.0718" y2="316.0008"/>
+      <line class="clu-1" x1="60.7861" y1="312.5008" x2="60.7861" y2="316.0008"/>
+      <text class="clu-2" transform="translate(58.0691 324.916)">1</text>
+      <text class="clu-2" transform="translate(306.0691 324.916)">7</text>
+      <text class="clu-2" transform="translate(264.7358 324.916)">6</text>
+      <text class="clu-2" transform="translate(223.4024 324.916)">5</text>
+      <text class="clu-2" transform="translate(182.0691 324.916)">4</text>
+      <text class="clu-2" transform="translate(140.7357 324.916)">3</text>
+      <text class="clu-2" transform="translate(99.4024 324.916)">2</text>
+      <line class="clu-3" x1="20.4926" y1="312" x2="321" y2="312"/>
+    </g>
+  </g>
+  <g id="cluster-layer-1" class="cluster-layer" visibility="hidden">
+    <g id="Label">
+      <text class="clu-4" transform="translate(40.0691 26.916)">unclustered</text>
+      <rect class="clu-5" x="35.991" y="12.5" width="99.509" height="20"/>
+    </g>
+    <g id="g3">
+      <circle class="clu-6" cx="277" cy="17" r="6"/>
+      <circle class="clu-6" cx="195" cy="54" r="6"/>
+      <circle class="clu-6" cx="298" cy="13" r="6"/>
+      <circle class="clu-6" cx="299" cy="31" r="6"/>
+      <circle class="clu-6" cx="311" cy="43" r="6"/>
+      <circle class="clu-6" cx="174" cy="92" r="6"/>
+      <circle class="clu-6" cx="212" cy="93" r="6"/>
+      <circle class="clu-6" cx="242" cy="38" r="6"/>
+      <circle class="clu-6" cx="248" cy="73" r="6"/>
+      <circle class="clu-6" cx="214" cy="50" r="6"/>
+      <circle class="clu-6" cx="231" cy="55" r="6"/>
+      <circle class="clu-6" cx="259" cy="44" r="6"/>
+      <circle class="clu-6" cx="277" cy="78" r="6"/>
+      <circle class="clu-6" cx="227" cy="38" r="6"/>
+      <circle class="clu-6" cx="275" cy="60" r="6"/>
+      <circle class="clu-6" cx="206" cy="141" r="6"/>
+      <circle class="clu-6" cx="232" cy="147" r="6"/>
+      <circle class="clu-6" cx="177" cy="72" r="6"/>
+      <circle class="clu-6" cx="194" cy="99" r="6"/>
+      <circle class="clu-6" cx="224" cy="74" r="6"/>
+      <circle class="clu-6" cx="228" cy="103" r="6"/>
+      <circle class="clu-6" cx="242" cy="121" r="6"/>
+      <circle class="clu-6" cx="184" cy="43" r="6"/>
+      <circle class="clu-6" cx="188" cy="18" r="6"/>
+      <circle class="clu-6" cx="196" cy="66" r="6"/>
+      <circle class="clu-6" cx="262" cy="72" r="6"/>
+      <circle class="clu-6" cx="204" cy="111" r="6"/>
+      <circle class="clu-6" cx="221" cy="128" r="6"/>
+      <circle class="clu-6" cx="227" cy="163" r="6"/>
+      <circle class="clu-6" cx="244" cy="90" r="6"/>
+      <circle class="clu-6" cx="261" cy="117" r="6"/>
+      <circle class="clu-6" cx="291" cy="92" r="6"/>
+      <circle class="clu-6" cx="303" cy="104" r="6"/>
+      <circle class="clu-6" cx="275" cy="33" r="6"/>
+      <circle class="clu-6" cx="295" cy="152" r="6"/>
+      <circle class="clu-6" cx="206" cy="35" r="6"/>
+      <circle class="clu-6" cx="297" cy="66" r="6"/>
+      <circle class="clu-6" cx="251" cy="61" r="6"/>
+      <circle class="clu-6" cx="306" cy="83" r="6"/>
+      <circle class="clu-6" cx="269" cy="108" r="6"/>
+      <circle class="clu-6" cx="294" cy="44" r="6"/>
+      <circle class="clu-6" cx="318" cy="23" r="6"/>
+      <circle class="clu-6" cx="248" cy="168" r="6"/>
+    </g>
+    <g id="g2">
+      <circle class="clu-6" cx="221" cy="281" r="6"/>
+      <circle class="clu-6" cx="176" cy="279" r="6"/>
+      <circle class="clu-6" cx="183" cy="250" r="6"/>
+      <circle class="clu-6" cx="193" cy="224" r="6"/>
+      <circle class="clu-6" cx="247" cy="291" r="6"/>
+      <circle class="clu-6" cx="166" cy="247" r="6"/>
+      <circle class="clu-6" cx="178" cy="266" r="6"/>
+      <circle class="clu-6" cx="231" cy="230" r="6"/>
+      <circle class="clu-6" cx="295" cy="228" r="6"/>
+      <circle class="clu-6" cx="307" cy="240" r="6"/>
+      <circle class="clu-6" cx="313" cy="275" r="6"/>
+      <circle class="clu-6" cx="273" cy="244" r="6"/>
+      <circle class="clu-6" cx="321" cy="267" r="6"/>
+      <circle class="clu-6" cx="318" cy="253" r="6"/>
+      <circle class="clu-6" cx="319" cy="254" r="6"/>
+      <circle class="clu-6" cx="315" cy="224" r="6"/>
+      <circle class="clu-6" cx="289" cy="248" r="6"/>
+      <circle class="clu-6" cx="284" cy="209" r="6"/>
+      <circle class="clu-6" cx="242" cy="195" r="6"/>
+      <circle class="clu-6" cx="254" cy="207" r="6"/>
+      <circle class="clu-6" cx="260" cy="242" r="6"/>
+      <circle class="clu-6" cx="206" cy="268" r="6"/>
+      <circle class="clu-6" cx="220" cy="211" r="6"/>
+      <circle class="clu-6" cx="206" cy="287" r="6"/>
+      <circle class="clu-6" cx="285" cy="177" r="6"/>
+      <circle class="clu-6" cx="268" cy="234" r="6"/>
+      <circle class="clu-6" cx="265" cy="220" r="6"/>
+      <circle class="clu-6" cx="160" cy="227" r="6"/>
+      <circle class="clu-6" cx="236" cy="266" r="6"/>
+      <circle class="clu-6" cx="208" cy="249" r="6"/>
+      <circle class="clu-6" cx="225" cy="176" r="6"/>
+      <circle class="clu-6" cx="236" cy="251" r="6"/>
+      <circle class="clu-6" cx="202" cy="172" r="6"/>
+      <circle class="clu-6" cx="306" cy="203" r="6"/>
+      <circle class="clu-6" cx="266" cy="221" r="6"/>
+      <circle class="clu-6" cx="210" cy="209" r="6"/>
+      <circle class="clu-6" cx="265" cy="186" r="6"/>
+      <circle class="clu-6" cx="229" cy="197" r="6"/>
+      <circle class="clu-6" cx="207" cy="195" r="6"/>
+      <circle class="clu-6" cx="202" cy="238" r="6"/>
+      <circle class="clu-6" cx="236" cy="215" r="6"/>
+      <circle class="clu-6" cx="247" cy="239" r="6"/>
+      <circle class="clu-6" cx="178" cy="226" r="6"/>
+      <circle class="clu-6" cx="208" cy="196" r="6"/>
+      <circle class="clu-6" cx="214" cy="231" r="6"/>
+    </g>
+    <g id="g1">
+      <circle class="clu-6" cx="170" cy="188" r="6"/>
+      <circle class="clu-6" cx="189" cy="184" r="6"/>
+      <circle class="clu-6" cx="42" cy="183" r="6"/>
+      <circle class="clu-6" cx="43" cy="109" r="6"/>
+      <circle class="clu-6" cx="54" cy="149" r="6"/>
+      <circle class="clu-6" cx="37" cy="172" r="6"/>
+      <circle class="clu-6" cx="79" cy="159" r="6"/>
+      <circle class="clu-6" cx="71" cy="187" r="6"/>
+      <circle class="clu-6" cx="62" cy="175" r="6"/>
+      <circle class="clu-6" cx="107" cy="213" r="6"/>
+      <circle class="clu-6" cx="107" cy="143" r="6"/>
+      <circle class="clu-6" cx="95" cy="172" r="6"/>
+      <circle class="clu-6" cx="66" cy="215" r="6"/>
+      <circle class="clu-6" cx="96" cy="190" r="6"/>
+      <circle class="clu-6" cx="110" cy="187" r="6"/>
+      <circle class="clu-6" cx="131" cy="164" r="6"/>
+      <circle class="clu-6" cx="108" cy="160" r="6"/>
+      <circle class="clu-6" cx="79" cy="217" r="6"/>
+      <circle class="clu-6" cx="152" cy="206" r="6"/>
+      <circle class="clu-6" cx="190" cy="202" r="6"/>
+      <circle class="clu-6" cx="185" cy="145" r="6"/>
+      <circle class="clu-6" cx="169" cy="208" r="6"/>
+      <circle class="clu-6" cx="160" cy="145" r="6"/>
+      <circle class="clu-6" cx="150" cy="128" r="6"/>
+      <circle class="clu-6" cx="147" cy="111" r="6"/>
+      <circle class="clu-6" cx="127" cy="139" r="6"/>
+      <circle class="clu-6" cx="80" cy="177" r="6"/>
+      <circle class="clu-6" cx="102" cy="202" r="6"/>
+      <circle class="clu-6" cx="132" cy="177" r="6"/>
+      <circle class="clu-6" cx="144" cy="189" r="6"/>
+      <circle class="clu-6" cx="136" cy="217" r="6"/>
+      <circle class="clu-6" cx="96" cy="250" r="6"/>
+      <circle class="clu-6" cx="161" cy="163" r="6"/>
+      <circle class="clu-6" cx="127" cy="120" r="6"/>
+      <circle class="clu-6" cx="144" cy="147" r="6"/>
+      <circle class="clu-6" cx="174" cy="122" r="6"/>
+      <circle class="clu-6" cx="127" cy="205" r="6"/>
+    </g>
+  </g>
+  <g id="cluster-layer-2" class="cluster-layer" visibility="hidden">
+    <g id="Label-2" data-name="Label">
+      <text class="clu-4" transform="translate(40.0691 26.916)">clustered</text>
+      <rect class="clu-7" x="35.991" y="12.5" width="87.509" height="20"/>
+    </g>
+    <g id="g3-2" data-name="g3" class="clu-8">
+      <circle class="clu-9" cx="277" cy="17" r="6"/>
+      <circle class="clu-9" cx="195" cy="54" r="6"/>
+      <circle class="clu-9" cx="298" cy="13" r="6"/>
+      <circle class="clu-9" cx="299" cy="31" r="6"/>
+      <circle class="clu-9" cx="311" cy="43" r="6"/>
+      <circle class="clu-9" cx="174" cy="92" r="6"/>
+      <circle class="clu-9" cx="212" cy="93" r="6"/>
+      <circle class="clu-9" cx="242" cy="38" r="6"/>
+      <circle class="clu-9" cx="248" cy="73" r="6"/>
+      <circle class="clu-9" cx="214" cy="50" r="6"/>
+      <circle class="clu-9" cx="231" cy="55" r="6"/>
+      <circle class="clu-9" cx="259" cy="44" r="6"/>
+      <circle class="clu-9" cx="277" cy="78" r="6"/>
+      <circle class="clu-9" cx="227" cy="38" r="6"/>
+      <circle class="clu-9" cx="275" cy="60" r="6"/>
+      <circle class="clu-9" cx="206" cy="141" r="6"/>
+      <circle class="clu-9" cx="232" cy="147" r="6"/>
+      <circle class="clu-9" cx="177" cy="72" r="6"/>
+      <circle class="clu-9" cx="194" cy="99" r="6"/>
+      <circle class="clu-9" cx="224" cy="74" r="6"/>
+      <circle class="clu-9" cx="228" cy="103" r="6"/>
+      <circle class="clu-9" cx="242" cy="121" r="6"/>
+      <circle class="clu-9" cx="184" cy="43" r="6"/>
+      <circle class="clu-9" cx="188" cy="18" r="6"/>
+      <circle class="clu-9" cx="196" cy="66" r="6"/>
+      <circle class="clu-9" cx="262" cy="72" r="6"/>
+      <circle class="clu-9" cx="204" cy="111" r="6"/>
+      <circle class="clu-9" cx="221" cy="128" r="6"/>
+      <circle class="clu-9" cx="227" cy="163" r="6"/>
+      <circle class="clu-9" cx="244" cy="90" r="6"/>
+      <circle class="clu-9" cx="261" cy="117" r="6"/>
+      <circle class="clu-9" cx="291" cy="92" r="6"/>
+      <circle class="clu-9" cx="303" cy="104" r="6"/>
+      <circle class="clu-9" cx="275" cy="33" r="6"/>
+      <circle class="clu-9" cx="295" cy="152" r="6"/>
+      <circle class="clu-9" cx="206" cy="35" r="6"/>
+      <circle class="clu-9" cx="297" cy="66" r="6"/>
+      <circle class="clu-9" cx="251" cy="61" r="6"/>
+      <circle class="clu-9" cx="306" cy="83" r="6"/>
+      <circle class="clu-9" cx="269" cy="108" r="6"/>
+      <circle class="clu-9" cx="294" cy="44" r="6"/>
+      <circle class="clu-9" cx="318" cy="23" r="6"/>
+      <circle class="clu-9" cx="248" cy="168" r="6"/>
+    </g>
+    <g id="g2-2" data-name="g2">
+      <circle class="clu-6" cx="221" cy="281" r="6"/>
+      <circle class="clu-6" cx="176" cy="279" r="6"/>
+      <circle class="clu-6" cx="183" cy="250" r="6"/>
+      <circle class="clu-6" cx="193" cy="224" r="6"/>
+      <circle class="clu-6" cx="247" cy="291" r="6"/>
+      <circle class="clu-6" cx="166" cy="247" r="6"/>
+      <circle class="clu-6" cx="178" cy="266" r="6"/>
+      <circle class="clu-6" cx="231" cy="230" r="6"/>
+      <circle class="clu-6" cx="295" cy="228" r="6"/>
+      <circle class="clu-6" cx="307" cy="240" r="6"/>
+      <circle class="clu-6" cx="313" cy="275" r="6"/>
+      <circle class="clu-6" cx="273" cy="244" r="6"/>
+      <circle class="clu-6" cx="321" cy="267" r="6"/>
+      <circle class="clu-6" cx="318" cy="253" r="6"/>
+      <circle class="clu-6" cx="319" cy="254" r="6"/>
+      <circle class="clu-6" cx="315" cy="224" r="6"/>
+      <circle class="clu-6" cx="289" cy="248" r="6"/>
+      <circle class="clu-6" cx="284" cy="209" r="6"/>
+      <circle class="clu-6" cx="242" cy="195" r="6"/>
+      <circle class="clu-6" cx="254" cy="207" r="6"/>
+      <circle class="clu-6" cx="260" cy="242" r="6"/>
+      <circle class="clu-6" cx="206" cy="268" r="6"/>
+      <circle class="clu-6" cx="220" cy="211" r="6"/>
+      <circle class="clu-6" cx="206" cy="287" r="6"/>
+      <circle class="clu-6" cx="285" cy="177" r="6"/>
+      <circle class="clu-6" cx="268" cy="234" r="6"/>
+      <circle class="clu-6" cx="265" cy="220" r="6"/>
+      <circle class="clu-6" cx="160" cy="227" r="6"/>
+      <circle class="clu-6" cx="236" cy="266" r="6"/>
+      <circle class="clu-6" cx="208" cy="249" r="6"/>
+      <circle class="clu-6" cx="225" cy="176" r="6"/>
+      <circle class="clu-6" cx="236" cy="251" r="6"/>
+      <circle class="clu-10" cx="202" cy="172" r="6"/>
+      <circle class="clu-6" cx="306" cy="203" r="6"/>
+      <circle class="clu-6" cx="266" cy="221" r="6"/>
+      <circle class="clu-6" cx="210" cy="209" r="6"/>
+      <circle class="clu-6" cx="265" cy="186" r="6"/>
+      <circle class="clu-6" cx="229" cy="197" r="6"/>
+      <circle class="clu-6" cx="207" cy="195" r="6"/>
+      <circle class="clu-6" cx="202" cy="238" r="6"/>
+      <circle class="clu-6" cx="236" cy="215" r="6"/>
+      <circle class="clu-6" cx="247" cy="239" r="6"/>
+      <circle class="clu-6" cx="178" cy="226" r="6"/>
+      <circle class="clu-6" cx="208" cy="196" r="6"/>
+      <circle class="clu-6" cx="214" cy="231" r="6"/>
+    </g>
+    <g id="g1-2" data-name="g1" class="clu-11">
+      <circle class="clu-12" cx="170" cy="188" r="6"/>
+      <circle class="clu-12" cx="189" cy="184" r="6"/>
+      <circle class="clu-12" cx="42" cy="183" r="6"/>
+      <circle class="clu-12" cx="43" cy="109" r="6"/>
+      <circle class="clu-12" cx="54" cy="149" r="6"/>
+      <circle class="clu-12" cx="37" cy="172" r="6"/>
+      <circle class="clu-12" cx="79" cy="159" r="6"/>
+      <circle class="clu-12" cx="71" cy="187" r="6"/>
+      <circle class="clu-12" cx="62" cy="175" r="6"/>
+      <circle class="clu-12" cx="107" cy="213" r="6"/>
+      <circle class="clu-12" cx="107" cy="143" r="6"/>
+      <circle class="clu-12" cx="95" cy="172" r="6"/>
+      <circle class="clu-12" cx="66" cy="215" r="6"/>
+      <circle class="clu-12" cx="96" cy="190" r="6"/>
+      <circle class="clu-12" cx="110" cy="187" r="6"/>
+      <circle class="clu-12" cx="131" cy="164" r="6"/>
+      <circle class="clu-12" cx="108" cy="160" r="6"/>
+      <circle class="clu-12" cx="79" cy="217" r="6"/>
+      <circle class="clu-12" cx="152" cy="206" r="6"/>
+      <circle class="clu-12" cx="190" cy="202" r="6"/>
+      <circle class="clu-12" cx="185" cy="145" r="6"/>
+      <circle class="clu-12" cx="169" cy="208" r="6"/>
+      <circle class="clu-12" cx="160" cy="145" r="6"/>
+      <circle class="clu-12" cx="150" cy="128" r="6"/>
+      <circle class="clu-12" cx="147" cy="111" r="6"/>
+      <circle class="clu-12" cx="127" cy="139" r="6"/>
+      <circle class="clu-12" cx="80" cy="177" r="6"/>
+      <circle class="clu-12" cx="102" cy="202" r="6"/>
+      <circle class="clu-12" cx="132" cy="177" r="6"/>
+      <circle class="clu-12" cx="144" cy="189" r="6"/>
+      <circle class="clu-12" cx="136" cy="217" r="6"/>
+      <circle class="clu-12" cx="96" cy="250" r="6"/>
+      <circle class="clu-12" cx="161" cy="163" r="6"/>
+      <circle class="clu-12" cx="127" cy="120" r="6"/>
+      <circle class="clu-12" cx="144" cy="147" r="6"/>
+      <circle class="clu-12" cx="174" cy="122" r="6"/>
+      <circle class="clu-12" cx="127" cy="205" r="6"/>
+    </g>
+  </g>
+</svg>
+    `
+  },
+  {
     name: "songs",
     content:   `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
@@ -98,73 +509,73 @@ const SVGS = [
       .visible{
          visibility: visible !important;
       } 
-      .cls-1 {
+      #song .cls-1 {
         fill: #26243100;
       }
 
-      .cls-2 {
+      #song .cls-2 {
         font-size: 24px;
       }
 
-      .cls-11, .cls-13, .cls-14, .cls-19, .cls-2, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+      #song .cls-11, .cls-13, .cls-14, .cls-19, .cls-2, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
         fill: #3bba7d;
       }
 
-      .cls-11, .cls-14, .cls-19, .cls-2, .cls-5, .cls-7, .cls-9 {
+      #song .cls-11, .cls-14, .cls-19, .cls-2, .cls-5, .cls-7, .cls-9 {
         font-family: FiraMono-Regular, Fira Mono;
       }
 
-      .cls-10, .cls-15, .cls-16, .cls-17, .cls-18, .cls-20, .cls-3, .cls-4 {
+      #song .cls-10, .cls-15, .cls-16, .cls-17, .cls-18, .cls-20, .cls-3, .cls-4 {
         fill: none;
         stroke: #3bba7d;
         stroke-miterlimit: 10;
       }
 
-      .cls-3, .cls-4 {
+      #song .cls-3, .cls-4 {
         stroke-linecap: round;
       }
 
-      .cls-3 {
+      #song .cls-3 {
         stroke-width: 3.7388px;
       }
 
-      .cls-5 {
+      #song .cls-5 {
         font-size: 28px;
       }
 
-      .cls-19, .cls-7 {
+      #song .cls-19, .cls-7 {
         font-size: 18px;
       }
 
-      .cls-8 {
+      #song .cls-8 {
         opacity: 0.3;
       }
 
-      .cls-14, .cls-9 {
+      #song .cls-14, .cls-9 {
         font-size: 16px;
       }
 
-      .cls-11 {
+      #song .cls-11 {
         font-size: 20px;
       }
 
-      .cls-12, .cls-13, .cls-14, .cls-15 {
+      #song .cls-12, .cls-13, .cls-14, .cls-15 {
         opacity: 0.16;
       }
 
-      .cls-16, .cls-20 {
+      #song .cls-16, .cls-20 {
         stroke-width: 3px;
       }
 
-      .cls-17 {
+      #song .cls-17 {
         stroke-width: 2px;
       }
 
-      .cls-18 {
-        stroke-width: 1.2593px;
+      #song .cls-18 {
+        stroke-width: 1.3px;
       }
 
-      .cls-19, .cls-20 {
+      #song .cls-19, .cls-20 {
         opacity: 0.6;
       }
     </style>
@@ -258,9 +669,7 @@ const SVGS = [
         <circle class="cls-6" cx="97.7169" cy="335.7288" r="10"/>
         <circle class="cls-8" cx="364.7169" cy="355.7288" r="10"/>
         <circle class="cls-8" cx="344.7169" cy="288.7288" r="10"/>
-        <circle class="cls-8" cx="513.7169" cy="149.7288" r="10"/>
-        <circle class="cls-8" cx="462.7169" cy="224.7288" r="10"/>
-        <circle class="cls-8" cx="472.7169" cy="292.7288" r="10"/>
+#song         <circle class="cls-8" cx="472.7169" cy="292.7288" r="10"/>
         <circle class="cls-8" cx="381.7169" cy="188.7288" r="10"/>
         <circle class="cls-8" cx="299.7169" cy="85.7288" r="10"/>
         <circle class="cls-17" cx="425" cy="61" r="10"/>

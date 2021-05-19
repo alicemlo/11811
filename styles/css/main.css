@@ -442,11 +442,14 @@ section.machine-learning .btn-gen-btn-text {
       color: #3BBA7D; }
   .panel .panel-body {
     margin-top: 1rem; }
+  .panel .panel-image {
+    margin-top: 2rem; }
+    .panel .panel-image svg {
+      max-width: 25rem; }
 
 .btn-svg {
   display: inline-block;
   padding: 0.1rem;
-  margin-left: 0.6rem;
   font-size: 0.88rem; }
 
 @media (max-width: 48em) {

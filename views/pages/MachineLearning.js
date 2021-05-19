@@ -129,10 +129,13 @@ const MachineLearning = {
           die ein System intelligent machen können. Ich werde dir 2 Kategorien vorstellen:
         </p>
         <p>
-          Am einfachsten zu verstehen ist überwachtest Lernen. Da werde ich dir zeigen, wie deine Gesten erkannt werden.
+          Am einfachsten zu verstehen ist überwachtes Lernen. Da werde ich dir zeigen, wie deine Gesten erkannt werden.
         </p>
         <p>
           Am Beispiel vom Netflix Filmempfehlungs Algorithmus werde ich die erklären, was unüberwachtes Lernen ist.
+        </p>
+        <p>
+          Diese beiden Lernmethoden unterscheidet insbesondere, in welcher Form die Trainingsdaten vorliegen.
         </p>
       </div>
       <div class="col-2">
@@ -145,11 +148,22 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Überwachtes Lernen</h1>
         <p> 
-        ...
+          Mit dieser Lernmethode lernt das Modell anhand beschrifteter Daten. Das Song-Beispiel von vorhin wäre dafür ein typisches Beispiel: 
+          Jeder Song wurde nach den Parametern Lautstärke und Tempo definiert und für jeden Song war ein Output (also das Ergebnis) definiert.
         </p>
-
+        <p>
+          Ein Modell, dass nach dieser Methode trainiert wird, kann Vorhersagen treffen, anhand der Parameter, die der Mensch definiert. 
+          Es wird keine neuen Muster in den Daten erkennen.
+        </p>
+        <p>
+          Mittlerweile ist diese Lernmethode schon sehr fortgeschritten.. 
+        </p>
+        <p>
+          Innerhalb dieser Lernmethode kann wiederum zwischen zwei Methoden unterschieden werden: Klassifikation und Regression: 
+        </p>
       </div>
       <div class="col-2">
+         <div class="panel" data-name="supervised-lerning"></div>
       </div>
     </div>
     
@@ -157,9 +171,57 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Unüberwachtes Lernen</h1>
         <p>
-        ...
+          Bei dieser Methode werden Modelle mit unbearbeiteten Daten trainiert. Dies ist gerade für die Verarbeitung grosser Datenmengen sehr von Vorteil. 
         </p>
-
+        <p>
+          Diese Methode wird eingesetzt, wenn es darum geht, in komplexen und unorganisierten Datensätzen neue Muster aufzudecken. Wir könnten diese Methode zum Beispiel dafür einsetzten, aus ganz vielen Wetterdaten neue Zusammenhänge zu erkennen. 
+        </p>
+        <p>
+          Clustering ist ein Möglichkeit, wie unüberwachtes Lernen durchgeführt wird. Ganz viele Daten werden in Cluster gruppiert. 
+        </p>
+        <p>
+          Anomalie-Erkennung: Ungewöhnliche Datenpunkte identifizieren
+        </p>
+        <p>Weitere Typen von unüberwachtem Lernen: Neuronale Netze, Assoziation, Entdeckung neuer Zusammenhänge und Beziehungen in den Daten</p>
+      </div>
+      <div class="col-2">
+          <div class="collection--image" data-name="svg-cluster"></div>   
+      </div>
+    </div>
+    
+    <div class="content">
+      <div class="col-1">
+        <h1>Überwachtes vs. unüberwachtes Lernen</h1>
+        <p>
+          Vorteile: 
+        </p>
+        <p>
+          Nachteile: 
+        </p>
+        <p>
+          Anwendnugsbeispiele: 
+        </p>
+      </div>
+      <div class="col-2">
+      </div>
+    </div>
+    
+    <div class="content">
+      <div class="col-1">
+        <h1>Der Netflix Algorithmus</h1>
+        <p>
+          Hast du dir mal überlegt, auf welcher Basis Netflix entschieded, welche Filme dir empfohlen werden? 
+        </p>
+        <p>
+          Netflix setzt Machine Learning ein, damit dir personalisierte Film- und Serienvorschläge angezeigt werden. 
+          Dabei sammelt Netflix ständig die Daten deine Sehgewohnheiten und trainiert anhand dieser Daten Modelle, welche deine Vorschläge berechnen. 
+          Aufgrund deines Sehverhaltens kann das Modell auch testen, wie gut die Vorschläge bei dir ankamen und kann immer präzisere Prognosen erstellen. 
+          Es lernt also ständig weiter und bleibt dynamisch.
+        </p>
+        <p>
+          Würde Netflix kein Machine Learning dafür einsetzten, müssten sie von Hand Parameter und Regeln definieren, nach denen deine Vorschläge berechnet werden.
+          Das würde nicht nur viel länger dauern, sondern auch ständig veraltet sein und niemals so genau sein, wie ein künstlich generiertes Modell.
+        </p>
       </div>
       <div class="col-2">
       </div>
