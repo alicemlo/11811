@@ -110,10 +110,10 @@ const MachineLearning = {
           Ziel: Du möchtest ein System generieren, dass dir vorhersagen kann, ob du einen Song magst oder nicht. 
         </p>
         <p>
-          Ausganslage: Du hörst dir 14 Songs an und kannst sie jeweils mit "gut" oder "schlecht" bewerten. 
-        </p>
-        <p>
-          -> Songs bewerten
+          Erforderliche Schritte: </br>
+          - Daten sammeln </br>
+          - Modell mit den gesammelten Daten trainieren</br>
+          - Model testen</br>
         </p>
       </div>
       <div class="col-2">   

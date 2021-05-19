@@ -374,6 +374,8 @@ section.machine-learning .ct-fixed {
 section.machine-learning .ct-content {
   padding: 0 3rem;
   max-width: 76rem; }
+  section.machine-learning .ct-content .col-2 {
+    font-size: 0.9rem; }
   @media (max-width: 62em) {
     section.machine-learning .ct-content {
       padding: 0 2.2rem; } }
@@ -413,7 +415,7 @@ section.machine-learning .randomised {
   justify-content: space-around;
   height: 100%; }
 
-section.machine-learning .ct-svg {
+section.machine-learning .collection--image {
   max-width: 25rem; }
 
 section.machine-learning .btn-gen-btn-text {
@@ -440,6 +442,12 @@ section.machine-learning .btn-gen-btn-text {
       color: #3BBA7D; }
   .panel .panel-body {
     margin-top: 1rem; }
+
+.btn-svg {
+  display: inline-block;
+  padding: 0.1rem;
+  margin-left: 0.6rem;
+  font-size: 0.88rem; }
 
 @media (max-width: 48em) {
   section.buzzwords {
@@ -645,3 +653,6 @@ section.fixed {
       padding: 0 1rem; } }
   section.fixed > article:first-of-type {
     margin-top: 5rem; }
+
+svg {
+  max-width: 20rem; }

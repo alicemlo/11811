@@ -32,6 +32,11 @@ section.machine-learning {
   .ct-content {
     padding: 0 3rem;
     max-width: 76rem;
+
+    .col-2{
+      font-size: 0.9rem;
+    }
+
     @include tablet-down{
       padding: 0 2.2rem;
     }
@@ -79,7 +84,7 @@ section.machine-learning {
     height: 100%;
   }
 
-  .ct-svg{
+  .collection--image{
     max-width: 25rem;
   }
 
@@ -122,4 +127,11 @@ section.machine-learning {
   .panel-body{
     margin-top: 1rem;
   }
+}
+
+.btn-svg{
+  display: inline-block;
+  padding: 0.1rem;
+  margin-left: 0.6rem;
+  font-size: 0.88rem;
 }
