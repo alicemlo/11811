@@ -242,18 +242,20 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Ohne Daten geht gar nichts</h1>
         <p>
-          Machine Learning basiert auf Daten. Je mehr Daten vorhanden, desto bessere können Modelle trainiert werden. Datensammlung, Big
-          Data, Privatsphäre und Datenverwaltung haben wird ja heute schon nicht im Griff.
+          Machine Learning funktioniert nur mit Daten. Und je mehr Daten vorhanden sind, desto bessere Modelle können trainiert werden. 
+          Das zieht Probleme mit sich, denn die Sammlung und die Verwaltung dieser Datenmengen ist nicht immer ganz transparent und steht 
+          oft im Zielkonflikt mit Datenschutz und mit Privatsphäre.
         </p>
         <p>
-          Ausserdem kommt es auch nicht allein auf die Menge der Daten an. Databias Beispiele...
+          Ausserdem stellt auch die Qualität der Daten eine grosse Herausforderung dar. Wenn Modelle mit unvollständigen oder schlechten Daten trainiert werden,
+          kann das zu verzerrten Prognosen führen. 
         </p>
       </div>
     </div>
   
     <div class="content">
       <div class="col-1">
-        <h1>Big Data und Privatsphäre</h1>
+        <h1>Big Data und Datenschutz</h1>
         <p>
           Zielkonflikt
         </p>
@@ -264,13 +266,39 @@ const MachineLearning = {
   
     <div class="content">
       <div class="col-1">
-        <h1>Databias und Ethik</h1>
+        <h1>Data bias und Ethik</h1>
         <p>
           Bsp. Hautfarbe, Gender.
           "Die KI ist nur so gut wie ihre Trainingsdaten."
+          Das Trainieren dieser Daten liegt allein in der Hand der Algorithmen, die diese Modelle generieren. Wir können nur die Traningsadten beeinflussen. 
+        </p>
+        <p>
+          Man kann es ein bisschen damit vergleiche, wie man ein Kind aufwachsen und lernen lässt.
+        </p>
+        <p>
+          Ein sehr populäres Beispiel für ein schlecht trainiertes Modell ist die Gesichtserkennung. Da diese Modelle 
+          vor allem mit Gesichtern von weissen Männern trainiert wurden, sind diese Modelle auch auf weisse Männer ausgerichtet. 
+          Diese Datenmodelle erzeugen weniger akkurate Vorhersagen bei Frauen oder bei Menschen anderer Hautfarbe. 
+        </p>
+        <p>
+          Diese Verzerrungen sind zum Beispiel auch bei der Spracherkennung aufgetreten: die meiste Spracherkennungssoftware erkennt
+          Männerstimmen besser als Frauenstimmen. 
+        </p>
+        <p>
+          Verzerrungen treten zum Beispiel bei unvollständigen, inkonsistenten, einseitigen Datensätzen und falsche Gewichtung von Daten.
+        </p>
+        <p>
+           Rassismus, Reinfocement, Fairness
+        </p>
+        <p>
+          Was man dagegen tun kann: Ständige Überprüfung der Modelle (Unterhalt dieser Modelle), 
         </p>
       </div>
       <div class="col-2">
+        Reale Beispiele (Panel)
+        - COMPAS (Polizei)
+        - Rassismus Beispiel
+        - Soziales Beispiel
       </div>
     </div>
   
@@ -288,7 +316,8 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Wieso brauchen wie ML</h1>
         <p>
-          ...
+          -> Unterstützt den Menschen
+          -> Häufigste Anwendungsfelder
         </p>
       </div>
     </div>
@@ -297,7 +326,22 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Potenzial, Prognose</h1>
         <p>
-          ...
+          -> Zahlen und Fakten zu ML
+        </p>
+      </div>
+    </div>
+    
+    <div class="content">
+      <div class="col-1">
+        <h1>Angst vor der Superintelligenz</h1>
+        <p>
+          Ein künstlich trainiertes System wird nur in dem gut sein, was seine Aufgabe ist. Ein künstliches Modell zur Wetterprognose wird sehr gut Wettervorhersagen machen können. 
+          Es wird jedoch in keinem anderen Bereich jemals gut sein. 
+        </p>
+        <p>
+          Zum aktuellen Zeitpunkt ist sehr gut erforscht, wie gute intelligente Modelle generiert werden können, die auf Zahlen und Logik beruhen. 
+          Es ist jedoch immernoch unglaublich schwierig eine KI zu erzeugen, welche logische Prognosen mit Weltwissen verknüpfen kann. Zum Beispiel ist es
+          viel einfacher einen Schachcomputer zu bauen, als eine Sprachverarbeitungssoftware. 
         </p>
       </div>
     </div>
@@ -306,7 +350,10 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Werden wir in Zukunft alle arbeitslos sein?</h1>
         <p>
-          ...
+          Die kurze Antwort: Nein, werden wir nicht. Auf jeden Fall nicht so bald.  
+        </p>
+        <p>
+          
         </p>
       </div>
     </div>

@@ -25,7 +25,7 @@ const COLLECTION_TERMS = [
   },
   {
     name: "collection-1",
-    content: ['Überwachted Lernen', 'Unüberwachtes Lernen', 'Deep Learning', 'Reinforcement Learning', 'Semi-Supervised Learning' ]
+    content: ['Überwachtes Lernen', 'Unüberwachtes Lernen', 'Deep Learning', 'Reinforcement Learning', 'Semi-Supervised Learning' ]
   }
 
 ]

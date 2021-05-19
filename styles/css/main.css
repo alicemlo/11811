@@ -426,22 +426,24 @@ section.machine-learning .btn-gen-btn-text {
     display: block; } }
 
 .panel {
-  padding: 0.5rem;
-  background: rgba(82, 125, 111, 0.3);
+  background: rgba(82, 125, 111, 0.2);
   font-size: 0.9rem; }
   .panel .panel-header {
-    display: flex; }
-    .panel .panel-header > div {
-      margin-right: 0.5rem; }
+    display: flex;
+    justify-content: space-evenly; }
   .panel .panel-header > div {
     color: #527D6F;
     transition: color 150ms;
-    padding-bottom: 0.5rem; }
+    padding: 0.5rem;
+    width: 100%;
+    background: rgba(82, 125, 111, 0.2); }
     .panel .panel-header > div.active {
-      border-bottom: 1px solid #3BBA7D;
+      background: rgba(82, 125, 111, 0);
+      border-top: 1px solid #3BBA7D;
       color: #3BBA7D; }
   .panel .panel-body {
-    margin-top: 1rem; }
+    margin-top: 0.2rem;
+    padding: 0.5rem; }
   .panel .panel-image {
     margin-top: 2rem; }
     .panel .panel-image svg {

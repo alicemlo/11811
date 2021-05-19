@@ -103,29 +103,31 @@ section.machine-learning {
 
 // panels
 .panel{
-  padding: 0.5rem;
-  background: rgba(82, 125, 111, 0.3);
+  background: rgba(82, 125, 111, 0.2);
   font-size: 0.9rem;
 
   .panel-header{
     display: flex;
-    >div{
-      margin-right: 0.5rem;
-    }
+    justify-content: space-evenly;
   }
 
   .panel-header>div{
     color: $col--main-02;
     transition: color 150ms;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    background: rgba(82, 125, 111, 0.2);
+
     &.active{
-      border-bottom: 1px solid $col--main-01;
+      background: rgba(82, 125, 111, 0);
+      border-top: 1px solid $col--main-01;
       color: $col--main-01;
     }
   }
 
   .panel-body{
-    margin-top: 1rem;
+    margin-top: 0.2rem;
+    padding: 0.5rem;
   }
 
   .panel-image{

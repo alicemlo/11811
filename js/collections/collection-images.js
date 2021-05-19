@@ -70,7 +70,7 @@ const COLLECTION_IMAGES = [
         "Die Songs werden nach den Eigenschafen Lautstärke und Tempo grafisch darsgestellt",
         "So sehen alle Daten grafisch dargestellt aus. Mit diesem Datensatz kann das Modell trainiert werden",
         "",
-        "Wir können nun irgendeinen neuen Song darstellen. Du musst jetzt nicht mehr selber klassifizieren, ob du den Song magst oder nicht. Wir lassen das Modell diese Klassifizierung durchführen",
+        "Wir können nun irgendeinen neuen Song darstellen. Du musst jetzt nicht mehr selber klassifizieren, ob du den Song magst oder nicht. Wir lassen das Modell diese Klassifizierung durchführen.",
         "So wie es aussieht, wirst du diesen Song mögen",
         "Wie können das Modell mit beliebig vielen Songs austesten.",
         ''
