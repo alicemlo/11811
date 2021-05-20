@@ -220,8 +220,17 @@ const MachineLearning = {
         <p>
           Diese Methode wird eingesetzt, wenn es darum geht, in komplexen und unorganisierten Datensätzen neue Muster aufzudecken. Wir könnten diese Methode zum Beispiel dafür einsetzten, aus ganz vielen Wetterdaten neue Zusammenhänge zu erkennen. 
         </p>
+        <p>Weitere Typen von unüberwachtem Lernen: Neuronale Netze, Assoziation, Entdeckung neuer Zusammenhänge und Beziehungen in den Daten</p>
+      </div>
+      <div class="col-2">
+      </div>
+    </div>
+    
+    <div class="content">
+      <div class="col-1">
+        <h1>Unüberwachtes Lernen: Clusteranalyse vs. Anomalieerkennung</h1>
         <p>
-          Clustering ist ein Möglichkeit, wie unüberwachtes Lernen durchgeführt wird. Ganz viele Daten werden in Cluster gruppiert. 
+          Clusteranalyse: Erkennen von Mustern in grossen Datensätzen
         </p>
         <p>
           Anomalie-Erkennung: Ungewöhnliche Datenpunkte identifizieren
@@ -229,11 +238,11 @@ const MachineLearning = {
         <p>Weitere Typen von unüberwachtem Lernen: Neuronale Netze, Assoziation, Entdeckung neuer Zusammenhänge und Beziehungen in den Daten</p>
       </div>
       <div class="col-2">
-          <div class="collection--image" data-name="svg-cluster"></div>   
+          <div class="panel" data-name="unsupervised-learning"></div>   
       </div>
     </div>
     
-        <div class="content">
+    <div class="content">
       <div class="col-1">
         <h1>Der Netflix Algorithmus</h1>
         <p>

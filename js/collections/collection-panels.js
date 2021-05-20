@@ -239,15 +239,321 @@ const COLLECTION_PANELS = [
     ]
   },
   {
-    name: 'bsp2',
+    name: 'unsupervised-learning',
     content: [
       {
-        title: '',
-        text: ''
+        title: 'Cluster Analyse',
+        text: 'Clustering kommt zum Beispiel im Marketing zum Einsatz, um verschiedene Kundensegmente zu identifizieren, um diese Kundensegemente besser ansprechen zu können.',
+        image: `
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570.8072 241.8072">
+  <defs>
+    <style>
+      .clus-1, .clus-3, .clus-4 {
+        fill: none;
+        stroke: #3bba7d;
+        stroke-miterlimit: 10;
+      }
+
+      .clus-1 {
+        stroke-linecap: round;
+      }
+
+      .clus-2 {
+        font-size: 12px;
+        font-family: FiraMono-Regular, Fira Mono;
+      }
+
+      .clus-2, .clus-5 {
+        fill: #3bba7d;
+      }
+
+      .clus-3 {
+        stroke-width: 0.7644px;
+      }
+
+      .clus-4 {
+        stroke-width: 0.7168px;
+      }
+
+      .clus-6 {
+        opacity: 0.55;
+      }
+
+      .clus-7 {
+        opacity: 0.2;
+      }
+    </style>
+  </defs>
+  <g id="clustering">
+    <g>
+      <line class="clus-1" x1="304" y1="143" x2="314.5" y2="133.5"/>
+      <line class="clus-1" x1="314.5" y1="133.5" x2="304" y2="124"/>
+      <line class="clus-1" x1="230.5" y1="133.5" x2="314.5" y2="133.5"/>
+    </g>
+    <g id="Label">
+      <text class="clus-2" transform="translate(10.0691 18.916)">unclustered</text>
+      <rect class="clus-3" x="5.991" y="4.5" width="89.509" height="20"/>
+    </g>
+    <g id="Label-2" data-name="Label">
+      <text class="clus-2" transform="translate(327.0691 18.916)">clustered</text>
+      <rect class="clus-4" x="322.991" y="4.5" width="76.509" height="20"/>
+    </g>
+    <g id="g2">
+      <circle class="clus-5" cx="481.0008" cy="223.0315" r="4.8632"/>
+      <circle class="clus-5" cx="444.5269" cy="221.4104" r="4.8632"/>
+      <circle class="clus-5" cx="450.2006" cy="197.9051" r="4.8632"/>
+      <circle class="clus-5" cx="458.306" cy="176.8313" r="4.8632"/>
+      <circle class="clus-5" cx="502.0746" cy="231.1368" r="4.8632"/>
+      <circle class="clus-5" cx="436.4216" cy="195.4735" r="4.8632"/>
+      <circle class="clus-5" cx="446.148" cy="210.8736" r="4.8632"/>
+      <circle class="clus-5" cx="489.1061" cy="181.6945" r="4.8632"/>
+      <circle class="clus-5" cx="540.9801" cy="180.0734" r="4.8632"/>
+      <circle class="clus-5" cx="550.7064" cy="189.7998" r="4.8632"/>
+      <circle class="clus-5" cx="555.5696" cy="218.1683" r="4.8632"/>
+      <circle class="clus-5" cx="523.1484" cy="193.0419" r="4.8632"/>
+      <circle class="clus-5" cx="562.0539" cy="211.6841" r="4.8632"/>
+      <circle class="clus-5" cx="559.6223" cy="200.3367" r="4.8632"/>
+      <circle class="clus-5" cx="560.4328" cy="201.1472" r="4.8632"/>
+      <circle class="clus-5" cx="557.1907" cy="176.8313" r="4.8632"/>
+      <circle class="clus-5" cx="536.1169" cy="196.284" r="4.8632"/>
+      <circle class="clus-5" cx="532.0642" cy="164.6733" r="4.8632"/>
+      <circle class="clus-5" cx="498.022" cy="153.3259" r="4.8632"/>
+      <circle class="clus-5" cx="507.7483" cy="163.0522" r="4.8632"/>
+      <circle class="clus-5" cx="512.6115" cy="191.4208" r="4.8632"/>
+      <circle class="clus-5" cx="468.8429" cy="212.4946" r="4.8632"/>
+      <circle class="clus-5" cx="480.1903" cy="166.2944" r="4.8632"/>
+      <circle class="clus-5" cx="468.8429" cy="227.8947" r="4.8632"/>
+      <circle class="clus-5" cx="532.8748" cy="138.7363" r="4.8632"/>
+      <circle class="clus-5" cx="519.0957" cy="184.9366" r="4.8632"/>
+      <circle class="clus-5" cx="516.6642" cy="173.5891" r="4.8632"/>
+      <circle class="clus-5" cx="431.5584" cy="179.2629" r="4.8632"/>
+      <circle class="clus-5" cx="493.1588" cy="210.8736" r="4.8632"/>
+      <circle class="clus-5" cx="470.4639" cy="197.0945" r="4.8632"/>
+      <circle class="clus-5" cx="484.2429" cy="137.9258" r="4.8632"/>
+      <circle class="clus-5" cx="493.1588" cy="198.7156" r="4.8632"/>
+      <circle class="clus-5" cx="465.6007" cy="134.6837" r="4.8632"/>
+      <circle class="clus-5" cx="549.8959" cy="159.8101" r="4.8632"/>
+      <circle class="clus-5" cx="517.4747" cy="174.3997" r="4.8632"/>
+      <circle class="clus-5" cx="472.085" cy="164.6733" r="4.8632"/>
+      <circle class="clus-5" cx="516.6642" cy="146.0311" r="4.8632"/>
+      <circle class="clus-5" cx="487.4851" cy="154.9469" r="4.8632"/>
+      <circle class="clus-5" cx="469.6534" cy="153.3259" r="4.8632"/>
+      <circle class="clus-5" cx="465.6007" cy="188.1787" r="4.8632"/>
+      <circle class="clus-5" cx="493.1588" cy="169.5365" r="4.8632"/>
+      <circle class="clus-5" cx="502.0746" cy="188.9892" r="4.8632"/>
+      <circle class="clus-5" cx="446.148" cy="178.4523" r="4.8632"/>
+      <circle class="clus-5" cx="470.4639" cy="154.1364" r="4.8632"/>
+      <circle class="clus-5" cx="475.3271" cy="182.505" r="4.8632"/>
+    </g>
+    <g id="g1" class="clus-6">
+      <circle class="clus-5" cx="439.6638" cy="147.6522" r="4.8632"/>
+      <circle class="clus-5" cx="455.0638" cy="144.41" r="4.8632"/>
+      <circle class="clus-5" cx="335.9158" cy="143.5995" r="4.8632"/>
+      <circle class="clus-5" cx="336.7264" cy="83.6202" r="4.8632"/>
+      <circle class="clus-5" cx="345.6422" cy="116.0415" r="4.8632"/>
+      <circle class="clus-5" cx="331.8632" cy="134.6837" r="4.8632"/>
+      <circle class="clus-5" cx="365.9055" cy="124.1468" r="4.8632"/>
+      <circle class="clus-5" cx="359.4212" cy="146.8416" r="4.8632"/>
+      <circle class="clus-5" cx="352.1264" cy="137.1153" r="4.8632"/>
+      <circle class="clus-5" cx="388.6003" cy="167.9154" r="4.8632"/>
+      <circle class="clus-5" cx="388.6003" cy="111.1783" r="4.8632"/>
+      <circle class="clus-5" cx="378.874" cy="134.6837" r="4.8632"/>
+      <circle class="clus-5" cx="355.3686" cy="169.5365" r="4.8632"/>
+      <circle class="clus-5" cx="379.6845" cy="149.2732" r="4.8632"/>
+      <circle class="clus-5" cx="391.0319" cy="146.8416" r="4.8632"/>
+      <circle class="clus-5" cx="408.0531" cy="128.1994" r="4.8632"/>
+      <circle class="clus-5" cx="389.4109" cy="124.9573" r="4.8632"/>
+      <circle class="clus-5" cx="365.9055" cy="171.1576" r="4.8632"/>
+      <circle class="clus-5" cx="425.0742" cy="162.2417" r="4.8632"/>
+      <circle class="clus-5" cx="455.8744" cy="158.9996" r="4.8632"/>
+      <circle class="clus-5" cx="451.8217" cy="112.7994" r="4.8632"/>
+      <circle class="clus-5" cx="438.8532" cy="163.8628" r="4.8632"/>
+      <circle class="clus-5" cx="431.5584" cy="112.7994" r="4.8632"/>
+      <circle class="clus-5" cx="423.4531" cy="99.0203" r="4.8632"/>
+      <circle class="clus-5" cx="421.0215" cy="85.2413" r="4.8632"/>
+      <circle class="clus-5" cx="404.8109" cy="107.9362" r="4.8632"/>
+      <circle class="clus-5" cx="366.716" cy="138.7363" r="4.8632"/>
+      <circle class="clus-5" cx="384.5477" cy="158.9996" r="4.8632"/>
+      <circle class="clus-5" cx="408.8636" cy="138.7363" r="4.8632"/>
+      <circle class="clus-5" cx="418.59" cy="148.4627" r="4.8632"/>
+      <circle class="clus-5" cx="412.1057" cy="171.1576" r="4.8632"/>
+      <circle class="clus-5" cx="379.6845" cy="197.9051" r="4.8632"/>
+      <circle class="clus-5" cx="432.369" cy="127.3889" r="4.8632"/>
+      <circle class="clus-5" cx="404.8109" cy="92.5361" r="4.8632"/>
+      <circle class="clus-5" cx="418.59" cy="114.4204" r="4.8632"/>
+      <circle class="clus-5" cx="442.9059" cy="94.1571" r="4.8632"/>
+      <circle class="clus-5" cx="404.8109" cy="161.4312" r="4.8632"/>
+    </g>
+    <g id="g1-2" data-name="g1" class="clus-7">
+      <circle class="clus-5" cx="508.085" cy="108.6619" r="4.8632"/>
+      <circle class="clus-5" cx="518.8688" cy="120.1242" r="4.8632"/>
+      <circle class="clus-5" cx="457.5468" cy="17.9648" r="4.8632"/>
+      <circle class="clus-5" cx="486.1403" cy="11.9266" r="4.8632"/>
+      <circle class="clus-5" cx="463.0505" cy="9.8639" r="4.8632"/>
+      <circle class="clus-5" cx="489.766" cy="33.4475" r="4.8632"/>
+      <circle class="clus-5" cx="467.0125" cy="39.723" r="4.8632"/>
+      <circle class="clus-5" cx="471.5209" cy="28.4318" r="4.8632"/>
+      <circle class="clus-5" cx="464.2053" cy="75.6067" r="4.8632"/>
+      <circle class="clus-5" cx="512.6517" cy="46.0762" r="4.8632"/>
+      <circle class="clus-5" cx="487.5186" cy="50.0052" r="4.8632"/>
+      <circle class="clus-5" cx="445.5247" cy="48.0747" r="4.8632"/>
+      <circle class="clus-5" cx="475.4829" cy="58.2908" r="4.8632"/>
+      <circle class="clus-5" cx="483.4652" cy="66.7145" r="4.8632"/>
+      <circle class="clus-5" cx="508.2425" cy="71.5456" r="4.8632"/>
+      <circle class="clus-5" cx="501.308" cy="53.94" r="4.8632"/>
+      <circle class="clus-5" cx="449.6247" cy="57.9156" r="4.8632"/>
+      <circle class="clus-5" cx="488.0338" cy="103.7978" r="4.8632"/>
+      <circle class="clus-5" cx="506.833" cy="128.4098" r="4.8632"/>
+      <circle class="clus-5" cx="544.1729" cy="100.9031" r="4.8632"/>
+      <circle class="clus-5" cx="493.8213" cy="116.4071" r="4.8632"/>
+      <circle class="clus-5" cx="533.6263" cy="83.6008" r="4.8632"/>
+      <circle class="clus-5" cx="541.1732" cy="69.5082" r="4.8632"/>
+      <circle class="clus-5" cx="551.6732" cy="60.2602" r="4.8632"/>
+      <circle class="clus-5" cx="523.8573" cy="58.2306" r="4.8632"/>
+      <circle class="clus-5" cx="477.7302" cy="41.7331" r="4.8632"/>
+      <circle class="clus-5" cx="469.709" cy="67.5058" r="4.8632"/>
+      <circle class="clus-5" cx="499.6672" cy="77.7219" r="4.8632"/>
+      <circle class="clus-5" cx="496.4244" cy="91.0894" r="4.8632"/>
+      <circle class="clus-5" cx="473.671" cy="97.3648" r="4.8632"/>
+      <circle class="clus-5" cx="521.5905" cy="91.8864" r="4.8632"/>
+      <circle class="clus-5" cx="537.007" cy="50.2152" r="4.8632"/>
+      <circle class="clus-5" cx="525.4923" cy="73.3711" r="4.8632"/>
+      <circle class="clus-5" cx="555.4505" cy="83.5872" r="4.8632"/>
+      <circle class="clus-5" cx="478.1793" cy="86.0736" r="4.8632"/>
+    </g>
+    <g id="g2-2" data-name="g2">
+      <circle class="clus-5" cx="168.0008" cy="223.0315" r="4.8632"/>
+      <circle class="clus-5" cx="131.5269" cy="221.4104" r="4.8632"/>
+      <circle class="clus-5" cx="137.2006" cy="197.9051" r="4.8632"/>
+      <circle class="clus-5" cx="145.306" cy="176.8313" r="4.8632"/>
+      <circle class="clus-5" cx="189.0746" cy="231.1368" r="4.8632"/>
+      <circle class="clus-5" cx="123.4216" cy="195.4735" r="4.8632"/>
+      <circle class="clus-5" cx="133.148" cy="210.8736" r="4.8632"/>
+      <circle class="clus-5" cx="176.1061" cy="181.6945" r="4.8632"/>
+      <circle class="clus-5" cx="227.9801" cy="180.0734" r="4.8632"/>
+      <circle class="clus-5" cx="237.7064" cy="189.7998" r="4.8632"/>
+      <circle class="clus-5" cx="242.5696" cy="218.1683" r="4.8632"/>
+      <circle class="clus-5" cx="210.1484" cy="193.0419" r="4.8632"/>
+      <circle class="clus-5" cx="249.0539" cy="211.6841" r="4.8632"/>
+      <circle class="clus-5" cx="246.6223" cy="200.3367" r="4.8632"/>
+      <circle class="clus-5" cx="247.4328" cy="201.1472" r="4.8632"/>
+      <circle class="clus-5" cx="244.1907" cy="176.8313" r="4.8632"/>
+      <circle class="clus-5" cx="223.1169" cy="196.284" r="4.8632"/>
+      <circle class="clus-5" cx="219.0642" cy="164.6733" r="4.8632"/>
+      <circle class="clus-5" cx="185.022" cy="153.3259" r="4.8632"/>
+      <circle class="clus-5" cx="194.7483" cy="163.0522" r="4.8632"/>
+      <circle class="clus-5" cx="199.6115" cy="191.4208" r="4.8632"/>
+      <circle class="clus-5" cx="155.8429" cy="212.4946" r="4.8632"/>
+      <circle class="clus-5" cx="167.1903" cy="166.2944" r="4.8632"/>
+      <circle class="clus-5" cx="155.8429" cy="227.8947" r="4.8632"/>
+      <circle class="clus-5" cx="219.8748" cy="138.7363" r="4.8632"/>
+      <circle class="clus-5" cx="206.0957" cy="184.9366" r="4.8632"/>
+      <circle class="clus-5" cx="203.6642" cy="173.5891" r="4.8632"/>
+      <circle class="clus-5" cx="118.5584" cy="179.2629" r="4.8632"/>
+      <circle class="clus-5" cx="180.1588" cy="210.8736" r="4.8632"/>
+      <circle class="clus-5" cx="157.4639" cy="197.0945" r="4.8632"/>
+      <circle class="clus-5" cx="171.2429" cy="137.9258" r="4.8632"/>
+      <circle class="clus-5" cx="180.1588" cy="198.7156" r="4.8632"/>
+      <circle class="clus-5" cx="152.6007" cy="134.6837" r="4.8632"/>
+      <circle class="clus-5" cx="236.8959" cy="159.8101" r="4.8632"/>
+      <circle class="clus-5" cx="204.4747" cy="174.3997" r="4.8632"/>
+      <circle class="clus-5" cx="159.085" cy="164.6733" r="4.8632"/>
+      <circle class="clus-5" cx="203.6642" cy="146.0311" r="4.8632"/>
+      <circle class="clus-5" cx="174.4851" cy="154.9469" r="4.8632"/>
+      <circle class="clus-5" cx="156.6534" cy="153.3259" r="4.8632"/>
+      <circle class="clus-5" cx="152.6007" cy="188.1787" r="4.8632"/>
+      <circle class="clus-5" cx="180.1588" cy="169.5365" r="4.8632"/>
+      <circle class="clus-5" cx="189.0746" cy="188.9892" r="4.8632"/>
+      <circle class="clus-5" cx="133.148" cy="178.4523" r="4.8632"/>
+      <circle class="clus-5" cx="157.4639" cy="154.1364" r="4.8632"/>
+      <circle class="clus-5" cx="162.3271" cy="182.505" r="4.8632"/>
+    </g>
+    <g id="g1-3" data-name="g1">
+      <circle class="clus-5" cx="126.6638" cy="147.6522" r="4.8632"/>
+      <circle class="clus-5" cx="142.0638" cy="144.41" r="4.8632"/>
+      <circle class="clus-5" cx="22.9158" cy="143.5995" r="4.8632"/>
+      <circle class="clus-5" cx="23.7264" cy="83.6202" r="4.8632"/>
+      <circle class="clus-5" cx="32.6422" cy="116.0415" r="4.8632"/>
+      <circle class="clus-5" cx="18.8632" cy="134.6837" r="4.8632"/>
+      <circle class="clus-5" cx="52.9055" cy="124.1468" r="4.8632"/>
+      <circle class="clus-5" cx="46.4212" cy="146.8416" r="4.8632"/>
+      <circle class="clus-5" cx="39.1264" cy="137.1153" r="4.8632"/>
+      <circle class="clus-5" cx="75.6003" cy="167.9154" r="4.8632"/>
+      <circle class="clus-5" cx="75.6003" cy="111.1783" r="4.8632"/>
+      <circle class="clus-5" cx="65.874" cy="134.6837" r="4.8632"/>
+      <circle class="clus-5" cx="42.3686" cy="169.5365" r="4.8632"/>
+      <circle class="clus-5" cx="66.6845" cy="149.2732" r="4.8632"/>
+      <circle class="clus-5" cx="78.0319" cy="146.8416" r="4.8632"/>
+      <circle class="clus-5" cx="95.0531" cy="128.1994" r="4.8632"/>
+      <circle class="clus-5" cx="76.4109" cy="124.9573" r="4.8632"/>
+      <circle class="clus-5" cx="52.9055" cy="171.1576" r="4.8632"/>
+      <circle class="clus-5" cx="112.0742" cy="162.2417" r="4.8632"/>
+      <circle class="clus-5" cx="142.8744" cy="158.9996" r="4.8632"/>
+      <circle class="clus-5" cx="138.8217" cy="112.7994" r="4.8632"/>
+      <circle class="clus-5" cx="125.8532" cy="163.8628" r="4.8632"/>
+      <circle class="clus-5" cx="118.5584" cy="112.7994" r="4.8632"/>
+      <circle class="clus-5" cx="110.4531" cy="99.0203" r="4.8632"/>
+      <circle class="clus-5" cx="108.0215" cy="85.2413" r="4.8632"/>
+      <circle class="clus-5" cx="91.8109" cy="107.9362" r="4.8632"/>
+      <circle class="clus-5" cx="53.716" cy="138.7363" r="4.8632"/>
+      <circle class="clus-5" cx="71.5477" cy="158.9996" r="4.8632"/>
+      <circle class="clus-5" cx="95.8636" cy="138.7363" r="4.8632"/>
+      <circle class="clus-5" cx="105.59" cy="148.4627" r="4.8632"/>
+      <circle class="clus-5" cx="99.1057" cy="171.1576" r="4.8632"/>
+      <circle class="clus-5" cx="66.6845" cy="197.9051" r="4.8632"/>
+      <circle class="clus-5" cx="119.369" cy="127.3889" r="4.8632"/>
+      <circle class="clus-5" cx="91.8109" cy="92.5361" r="4.8632"/>
+      <circle class="clus-5" cx="105.59" cy="114.4204" r="4.8632"/>
+      <circle class="clus-5" cx="129.9059" cy="94.1571" r="4.8632"/>
+      <circle class="clus-5" cx="91.8109" cy="161.4312" r="4.8632"/>
+    </g>
+    <g id="g1-4" data-name="g1">
+      <circle class="clus-5" cx="195.085" cy="108.6619" r="4.8632"/>
+      <circle class="clus-5" cx="205.8688" cy="120.1242" r="4.8632"/>
+      <circle class="clus-5" cx="144.5468" cy="17.9648" r="4.8632"/>
+      <circle class="clus-5" cx="173.1403" cy="11.9266" r="4.8632"/>
+      <circle class="clus-5" cx="150.0505" cy="9.8639" r="4.8632"/>
+      <circle class="clus-5" cx="176.766" cy="33.4475" r="4.8632"/>
+      <circle class="clus-5" cx="154.0125" cy="39.723" r="4.8632"/>
+      <circle class="clus-5" cx="158.5209" cy="28.4318" r="4.8632"/>
+      <circle class="clus-5" cx="151.2053" cy="75.6067" r="4.8632"/>
+      <circle class="clus-5" cx="199.6517" cy="46.0762" r="4.8632"/>
+      <circle class="clus-5" cx="174.5186" cy="50.0052" r="4.8632"/>
+      <circle class="clus-5" cx="132.5247" cy="48.0747" r="4.8632"/>
+      <circle class="clus-5" cx="162.4829" cy="58.2908" r="4.8632"/>
+      <circle class="clus-5" cx="170.4652" cy="66.7145" r="4.8632"/>
+      <circle class="clus-5" cx="195.2425" cy="71.5456" r="4.8632"/>
+      <circle class="clus-5" cx="188.308" cy="53.94" r="4.8632"/>
+      <circle class="clus-5" cx="136.6247" cy="57.9156" r="4.8632"/>
+      <circle class="clus-5" cx="175.0338" cy="103.7978" r="4.8632"/>
+      <circle class="clus-5" cx="193.833" cy="128.4098" r="4.8632"/>
+      <circle class="clus-5" cx="231.1729" cy="100.9031" r="4.8632"/>
+      <circle class="clus-5" cx="180.8213" cy="116.4071" r="4.8632"/>
+      <circle class="clus-5" cx="220.6263" cy="83.6008" r="4.8632"/>
+      <circle class="clus-5" cx="228.1732" cy="69.5082" r="4.8632"/>
+      <circle class="clus-5" cx="238.6732" cy="60.2602" r="4.8632"/>
+      <circle class="clus-5" cx="210.8573" cy="58.2306" r="4.8632"/>
+      <circle class="clus-5" cx="164.7302" cy="41.7331" r="4.8632"/>
+      <circle class="clus-5" cx="156.709" cy="67.5058" r="4.8632"/>
+      <circle class="clus-5" cx="186.6672" cy="77.7219" r="4.8632"/>
+      <circle class="clus-5" cx="183.4244" cy="91.0894" r="4.8632"/>
+      <circle class="clus-5" cx="160.671" cy="97.3648" r="4.8632"/>
+      <circle class="clus-5" cx="208.5905" cy="91.8864" r="4.8632"/>
+      <circle class="clus-5" cx="224.007" cy="50.2152" r="4.8632"/>
+      <circle class="clus-5" cx="212.4923" cy="73.3711" r="4.8632"/>
+      <circle class="clus-5" cx="242.4505" cy="83.5872" r="4.8632"/>
+      <circle class="clus-5" cx="165.1793" cy="86.0736" r="4.8632"/>
+    </g>
+  </g>
+</svg>       
+        `
       },
       {
-        title: '',
-        text: ''
+        title: 'Anomalie Erkennung',
+        text: 'Diese Methode eignet sich zum Beispiel in der Radiologie zur Erkennung von Brustkrebs.',
+        image: `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570.8072 241.8072"><defs><style>.anom-1{opacity:0.6;}.anom-2{fill:none;stroke:#3bba7d;stroke-linecap:round;stroke-miterlimit:10;}.anom-3{fill:#3bba7d;}</style></defs><g id="anomaly"><g class="anom-1"><line class="anom-2" x1="519.7717" y1="32.8056" x2="523.7092" y2="29.2431"/><line class="anom-2" x1="523.7092" y1="29.2431" x2="519.7717" y2="25.6806"/><line class="anom-2" x1="511.2092" y1="29.2431" x2="523.7092" y2="29.2431"/></g><circle class="anom-3" cx="535.6921" cy="29.0964" r="4.8632"/><g class="anom-1"><line class="anom-2" x1="292.5625" y1="75" x2="296.5" y2="71.4375"/><line class="anom-2" x1="296.5" y1="71.4375" x2="292.5625" y2="67.875"/><line class="anom-2" x1="284" y1="71.4375" x2="296.5" y2="71.4375"/></g><circle class="anom-3" cx="308.4829" cy="71.2908" r="4.8632"/><g class="anom-1"><line class="anom-2" x1="148.5625" y1="106" x2="152.5" y2="102.4375"/><line class="anom-2" x1="152.5" y1="102.4375" x2="148.5625" y2="98.875"/><line class="anom-2" x1="140" y1="102.4375" x2="152.5" y2="102.4375"/></g><circle class="anom-3" cx="164.4829" cy="102.2908" r="4.8632"/><g class="anom-1"><line class="anom-2" x1="60.5625" y1="46" x2="64.5" y2="42.4375"/><line class="anom-2" x1="64.5" y1="42.4375" x2="60.5625" y2="38.875"/><line class="anom-2" x1="52" y1="42.4375" x2="64.5" y2="42.4375"/></g><circle class="anom-3" cx="162.4829" cy="178.2908" r="4.8632"/><circle class="anom-3" cx="544.4829" cy="205.2908" r="4.8632"/><circle class="anom-3" cx="554.4829" cy="187.2908" r="4.8632"/><circle class="anom-3" cx="552.4829" cy="227.2908" r="4.8632"/><circle class="anom-3" cx="524.4829" cy="215.2908" r="4.8632"/><circle class="anom-3" cx="522.4829" cy="231.2908" r="4.8632"/><circle class="anom-3" cx="564.4829" cy="232.2908" r="4.8632"/><circle class="anom-3" cx="557.4829" cy="211.2908" r="4.8632"/><circle class="anom-3" cx="531.4829" cy="235.2908" r="4.8632"/><circle class="anom-3" cx="499.4829" cy="229.2908" r="4.8632"/><circle class="anom-3" cx="505.4829" cy="195.2908" r="4.8632"/><circle class="anom-3" cx="453.4829" cy="231.2908" r="4.8632"/><circle class="anom-3" cx="483.4829" cy="214.2908" r="4.8632"/><circle class="anom-3" cx="462.4829" cy="193.2908" r="4.8632"/><circle class="anom-3" cx="488.4829" cy="201.2908" r="4.8632"/><circle class="anom-3" cx="452.4829" cy="206.2908" r="4.8632"/><circle class="anom-3" cx="442.4829" cy="203.2908" r="4.8632"/><circle class="anom-3" cx="418.4829" cy="209.2908" r="4.8632"/><circle class="anom-3" cx="480.4829" cy="226.2908" r="4.8632"/><circle class="anom-3" cx="475.4829" cy="199.2908" r="4.8632"/><circle class="anom-3" cx="433.4829" cy="222.2908" r="4.8632"/><circle class="anom-3" cx="463.4829" cy="220.2908" r="4.8632"/><circle class="anom-3" cx="522.4829" cy="196.2908" r="4.8632"/><circle class="anom-3" cx="488.4829" cy="183.2908" r="4.8632"/><circle class="anom-3" cx="443.4829" cy="230.2908" r="4.8632"/><circle class="anom-3" cx="468.4829" cy="206.2908" r="4.8632"/><circle class="anom-3" cx="499.4829" cy="210.2908" r="4.8632"/><circle class="anom-3" cx="405.4829" cy="198.2908" r="4.8632"/><circle class="anom-3" cx="440.4829" cy="179.2908" r="4.8632"/><circle class="anom-3" cx="421.4829" cy="236.2908" r="4.8632"/><circle class="anom-3" cx="332.4829" cy="214.2908" r="4.8632"/><circle class="anom-3" cx="76.4829" cy="42.2908" r="4.8632"/><circle class="anom-3" cx="291.4829" cy="166.2908" r="4.8632"/><circle class="anom-3" cx="405.4829" cy="232.2908" r="4.8632"/><circle class="anom-3" cx="381.4829" cy="208.2908" r="4.8632"/><circle class="anom-3" cx="407.4829" cy="216.2908" r="4.8632"/><circle class="anom-3" cx="389.4829" cy="230.2908" r="4.8632"/><circle class="anom-3" cx="361.4829" cy="218.2908" r="4.8632"/><circle class="anom-3" cx="367.4829" cy="231.2908" r="4.8632"/><circle class="anom-3" cx="420.4829" cy="193.2908" r="4.8632"/><circle class="anom-3" cx="394.4829" cy="214.2908" r="4.8632"/><circle class="anom-3" cx="325.4829" cy="233.2908" r="4.8632"/><circle class="anom-3" cx="338.4829" cy="195.2908" r="4.8632"/><circle class="anom-3" cx="364.4829" cy="203.2908" r="4.8632"/><circle class="anom-3" cx="346.4829" cy="217.2908" r="4.8632"/><circle class="anom-3" cx="318.4829" cy="205.2908" r="4.8632"/><circle class="anom-3" cx="316.4829" cy="221.2908" r="4.8632"/><circle class="anom-3" cx="356.4829" cy="228.2908" r="4.8632"/><circle class="anom-3" cx="351.4829" cy="201.2908" r="4.8632"/><circle class="anom-3" cx="252.4829" cy="198.2908" r="4.8632"/><circle class="anom-3" cx="293.4829" cy="219.2908" r="4.8632"/><circle class="anom-3" cx="275.4829" cy="233.2908" r="4.8632"/><circle class="anom-3" cx="247.4829" cy="221.2908" r="4.8632"/><circle class="anom-3" cx="245.4829" cy="233.2908" r="4.8632"/><circle class="anom-3" cx="296.4829" cy="235.2908" r="4.8632"/><circle class="anom-3" cx="296.4829" cy="206.2908" r="4.8632"/><circle class="anom-3" cx="256.4829" cy="183.2908" r="4.8632"/><circle class="anom-3" cx="282.4829" cy="191.2908" r="4.8632"/><circle class="anom-3" cx="225.4829" cy="229.2908" r="4.8632"/><circle class="anom-3" cx="236.4829" cy="193.2908" r="4.8632"/><circle class="anom-3" cx="260.4829" cy="213.2908" r="4.8632"/><circle class="anom-3" cx="274.4829" cy="216.2908" r="4.8632"/><circle class="anom-3" cx="269.4829" cy="189.2908" r="4.8632"/><circle class="anom-3" cx="53.4829" cy="196.2908" r="4.8632"/><circle class="anom-3" cx="13.4829" cy="208.2908" r="4.8632"/><circle class="anom-3" cx="46.4829" cy="174.2908" r="4.8632"/><circle class="anom-3" cx="20.4829" cy="186.2908" r="4.8632"/><circle class="anom-3" cx="89.4829" cy="228.2908" r="4.8632"/><circle class="anom-3" cx="102.4829" cy="218.2908" r="4.8632"/><circle class="anom-3" cx="138.4829" cy="211.2908" r="4.8632"/><circle class="anom-3" cx="159.4829" cy="206.2908" r="4.8632"/><circle class="anom-3" cx="121.4829" cy="221.2908" r="4.8632"/><circle class="anom-3" cx="133.4829" cy="199.2908" r="4.8632"/><circle class="anom-3" cx="79.4829" cy="204.2908" r="4.8632"/><circle class="anom-3" cx="104.4829" cy="196.2908" r="4.8632"/><circle class="anom-3" cx="61.4829" cy="218.2908" r="4.8632"/><circle class="anom-3" cx="33.4829" cy="206.2908" r="4.8632"/><circle class="anom-3" cx="31.4829" cy="222.2908" r="4.8632"/><circle class="anom-3" cx="121.4829" cy="202.2908" r="4.8632"/><circle class="anom-3" cx="71.4829" cy="229.2908" r="4.8632"/><circle class="anom-3" cx="66.4829" cy="202.2908" r="4.8632"/><circle class="anom-3" cx="88.4829" cy="192.2908" r="4.8632"/><circle class="anom-3" cx="157.4829" cy="234.2908" r="4.8632"/><circle class="anom-3" cx="170.4829" cy="224.2908" r="4.8632"/><circle class="anom-3" cx="206.4829" cy="217.2908" r="4.8632"/><circle class="anom-3" cx="227.4829" cy="212.2908" r="4.8632"/><circle class="anom-3" cx="189.4829" cy="227.2908" r="4.8632"/><circle class="anom-3" cx="201.4829" cy="205.2908" r="4.8632"/><circle class="anom-3" cx="147.4829" cy="210.2908" r="4.8632"/><circle class="anom-3" cx="172.4829" cy="202.2908" r="4.8632"/><circle class="anom-3" cx="129.4829" cy="224.2908" r="4.8632"/><circle class="anom-3" cx="106.4829" cy="227.2908" r="4.8632"/><circle class="anom-3" cx="86.4829" cy="215.2908" r="4.8632"/></g></svg>        
+        `
       }
     ]
   },
