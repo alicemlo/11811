@@ -10,7 +10,7 @@ const MachineLearning = {
   <article class="ct-ml story-1">
   
   <div class="ct-fixed">    
-    <div class="chapter"><p><span class="expand-info" data-info=": Künstliche Intelligenz">Kapitel 1</span></p></div>
+    <div class="chapter"><p><span class="expand-info" >Kapitel 1:Künstliche Intelligenz</span></p></div>
   </div>
   
   <div class="ct-content">
@@ -60,6 +60,11 @@ const MachineLearning = {
         <h1>Für was brauchen wir künstliche generierte Intelligenz?</h1>
         <p>Schlussendlich bringt uns KI Effizienz. Um dir das zu veranschaulichen, stelle dir folgendes Szenario vor:</p> 
         <p>Du erhälst den Auftrag, eine Wetterprognose an deinen Wohnort für die nächste Woche zu erstellen. Als Ausgangslage erhältst du ausführliche Wetterdaten der letzten 10 Jahre. Dir steht ausserdem ein Computer für die Auswertung zur Verfügung.</p>
+        <p>
+          TODO </br>
+          Klassisches Programmiern: Wir programmieren ein Modell, das und einen Output gibt</br>
+          ML: Wir generieren ein Modell, dass sich selbst bauen kann augrund definierter Input und Output Daten. 
+        </p>
       </div>
       <div class="col-2">
          <div class="panel" data-name="panel-0"></div>
@@ -85,7 +90,7 @@ const MachineLearning = {
   <article class="ct-ml story-2">
   
   <div class="ct-fixed">
-    <div class="chapter"><p><span class="expand-info" data-info=": Machine Learning">Kapitel 2</span></p></div>
+    <div class="chapter"><p><span class="expand-info">Kapitel 2: Machine Learning</span></p></div>
   </div>
   
   <div class="ct-content">
@@ -93,25 +98,36 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Wie wird ein System intelligent?</h1>
         <p>
-          Hier kommt Machine Learning ins Spiel. Denn durch maschinelles Lernen entstehen intelligete Modelle bzw. Algorithmen, die uns
-          bespielsweise intelligente Bilderkennung ermöglichen. -> Grobe Funktionsweise, Übersicht über Lernmethoden.
+          Hier kommt Machine Learning ins Spiel. Denn durch maschinelle Lernverfahren werden Modelle generiert, die Daten (Inputs) verarbeiten 
+          können und einen Ouput (Ergebnis) ausgeben. 
         </p>
         <p>
-          Damit eine Maschine lernen kann, braucht es als Ausgangslage Daten. Diese Daten werden auch Input genannt. Diese stellen wir dem System
-          zur Verfügung. Anhand dieses Inputs, kann das System einen eigenen Algorithmus programmieren, welcher anhand des Inputs einen Ergebnis (Output) ausgeben kann.
+          Der Input ist der Datensatz, auf dessen Basis ein Modell eine Vorhersage (Output) treffen kann. 
+          Im Grund kann der Input ein Bild sein, bei dem der Farbwert jedes Pixels als Zahlenwert dargestellt ist.
         </p>
+        <p>
+          Wenn ein Modell einen Input verarbeitet hat, wird es einen Output ausgeben. Als Beispiel nehmen wir ein Modell, dass auf einem Bild
+          entweder einen Hund oder eine Katze erkennt. Der Output des Modells ist also HUND oder KATZE.
+        </p>
+        <p>
+          Damit so ein generiertes Modell entstehen kann, muss es zuerst mit Beispieldaten trainiert werden. Wie so ein Modell trainiert wird, zeigt
+          das nächste Beispiel, dass ein Modell abbildet, dass vorhersagt, ob dir ein Song gefällt oder nicht. 
+        </p>
+      </div>
+      <div>
+        <div class="item-svg" data-name="svg-input-output"></div>
       </div>
     </div>
   
     <div class="content">
       <div class="col-1">
-        <h1>Dieser Prozess in einem sehr einfachen Beispiel zusammengefasst</h1>
+        <h1>Ein Modell trainieren</h1>
         <p>
-          Ziel: Du möchtest ein System generieren, dass dir vorhersagen kann, ob du einen Song magst oder nicht. 
+          Ziel: Du möchtest ein System generieren, dass dir vorhersagt, ob du einen Song magst oder nicht. 
         </p>
         <p>
           Erforderliche Schritte: </br>
-          - Daten sammeln </br>
+          - Trainingsdaten sammeln </br>
           - Modell mit den gesammelten Daten trainieren</br>
           - Model testen</br>
         </p>
@@ -121,21 +137,33 @@ const MachineLearning = {
       </div>
     </div>
   
+  
+    <div class="content">
+      <div class="col-1">
+        <h1>Zusammenfassung Ablauf / Klärung der Begriffe</h1>
+        <p>
+          Input: Bezeichnung der Daten, die das Modell verarbeitet, um eine Prognose treffen zu können
+        </p>
+        <p>
+          Output: Prognose bzw. Vorhersage des Modells
+        </p>
+        <p>
+          Modell: Auch Datenmodell oder statistisches Modell. Wird von einem Algorithmus generiert und kann Daten verarbeiten. 
+        </p>
+      </div>
+    </div>
+    
+    
     <div class="content">
       <div class="col-1">
         <h1>Lernmethoden</h1>
         <p>
-          Machine Learning ist aber noch viel breiter als wie das vorheige Beispiel veranschaulicht hat. Es gibt ganz viele Lernmethoden,
-          die ein System intelligent machen können. Ich werde dir 2 Kategorien vorstellen:
+          Die Lernmethode bezeichnet die Art und Weise, wie ein intelligentes Modell generiert wird. Die Wahl der Methode ist abhängig vom Einsatzzweck 
+          der Applikation, aber auch von der Strukturierung der Input Daten. 
         </p>
         <p>
-          Am einfachsten zu verstehen ist überwachtes Lernen. Da werde ich dir zeigen, wie deine Gesten erkannt werden.
-        </p>
-        <p>
-          Am Beispiel vom Netflix Filmempfehlungs Algorithmus werde ich die erklären, was unüberwachtes Lernen ist.
-        </p>
-        <p>
-          Diese beiden Lernmethoden unterscheidet insbesondere, in welcher Form die Trainingsdaten vorliegen.
+          Es gibt verschiedene maschinelle Lernmethoden, die intelligente Modelle generieren. Hier wird das überwachte sowie das unüberwachte Lernen vorgestellt. 
+          Diese Methoden unterscheidet insbesondere die Form der Daten, mit denen die Modelle trainiert werden, aber auch der Anwendungszweck ist bei der Wahl der Methode entscheidend. 
         </p>
       </div>
       <div class="col-2">
@@ -148,18 +176,34 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Überwachtes Lernen</h1>
         <p> 
-          Mit dieser Lernmethode lernt das Modell anhand beschrifteter Daten. Das Song-Beispiel von vorhin wäre dafür ein typisches Beispiel: 
-          Jeder Song wurde nach den Parametern Lautstärke und Tempo definiert und für jeden Song war ein Output (also das Ergebnis) definiert.
+          Bei dieser Methode werden Modelle trainiert, wo eine sogenannte GROUND TRUTH (Grundwahrheit) besteht.
+          Die Trainingsdaten bestehen also aus bekannten Input-Daten, denen jeweils einem bekannten Output zugewiesen ist. 
+          Sprich wir können den Trainingsprozess überwachen, da wir die Trainingsdaten vor dem Training selbst strukturieren. 
         </p>
         <p>
-          Ein Modell, dass nach dieser Methode trainiert wird, kann Vorhersagen treffen, anhand der Parameter, die der Mensch definiert. 
-          Es wird keine neuen Muster in den Daten erkennen.
+          Sobald das Modell mit denen von uns strukturierten Daten trainiert wurde, wird es unbekannte Inputs von alleine
+          verarbeiten und einen Output ausgeben.
         </p>
         <p>
-          Mittlerweile ist diese Lernmethode schon sehr fortgeschritten.. 
+          Im Vergleich zu anderen Lernmethoden ist diese Methode schon sehr weit entwickelt und kann relativ schnell durchgeführt werden. 
+        </p>
+      </div>
+      <div class="col-2">
+
+      </div>
+    </div>
+    
+        <div class="content">
+      <div class="col-1">
+        <h1>Überwachtes Lernen: Klassifikation vs. Regression</h1>
+        <p>
+          Der Output eines solchen Modells kann entweder eine Klassifizierung sein oder eine fortlaufender Wert (Regression).
         </p>
         <p>
-          Innerhalb dieser Lernmethode kann wiederum zwischen zwei Methoden unterschieden werden: Klassifikation und Regression: 
+          Bei der Klassifikation ist der Output ein fixer Wert bzw. eine Klasse. Zum Beispiel HUND oder KATZE. 
+        </p>
+        <p>
+          Bei der Regression wird das Modell einen stetigen Wert ausgeben. Das wird zum Beispiel eingesetzt, um die Prognose eines Immobilienwertes zu prognostizieren. 
         </p>
       </div>
       <div class="col-2">
@@ -189,24 +233,7 @@ const MachineLearning = {
       </div>
     </div>
     
-    <div class="content">
-      <div class="col-1">
-        <h1>Überwachtes vs. unüberwachtes Lernen</h1>
-        <p>
-          Vorteile: 
-        </p>
-        <p>
-          Nachteile: 
-        </p>
-        <p>
-          Anwendnugsbeispiele: 
-        </p>
-      </div>
-      <div class="col-2">
-      </div>
-    </div>
-    
-    <div class="content">
+        <div class="content">
       <div class="col-1">
         <h1>Der Netflix Algorithmus</h1>
         <p>
@@ -226,6 +253,24 @@ const MachineLearning = {
       <div class="col-2">
       </div>
     </div>
+    
+    <div class="content">
+      <div class="col-1">
+        <h1>Überwachtes vs. unüberwachtes Lernen</h1>
+        <p>
+          Vorteile: 
+        </p>
+        <p>
+          Nachteile: 
+        </p>
+        <p>
+          Anwendnugsbeispiele: 
+        </p>
+      </div>
+      <div class="col-2">
+      </div>
+    </div>
+    
   
   </div>
   
@@ -234,7 +279,7 @@ const MachineLearning = {
   <article class="ct-ml story-3">
   
   <div class="ct-fixed">
-    <div class="chapter"><p><span class="expand-info" data-info=": Datenproblematik">Kapitel 3</span></p></div>
+    <div class="chapter"><p><span class="expand-info">Kapitel 3: Datenproblematik</span></p></div>
   </div>
   
   <div class="ct-content">
@@ -308,7 +353,7 @@ const MachineLearning = {
   <article class="ct-ml story-4">
   
   <div class="ct-fixed">
-    <div class="chapter"><p><span class="expand-info" data-info=": Zukunft">Kapitel 4</span></p></div>
+    <div class="chapter"><p><span class="expand-info">Kapitel 4: Zukunft</span></p></div>
   </div>
   
   <div class="ct-content">
@@ -368,8 +413,8 @@ const MachineLearning = {
   after_render: async () => {
 
     // term collection
-    const termCollections = document.querySelectorAll('.term-collection')
-    termCollections.forEach(collection=>{
+    const collection_terms = document.querySelectorAll('.term-collection')
+    collection_terms.forEach(collection=>{
       const name = collection.getAttribute('data-name')
       const data = COLLECTION_TERMS.find(term => term.name === name)
       const item = new CollectionTerm(collection, data);
@@ -392,6 +437,13 @@ const MachineLearning = {
       const data = COLLECTION_IMAGES.find(item => item.name === name)
       const item = new CollectionImage(collection, data);
       item.run()
+    })
+
+    const item_svg = document.querySelectorAll('.item-svg');
+    item_svg.forEach(item =>{
+      const name = item.getAttribute('data-name');
+      const data = SVGS.find(item => item.name === name)
+      item.innerHTML = data.content;
     })
 
 

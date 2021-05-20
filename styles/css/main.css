@@ -366,6 +366,7 @@ section.machine-learning .ct-fixed {
     left: 0;
     background: #527D6F; }
   section.machine-learning .ct-fixed .expand-info {
+    font-size: 0.9rem;
     background-color: #2D373A; }
   @media (max-width: 48em) {
     section.machine-learning .ct-fixed {

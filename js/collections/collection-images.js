@@ -770,6 +770,93 @@ const SVGS = [
 `
   },
   {
+    name: 'svg-input-output',
+    content: `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.8072 185.8072">
+  <defs>
+    <style>
+      .io-1, .io-3 {
+        fill: none;
+        stroke: #3bba7d;
+        stroke-miterlimit: 10;
+      }
+
+      .io-2, .io-4 {
+        fill: #3bba7d;
+      }
+
+      .io-2 {
+        opacity: 0.57;
+      }
+
+      .io-3 {
+        stroke-width: 0.8188px;
+      }
+
+      .io-4 {
+        font-size: 12px;
+        font-family: FiraMono-Regular, Fira Mono;
+      }
+    </style>
+  </defs>
+  <g id="Input-Output">
+    <circle class="io-1" cx="253" cy="96" r="7.5"/>
+    <line class="io-1" x1="194" y1="95.5" x2="227" y2="95.5"/>
+    <line class="io-1" x1="76.5" y1="95" x2="109.5" y2="95"/>
+    <g id="g3">
+      <circle class="io-2" cx="48.8084" cy="72.1317" r="2.479"/>
+      <circle class="io-2" cx="14.9281" cy="87.4192" r="2.479"/>
+      <circle class="io-2" cx="57.485" cy="70.479" r="2.479"/>
+      <circle class="io-2" cx="57.8982" cy="77.9162" r="2.479"/>
+      <circle class="io-2" cx="62.8563" cy="82.8743" r="2.479"/>
+      <circle class="io-2" cx="6.2515" cy="103.1198" r="2.479"/>
+      <circle class="io-2" cx="21.9521" cy="103.5329" r="2.479"/>
+      <circle class="io-2" cx="34.3473" cy="80.8084" r="2.479"/>
+      <circle class="io-2" cx="36.8263" cy="95.2695" r="2.479"/>
+      <circle class="io-2" cx="22.7784" cy="85.7665" r="2.479"/>
+      <circle class="io-2" cx="29.8024" cy="87.8323" r="2.479"/>
+      <circle class="io-2" cx="41.3713" cy="83.2874" r="2.479"/>
+      <circle class="io-2" cx="48.8084" cy="97.3353" r="2.479"/>
+      <circle class="io-2" cx="28.1497" cy="80.8084" r="2.479"/>
+      <circle class="io-2" cx="47.982" cy="89.8982" r="2.479"/>
+      <circle class="io-2" cx="19.4731" cy="123.3653" r="2.479"/>
+      <circle class="io-2" cx="30.2156" cy="125.8443" r="2.479"/>
+      <circle class="io-2" cx="7.491" cy="94.8563" r="2.479"/>
+      <circle class="io-2" cx="14.515" cy="106.012" r="2.479"/>
+      <circle class="io-2" cx="26.9102" cy="95.6826" r="2.479"/>
+      <circle class="io-2" cx="28.5629" cy="107.6647" r="2.479"/>
+      <circle class="io-2" cx="34.3473" cy="115.1018" r="2.479"/>
+      <circle class="io-2" cx="10.3832" cy="82.8743" r="2.479"/>
+      <circle class="io-2" cx="12.0359" cy="72.5449" r="2.479"/>
+      <circle class="io-2" cx="15.3413" cy="92.3772" r="2.479"/>
+      <circle class="io-2" cx="42.6108" cy="94.8563" r="2.479"/>
+      <circle class="io-2" cx="18.6467" cy="110.9701" r="2.479"/>
+      <circle class="io-2" cx="25.6707" cy="117.994" r="2.479"/>
+      <circle class="io-2" cx="28.1497" cy="132.4551" r="2.479"/>
+      <circle class="io-2" cx="35.1737" cy="102.2934" r="2.479"/>
+      <circle class="io-2" cx="42.1976" cy="113.4491" r="2.479"/>
+      <circle class="io-2" cx="54.5928" cy="103.1198" r="2.479"/>
+      <circle class="io-2" cx="59.5509" cy="108.0778" r="2.479"/>
+      <circle class="io-2" cx="47.982" cy="78.7425" r="2.479"/>
+      <circle class="io-2" cx="56.2455" cy="127.9102" r="2.479"/>
+      <circle class="io-2" cx="19.4731" cy="79.5689" r="2.479"/>
+      <circle class="io-2" cx="57.0719" cy="92.3772" r="2.479"/>
+      <circle class="io-2" cx="38.0659" cy="90.3114" r="2.479"/>
+      <circle class="io-2" cx="60.7904" cy="99.4012" r="2.479"/>
+      <circle class="io-2" cx="45.503" cy="109.7305" r="2.479"/>
+      <circle class="io-2" cx="55.8323" cy="83.2874" r="2.479"/>
+      <circle class="io-2" cx="65.7485" cy="74.6108" r="2.479"/>
+      <circle class="io-2" cx="36.8263" cy="134.521" r="2.479"/>
+    </g>
+    <rect class="io-3" x="94.5" y="3.5" width="118" height="177"/>
+    <text class="io-4" transform="translate(234.7035 63.2344)">Output</text>
+    <text class="io-4" transform="translate(1.7035 50.2344)">Input</text>
+    <text class="io-4" transform="translate(128.7035 97.2344)">Modell</text>
+  </g>
+</svg>    
+    `
+  },
+  {
     name: '',
     content: ``
   }
