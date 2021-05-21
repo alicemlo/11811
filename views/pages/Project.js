@@ -11,11 +11,11 @@ const Project = {
       
         <article class="container">
           <h1>Über mich</h1>
-          <p>podcast richard socher</p>
         </article>  
         
         <article>
-          <p>Quellenangaben</p>
+          <h1>Quellenangaben</h1>
+          <p>podcast richard socher</p>
         </article>
       
       </section>

@@ -183,6 +183,7 @@ const MachineLearning = {
         <p>
           Sobald das Modell mit denen von uns strukturierten Daten trainiert wurde, wird es unbekannte Inputs von alleine
           verarbeiten und einen Output ausgeben.
+          Die Überwachung bezieht sich nur auf das Trainingdaten, mit denen das Modell trainiert wird. 
         </p>
         <p>
           Im Vergleich zu anderen Lernmethoden ist diese Methode schon sehr weit entwickelt und kann relativ schnell durchgeführt werden. 
@@ -203,7 +204,7 @@ const MachineLearning = {
           Bei der Klassifikation ist der Output ein fixer Wert bzw. eine Klasse. Zum Beispiel HUND oder KATZE. 
         </p>
         <p>
-          Bei der Regression wird das Modell einen stetigen Wert ausgeben. Das wird zum Beispiel eingesetzt, um die Prognose eines Immobilienwertes zu prognostizieren. 
+          Bei der Regression wird das Modell einen stetigen Wert ausgeben (numerische Vorhersage). Das wird zum Beispiel eingesetzt, um die Prognose eines Immobilienwertes zu prognostizieren. 
         </p>
       </div>
       <div class="col-2">
@@ -215,7 +216,7 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Unüberwachtes Lernen</h1>
         <p>
-          Bei dieser Methode werden Modelle mit unbearbeiteten Daten trainiert. Dies ist gerade für die Verarbeitung grosser Datenmengen sehr von Vorteil. 
+          Bei dieser Methode werden Modelle mit unbearbeiteten / unkategorisierten Daten trainiert. Dies ist gerade für die Verarbeitung grosser Datenmengen sehr von Vorteil. 
         </p>
         <p>
           Diese Methode wird eingesetzt, wenn es darum geht, in komplexen und unorganisierten Datensätzen neue Muster aufzudecken. Wir könnten diese Methode zum Beispiel dafür einsetzten, aus ganz vielen Wetterdaten neue Zusammenhänge zu erkennen. 
@@ -228,9 +229,12 @@ const MachineLearning = {
     
     <div class="content">
       <div class="col-1">
-        <h1>Unüberwachtes Lernen: Clusteranalyse vs. Anomalieerkennung</h1>
+        <h1>Unüberwachtes Lernen: Clusteranalyse vs. Assoziationsanalyse vs. Anomalieerkennung</h1>
         <p>
           Clusteranalyse: Erkennen von Mustern in grossen Datensätzen
+        </p>
+        <p>
+          Assoziationsanalyse: Sucht nach Regeln und Beziehungen in den Daten. Die Regel beschreiben Zusammenhänge zwischen den Daten.
         </p>
         <p>
           Anomalie-Erkennung: Ungewöhnliche Datenpunkte identifizieren
@@ -246,13 +250,16 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Der Netflix Algorithmus</h1>
         <p>
-          Hast du dir mal überlegt, auf welcher Basis Netflix entschieded, welche Filme dir empfohlen werden? 
+          Netflix setzt Machine Learning ein, um dir personanlisierte Empfehlungen anzuzeigen. Dafür wird laufend ein Datenmodell unter anderem mithilfe von 
+          Clustering trainiert (unüberwachtes Lernen), dass anhand deiner Sehgewohnheiten neue Film- und Serienvorschläge generiert. 
         </p>
         <p>
-          Netflix setzt Machine Learning ein, damit dir personalisierte Film- und Serienvorschläge angezeigt werden. 
           Dabei sammelt Netflix ständig die Daten deine Sehgewohnheiten und trainiert anhand dieser Daten Modelle, welche deine Vorschläge berechnen. 
           Aufgrund deines Sehverhaltens kann das Modell auch testen, wie gut die Vorschläge bei dir ankamen und kann immer präzisere Prognosen erstellen. 
           Es lernt also ständig weiter und bleibt dynamisch.
+        </p>
+        <p>
+          
         </p>
         <p>
           Würde Netflix kein Machine Learning dafür einsetzten, müssten sie von Hand Parameter und Regeln definieren, nach denen deine Vorschläge berechnet werden.
@@ -267,6 +274,9 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Überwachtes vs. unüberwachtes Lernen</h1>
         <p>
+          Auch Mischformen möglich
+        </p>
+        <p>
           Vorteile: 
         </p>
         <p>
@@ -277,6 +287,7 @@ const MachineLearning = {
         </p>
       </div>
       <div class="col-2">
+        <div class="collection--image" data-name="supervised-unsupervised"></div>
       </div>
     </div>
     
@@ -368,7 +379,7 @@ const MachineLearning = {
   <div class="ct-content">
     <div class="content">
       <div class="col-1">
-        <h1>Wieso brauchen wie ML</h1>
+        <h1>Wieso brauchen wir ML</h1>
         <p>
           -> Unterstützt den Menschen
           -> Häufigste Anwendungsfelder

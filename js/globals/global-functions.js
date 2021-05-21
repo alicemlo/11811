@@ -236,6 +236,33 @@ swipeToRoute = (route) => {
   window.location.hash = `/${route}`
 }
 
+document.body.onkeyup = function(e){
+  if(e.keyCode == 32){
+    createPopup();
+  }
+}
+
+let popup;
+
+createPopup = () => {
+  popup  = document.createElement("DIV");
+  popup.classList.add('popup')
+  popup.innerText = '11811...'
+}
+
+destroyPopup = () => {
+
+}
+
+document.documentElement.addEventListener('keydown', function (e) {
+  if ( ( e.keycode || e.which ) == 32) {
+    e.preventDefault();
+    createPopup();
+    alert('Eine Referenz auf Arbeiter 11811 aus dem Film Metropolis')
+  }
+}, false);
+
+
 // random functions
 
 wait = (ms) => {
