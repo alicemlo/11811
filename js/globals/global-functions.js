@@ -52,6 +52,34 @@ createParticles = () => {
 }
 
 
+getButtonsOnPage = () => {
+  // const buttons =  document.querySelectorAll('button:not(.disabled)')
+  const buttons = document.querySelectorAll('.component')
+
+  buttons.forEach(btn => {
+    const box = btn.getBoundingClientRect()
+    eventButtons.push({
+      el: btn,
+      top: box.top,
+      left: box.left
+    })
+  })
+
+}
+
+
+
+detectClick = () => {
+  if(labelHandPose === 'X'){ // hand is closed
+    let x = xAvg / 22
+    let y = yAvg / 22
+    console.log(x)
+    console.log(y)
+
+  }
+  return ""
+}
+
 detectSwipe = () => {
   let x = xAvg / 22
   if (labelHandPose === 'X') {
@@ -102,10 +130,12 @@ classifyPose = () => {
   if (pose.length > 0) {
     let inputs = [];
     xAvg = 0
+    yAvg = 0
     pose[0].landmarks.forEach(key => {
       let x = key[0]
       let y = key[1]
       xAvg += key[0];
+      yAvg += key[1];
       inputs.push(x);
       inputs.push(y);
     })
@@ -131,10 +161,12 @@ classifyCreatedPose = () => {
   if (pose.length > 0) {
     let inputs = [];
     xAvg = 0
+    yAvg = 0
     pose[0].landmarks.forEach(key => {
       let x = key[0]
       let y = key[1]
       xAvg += key[0];
+      yAvg += key[1];
       inputs.push(x);
       inputs.push(y);
     })
@@ -150,12 +182,22 @@ gotResult = (error, results) => {
 }
 
 gotResultBrainCreated = (error, results) => {
-  if (results[0].confidence > 0.95 && results[0].label !== labelCreatedPose) {
+  if(!results.length) return
+  if(results[0].confidence < 0.9){
+    labelCreatedPose = ''
+    setPoseLabelModelCreated(false)
+  }else if (results[0].confidence > 0.93 && results[0].label !== labelCreatedPose) {
     labelCreatedPose = results[0].label
+    if(stateTestModel) setPoseLabelModelCreated(true)
     console.log(labelCreatedPose)
   }
+
 }
 
+
+setPoseLabelModelCreated = (pose) => {
+  trainedPoseLabel.innerText = pose ? labelCreatedPose : '-'
+}
 
 
 stopCollecting = () => {
@@ -164,17 +206,73 @@ stopCollecting = () => {
 }
 
 startCollecting = (arg) => {
-  let activeLabel = train_model_data.activePoseLabel
+  const activeLabel = train_model_data.activePoseLabel
   if(arg && arg==='restart'){
+    console.log(brainCreate)
     brainCreate.neuralNetworkData.data.raw = brainCreate.neuralNetworkData.data.raw.filter(input => input.ys[0] !== activeLabel)
   }
   if(!activeLabel) return
   collectionState = 'collecting'
-  wait(4000).then(() =>{
+
+  setCountdown();
+
+  document.querySelector('.collect-data-controls').classList.add('opacity-25')
+
+  wait(trainingTime).then(() =>{
     collectionState = 'waiting'
     poseCollected = true
+    document.querySelector('.collect-data-controls').classList.remove('opacity-25')
+    if(!arg){
+      document.querySelector('.btn-collect-start').classList.add('invisible')
+      document.querySelector('.btn-collect-restart').classList.remove('invisible')
+      enableTrainEvent()
+    }
   })
 }
+
+const trainingTime = 4000
+let trainingCountdown = 4
+
+setCountdown = () => {
+  trainingCountdown = 4
+  const pre = document.querySelector('.col-2 pre')
+  let i = trainingCountdown
+  pre.innerText = i
+
+  const timer = setInterval(function() {
+    i--;
+    if (i <= 0) clearInterval(timer);
+    else pre.innerText = `${i}`
+    if(i === 0) pre.innerText = "Sammlung fertig"
+  }, 1000);
+
+}
+
+
+disableTrainEvent = () => {
+  const button = document.querySelector('.col-1-event')
+  if(button) button.classList.add('opacity-25')
+}
+
+enableTrainEvent = () => {
+  const button = document.querySelector('.col-1-event')
+  if(button) button.classList.remove('opacity-25')
+}
+
+disableButton = (btnClass) => {
+  const classname = "."+btnClass
+  const button = document.querySelector(classname)
+  if(button) button.classList.add('opacity-25')
+  else console.log("no button found")
+}
+
+enableButton = (btnClass) => {
+  const classname = "."+btnClass
+  const button = document.querySelector(classname)
+  if(button) button.classList.remove('opacity-25')
+  else console.log("no button found")
+}
+
 
 trainingSaveData = () =>{
   brainCreate.saveData(); // provide file name (input field)
@@ -183,6 +281,7 @@ trainingSaveData = () =>{
 trainCollection = () => {
   collectionState = 'waiting'
   brainCreate.normalizeData();
+  console.log(brainCreate)
   brainCreate.train(trainingOptions, whileTraining, finishedTraining)
 }
 
@@ -193,14 +292,18 @@ whileTraining = (epoch, loss) => {
   trainingDataEpochs.innerText=epoch
   trainingDataLoss.innerText=loss.acc
   trainingDataAccuracy.innerText=loss.loss
+
+  if(loss.loss<0.001) trainingDataLoss.innerText += '(gut)'
+  if(loss.acc>0.7) trainingDataAccuracy.innerText += '(gut)'
   // loss should get smaller and accuracy should get higher
   //  If the errors are high, the loss will be high, which means that the model does not do a good job. Otherwise, the lower it is, the better our model works.
 }
 
-finishedTraining = (x, y) =>{
-  console.log("model has finished training")
-  console.log(brainCreate)
+finishedTraining = () =>{
   brainCreated = true
+  enableTrainEvent();
+  enableButton('train-save');
+  disableButton('btn-train-start')
 }
 
 collectPose = () => {
@@ -220,10 +323,8 @@ collectPose = () => {
       inputs.push(y);
     }
   }
-  console.log(inputs)
-  let target = [create_poseLabel_active];
+  const target = [train_model_data.activePoseLabel];
   brainCreate.addData(inputs, target);
-  console.log(brainCreate)
 }
 
 gestureSize = () =>{
@@ -258,7 +359,7 @@ document.documentElement.addEventListener('keydown', function (e) {
   if ( ( e.keycode || e.which ) == 32) {
     e.preventDefault();
     createPopup();
-    alert('Eine Referenz auf Arbeiter 11811 aus dem Film Metropolis')
+    alert('„Nr. 11811, Sie gehen sofort an die Maschine zurück und vergessen, dass Sie sie jemals verlassen haben – verstanden?“ ... Metropolis [Film], Fritz Lang, 1927 ')
   }
 }, false);
 

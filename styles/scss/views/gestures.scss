@@ -1,0 +1,21 @@
+section.gestures{
+
+  @include page-padding;
+  margin: 4rem 0;
+  article{
+    margin: 4rem 0;
+    max-width: 80rem;
+  }
+
+  article.hand-poses{
+    display: flex;
+    align-items: center;
+    max-width: 38rem;
+    gap: 2rem;
+  }
+
+  img.hand-icon{
+    width: 8rem;
+  }
+}
+

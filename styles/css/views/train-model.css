@@ -1,13 +1,26 @@
 article.create {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  min-height: calc(100vh - 6rem);
+  min-height: calc(100vh - 15rem);
   padding: 1rem 3rem;
   grid-gap: 2rem;
-  max-width: 85rem; }
-  article.create .col-2 {
+  max-width: 85rem;
+  margin: 0 auto; }
+  article.create .col-1 {
+    max-width: 30rem; }
+  article.create .col-2, article.create .col-1 {
     display: flex;
     flex-direction: column;
     justify-content: center; }
+  article.create .col-2.border {
+    border: 2px solid rgba(82, 125, 111, 0.45);
+    padding: 3rem 1rem; }
+  article.create .col-2 pre {
+    position: absolute;
+    bottom: 1rem; }
   article.create button {
-    margin-right: 1rem; }
+    margin-right: 1rem;
+    margin-top: 2rem;
+    width: fit-content; }
+  article.create .btn-train-start, article.create .train-save {
+    max-width: unset; }

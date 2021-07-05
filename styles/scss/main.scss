@@ -47,6 +47,23 @@ article.container{
   display: none;
 }
 
+.opacity-25{
+  opacity: 0.25;
+  pointer-events: none;
+  cursor: unset;
+}
+
+.opacity-50{
+  opacity: 0.50;
+  pointer-events: none;
+  cursor: unset;
+}
+
+.opacity-75{
+  opacity: 0.75;
+  pointer-events: none;
+  cursor: unset;
+}
 
 header[data-index='no-index'] + main#page_root section{
   animation-name: pageUp;
@@ -73,5 +90,14 @@ section.fixed{
 }
 
 svg{
-  max-width: 20rem;
+  max-width: 30rem;
 }
+
+//button{
+//  border-radius: 25px;
+//  transition: border-radius 250ms;
+//
+//  &:hover{
+//    border-radius: 0;
+//  }
+//}

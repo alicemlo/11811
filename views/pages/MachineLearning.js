@@ -22,9 +22,13 @@ const MachineLearning = {
           unserem Alltag angewendet - ohne dass uns das wirklich bewusst ist. Zum Beispiel der Netflix Algorithmus.
         </p>
         <p>
-          Mittlerweile ist KI ein Hype, um dem gleichzeitig sehr viel Unwissenheit und Halbwahrheiten bestehen. Ziel dieser Webseite ist es,
-          dir das Thema KI und insbesondere Machine Learning möglichst anschaulich näher zu bringen. Die Basics verstehst du auch, wenn du
-          kein Informatik Nerd bist.
+          Mittlerweile ist KI ein Hype, um dem gleichzeitig sehr viel Unwissenheit und Halbwahrheiten bestehen. Ziel dieser Webseite ist es, 
+          dir ein grundlegendes Verständnis für die Prozesse hinter dem Begriff KI zu vermitteln. Dabei liegt der Fokus auf den Prozess des
+          maschinellen Lernens (Machine Learning). 
+        </p>
+        <p>
+          Auf der Seite <a href="#/buzzwords">"Buzzwords"</a> kannst du dich durch eine Buzzwordgrafik durchklicken, welche 
+          dir die wichtigsten Schlagwörter kurz auffrischt und dir eine kleine Übersicht der Zusammenhänge vermittelt.  
         </p>
       </div>
       <div class="col-2" style="padding: 2rem 0">
@@ -32,51 +36,49 @@ const MachineLearning = {
       </div>
     </div>
   
-    <div class="content">
-      <div class="col-1">
-        <h3><a href="#/buzzwords">-> du willst die zuerst einen Überblick über die wichtigsten Begriffe verschafffen?</a></h3>
-      </div>
-    </div>
-  
   
     <div class="content">
       <div class="col-1">
         <h1>Was ist Intelligenz?</h1>
-        <p>Damit man weiss, wie man Intelligenz künstlich erschaffen kann, muss zuerst geklärt sein, wie man Intelligenz definiert.</p>
         <p>
-          Jedoch ist dies nicht ganz so einfach, da sich diese Defintion immer wieder verändert. Wir selber verstehen noch nicht ganz, was Intelligenz ist.
-          Grunsätzlich beschreibt Intelligenz jedoch ein lernfähiges System, dass an das menschliche Denken herankommt. Wir Menschen lernen zum Beispiel aus den Erfahrungen, 
-          die wir in unserer Vergangenheit erlebt haben. Künstlich generierte Intelligenz basiert genau auf diesem Prinzip. 
+          Anhand von Machine Learning wird "Intelligenz" künstlich erschafft. Um dieses Prozess zu verstehen, muss zuerst geklärt sein, wie man Intelligenz definiert.
+          Dies ist allerdings nicht ganz so einfach, da sich diese Defintion immer wieder verändert. (Wir Menschen selber verstehen noch nicht ganz, was Intelligenz ist.)
         </p>
         <p>
-          Um ein intelligentes System künstlich zu generieren, braucht es Machine Learning (ML). Dieses System lernt anhand von ganz viel Beispieldaten. 
-          Wie das genau abläuft und welche Lernmethoden existiern, wird im nächsten Kapitel genauer dargestellt. 
+          Ein Anhaltspunkt ist die Lernfähigkeit eines Systems. Es ist eines des Merkmale, welches ein intelligentes Wesen oder eine intelligente Maschine auszeichnet. 
+          Wir Menschen lernen aus Erfahrungen und Ereignissen aus unserer Vergangenheit. Wir könnnen diese Lernfähigkeit auch bei einer Maschine erzeugen. Dann wird aus einer
+          Maschine eine intelligente Maschine. Dieser Prozess wird auch "Machine Learning" genannt. 
         </p>
       </div>
     </div>
   
       <div class="content">
       <div class="col-1">
-        <h1>Für was brauchen wir künstliche generierte Intelligenz?</h1>
-        <p>Schlussendlich bringt uns KI Effizienz. Um dir das zu veranschaulichen, stelle dir folgendes Szenario vor:</p> 
-        <p>Du erhälst den Auftrag, eine Wetterprognose an deinen Wohnort für die nächste Woche zu erstellen. Als Ausgangslage erhältst du ausführliche Wetterdaten der letzten 10 Jahre. Dir steht ausserdem ein Computer für die Auswertung zur Verfügung.</p>
+        <h1>Für was brauchen wir künstliche Intelligenz und Machine Learning?</h1>
         <p>
-          TODO </br>
-          Klassisches Programmiern: Wir programmieren ein Modell, das und einen Output gibt</br>
-          ML: Wir generieren ein Modell, dass sich selbst bauen kann augrund definierter Input und Output Daten. 
+          Schlussendlich bringt und KI Effizienz bei der Verarbeitung und Auswertung von Daten. 
+          Intelligente Systeme kommen im Gegensatz zu Menschen sehr gut mit grossen Datenmengen zurecht und können Vorhersagen treffen, 
+          Analysen erstellen, Daten strukturieren oder Abweichungen in Datensätzen feststellen. 
+        </p>
+        <p> 
+          Anhand von Beispielen, die du in der rechten Spalte findest, kannst du ein bisschen erahnen, wie sich KI auswirken kann und für 
+          welche Zwecke wir uns intelligente Systeme zunutze machen können.
         </p>
       </div>
       <div class="col-2">
-         <div class="panel" data-name="panel-0"></div>
+         <div class="panel" data-name="examples-ai"></div>
       </div>
     </div>
     
     <div class="content">
       <div class="col-1">
-        <h1>Gebiete von KI</h1>
+        <h1>Teilgebiete von KI</h1>
         <p>
-          Künstliche Intelligenz ist ein riesiges Feld, dass in viele kleinere Bereiche aufgeteilt werden kann. Um dir das kurz zu
-          veranschaulichen, stelle ich dir drei der relevanten Teilgebiete von KI auf:
+          Es ist unmöglich, nur "kurz" über KI zu reden. 
+          Um dir zu veranschaulichen, wie breit das Thema KI behandelt werden kann, stelle ich dir in der rechten Spalte ein paar der relevanten Teilgebiete von KI vor.
+        </p>
+        <p>
+...
         </p>
       </div>
       <div class="col-2">
@@ -98,6 +100,12 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Wie wird ein System intelligent?</h1>
         <p>
+          verarbteitet Daten.
+        </p>
+        <p>
+          Hier kommt Machine Learning ins Spiel: 
+        </p>
+        <p>
           Hier kommt Machine Learning ins Spiel. Denn durch maschinelle Lernverfahren werden Modelle generiert, die Daten (Inputs) verarbeiten 
           können und einen Ouput (Ergebnis) ausgeben. 
         </p>
@@ -115,7 +123,7 @@ const MachineLearning = {
         </p>
       </div>
       <div>
-        <div class="item-svg" data-name="svg-input-output"></div>
+        <div class="item-svg flex-center" data-name="svg-input-output"></div>
       </div>
     </div>
   
@@ -273,6 +281,9 @@ const MachineLearning = {
     <div class="content">
       <div class="col-1">
         <h1>Überwachtes vs. unüberwachtes Lernen</h1>
+        <pre>
+          --> Full Width
+        </pre>
         <p>
           Auch Mischformen möglich
         </p>
@@ -295,7 +306,15 @@ const MachineLearning = {
   </div>
   
   </article>
-  
+ 
+<!-- only if gi enabled-->
+<a href="#/train-model" class="banner">
+  <div> 
+    <p>Da du jetzt den groben Abaluf eines Trainingprozesses kennst, würde ich vorschlagen, du versuchst es selber aus.</p>
+    <p>Hier kannst du deine eingenen zwei Gesten trainieren, die du dann auf dieser Webseite nutzen kannst.</p>
+  </div> 
+</a>
+
   <article class="ct-ml story-3">
   
   <div class="ct-fixed">
@@ -381,8 +400,15 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Wieso brauchen wir ML</h1>
         <p>
+          Es gibt Aufgaben, bei denen Computer und intelligente Systeme dem Menschen deutlich überlegen sind. Zum Beispiel ... Genau für diese Aufgaben macht der Einsatz von künstlicher Intelligenz
+          sehr viel Sinn. Automatisierung, etc.  
+        </p>
+        <p>
           -> Unterstützt den Menschen
           -> Häufigste Anwendungsfelder
+        </p>
+        <p>
+          Es wird jedoch auch immer Sachen geben, die sich nicht leicht durch Systeme ersetzen lassen. Sprachverarbeitung sehr schwierig, Logisches Denken verknüpft mit Weltwissen, etc.
         </p>
       </div>
     </div>
@@ -393,12 +419,28 @@ const MachineLearning = {
         <p>
           -> Zahlen und Fakten zu ML
         </p>
+
       </div>
     </div>
     
     <div class="content">
       <div class="col-1">
+        <h1>Starke vs. Schwache Intelligenz</h1>
+        <p>
+          Diese Unterscheidung sollte für dich jetzt nicht mehr so schwierig zu verstehen sein. Wenn du das verstanden hast, 
+          hast du eine wichtige Unterscheidung verstanden, für das Verständig von KI sehr wichtig ist. 
+        </p>
+      </div>
+    </div>
+    
+    
+    <div class="content">
+      <div class="col-1">
         <h1>Angst vor der Superintelligenz</h1>
+        <p>
+          Ein künstliche trainiertes System ist dafür gemacht, Probleme zu lösen, für die es trainiert wurde. Man kann heute ohne Probleme
+          eine intelligentes System generieren, dass mit hoher Wahrscheinlichkeit einen Hund von einer Katze unterscheiden kann. ...
+        </p>
         <p>
           Ein künstlich trainiertes System wird nur in dem gut sein, was seine Aufgabe ist. Ein künstliches Modell zur Wetterprognose wird sehr gut Wettervorhersagen machen können. 
           Es wird jedoch in keinem anderen Bereich jemals gut sein. 
@@ -434,7 +476,7 @@ const MachineLearning = {
 
     // term collection
     const collection_terms = document.querySelectorAll('.term-collection')
-    collection_terms.forEach(collection=>{
+    collection_terms.forEach(collection => {
       const name = collection.getAttribute('data-name')
       const data = COLLECTION_TERMS.find(term => term.name === name)
       const item = new CollectionTerm(collection, data);
@@ -460,7 +502,7 @@ const MachineLearning = {
     })
 
     const item_svg = document.querySelectorAll('.item-svg');
-    item_svg.forEach(item =>{
+    item_svg.forEach(item => {
       const name = item.getAttribute('data-name');
       const data = SVGS.find(item => item.name === name)
       item.innerHTML = data.content;
@@ -469,7 +511,6 @@ const MachineLearning = {
 
   }
 };
-
 
 
 export default MachineLearning;

@@ -64,6 +64,23 @@ const COLLECTION_PANELS = [
     ]
   },
   {
+    name: 'examples-ai',
+    content: [
+      {
+        title: 'KI in der Radiologie - Krebsfrüherkennung',
+        text: '...'
+      },
+      {
+        title: 'Wie Zalando KI einsetzt',
+        text: 'Zalando setzt KI ein, um jedem Kunden ein personalisiertes Kauferlebnis zu ermöglichen. [ Lernmethode: unüberwacht, Assoziation ]'
+      },
+      {
+        title: 'Intelligente Chatbots',
+        text: '...'
+      }
+    ]
+  },
+  {
     name: 'panel-1',
     content: [
       {
@@ -72,11 +89,11 @@ const COLLECTION_PANELS = [
       },
       {
         title: 'Sprachliche Intelligenz',
-        text: 'Auch bekannt unter Natural Language Processing. Gemeint ist die maschinelle Verarbeitung von natürlicher Sprache: Texte aber auch gesprochene Sprache wird vom Algorithmus erkannt und analysiert. -> Eher neu und am Anfang der Entwicklung, Sinn / Kontext, Weltwissen mit Logik ..',
+        text: 'Auch bekannt unter Natural Language Processing. Gemeint ist die maschinelle Verarbeitung von natürlicher Sprache: Texte aber auch gesprochene Sprache werden vom Algorithmus erkannt und analysiert. Sprachliche Intelligent ist momentan noch sehr schwierig künstlich zu generieren, weil der KI neben logischen Prozessen auch Weltwissen und ein Verständnis für Zusammenhänge zwischen den Sätzen angeignet werden müssen.',
       },
       {
         title: 'Robotics',
-        text: 'Bsp. Roboter, der Unkraut jätten kann.',
+        text: 'In diesem sehr interdisziplinären Fachgebiet beschäftigt man sich damit, wie mechanische Vorgänge mit intelligenten Systemen verknüpft werden können. Intelligente Roboter sind in der Lage selbstständig mit Umwelt zu interagieren. Häufig werden diese in der Industrie eingesetzt. In der Landwirtschaft können Roboter zum Beispiel eingesetzt werden, um selbstständig Unkraut zu jätten.',
       },
     ]
   },

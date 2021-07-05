@@ -1,21 +1,40 @@
 article.create{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  min-height: calc(100vh - 6rem);
+  min-height: calc(100vh - 15rem);
   padding: 1rem 3rem;
   grid-gap: 2rem;
   max-width: 85rem;
+  margin: 0 auto;
 
+  .col-1{
+    max-width: 30rem;
+  }
 
-  .col-2{
+  .col-2, .col-1{
     display: flex;
     flex-direction: column;
     justify-content: center;
     // align-items: center;
   }
 
+  .col-2.border{
+    border: 2px solid rgba(82, 125, 111, 0.45);
+    padding: 3rem 1rem;
+  }
+
+  .col-2 pre{
+    position: absolute;
+    bottom: 1rem;
+  }
 
   button{
     margin-right: 1rem;
+    margin-top: 2rem;
+    width: fit-content;
+  }
+
+  .btn-train-start, .train-save{
+    max-width: unset;
   }
 }

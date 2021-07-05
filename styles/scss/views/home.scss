@@ -25,6 +25,9 @@ section.home{
     top: 15rem;
     left: 20%;
   }
+  .sub-title , h5, .title{
+    color: $col--main-02;
+  }
   @include mobile-down{
     h3{
       left: 20%;

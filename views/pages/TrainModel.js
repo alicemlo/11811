@@ -66,7 +66,8 @@ class CollectionTrainModel{
 
   update(){
     const content = this.data[this.index]
-    if(content.getState()) this.setContent(this.index++)
+    if(this.index >= this.data.length-1)   window.location.hash = `/machine-learning`
+    else if(content.getState()) this.setContent(this.index++)
   }
 
   setContent(){
@@ -78,6 +79,7 @@ class CollectionTrainModel{
     this.ctText.innerText = content.text
     this.ctInfo.innerText = content.info
     this.ctButton.innerText = content.event
+    if(content.class) this.ctCol2.classList.add(content.class)
 
     if(content.col2) this.ctCol2.innerHTML = content.col2
     if(content.setInit) content.setInit()

@@ -36,6 +36,7 @@ let xAvg = 0
 let yAvg = 0
 
 
+
 let width = window.innerWidth
 let height = window.innerHeight
 
@@ -43,10 +44,13 @@ let height = window.innerHeight
 // variables
 let collectionState = 'waiting' // can have state waiting or collecting
 let collectionLabelIndex = -1
-let trainingOptions = {
+const trainingOptions = {
   epochs: 20,
+  batchSize: 10
 }
+let stateTestModel = false
 
 
 // dom
-let trainingDataEpochs, trainingDataLoss, trainingDataAccuracy, trainingSaveData
+let trainingDataEpochs, trainingDataLoss, trainingDataAccuracy, trainingSaveData, trainedPoseLabel
+let eventButtons = []

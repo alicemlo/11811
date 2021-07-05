@@ -16,8 +16,6 @@ const Buzzwords = {
     </div>
   </article>
   
-
-  
   <article class="ct-buzz no-comp">
     <div class="flex">
         <div class="component">
@@ -110,11 +108,16 @@ const Buzzwords = {
   },
 
   after_render: async () => {
+    getButtonsOnPage()
+
     const cps = document.querySelectorAll('.component')
     const ct = document.querySelector('section .container')
     const buzz = new Event('buzz');
+    const def = document.querySelector('.definition')
     defContainer = document.querySelector('.def-content')
     keyword = document.querySelector('.keyword')
+    def.classList.add('inactive')
+
     cps.forEach(item => {
       let title = item.firstElementChild.innerText;
       let content = COLLECTION_BUZZWORDS.find(item => item.title === title)
@@ -123,9 +126,15 @@ const Buzzwords = {
     })
     ct.onclick = (e) => {
       let el=e.target
-      if(e.target.tagName==='H5' || e.target.tagName==='H4')el = e.target.parentElement
+      if(e.target.tagName==='H5' || e.target.tagName==='H4') el = e.target.parentElement
+      else resetDefContainer()
       document.querySelectorAll('.active-buzz').forEach(item => item.classList.remove('active-buzz'))
       el.dispatchEvent(buzz);
+    }
+    const resetDefContainer = () => {
+      def.classList.add('inactive')
+      defContainer.innerHTML = ''
+      keyword.innerHTML = ''
     }
   }
 };
@@ -142,7 +151,8 @@ class BuzzComponent {
   showContent() {
     this.item.addEventListener('buzz', ()  => {
       this.item.classList.add('active-buzz')
-      defContainer.innerHTML = this.title;
+      document.querySelector('.definition').classList.remove('inactive')
+      defContainer.innerHTML = this.content;
       keyword.innerText = '- '+this.keyword;
     }, false);
   }

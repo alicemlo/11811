@@ -3,13 +3,13 @@ section.buzzwords{
   //display: grid;
   //grid-template-columns: 70% 30%;
 
-  @include mobile-down{
+  @include mobile-down {
     display: block;
   }
 
   >div.container{
-    display: flex;
-    flex-wrap: wrap;
+    //display: flex;
+    //flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     //transform: scale(0.9);
@@ -32,6 +32,17 @@ section.buzzwords{
       font-size: 0.9rem;
       margin: 0.8rem 0;
     }
+
+    .definition{
+      height: fit-content;
+      background: rgba(28, 25, 34, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 1rem;
+      &.inactive{
+        display:none
+      }
+    }
+
   }
 
   article{
@@ -40,6 +51,23 @@ section.buzzwords{
     &.placeholder{
       width: 15rem;
       height: 15rem;
+    }
+  }
+
+  .no-comp{
+    >div.flex{
+      justify-content: flex-start;
+      @include mobile-up{
+        margin-left: 10%;
+      }
+    }
+  }
+  .no-comp:nth-child(2n){
+    >div.flex{
+      justify-content: flex-end;
+      @include mobile-up{
+        margin-right: 30%;
+      }
     }
   }
 
@@ -88,6 +116,10 @@ section.buzzwords{
     border: 1.5px solid transparent;
     transition: all 150ms;
 
+    @include mobile-down{
+      margin: 1rem 0.5rem;
+    }
+
 
     &:hover, &:focus{
     //  box-shadow: 0 0 8px 3px rgba(59, 186, 125, 0.55);
@@ -131,6 +163,10 @@ section.buzzwords{
   }
 
   @include mobile-down{
+    >.container{
+      grid-template-columns: 1fr;
+      margin: 5rem 1rem;
+    }
     .container, .flex{
       display: grid !important;
       article, >.component{
@@ -148,6 +184,16 @@ section.buzzwords{
     .no-comp{
       padding: 0 !important;
       margin: 0 !important;
+    }
+
+    aside{
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: unset;
+    }
+    .definition{
+      width: 100%;
     }
   }
 }
