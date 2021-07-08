@@ -12,7 +12,7 @@ const links = [
   {
     'id': 'Gesten',
     'ref': 'gestures',
-    'class': 'nav-item on-gi'
+    'class': 'nav-item ng-dashed'
   }
 ]
 
@@ -22,15 +22,16 @@ const Footer = {
    */
   render: async () => {
     const navLinks = links
-      .map(
-        link => `<li class="${link.class}"><a class="nav-link" href="/#/${link.ref}">${link.id}</a></li>`
-      )
-      .join('\n');
+      .map(link => `<li class="${link.class}"><a class="nav-link" href="/#/${link.ref}">${link.id}</a></li>`)
+      .join('\n')
 
     return /*html*/ `
         <footer>
           <nav class="nav-footer">
-            <ul>${navLinks}</ul>
+            <ul>
+              ${navLinks}
+           </ul>
+           <span class="gi-not-active invisible">(gestenbasierte Interaktionen auf dieser Seite nicht aktiv)</span>
           </nav>
           <span class="enable-gi"></span>
           <span class="mobile-link"><a href="/"></a></span>
@@ -48,6 +49,8 @@ const Footer = {
       elUl.appendChild(elBack)
       elBack.onclick = () => window.location.href = '/#'+lastStory
     }
+
+    if(!gesturalInteractionEnabled) document.querySelector('.gi-not-active').classList.remove('invisible')
 
     giEnabler.onclick = () => toggleGi(document.body, giEnabler);
     giEnabled ? giEnabler.classList.add('active')  : giEnabler.classList.remove('active')

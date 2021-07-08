@@ -24,9 +24,3 @@ article.create {
     width: fit-content; }
   article.create .btn-train-start, article.create .train-save {
     max-width: unset; }
-
-section.section-create .gesture-are-disabled {
-  width: 50rem; }
-  section.section-create .gesture-are-disabled span {
-    font-size: 0.7rem;
-    opacity: 0.7; }

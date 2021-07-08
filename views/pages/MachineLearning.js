@@ -310,7 +310,7 @@ const MachineLearning = {
   </article>
  
 <!-- only if gi enabled-->
-<a href="#/train-model" class="banner">
+<a href="#/train-model" class="banner ng-invisible">
   <div> 
     <p>Da du jetzt den groben Abaluf eines Trainingprozesses kennst, würde ich vorschlagen, du versuchst es selber aus.</p>
     <p>Hier kannst du deine eingenen zwei Gesten trainieren, die du dann auf dieser Webseite nutzen kannst.</p>
@@ -475,6 +475,9 @@ const MachineLearning = {
     `;
   },
   after_render: async () => {
+    gesturalInteractionEnabled = true
+    gestureLabelingEnabled = false
+
     // term collection
     const collection_terms = document.querySelectorAll('.term-collection')
     collection_terms.forEach(collection => {

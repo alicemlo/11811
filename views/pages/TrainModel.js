@@ -15,11 +15,12 @@ const TrainModel = {
 
 </article>
 
-<div class="gesture-are-disabled"><span>(Auf dieser Seite ist die Gestensteuerung deaktiviert. Deine Gesten werden dennoch erkannt.)</span></div>
       </section>
     `;
   },
   after_render: async () => {
+    gesturalInteractionEnabled = false
+    gestureLabelingEnabled = false
 
     const container = document.querySelector('article.create')
     const col1 = document.querySelector('.col-1')

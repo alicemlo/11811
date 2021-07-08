@@ -131,3 +131,22 @@ svg{
     opacity: 1;
   }
 }
+
+
+body:not(.gi){
+  .ng-dashed{
+    //pointer-events: none;
+    cursor: crosshair;
+    text-decoration: line-through;
+    color: $col--main-02;
+    opacity: 0.9;
+  }
+
+  .ng-invisible{
+    display: none;
+  }
+
+  .ng-hidden{
+    opacity: 0;
+  }
+}

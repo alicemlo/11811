@@ -15,6 +15,14 @@ let labelHandPose = ''
 let labelCreatedPose = ''
 let brainCreated = false
 let status = false
+let gesturalInteractionEnabled = true
+let gestureLabelingEnabled = false
+let hoveredElementID = null
+let clickTimeout = null;
+
+let dots = [];
+
+
 
 
 // gestures
@@ -36,11 +44,14 @@ let height = window.innerHeight
 
 // data
 let pose = [];
+let poseOld = [];
 let particles = []
 let xAvg = 0
 let yAvg = 0
 let xIndex = 0
 let yIndex = 0
+
+
 
 
 

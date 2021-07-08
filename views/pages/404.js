@@ -6,6 +6,9 @@ const Error404 = {
       </section>
     `;
   },
-  after_render: async () => {}
+  after_render: async () => {
+    gesturalInteractionEnabled = true
+    gestureLabelingEnabled = false
+  }
 };
 export default Error404;

@@ -22,6 +22,8 @@ const Project = {
     `;
   },
   after_render: async () => {
+    gesturalInteractionEnabled = true
+    gestureLabelingEnabled = false
   }
 };
 export default Project;

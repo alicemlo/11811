@@ -1,11 +1,12 @@
 let scriptsLoaded = false
 const giToggleEvent = new Event("giToggle");
 
-
 toggleGi = (item, button) => {
+  const body = document.querySelector('body')
   loader = document.querySelector('#loader')
   giEnabled = !giEnabled;
   if (button) giEnabled ? button.classList.add('active') : button.classList.remove('active')
+  giEnabled ? body.classList.add('gi') : body.classList.remove('gi')
   if(!scriptsLoaded && giEnabled) appendScripts(item);
   if(scriptsLoaded) document.dispatchEvent(giToggleEvent);
 }
@@ -35,15 +36,47 @@ handModelLoaded = () => {
   console.log('handpose model ready');
 }
 
+let landmarksOld = null
+let landmarks = null
+let transformedLandmarks = null
+
 getPoses = (p) => {
+  poseOld = pose
   pose = p
+  landmarksOld = poseOld[0] ? poseOld[0].landmarks : null
+  landmarks = pose[0] ? pose[0].landmarks : null
+
+  transformLandmarks()
 }
 
-createParticles = () => {
-  if (pose.length === 0) return
-  if (pose[0].handInViewConfidence < 0.95) return
 
-  pose[0].landmarks.forEach(key => particles.push(new Particle(key[0], key[1], col__accent)))
+transformLandmarks = () => {
+
+  if(landmarksOld?.length && landmarks?.length){
+    transformedLandmarks = landmarks.map((entry, index) => {
+      return {
+        x: lerp(entry[0], landmarksOld[index][0], 0.5 ),
+        y: lerp(entry[1], landmarksOld[index][1], 0.5 ),
+      }
+    })
+  }else if(landmarks?.length){
+    transformedLandmarks = landmarks.map(entry => {
+      return {
+        x: entry[0],
+        y: entry[1]
+      }
+    })
+  }else{
+    transformedLandmarks = null
+  }
+
+}
+
+
+createParticles = () => {
+  if (!transformedLandmarks) return
+  if (pose[0].handInViewConfidence < 0.95) return
+  transformedLandmarks.forEach(key => particles.push(new Particle(key.x, key.y, col__accent)))
 }
 
 createLabelsY = () => {
@@ -54,9 +87,6 @@ createLabelsX = () => {
 
 }
 
-
-let hoveredElementID = null
-let clickTimeout = null;
 
 detectClick = () => {
   const hoveredElement = document.elementFromPoint(xIndex, yIndex)
@@ -77,14 +107,10 @@ resetTimeout = () => {
 setHoveredElementID = (id) => {
   resetTimeout()
   hoveredElementID = id
-  console.log(id)
   document.querySelectorAll('.click-animation')?.forEach(it => it.classList.remove('click-animation'))
   const el = document.querySelector(`.gclick[data-id=${id}]`)
-  console.log(el)
   if(el) el.classList.add('click-animation')
   clickTimeout = setTimeout(function () {
-    console.log("Click, ID: " + id);
-    console.log(el)
     if(el) {
       el.click();
       el.classList.remove('click-animation')
@@ -93,29 +119,35 @@ setHoveredElementID = (id) => {
 }
 
 setIndexPoints = () => {
+  const oldXIndex = xIndex
+  const oldYIndex = yIndex
+
   if(!pose[0]){
     xIndex = 0
     yIndex = 0
-  }else{
+  }else if(oldXIndex === 0){
     xIndex = map(pose[0].annotations.indexFinger[3][0], 640, 0, 0, width)
     yIndex = map(pose[0].annotations.indexFinger[3][1], 0, 420, 0, height)
+  }else {
+    const xNew = map(pose[0].annotations.indexFinger[3][0], 640, 0, 0, width)
+    const yNew = map(pose[0].annotations.indexFinger[3][1], 0, 420, 0, height)
+    xIndex = lerp(xNew, oldXIndex, 0.5)
+    yIndex = lerp(yNew, oldYIndex, 0.5)
   }
 }
 
-detectScroll = (y) => {
-  if(pose[0] && labelHandPose === 'X'){
-    if(y > 500) window.scroll({ top: window.scrollY+10,  left: 0, behavior: 'smooth'});
-    if(y < 230)window.scroll({ top: window.scrollY-10,  left: 0, behavior: 'smooth'});
+detectScroll = () => {
+  let y = 0
+  if(pose[0]){
+    y = yAvg/22
+    if(y > 370) window.scroll({ top: window.scrollY+10,  left: 0, behavior: 'smooth'});
+    if(y < 100)window.scroll({ top: window.scrollY-10,  left: 0, behavior: 'smooth'});
   }
 }
 
 detectSwipe = () => {
   let x = xAvg / 22
-  if (labelHandPose === 'X') {
-    gestureSwipeLeftIndex = 0
-    gestureSwipeRightIndex = 0
-  } else {
-
+  if (labelHandPose === 'Y') {
     if (x > breakpoints[2]) {
       // area 3
       if (gestureSwipeLeftIndex === 2) gestureSwipeLeftIndex = 3
@@ -133,6 +165,9 @@ detectSwipe = () => {
       if (gestureSwipeLeftIndex === 1) gestureSwipeLeftIndex = 2
       if (gestureSwipeRightIndex === 0) gestureSwipeRightIndex = 1
     }
+  } else {
+    gestureSwipeLeftIndex = 0
+    gestureSwipeRightIndex = 0
   }
   if (gestureSwipeRightIndex === 3) {
     gestureSwipeRightIndex = 0

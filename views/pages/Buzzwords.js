@@ -108,6 +108,9 @@ const Buzzwords = {
   },
 
   after_render: async () => {
+    gesturalInteractionEnabled = true
+    gestureLabelingEnabled = false
+
     const cps = document.querySelectorAll('.component')
     const ct = document.querySelector('section .container')
     const buzz = new Event('buzz');

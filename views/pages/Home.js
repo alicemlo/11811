@@ -11,7 +11,10 @@ const Home = {
     `;
   },
   after_render: async () => {
-    let toggleGI = document.querySelector('.toggle-gi');
+    gesturalInteractionEnabled = true
+    gestureLabelingEnabled = false
+
+    const toggleGI = document.querySelector('.toggle-gi');
     toggleGI.onclick = () => toggleGi(document.body, toggleGI)
   }
 };

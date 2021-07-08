@@ -25,7 +25,7 @@ const headerLinks = [
   {
     'id': 'Training',
     'ref': '/train-model',
-    'class': 'nav-item on-gi',
+    'class': 'nav-item ng-dashed',
     'index': 1
   }
 ]

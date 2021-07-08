@@ -8,6 +8,8 @@ window.draw  = draw;
 new p5();
 
 
+
+
 function setup(){
   createCanvas(width, height);
   video = createCapture(VIDEO);
@@ -22,13 +24,18 @@ function setup(){
   brainCreate = ml5.neuralNetwork(options);
   fraction = 640*width
 
-  frameRate(20);
+  for (let i = 0; i<21; i++){
+    dots.push(new Dot())
+  }
+
+
+  frameRate(30);
 }
 
 function draw() {
   if(!modelIsLoaded) return
-  let viewGestures = window.location.hash==='#/gestures'
-
+  let beforeSwipe = null
+  let swipe = null
   background(col__dark_01);
   push();
   translate(width, 0);
@@ -36,10 +43,6 @@ function draw() {
   image(video, 0, 0, 64, 48);
   createParticles();
   setIndexPoints()
-
-  const x0Inversed = map(xAvg, 0, 14080, 0, width)
-  // const x0 = map(xAvg, 14080, 0, 0, width)
-  const y0 = map(yAvg, 0, 10560, 0, height)
 
   particles.forEach((p, index) =>{
     p.show()
@@ -51,13 +54,18 @@ function draw() {
   if(brainCreated) classifyCreatedPose();
   classifyPose();
 
-  let beforeSwipe = null
-  if(!viewGestures) beforeSwipe = detectBeforeSwipe();
-  const swipe = detectSwipe();
 
-  detectClick();
+  if(gesturalInteractionEnabled){
+    beforeSwipe = detectBeforeSwipe();
+    swipe = detectSwipe();
+    detectClick();
+    detectScroll()
+  }
 
-  detectScroll(y0)
+  if(gestureLabelingEnabled){
+    drawLabels();
+  }
+
 
   if(beforeSwipe){
     noStroke()
@@ -70,7 +78,6 @@ function draw() {
   }
 
   if(swipe){
-    if(viewGestures) return
     if(swipe==='swipeLeft'){
       if(storyIndex<story.length-1) storyIndex++
       swipeToRoute(story[storyIndex])
@@ -81,19 +88,6 @@ function draw() {
     }
   }
 
-  if(viewGestures){
-    fill(251, 136, 141);
-    textSize(28);
-    let label = ""
-    if (labelHandPose === 'Y') label = 'Hand offen'
-    if (labelHandPose === 'X') label = 'Hand geschlossen'
-    text(label, x0Inversed, y0);
-
-    // if(labelHandPose === 'Y'){
-    //   text("<- nach links", xAvg/22+100, yAvg/22+100);
-    //   text("nach rechts ->", xAvg/22-100, yAvg/22+100);
-    // }
-  }
 }
 
 
@@ -110,4 +104,20 @@ hideP5 = () => {
 showP5 = () => {
   loop()
   document.querySelector('CANVAS').classList.remove('hidden')
+}
+
+drawLabels = () => {
+  const x0Inversed = map(xAvg, 0, 14080, 0, width)
+  // const x0 = map(xAvg, 14080, 0, 0, width)
+  const y0 = map(yAvg, 0, 10560, 0, height)
+  fill(251, 136, 141);
+  textSize(28);
+  let label = ""
+  if (labelHandPose === 'Y') label = 'Hand offen'
+  if (labelHandPose === 'X') label = 'Hand geschlossen'
+  text(label, x0Inversed, y0);
+  // if(labelHandPose === 'Y'){
+  //   text("<- nach links", xAvg/22+100, yAvg/22+100);
+  //   text("nach rechts ->", xAvg/22-100, yAvg/22+100);
+  // }
 }
