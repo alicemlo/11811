@@ -96,7 +96,7 @@ function draw() {
   setIndexPoints()
 
   const x0Inversed = map(xAvg, 0, 14080, 0, width)
- // const x0 = map(xAvg, 14080, 0, 0, width)
+  // const x0 = map(xAvg, 14080, 0, 0, width)
   const y0 = map(yAvg, 0, 10560, 0, height)
 
 
@@ -116,6 +116,8 @@ function draw() {
   const swipe = detectSwipe();
 
   detectClick();
+
+  detectScroll(y0)
 
   if(beforeSwipe){
     noStroke()

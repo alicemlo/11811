@@ -93,21 +93,41 @@ svg{
   max-width: 30rem;
 }
 
-.gclick::before{
-  position: absolute;
-  top: -0.6rem;
-  left: -0.6rem;
-  content: '';
-  width: 0.6rem;
-  height: 0.6rem;
-  background: rgba(251, 136, 141, 1);
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 100ms;
+.gclick{
+
+ &::before{
+   position: absolute;
+   top: -0.6rem;
+   left: -0.6rem;
+   content: '';
+   width: 0.6rem;
+   height: 0.6rem;
+   transform: scale(0);
+   background: rgba(251, 136, 141, 1);
+   border-radius: 50%;
+   transition: transform 700ms;
+   border: 1px solid rgba(251, 136, 141, 1);
+ }
+
+  &::after{
+    position: absolute;
+    top: -0.6rem;
+    left: -0.6rem;
+    content: '';
+    width: 0.6rem;
+    height: 0.6rem;
+    border: 1px solid rgba(251, 136, 141, 1);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 200ms;
+  }
 }
 
 .gclick.click-animation{
   &::before{
+    transform: scale(1);
+  }
+  &::after{
     opacity: 1;
   }
 }

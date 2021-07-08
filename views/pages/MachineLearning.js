@@ -7,7 +7,6 @@ const MachineLearning = {
     return `
 
 <section class="machine-learning">
-  <div class="scrollto" style="background: white; width: 100px; height: 100px;">
   
   </div>
   <article class="ct-ml story-1">
@@ -476,16 +475,6 @@ const MachineLearning = {
     `;
   },
   after_render: async () => {
-    const clickel = document.querySelector('.scrollto')
-    clickel.onclick = () => {
-      console.log(window.scrollY)
-      window.scroll({
-        top: window.scrollY+1,
-        left: 0,
-        behavior: 'smooth'
-      });
-    }
-
     // term collection
     const collection_terms = document.querySelectorAll('.term-collection')
     collection_terms.forEach(collection => {

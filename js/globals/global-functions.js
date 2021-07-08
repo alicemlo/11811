@@ -104,7 +104,13 @@ setIndexPoints = () => {
     xIndex = map(pose[0].annotations.indexFinger[3][0], 640, 0, 0, width)
     yIndex = map(pose[0].annotations.indexFinger[3][1], 0, 420, 0, height)
   }
+}
 
+detectScroll = (y) => {
+  if(pose[0] && labelHandPose === 'X'){
+    if(y > 500) window.scroll({ top: window.scrollY+10,  left: 0, behavior: 'smooth'});
+    if(y < 220) window.scroll({ top: window.scrollY-10,  left: 0, behavior: 'smooth'});
+  }
 }
 
 detectSwipe = () => {
