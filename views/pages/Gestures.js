@@ -25,12 +25,25 @@ const Gestures = {
         
         
         <article>
-          <h1>Gesten</h1>
+          <h1>Gestenerkennung</h1>
           <p>die Gestensteuerung auf dieser Webseite basiert auf 2 Posen: Hand offen und Hand zu. </p>
 <!--          <div>-->
 <!--            <img class="hand-icon" src="../../assets/images/hand-closeds.png" alt="Hand geschlossen"/>-->
 <!--            <img class="hand-icon" src="../../assets/images/hand-open.png" alt="Hand offen"/>-->
 <!--          </div>-->
+        </article>
+        
+        <article>
+          <h1>Interaktionen</h1>
+          <p><strong>Klicken</strong></p>
+<!--          <div>-->
+<!--            <img class="hand-icon" src="../../assets/images/hand-closeds.png" alt="Hand geschlossen"/>-->
+<!--            <img class="hand-icon" src="../../assets/images/hand-open.png" alt="Hand offen"/>-->
+<!--          </div>-->
+          <p><strong>Scrollen</strong></p>
+
+          <p><strong>Swipen</strong></p>
+
         </article>
         
         
