@@ -1,28 +1,24 @@
+let scriptsLoaded = false
+const giToggleEvent = new Event("giToggle");
+
+
 toggleGi = (item, button) => {
   loader = document.querySelector('#loader')
   giEnabled = !giEnabled;
   if (button) giEnabled ? button.classList.add('active') : button.classList.remove('active')
+  if(!scriptsLoaded && giEnabled) appendScripts(item);
+  if(scriptsLoaded) document.dispatchEvent(giToggleEvent);
+}
 
-  if (giEnabled) {
-    loader.classList.remove('invisible')
-    giScripts.forEach(itm => {
-      const script = document.createElement('script');
-      script.id = itm.id;
-      script.src = itm.src;
-      item.append(script);
-    })
-  } else {
-    loader.classList.add('invisible')
-    const canvas = document.querySelector('CANVAS')
-    const video = document.querySelector('VIDEO')
-    if (canvas) document.body.removeChild(canvas)
-    if (video) document.body.removeChild(canvas)
-    giScripts.forEach(itm => {
-      // TODO fix parent error
-      let i = document.getElementById(itm.id)
-      i.parentNode.removeChild(i);
-    })
-  }
+appendScripts = (item) => {
+  loader.classList.remove('invisible')
+  giScripts.forEach(itm => {
+    const script = document.createElement('script');
+    script.id = itm.id;
+    script.src = itm.src;
+    item.append(script);
+  })
+  scriptsLoaded = true
 }
 
 // ml5js
@@ -63,20 +59,19 @@ let hoveredElementID = null
 let clickTimeout = null;
 
 detectClick = () => {
-  if (labelHandPose === 'X') { // hand is closed
-    const hoveredElement = document.elementFromPoint(xIndex, yIndex)
-    if(!hoveredElement) return
-    const id = hoveredElement.getAttribute('data-id');
-    if (!id) {
-      resetTimeout()
-      hoveredElementID = null
-    }
-    if (id && id !== hoveredElementID) setHoveredElementID(id);
+  const hoveredElement = document.elementFromPoint(xIndex, yIndex)
+  if(!hoveredElement) return
+  const id = hoveredElement.getAttribute('data-id');
+  if (!id) {
+    resetTimeout()
+    hoveredElementID = null
   }
+  if (id && id !== hoveredElementID) setHoveredElementID(id);
 }
 
 resetTimeout = () => {
   clearTimeout(clickTimeout)
+  document.querySelectorAll('.click-animation')?.forEach(it => it.classList.remove('click-animation'))
 }
 
 setHoveredElementID = (id) => {
@@ -89,6 +84,7 @@ setHoveredElementID = (id) => {
   if(el) el.classList.add('click-animation')
   clickTimeout = setTimeout(function () {
     console.log("Click, ID: " + id);
+    console.log(el)
     if(el) {
       el.click();
       el.classList.remove('click-animation')
@@ -410,8 +406,4 @@ hide = (el) => {
 
 show = (el) => {
   el.style.display = 'inline-block'
-}
-
-randomNumber = (min, max) => {
-  return Math.random() * (max - min) + min;
 }

@@ -23,7 +23,9 @@ class CollectionPanel{
     this.content.forEach((item, index) =>{
       const el = document.createElement("DIV")
       el.innerHTML = item.title
+      el.classList.add('gclick')
       el.setAttribute('data-index', index)
+      el.setAttribute('data-id', generateRandomID())
       this.header.appendChild(el)
       el.onclick = () => this.update(el)
       if(index===0) this.update(el)

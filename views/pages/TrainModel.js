@@ -5,8 +5,8 @@ const TrainModel = {
   async render(){
     lastStory = this.slug
     return `
-      <section>
-      
+      <section class="section-create">
+   
 <article class="create ct-col">
 
   <div class="col-1"></div>
@@ -15,6 +15,7 @@ const TrainModel = {
 
 </article>
 
+<div class="gesture-are-disabled"><span>(Auf dieser Seite ist die Gestensteuerung deaktiviert. Deine Gesten werden dennoch erkannt.)</span></div>
       </section>
     `;
   },

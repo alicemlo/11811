@@ -19,6 +19,8 @@ class CollectionImage{
 
   init(){
     this.nextButton.classList.add('btn-svg')
+    this.nextButton.classList.add('gclick')
+    this.nextButton.setAttribute('data-id', generateRandomID())
     this.ctText.classList.add('text-svg')
     this.nextButton.innerText = '-> '+this.indications[0]
     this.svgContainer.innerHTML = this.source

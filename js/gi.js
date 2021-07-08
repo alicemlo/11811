@@ -4,6 +4,7 @@ let fraction = 1;
 
 window.setup = setup;
 window.draw  = draw;
+
 new p5();
 
 let tutIndex = 0
@@ -80,7 +81,7 @@ function setup(){
   brainCreate = ml5.neuralNetwork(options);
   fraction = 640*width
 
-  frameRate(30);
+  frameRate(28);
 }
 
 function draw() {
@@ -99,13 +100,11 @@ function draw() {
   // const x0 = map(xAvg, 14080, 0, 0, width)
   const y0 = map(yAvg, 0, 10560, 0, height)
 
-
   particles.forEach((p, index) =>{
     p.show()
     p.update()
     if(p.destroy()) particles.splice(index, 1)
   })
-
 
   if (collectionState === 'collecting') collectPose()
   if(brainCreated) classifyCreatedPose();
@@ -144,11 +143,9 @@ function draw() {
   if(viewGestures){
     fill(251, 136, 141);
     textSize(28);
-
     let label = ""
     if (labelHandPose === 'Y') label = 'Hand offen'
     if (labelHandPose === 'X') label = 'Hand geschlossen'
-
     text(label, x0Inversed, y0);
 
     // if(labelHandPose === 'Y'){
@@ -157,6 +154,23 @@ function draw() {
     // }
   }
 }
+
+
+document.addEventListener("giToggle", function() {
+  if(giEnabled) showP5();
+  else hideP5()
+});
+
+hideP5 = () => {
+  noLoop();
+  document.querySelector('CANVAS').classList.add('hidden')
+}
+
+showP5 = () => {
+  loop()
+  document.querySelector('CANVAS').classList.remove('hidden')
+}
+
 
 
 window.onresize = () => {

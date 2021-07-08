@@ -39,3 +39,13 @@ article.create{
   }
 
 }
+
+section.section-create{
+  .gesture-are-disabled{
+    width: 50rem;
+    span{
+      font-size: 0.7rem;
+      opacity: 0.7;
+    }
+  }
+}
