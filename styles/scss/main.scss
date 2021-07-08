@@ -93,11 +93,21 @@ svg{
   max-width: 30rem;
 }
 
-//button{
-//  border-radius: 25px;
-//  transition: border-radius 250ms;
-//
-//  &:hover{
-//    border-radius: 0;
-//  }
-//}
+.gclick::before{
+  position: absolute;
+  top: -0.6rem;
+  left: -0.6rem;
+  content: '';
+  width: 0.6rem;
+  height: 0.6rem;
+  background: rgba(251, 136, 141, 1);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 100ms;
+}
+
+.gclick.click-animation{
+  &::before{
+    opacity: 1;
+  }
+}

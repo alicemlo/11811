@@ -29,16 +29,20 @@ let gestureBox = {
 let gesturePushStates = [false, false, false];
 
 
+// height + width
+let width = window.innerWidth
+let height = window.innerHeight
+
+
 // data
 let pose = [];
 let particles = []
 let xAvg = 0
 let yAvg = 0
+let xIndex = 0
+let yIndex = 0
 
 
-
-let width = window.innerWidth
-let height = window.innerHeight
 
 // TRAINING DATA
 // variables

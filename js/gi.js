@@ -93,6 +93,13 @@ function draw() {
   scale(-1, 1);
   image(video, 0, 0, 64, 48);
   createParticles();
+  setIndexPoints()
+
+  const x0Inversed = map(xAvg, 0, 14080, 0, width)
+ // const x0 = map(xAvg, 14080, 0, 0, width)
+  const y0 = map(yAvg, 0, 10560, 0, height)
+
+
   particles.forEach((p, index) =>{
     p.show()
     p.update()
@@ -104,10 +111,11 @@ function draw() {
   if(brainCreated) classifyCreatedPose();
   classifyPose();
 
+  let beforeSwipe = null
+  if(!viewGestures) beforeSwipe = detectBeforeSwipe();
+  const swipe = detectSwipe();
 
-  let beforeSwipe = detectBeforeSwipe();
-  let swipe = detectSwipe();
-  // let click = detectClick();
+  detectClick();
 
   if(beforeSwipe){
     noStroke()
@@ -131,16 +139,20 @@ function draw() {
     }
   }
 
-
-
   if(viewGestures){
-    console.log(tutIndex)
-    if(tutIndex>=tutGestures.length) {
-      console.log("tutorial completed")
-      return
-    }
-    if(tutGestures[tutIndex].completed) tutIndex++
-    else tutGestures[tutIndex].perform()
+    fill(251, 136, 141);
+    textSize(28);
+
+    let label = ""
+    if (labelHandPose === 'Y') label = 'Hand offen'
+    if (labelHandPose === 'X') label = 'Hand geschlossen'
+
+    text(label, x0Inversed, y0);
+
+    // if(labelHandPose === 'Y'){
+    //   text("<- nach links", xAvg/22+100, yAvg/22+100);
+    //   text("nach rechts ->", xAvg/22-100, yAvg/22+100);
+    // }
   }
 }
 
