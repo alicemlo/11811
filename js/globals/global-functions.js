@@ -71,10 +71,18 @@ getButtonsOnPage = () => {
 
 detectClick = () => {
   if(labelHandPose === 'X'){ // hand is closed
-    let x = xAvg / 22
-    let y = yAvg / 22
+    const x = Math.abs(xAvg / 22 - 640) / 640 * width
+    const y = yAvg/22/480*height;
+    const x0 = x+25
+    const x1 = x-25
+    const y0 = y+25
+    const y1 = y-25
+
     console.log(x)
     console.log(y)
+
+    const el = document.elementFromPoint(x, y)
+    console.log(el)
 
   }
   return ""

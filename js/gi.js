@@ -107,7 +107,7 @@ function draw() {
 
   let beforeSwipe = detectBeforeSwipe();
   let swipe = detectSwipe();
-  let click = detectClick();
+  // let click = detectClick();
 
   if(beforeSwipe){
     noStroke()

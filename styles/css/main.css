@@ -649,7 +649,7 @@ section.buzzwords .ct-hover {
 article.create {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  min-height: calc(100vh - 15rem);
+  min-height: calc(100vh - 10rem);
   padding: 1rem 3rem;
   grid-gap: 2rem;
   max-width: 85rem;
