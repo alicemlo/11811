@@ -51,7 +51,6 @@ getPoses = (p) => {
 
 
 transformLandmarks = () => {
-
   if(landmarksOld?.length && landmarks?.length){
     transformedLandmarks = landmarks.map((entry, index) => {
       return {
@@ -69,14 +68,22 @@ transformLandmarks = () => {
   }else{
     transformedLandmarks = null
   }
-
 }
 
 
 createParticles = () => {
   if (!transformedLandmarks) return
+  //if(!pose[0] || !landmarks || !landmarksOld) return
   if (pose[0].handInViewConfidence < 0.95) return
+
   transformedLandmarks.forEach(key => particles.push(new Particle(key.x, key.y, col__accent)))
+
+  // dots.forEach((dot, index) =>{
+  //   const x = lerp(landmarks[index][0], landmarksOld[index][0], 0.5) / 640 * width
+  //   const y = lerp(landmarks[index][1], landmarksOld[index][1], 0.5) / 420 * height
+  //   dot.update(x, y)
+  // })
+
 }
 
 createLabelsY = () => {
@@ -140,8 +147,10 @@ detectScroll = () => {
   let y = 0
   if(pose[0]){
     y = yAvg/22
-    if(y > 370) window.scroll({ top: window.scrollY+10,  left: 0, behavior: 'smooth'});
-    if(y < 100)window.scroll({ top: window.scrollY-10,  left: 0, behavior: 'smooth'});
+    if(y > 400) window.scroll({ top: window.scrollY+22,  left: 0, behavior: 'smooth'});
+    else if(y > 370) window.scroll({ top: window.scrollY+15,  left: 0, behavior: 'smooth'});
+    else if(y < 50)window.scroll({ top: window.scrollY-22,  left: 0, behavior: 'smooth'});
+    else if(y < 100)window.scroll({ top: window.scrollY-15,  left: 0, behavior: 'smooth'});
   }
 }
 

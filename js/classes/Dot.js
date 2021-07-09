@@ -10,12 +10,9 @@ class Dot{
 
   }
 
-  update(xNew, yNew, xOld, yOld){
-    const x = lerp(xOld, xNew, 0.5)
-    const y = lerp(yOld, yNew, 0.5)
-
+  update(x, y, index){
     noStroke();
-    fill(this.color[0], this.color[1], this.color[2]);
+    fill(251, 136, 141);
     ellipse(x, y, 10, 10)
   }
 

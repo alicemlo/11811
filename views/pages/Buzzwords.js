@@ -147,7 +147,7 @@ class BuzzComponent {
     this.item = item;
     this.title = title;
     this.keyword = keyword;
-    this.content = content || 'ist not defined';
+    this.content = content || '...';
   }
   showContent() {
     this.item.addEventListener('buzz', ()  => {

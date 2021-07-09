@@ -11,7 +11,7 @@ class Particle{
     ellipse(this.x, this.y, 10, 10)
   }
   update(){
-    this.alpha -= 20
+    this.alpha -= 40
   }
   destroy(){
     return this.alpha < 0

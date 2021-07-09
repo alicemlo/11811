@@ -70,7 +70,7 @@ const COLLECTION_PANELS = [
     content: [
       {
         title: 'KI in der Radiologie - Krebsfrüherkennung',
-        text: '...'
+        text: 'Künstlich intelligente Systeme können Abweichungen in einer Menge von Datensätzen gtu erkennen. In der Radiologie kann diese Mustererkennung sehr hilfreich sein, krankhafte Verändernungen auf Bildern zu identifizieren. Diese Methode wird zum Beispiel bei Mammographien eingesetzt. '
       },
       {
         title: 'Wie Zalando KI einsetzt',

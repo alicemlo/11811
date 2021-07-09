@@ -20,30 +20,39 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Wieso du über Machine Learning Bescheid wissen solltest</h1>
         <p>
-          Künstliche Intelligenz und Machine Learning gewinnt immer mehr an Relevanz und wird auch immer häufiger auch für Anwendungen in
-          unserem Alltag angewendet - ohne dass uns das wirklich bewusst ist. Zum Beispiel der Netflix Algorithmus.
+          Themen wie Künstliche Intelligenz (KI) und Machine Learning gewinnen immer mehr an Relevanz und werden immer häufiger in alltäglichen Anwendungen 
+          eingesetzt, ohne dass uns das wirklich bewusst ist. Beispielweise werden uns Serien- und Filmsempfehlungen auf Netflix
+          von einem künstlich trainierten System angezeigt. 
         </p>
         <p>
-          Mittlerweile ist KI ein Hype, um dem gleichzeitig sehr viel Unwissenheit und Halbwahrheiten bestehen. Ziel dieser Webseite ist es, 
-          dir ein grundlegendes Verständnis für die Prozesse hinter dem Begriff KI zu vermitteln. Dabei liegt der Fokus auf den Prozess des
+          Leider wissen heute noch viele nicht, wie das Prinzip KI funktioniert. Ziel dieser Webseite ist es, 
+          dir ein grundlegendes Verständnis für die Prozesse hinter diesem Begriff zu vermitteln. Dabei liegt der Fokus auf den Prozess des
           maschinellen Lernens (Machine Learning). 
         </p>
         <p>
-          Auf der Seite <a href="#/buzzwords">"Buzzwords"</a> kannst du dich durch eine Buzzwordgrafik durchklicken, welche 
-          dir die wichtigsten Schlagwörter kurz auffrischt und dir eine kleine Übersicht der Zusammenhänge vermittelt.  
+          (Falls du eine kleine Auffrischung über die wichtigsten Buzzwords im Zusammenhang mit KI brauchst: Auf der Seite <a href="#/buzzwords">"Buzzwords"</a> 
+          kannst du dich durch eine Grafik durchklicken, welche dir die wichtigsten Schlagwörter kurz erklärt) 
         </p>
       </div>
       <div class="col-2" style="padding: 2rem 0">
         <div class="term-collection" data-name="collection-0"></div>
       </div>
     </div>
-  
+    
+<a href="#/buzzwords" class="banner">
+  <div> 
+    <p>
+      (Falls du eine kleine Auffrischung über die wichtigsten Buzzwords im Zusammenhang mit KI brauchst: Auf der Seite "Buzzwords"
+      kannst du dich durch eine Grafik durchklicken, welche dir die wichtigsten Schlagwörter kurz erklärt) 
+    </p>
+  </div> 
+</a>
   
     <div class="content">
       <div class="col-1">
         <h1>Was ist Intelligenz?</h1>
         <p>
-          Anhand von Machine Learning wird "Intelligenz" künstlich erschafft. Um dieses Prozess zu verstehen, muss zuerst geklärt sein, wie man Intelligenz definiert.
+          Anhand von Machine Learning wird "Intelligenz" künstlich geschaffen. Um dieses Prozess zu nachzuvollziehen, muss man zuerst den Begriff Intelligenz definieren.
           Dies ist allerdings nicht ganz so einfach, da sich diese Defintion immer wieder verändert. (Wir Menschen selber verstehen noch nicht ganz, was Intelligenz ist.)
         </p>
         <p>
@@ -60,7 +69,7 @@ const MachineLearning = {
         <p>
           Schlussendlich bringt und KI Effizienz bei der Verarbeitung und Auswertung von Daten. 
           Intelligente Systeme kommen im Gegensatz zu Menschen sehr gut mit grossen Datenmengen zurecht und können Vorhersagen treffen, 
-          Analysen erstellen, Daten strukturieren oder Abweichungen in Datensätzen feststellen. 
+          Analysen erstellen, Daten strukturieren, Prozesse optimieren oder Abweichungen in Datensätzen feststellen. 
         </p>
         <p> 
           Anhand von Beispielen, die du in der rechten Spalte findest, kannst du ein bisschen erahnen, wie sich KI auswirken kann und für 
@@ -309,7 +318,6 @@ const MachineLearning = {
   
   </article>
  
-<!-- only if gi enabled-->
 <a href="#/train-model" class="banner ng-invisible">
   <div> 
     <p>Da du jetzt den groben Abaluf eines Trainingprozesses kennst, würde ich vorschlagen, du versuchst es selber aus.</p>
