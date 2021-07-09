@@ -19,8 +19,6 @@ const TrainModel = {
     `;
   },
   after_render: async () => {
-    gesturalInteractionEnabled = false
-    gestureLabelingEnabled = false
 
     const container = document.querySelector('article.create')
     const col1 = document.querySelector('.col-1')
@@ -58,6 +56,9 @@ class CollectionTrainModel{
     this.ctText.classList.add('col-1-text')
     this.ctInfo.classList.add('col-1-info')
     this.ctButton.classList.add('col-1-event')
+    this.ctButton.classList.add('gclick')
+    this.ctButton.setAttribute('data-id', generateRandomID())
+
     appendChildren(this.ctCol1, [this.ctTitle, this.ctText, this.ctInfo, this.ctButton])
   }
 
@@ -68,7 +69,11 @@ class CollectionTrainModel{
 
   update(){
     const content = this.data[this.index]
-    if(this.index >= this.data.length-1)   window.location.hash = `/machine-learning`
+    if(this.index >= this.data.length-1) {
+      gesturalInteractionEnabled = ture
+      gestureLabelingEnabled = false
+      window.location.hash = `/machine-learning`
+    }
     else if(content.getState()) this.setContent(this.index++)
   }
 
