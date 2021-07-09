@@ -394,13 +394,13 @@ section.machine-learning .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 5rem 0 3rem 0;
-  grid-gap: 2rem; }
+  grid-column-gap: 2rem; }
   @media (min-width: 62em) {
     section.machine-learning .content {
-      grid-gap: 4rem; } }
+      grid-column-gap: 4rem; } }
   @media (min-width: 76em) {
     section.machine-learning .content {
-      grid-gap: 5rem; } }
+      grid-column-gap: 5rem; } }
 
 section.machine-learning h1 {
   font-weight: normal;
@@ -430,6 +430,34 @@ section.machine-learning .collection--image {
 
 section.machine-learning .btn-gen-btn-text {
   margin: 0 0.5rem 0.5rem 0; }
+
+section.machine-learning .col-sources {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  padding-right: 1rem;
+  border-right: 1px solid transparent;
+  margin: 2rem 0 1rem 0; }
+  section.machine-learning .col-sources.border {
+    border-right: 1px solid #3BBA7D; }
+  section.machine-learning .col-sources .title {
+    cursor: pointer;
+    color: #527D6F;
+    text-align: right; }
+    section.machine-learning .col-sources .title:hover {
+      color: #3BBA7D; }
+  section.machine-learning .col-sources .sources {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    opacity: 1;
+    transition: opacity 200ms; }
+  section.machine-learning .col-sources .sources.hidden {
+    opacity: 0;
+    pointer-events: none; }
 
 @media (max-width: 48em) {
   section.machine-learning .content {
@@ -488,7 +516,8 @@ a.banner {
   grid-template-columns: 1fr 2fr;
   max-width: unset;
   grid-gap: 4rem;
-  grid-auto-flow: dense; }
+  grid-auto-flow: dense;
+  margin: -2rem 0 4rem 0; }
   @media (max-width: 48em) {
     .banner.svg-grid > .collection--image {
       display: block; } }

@@ -29,10 +29,6 @@ const MachineLearning = {
           dir ein grundlegendes Verständnis für die Prozesse hinter diesem Begriff zu vermitteln. Dabei liegt der Fokus auf den Prozess des
           maschinellen Lernens (Machine Learning). 
         </p>
-        <p>
-          (Falls du eine kleine Auffrischung über die wichtigsten Buzzwords im Zusammenhang mit KI brauchst: Auf der Seite <a href="#/buzzwords">"Buzzwords"</a> 
-          kannst du dich durch eine Grafik durchklicken, welche dir die wichtigsten Schlagwörter kurz erklärt) 
-        </p>
       </div>
       <div class="col-2" style="padding: 2rem 0">
         <div class="term-collection" data-name="collection-0"></div>
@@ -42,7 +38,7 @@ const MachineLearning = {
 <a href="#/buzzwords" class="banner">
   <div> 
     <p>
-      (Falls du eine kleine Auffrischung über die wichtigsten Buzzwords im Zusammenhang mit KI brauchst: Auf der Seite "Buzzwords"
+      (falls du eine kleine Auffrischung über die wichtigsten Buzzwords im Zusammenhang mit KI brauchst: Auf der Seite "Buzzwords"
       kannst du dich durch eine Grafik durchklicken, welche dir die wichtigsten Schlagwörter kurz erklärt) 
     </p>
   </div> 
@@ -79,12 +75,15 @@ const MachineLearning = {
       <div class="col-2">
          <div class="panel" data-name="examples-ai"></div>
       </div>
+      
       <div class="col-sources">
-        <span class="title" style="color: #527D6F">Mehr dazu lesen: </span>
-        <div>
-            <a target="_blank" href="https://www.medica.de/de/News/Archiv/Deep_Learning_Algorithmen_entlasten_Radiologen">Algorithmen entlasten Radiologen</a>    
+        <span class="title">-> Mehr dazu lesen</span>
+        <div class="sources hidden">   
+            <a target="_blank" href="https://www.medica.de/de/News/Archiv/Deep_Learning_Algorithmen_entlasten_Radiologen">Algorithmen entlasten Radiologen</a> 
+            <a target="_blank" href="https://corporate.zalando.com/de/newsroom/de/news-storys/smart-shoppen-dank-kuenstlicher-intelligenzn">Zalando: Smart Shoppen dank künstlicher Intelligenz</a>    
         </div>
       </div>
+      
     </div>
     
     <div class="content">
@@ -94,13 +93,13 @@ const MachineLearning = {
           Es ist unmöglich, nur "kurz" über KI zu reden. 
           Um dir zu veranschaulichen, wie breit das Thema KI behandelt werden kann, stelle ich dir in der rechten Spalte ein paar der relevanten Teilgebiete von KI vor.
         </p>
-        <p>
-...
-        </p>
       </div>
+      
       <div class="col-2">
         <div class="panel" data-name="panel-1"></div>
       </div>
+      
+      
     </div>
   
   </div>
@@ -136,6 +135,8 @@ const MachineLearning = {
       <div>
         <div class="item-svg flex-center" data-name="svg-input-output"></div>
       </div>
+
+      
     </div>
   
     <div class="content">
@@ -282,7 +283,19 @@ const MachineLearning = {
       <div class="col-2">
           <div class="panel" data-name="unsupervised-learning"></div>   
       </div>
+      
+      <div class="col-sources">
+        <span class="title">-> Mehr dazu lesen</span>
+        <div class="sources hidden">   
+            <a target="_blank" href="https://datasolut.com/wiki/clusteranalyse/">Clusteranalyse einfach erklärt</a> 
+            <a target="_blank" href="https://www.oracle.com/ch-de/data-science/machine-learning/what-is-machine-learning/#link6">Machine Learning – definiert</a> 
+        </div>
+       </div>
+  
     </div>
+   
+    
+    
     
     <div class="content">
       <div class="col-1">
@@ -303,18 +316,36 @@ const MachineLearning = {
       </div>
       <div class="col-2">
       </div>
+      
+      <div class="col-sources">
+        <span class="title">-> Mehr dazu lesen</span>
+        <div class="sources hidden">   
+            <a target="_blank" href="https://netflixtechblog.com/artwork-personalization-c589f074ad76">Artwork Personalization at Netflix</a> 
+            <a target="_blank" href="https://becominghuman.ai/how-netflix-uses-ai-and-machine-learning-a087614630fe">How Netflix Uses AI, Data Science, and Machine Learning</a> 
+        </div>
+     </div>
+     
     </div>
     
     <div class="content">
       <div class="col-1">
         <h1>Überwachtes vs. unüberwachtes Lernen</h1>
       </div>
+     
     </div>
     
     <div class="banner svg-grid">
         <div class="collection--image" data-name="supervised-unsupervised"></div>
     </div>
+
+  </div>
   
+  <div class="col-sources">
+        <span class="title">-> Mehr dazu lesen</span>
+        <div class="sources hidden">   
+            <a target="_blank" href="https://towardsdatascience.com/machine-learning-for-beginners-d247a9420dab">Machine Learning For Beginners</a> 
+            <a target="_blank" href="https://medium.com/technology-nineleaps/some-key-machine-learning-definitions-b524eb6cb48">Some Key Machine Learning Definitions</a> 
+        </div>
   </div>
   
   </article>
@@ -346,6 +377,14 @@ const MachineLearning = {
           kann das zu verzerrten Prognosen führen. 
         </p>
       </div>
+      <div class="col-2"></div>
+      <div class="col-sources">
+        <span class="title">-> Mehr dazu lesen</span>
+        <div class="sources hidden">   
+            <a target="_blank" href="https://ncube.com/blog/big-data-and-ai">How Big Data and AI Work Together</a> 
+            <a target="_blank" href="https://online.maryville.edu/blog/big-data-is-too-big-without-ai/">Big Data is to big without AI</a> 
+        </div>
+     </div>
     </div>
   
 <!--    <div class="content">-->
@@ -386,6 +425,15 @@ const MachineLearning = {
         - Rassismus Beispiel
         - Soziales Beispiel
       </div>
+      
+      <div class="col-sources">
+        <span class="title">-> Mehr dazu lesen</span>
+        <div class="sources hidden">   
+            <a target="_blank" href="https://www.telusinternational.com/articles/7-types-of-data-bias-in-machine-learning?INTCMP=ti_lbai">7 Types of Data Bias in Machine Learning</a> 
+            <a target="_blank" href="https://hbr.org/2019/10/what-do-we-do-about-the-biases-in-ai">What Do We Do About the Biases in AI?</a> 
+        </div>
+     </div>
+   
     </div>
   
   </div>
@@ -523,6 +571,17 @@ const MachineLearning = {
       item.innerHTML = data.content;
     })
 
+    // sources
+    const sources = document.querySelectorAll('.col-sources')
+    sources.forEach(it => {
+      const title = it.firstElementChild
+      const content = it.lastElementChild
+
+      title.onclick = () => {
+        content.classList.toggle('hidden')
+        it.classList.toggle('border')
+      }
+    })
 
   }
 };

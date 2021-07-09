@@ -49,13 +49,13 @@ section.machine-learning {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 5rem 0 3rem 0;
-    grid-gap: 2rem;
+    grid-column-gap: 2rem;
     @include tablet-up{
-      grid-gap: 4rem;
+      grid-column-gap: 4rem;
     }
 
     @include desktop-up{
-      grid-gap: 5rem;
+      grid-column-gap: 5rem;
     }
   }
 
@@ -94,6 +94,44 @@ section.machine-learning {
 
   .btn-gen-btn-text{
     margin: 0 0.5rem 0.5rem 0;
+  }
+
+  .col-sources{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    padding-right: 1rem;
+    border-right: 1px solid transparent;
+    margin: 2rem 0 1rem 0;
+
+    &.border{
+      border-right: 1px solid $col--main-01;
+    }
+
+    .title{
+      cursor: pointer;
+      color: $col--main-02;
+      text-align: right;
+      &:hover{
+        color: $col--main-01;
+      }
+    }
+
+    .sources{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      opacity: 1;
+      transition: opacity 200ms;
+    }
+
+    .sources.hidden{
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 
 
@@ -186,6 +224,8 @@ a.banner{
   max-width: unset;
   grid-gap: 4rem;
   grid-auto-flow: dense;
+  margin: -2rem 0 4rem 0;
+
 
   @include mobile-down{
     display: block;
@@ -203,4 +243,5 @@ a.banner{
     max-width: unset;
     max-height: 70vh;
   }
+
 }
