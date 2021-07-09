@@ -179,3 +179,28 @@ a.banner{
   }
 
 }
+
+.banner.svg-grid > .collection--image {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: unset;
+  grid-gap: 4rem;
+  grid-auto-flow: dense;
+
+  @include mobile-down{
+    display: block;
+  }
+
+  div:not(.text-svg){
+    grid-column-start: 2;
+  }
+
+  .text-svg{
+    grid-column-start: 1;
+  }
+
+  svg{
+    max-width: unset;
+    max-height: 70vh;
+  }
+}

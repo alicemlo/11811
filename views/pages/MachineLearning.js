@@ -63,7 +63,7 @@ const MachineLearning = {
       </div>
     </div>
   
-      <div class="content">
+    <div class="content">
       <div class="col-1">
         <h1>Für was brauchen wir künstliche Intelligenz und Machine Learning?</h1>
         <p>
@@ -78,6 +78,12 @@ const MachineLearning = {
       </div>
       <div class="col-2">
          <div class="panel" data-name="examples-ai"></div>
+      </div>
+      <div class="col-sources">
+        <span class="title" style="color: #527D6F">Mehr dazu lesen: </span>
+        <div>
+            <a target="_blank" href="https://www.medica.de/de/News/Archiv/Deep_Learning_Algorithmen_entlasten_Radiologen">Algorithmen entlasten Radiologen</a>    
+        </div>
       </div>
     </div>
     
@@ -111,26 +117,20 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Wie wird ein System intelligent?</h1>
         <p>
-          verarbteitet Daten.
-        </p>
-        <p>
-          Hier kommt Machine Learning ins Spiel: 
-        </p>
-        <p>
           Hier kommt Machine Learning ins Spiel. Denn durch maschinelle Lernverfahren werden Modelle generiert, die Daten (Inputs) verarbeiten 
           können und einen Ouput (Ergebnis) ausgeben. 
         </p>
         <p>
           Der Input ist der Datensatz, auf dessen Basis ein Modell eine Vorhersage (Output) treffen kann. 
-          Im Grund kann der Input ein Bild sein, bei dem der Farbwert jedes Pixels als Zahlenwert dargestellt ist.
+          Zum Beispiel kann ein Input ein Bild sein, bei dem der Farbwert jedes Pixels als Zahlenwert dargestellt ist.
         </p>
         <p>
           Wenn ein Modell einen Input verarbeitet hat, wird es einen Output ausgeben. Als Beispiel nehmen wir ein Modell, dass auf einem Bild
-          entweder einen Hund oder eine Katze erkennt. Der Output des Modells ist also HUND oder KATZE.
+          entweder einen Hund oder eine Katze erkennt. Der Output des Modells wäre dann HUND oder KATZE.
         </p>
         <p>
-          Damit so ein generiertes Modell entstehen kann, muss es zuerst mit Beispieldaten trainiert werden. Wie so ein Modell trainiert wird, zeigt
-          das nächste Beispiel, dass ein Modell abbildet, dass vorhersagt, ob dir ein Song gefällt oder nicht. 
+          Damit so ein Modell generiert werden kann, muss es zuerst mit Beispieldaten trainiert werden. Der nächste Abschnitt zeigt
+          einen Trainingsprozess eines Systems, dass dir vorhersagt, ob dir ein Song gefällt oder nicht. 
         </p>
       </div>
       <div>
@@ -143,6 +143,14 @@ const MachineLearning = {
         <h1>Ein Modell trainieren</h1>
         <p>
           Ziel: Du möchtest ein System generieren, dass dir vorhersagt, ob du einen Song magst oder nicht. 
+          Dafür müssen wir bestimmten, was der Input ist und was der Output sein sollte. 
+        </p>
+        <p>
+          Um das System möglichst einfach zu gestaltet, besteht der Input nur aus zwei Werten: LAUTSTÄRKE und TEMPO. 
+          Jeder einzelner Song definiert sich alleine durch diese zwei Werte.
+        </p>
+        <p>
+          Du kannst den Song entweder mögen oder nicht mögen. Der Output kann also auch nur zwei Werte annehmen: LIKE oder DISLIKE
         </p>
         <p>
           Erforderliche Schritte: </br>
@@ -150,6 +158,9 @@ const MachineLearning = {
           - Modell mit den gesammelten Daten trainieren</br>
           - Model testen</br>
         </p>
+        <p>
+          (klicke dich durch die Grafik rechts, um dir den Ablauf des Trainingsprozess veranschaulichen zu lassen)
+        </p>  
       </div>
       <div class="col-2">   
         <div class="collection--image" data-name="svg-songs"></div>   
@@ -157,32 +168,34 @@ const MachineLearning = {
     </div>
   
   
-    <div class="content">
-      <div class="col-1">
-        <h1>Zusammenfassung Ablauf / Klärung der Begriffe</h1>
-        <p>
-          Input: Bezeichnung der Daten, die das Modell verarbeitet, um eine Prognose treffen zu können
-        </p>
-        <p>
-          Output: Prognose bzw. Vorhersage des Modells
-        </p>
-        <p>
-          Modell: Auch Datenmodell oder statistisches Modell. Wird von einem Algorithmus generiert und kann Daten verarbeiten. 
-        </p>
-      </div>
-    </div>
-    
+<!--    <div class="content">-->
+<!--      <div class="col-1">-->
+<!--        <h1>Zusammenfassung Ablauf / Klärung der Begriffe</h1>-->
+<!--        <p>-->
+<!--          Input: Bezeichnung der Daten, die das Modell verarbeitet, um eine Prognose treffen zu können-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          Output: Prognose bzw. Vorhersage des Modells-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          Modell: Auch Datenmodell oder statistisches Modell. Wird von einem Algorithmus generiert und kann Daten verarbeiten. -->
+<!--        </p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    -->
     
     <div class="content">
       <div class="col-1">
         <h1>Lernmethoden</h1>
         <p>
-          Die Lernmethode bezeichnet die Art und Weise, wie ein intelligentes Modell generiert wird. Die Wahl der Methode ist abhängig vom Einsatzzweck 
-          der Applikation, aber auch von der Strukturierung der Input Daten. 
+          Die Lernmethode bezeichnet die Art und Weise, wie ein intelligentes Modell generiert wird. 
+          Das obige Beispiel wurde anhand einer überwachten Trainingsmethode trainiert. 
+          Doch es existieren verschiedene maschinelle Lernmethoden, die intelligente Modelle generieren.
+          Die Wahl der Methode ist abhängig vom Einsatzzweck der Modells, aber auch von der Strukturierung der Input Daten. 
         </p>
         <p>
-          Es gibt verschiedene maschinelle Lernmethoden, die intelligente Modelle generieren. Hier wird das überwachte sowie das unüberwachte Lernen vorgestellt. 
-          Diese Methoden unterscheidet insbesondere die Form der Daten, mit denen die Modelle trainiert werden, aber auch der Anwendungszweck ist bei der Wahl der Methode entscheidend. 
+          Auf dieser Seite werden die überwachte und die unüberwachte Lernenmethode vorgestellt. 
+          Diese Methoden unterscheidet insbesondere die Form der Daten, mit denen die Modelle trainiert werden.
         </p>
       </div>
       <div class="col-2">
@@ -194,15 +207,15 @@ const MachineLearning = {
     <div class="content">
       <div class="col-1">
         <h1>Überwachtes Lernen</h1>
-        <p> 
-          Bei dieser Methode werden Modelle trainiert, wo eine sogenannte GROUND TRUTH (Grundwahrheit) besteht.
-          Die Trainingsdaten bestehen also aus bekannten Input-Daten, denen jeweils einem bekannten Output zugewiesen ist. 
-          Sprich wir können den Trainingsprozess überwachen, da wir die Trainingsdaten vor dem Training selbst strukturieren. 
+        <p>    
+          Bei dieser Methode werden Modelle anhand bekannter Daten (GROUND TRUTH) trainiert.
+          Die GROUND TRUTH (Grundwahrheit, also die bekannten Daten) besteht aus einem Datensatz, bei dem jedem Input ein
+          Output zugewiesen ist. Das könnte zum Beispiel eine Sammlung von 100 Tier-Bildern sein, wobei bei jedem Bild definiert ist,
+          ob ein Hund oder eine Katze darauf zu sehen ist. 
         </p>
         <p>
-          Sobald das Modell mit denen von uns strukturierten Daten trainiert wurde, wird es unbekannte Inputs von alleine
-          verarbeiten und einen Output ausgeben.
-          Die Überwachung bezieht sich nur auf das Trainingdaten, mit denen das Modell trainiert wird. 
+          Bevor ein Modell mit dieser Methode trainiert werden kann, müssen die Trainigsdaten strukturiert werden. Der erfordert auf der 
+          einen Seite Aufwand, bedeutet aber auch einen kontrollierten Trainingsablauft. 
         </p>
         <p>
           Im Vergleich zu anderen Lernmethoden ist diese Methode schon sehr weit entwickelt und kann relativ schnell durchgeführt werden. 
@@ -215,12 +228,13 @@ const MachineLearning = {
     
         <div class="content">
       <div class="col-1">
-        <h1>Überwachtes Lernen: Klassifikation vs. Regression</h1>
+        <h1>Klassifikation vs. Regression</h1>
         <p>
-          Der Output eines solchen Modells kann entweder eine Klassifizierung sein oder eine fortlaufender Wert (Regression).
+          Die überwachte Lernmethode kennt zwei Verfahren, die sich auf den Output auswirken. Ein Output kann entweder ein fixes Label
+          sein (Klassifikation) oder einen fortlaufenden Wert annehmen (Regression).
         </p>
         <p>
-          Bei der Klassifikation ist der Output ein fixer Wert bzw. eine Klasse. Zum Beispiel HUND oder KATZE. 
+          Bei der Klassifikation ist der Output ein fixer Wert bzw. eine Klasse aus einer fixen Sammlung an Klassen. Zum Beispiel HUND oder KATZE. 
         </p>
         <p>
           Bei der Regression wird das Modell einen stetigen Wert ausgeben (numerische Vorhersage). Das wird zum Beispiel eingesetzt, um die Prognose eines Immobilienwertes zu prognostizieren. 
@@ -235,12 +249,17 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Unüberwachtes Lernen</h1>
         <p>
-          Bei dieser Methode werden Modelle mit unbearbeiteten / unkategorisierten Daten trainiert. Dies ist gerade für die Verarbeitung grosser Datenmengen sehr von Vorteil. 
+          Bei dieser Lernmethode müssen vor dem Training keine Daten strukturiert werden. Die KI übernimmt für uns die Strukturierung der Daten. 
+          Dies ist gerade für die Verarbeitung grosser Datenmengen von Vorteil, da die Struktierung grosser Datenmengen natürlich sehr schnell sehr aufwendig wird. 
         </p>
         <p>
           Diese Methode wird eingesetzt, wenn es darum geht, in komplexen und unorganisierten Datensätzen neue Muster aufzudecken. Wir könnten diese Methode zum Beispiel dafür einsetzten, aus ganz vielen Wetterdaten neue Zusammenhänge zu erkennen. 
         </p>
-        <p>Weitere Typen von unüberwachtem Lernen: Neuronale Netze, Assoziation, Entdeckung neuer Zusammenhänge und Beziehungen in den Daten</p>
+        <p>
+          Ein weiterer Vorteil dieser Methode: Sie kann in Echtzeit angewendet werden. Beispielweise wird der Netflix-Algorithmus (der unüberwacht trainiert wird)
+          laufend neu trainiert und kann sich stetig verbessern, je mehr Daten existieren. 
+        </p>
+<!--        <p>Weitere Typen von unüberwachtem Lernen: Neuronale Netze, Assoziation, Entdeckung neuer Zusammenhänge und Beziehungen in den Daten</p>-->
       </div>
       <div class="col-2">
       </div>
@@ -248,17 +267,17 @@ const MachineLearning = {
     
     <div class="content">
       <div class="col-1">
-        <h1>Unüberwachtes Lernen: Clusteranalyse vs. Assoziationsanalyse vs. Anomalieerkennung</h1>
+        <h1>Clusteranalyse vs. Assoziationsanalyse vs. Anomalieerkennung</h1>
+        <p>Die Clusteranalyse, die Assoziationsanalyse und die Anomalieerkennung sind Verfahren, die auf unüberwachten Lernprozessen basieren.</p>
         <p>
           Clusteranalyse: Erkennen von Mustern in grossen Datensätzen
         </p>
         <p>
-          Assoziationsanalyse: Sucht nach Regeln und Beziehungen in den Daten. Die Regel beschreiben Zusammenhänge zwischen den Daten.
+          Assoziationsanalyse: Suche nach Regeln und Beziehungen in den Daten. Die Regel beschreiben Zusammenhänge zwischen den Daten.
         </p>
         <p>
-          Anomalie-Erkennung: Ungewöhnliche Datenpunkte identifizieren
+          Anomalie-Erkennung: Identifikation ungewöhnlicher Datensätze
         </p>
-        <p>Weitere Typen von unüberwachtem Lernen: Neuronale Netze, Assoziation, Entdeckung neuer Zusammenhänge und Beziehungen in den Daten</p>
       </div>
       <div class="col-2">
           <div class="panel" data-name="unsupervised-learning"></div>   
@@ -273,12 +292,9 @@ const MachineLearning = {
           Clustering trainiert (unüberwachtes Lernen), dass anhand deiner Sehgewohnheiten neue Film- und Serienvorschläge generiert. 
         </p>
         <p>
-          Dabei sammelt Netflix ständig die Daten deine Sehgewohnheiten und trainiert anhand dieser Daten Modelle, welche deine Vorschläge berechnen. 
-          Aufgrund deines Sehverhaltens kann das Modell auch testen, wie gut die Vorschläge bei dir ankamen und kann immer präzisere Prognosen erstellen. 
-          Es lernt also ständig weiter und bleibt dynamisch.
-        </p>
-        <p>
-          
+          Dabei sammelt das Modell ständig die Daten deiner Sehgewohnheiten, lernt anhand dieser Daten und berechnet dir so neue Filmempfehlungen. 
+          Das Modell kann ständig evaluieren, wie gut die Empfehlungen bei dir ankommen und kann so seine Vorhersagen verbessern.
+          Es lernt also ständig weiter und bleibt so dynamisch.
         </p>
         <p>
           Würde Netflix kein Machine Learning dafür einsetzten, müssten sie von Hand Parameter und Regeln definieren, nach denen deine Vorschläge berechnet werden.
@@ -292,27 +308,12 @@ const MachineLearning = {
     <div class="content">
       <div class="col-1">
         <h1>Überwachtes vs. unüberwachtes Lernen</h1>
-        <pre>
-          --> Full Width
-        </pre>
-        <p>
-          Auch Mischformen möglich
-        </p>
-        <p>
-          Vorteile: 
-        </p>
-        <p>
-          Nachteile: 
-        </p>
-        <p>
-          Anwendnugsbeispiele: 
-        </p>
-      </div>
-      <div class="col-2">
-        <div class="collection--image" data-name="supervised-unsupervised"></div>
       </div>
     </div>
     
+    <div class="banner svg-grid">
+        <div class="collection--image" data-name="supervised-unsupervised"></div>
+    </div>
   
   </div>
   
@@ -338,7 +339,7 @@ const MachineLearning = {
         <p>
           Machine Learning funktioniert nur mit Daten. Und je mehr Daten vorhanden sind, desto bessere Modelle können trainiert werden. 
           Das zieht Probleme mit sich, denn die Sammlung und die Verwaltung dieser Datenmengen ist nicht immer ganz transparent und steht 
-          oft im Zielkonflikt mit Datenschutz und mit Privatsphäre.
+          oft im Zielkonflikt mit unserer Vorstellung von Datenschutz und mit Privatsphäre.
         </p>
         <p>
           Ausserdem stellt auch die Qualität der Daten eine grosse Herausforderung dar. Wenn Modelle mit unvollständigen oder schlechten Daten trainiert werden,
@@ -347,45 +348,36 @@ const MachineLearning = {
       </div>
     </div>
   
-    <div class="content">
-      <div class="col-1">
-        <h1>Big Data und Datenschutz</h1>
-        <p>
-          Zielkonflikt
-        </p>
-      </div>
-      <div class="col-2">
-      </div>
-    </div>
+<!--    <div class="content">-->
+<!--      <div class="col-1">-->
+<!--        <h1>Big Data und Datenschutz</h1>-->
+<!--        <p>-->
+<!--          Zielkonflikt-->
+<!--        </p>-->
+<!--      </div>-->
+<!--      <div class="col-2">-->
+<!--      </div>-->
+<!--    </div>-->
   
     <div class="content">
       <div class="col-1">
-        <h1>Data bias und Ethik</h1>
+        <h1>Diskriminierung durch KI</h1>
         <p>
-          Bsp. Hautfarbe, Gender.
-          "Die KI ist nur so gut wie ihre Trainingsdaten."
-          Das Trainieren dieser Daten liegt allein in der Hand der Algorithmen, die diese Modelle generieren. Wir können nur die Traningsadten beeinflussen. 
+          "Die KI ist nur so gut wie ihre Trainingsdaten." So sieht das der KI-Forscher Richard Socher. 
+          Künstlich intelligente Systeme diskriminieren nicht. Doch wenn sie mit unvollständigen oder einseitigen Daten trainiert werden,
+          können dennoch diskriminierten Prognosen auftreten. 
         </p>
         <p>
-          Man kann es ein bisschen damit vergleiche, wie man ein Kind aufwachsen und lernen lässt.
+          Beispielsweise wurde die Modelle zur Erkennung von Gesichtern nur mit männlichen, hellhäutigen Gesichtern trainiert. 
+          Das hat bis heute zur Folge, dass die Gesichtserkennung bei Männern mit heller Haut besser funktioniert als bei Frauen oder
+          bei Leuten mit dunklerer Hautfarbe.
         </p>
         <p>
-          Ein sehr populäres Beispiel für ein schlecht trainiertes Modell ist die Gesichtserkennung. Da diese Modelle 
-          vor allem mit Gesichtern von weissen Männern trainiert wurden, sind diese Modelle auch auf weisse Männer ausgerichtet. 
-          Diese Datenmodelle erzeugen weniger akkurate Vorhersagen bei Frauen oder bei Menschen anderer Hautfarbe. 
+          Diese Verzerrungen treten auf, wenn die Trainingsdaten unvollständig, nicht konsistet oder einseitig sind oder falsch Gewichtet wurden. 
         </p>
         <p>
-          Diese Verzerrungen sind zum Beispiel auch bei der Spracherkennung aufgetreten: die meiste Spracherkennungssoftware erkennt
-          Männerstimmen besser als Frauenstimmen. 
-        </p>
-        <p>
-          Verzerrungen treten zum Beispiel bei unvollständigen, inkonsistenten, einseitigen Datensätzen und falsche Gewichtung von Daten.
-        </p>
-        <p>
-           Rassismus, Reinfocement, Fairness
-        </p>
-        <p>
-          Was man dagegen tun kann: Ständige Überprüfung der Modelle (Unterhalt dieser Modelle), 
+          Dieses Problem kann man nur dadaurch lösen, indem man die Modelle mit besseren Daten trainiert und wenn solche Verzerrungnen
+          identifiziert werden. 
         </p>
       </div>
       <div class="col-2">
@@ -410,7 +402,10 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Wieso brauchen wir ML</h1>
         <p>
-          Es gibt Aufgaben, bei denen Computer und intelligente Systeme dem Menschen deutlich überlegen sind. Zum Beispiel ... Genau für diese Aufgaben macht der Einsatz von künstlicher Intelligenz
+          Es gibt Aufgaben, bei denen Computer und intelligente Systeme dem Menschen deutlich überlegen sind. 
+          Zum Beispiel die Analyse und Handhabung grosser Datenmengen. Aber auch bei der Automatisierung repetitiver Prozesse 
+          macht der Einsatz computerbaiser
+           Zum Beispiel ... Genau für diese Aufgaben macht der Einsatz von künstlicher Intelligenz
           sehr viel Sinn. Automatisierung, etc.  
         </p>
         <p>
@@ -418,7 +413,8 @@ const MachineLearning = {
           -> Häufigste Anwendungsfelder
         </p>
         <p>
-          Es wird jedoch auch immer Sachen geben, die sich nicht leicht durch Systeme ersetzen lassen. Sprachverarbeitung sehr schwierig, Logisches Denken verknüpft mit Weltwissen, etc.
+          Es wird jedoch auch immer Sachen geben, die sich nicht leicht durch Systeme ersetzen lassen. 
+          Sprachverarbeitung sehr schwierig, Logisches Denken verknüpft mit Weltwissen, etc.
         </p>
       </div>
     </div>
@@ -440,6 +436,13 @@ const MachineLearning = {
           Diese Unterscheidung sollte für dich jetzt nicht mehr so schwierig zu verstehen sein. Wenn du das verstanden hast, 
           hast du eine wichtige Unterscheidung verstanden, für das Verständig von KI sehr wichtig ist. 
         </p>
+        <p>
+          "Schwache" künstlich intelligte Systeme können genau eines: sie berechnen einen Output anhand eines Inputs, der sich von 
+          seiner Art nicht verändert. Eine KI, welche trainiert wurde, verschiedene Tiere auf einem Bild zu erkennen wird immer nur
+          Tiere auf einem Bild erkennen. Aber sie wird nicht plötzlich unterschiedliche Gegenstände erkennen können, solange sie nicht dazu
+          trainiert wurde.  
+         </p>
+         <p>Eine starke KI - oder auch Superintelligenz - gibt es heute nicht wirklich. </p>
       </div>
     </div>
     

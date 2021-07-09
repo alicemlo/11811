@@ -483,6 +483,23 @@ a.banner {
   a.banner:hover > div {
     background: rgba(82, 125, 111, 0.45); }
 
+.banner.svg-grid > .collection--image {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: unset;
+  grid-gap: 4rem;
+  grid-auto-flow: dense; }
+  @media (max-width: 48em) {
+    .banner.svg-grid > .collection--image {
+      display: block; } }
+  .banner.svg-grid > .collection--image div:not(.text-svg) {
+    grid-column-start: 2; }
+  .banner.svg-grid > .collection--image .text-svg {
+    grid-column-start: 1; }
+  .banner.svg-grid > .collection--image svg {
+    max-width: unset;
+    max-height: 70vh; }
+
 section.gestures {
   margin: 4rem 0; }
   @media (min-width: 88em) {

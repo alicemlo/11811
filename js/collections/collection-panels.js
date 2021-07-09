@@ -70,7 +70,7 @@ const COLLECTION_PANELS = [
     content: [
       {
         title: 'KI in der Radiologie - Krebsfrüherkennung',
-        text: 'Künstlich intelligente Systeme können Abweichungen in einer Menge von Datensätzen gtu erkennen. In der Radiologie kann diese Mustererkennung sehr hilfreich sein, krankhafte Verändernungen auf Bildern zu identifizieren. Diese Methode wird zum Beispiel bei Mammographien eingesetzt. '
+        text: 'Künstlich intelligente Systeme können Abweichungen in einer Menge von Datensätzen gtu erkennen. In der Radiologie kann diese Mustererkennung sehr hilfreich sein, krankhafte Verändernungen (bsp. Tumore) auf Bildern zu identifizieren.'
       },
       {
         title: 'Wie Zalando KI einsetzt',
@@ -78,7 +78,7 @@ const COLLECTION_PANELS = [
       },
       {
         title: 'Intelligente Chatbots',
-        text: '...'
+        text: 'Das Verstehen und Verarbeiten von Text und Sprache ist auch ein Teilgebiet von KI. Dadurch können Chatbots gebaut werden, welche die Fragen und Anliegen von Kunden verstehen und dementsprechend antworten.'
       }
     ]
   },
@@ -87,7 +87,7 @@ const COLLECTION_PANELS = [
     content: [
       {
         title: 'Visuelle Intelligenz',
-        text: 'Visuelle Intelligenz kann man auch als intelligente Bildverarbeitung beschreiben: Ein Algorithmus ist dabei fähig, Formen bzw. Muster auf Bildern zu erkennen. Ein einfach Beispiel dafür ist die Unterscheidung zwischen Hund und Katze (Objekterkennung) auf einem Bild. Visuelle Intelligenz kann aber auch für Gesichtserkennung eingesetzt werden.',
+        text: 'Visuelle Intelligenz kann man auch als intelligente Bildverarbeitung beschreiben: Ein Algorithmus ist dabei fähig, Formen bzw. Muster auf Bildern zu erkennen. Ein einfaches Beispiel dafür ist die Unterscheidung zwischen Hund und Katze (Objekterkennung) auf einem Bild. Visuelle Intelligenz kann aber auch für Gesichtserkennung eingesetzt werden.',
       },
       {
         title: 'Sprachliche Intelligenz',
