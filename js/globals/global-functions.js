@@ -1,6 +1,3 @@
-let scriptsLoaded = false
-const giToggleEvent = new Event("giToggle");
-
 toggleGi = (item, button) => {
   const body = document.querySelector('body')
   loader = document.querySelector('#loader')
@@ -23,7 +20,6 @@ appendScripts = (item) => {
 }
 
 // ml5js
-
 modelLoaded = () => {
   loader = document.querySelector('#loader')
   loader.classList.add('invisible')
@@ -45,7 +41,6 @@ getPoses = (p) => {
   pose = p
   landmarksOld = poseOld[0] ? poseOld[0].landmarks : null
   landmarks = pose[0] ? pose[0].landmarks : null
-
   transformLandmarks()
 }
 
@@ -60,10 +55,7 @@ transformLandmarks = () => {
     })
   }else if(landmarks?.length){
     transformedLandmarks = landmarks.map(entry => {
-      return {
-        x: entry[0],
-        y: entry[1]
-      }
+      return { x: entry[0], y: entry[1] }
     })
   }else{
     transformedLandmarks = null
@@ -86,22 +78,14 @@ createParticles = () => {
 
 }
 
-createLabelsY = () => {
-
-}
-
-createLabelsX = () => {
-
-}
-
-
 detectClick = () => {
-  const hoveredElement = document.elementFromPoint(xIndex, yIndex-50)
+  const hoveredElement = document.elementFromPoint(xIndex, yIndex-80)
   if(!hoveredElement) return
   const id = hoveredElement.getAttribute('data-id');
   if (!id) {
     resetTimeout()
     hoveredElementID = null
+    return
   }
   if (id && id !== hoveredElementID) setHoveredElementID(id);
 }
@@ -132,25 +116,33 @@ setIndexPoints = () => {
   if(!pose[0]){
     xIndex = 0
     yIndex = 0
-  }else if(oldXIndex === 0){
+  }else{
     xIndex = map(pose[0].annotations.indexFinger[3][0], 640, 0, 0, width)
     yIndex = map(pose[0].annotations.indexFinger[3][1], 0, 420, 0, height)
-  }else {
-    const xNew = map(pose[0].annotations.indexFinger[3][0], 640, 0, 0, width)
-    const yNew = map(pose[0].annotations.indexFinger[3][1], 0, 420, 0, height)
-    xIndex = lerp(xNew, oldXIndex, 0.5)
-    yIndex = lerp(yNew, oldYIndex, 0.5)
   }
+
+  // if(!pose[0]){
+  //   xIndex = 0
+  //   yIndex = 0
+  // }else if(oldXIndex === 0){
+  //   xIndex = map(pose[0].annotations.indexFinger[3][0], 640, 0, 0, width)
+  //   yIndex = map(pose[0].annotations.indexFinger[3][1], 0, 420, 0, height)
+  // }else {
+  //   const xNew = map(pose[0].annotations.indexFinger[3][0], 640, 0, 0, width)
+  //   const yNew = map(pose[0].annotations.indexFinger[3][1], 0, 420, 0, height)
+  //   xIndex = lerp(xNew, oldXIndex, 0.5)
+  //   yIndex = lerp(yNew, oldYIndex, 0.5)
+  // }
 }
 
 detectScroll = () => {
   let y = 0
   if(pose[0]){
     y = yAvg/22
-    if(y > 400) window.scroll({ top: window.scrollY+22,  left: 0, behavior: 'smooth'});
-    else if(y > 370) window.scroll({ top: window.scrollY+15,  left: 0, behavior: 'smooth'});
-    else if(y < 50)window.scroll({ top: window.scrollY-22,  left: 0, behavior: 'smooth'});
-    else if(y < 100)window.scroll({ top: window.scrollY-15,  left: 0, behavior: 'smooth'});
+    if(y > 400) window.scroll({ top: window.scrollY+22,  left: 0});
+    else if(y > 370) window.scroll({ top: window.scrollY+15,  left: 0});
+    else if(y < 50)window.scroll({ top: window.scrollY-22,  left: 0});
+    else if(y < 100)window.scroll({ top: window.scrollY-15,  left: 0});
   }
 }
 
@@ -190,43 +182,48 @@ detectSwipe = () => {
 }
 
 
-detectBeforeSwipe = () => {
-  if (gestureSwipeLeftIndex === 2) return "beforeLeft"
-  if (gestureSwipeRightIndex === 2) return "beforeRight"
-  else return false
+detectBeforeSwipeRight = () => {
+  return gestureSwipeRightIndex === 2;
+}
+
+detectBeforeSwipeLeft = () => {
+  return gestureSwipeLeftIndex === 2;
 }
 
 
 classifyPose = () => {
   if (!handModelIsLoaded) return
+  poseInputsOld = poseInputs
+
   if (pose.length > 0) {
-    let inputs = [];
+    poseInputs = [];
     xAvg = 0
     yAvg = 0
     pose[0].landmarks.forEach(key => {
-      let x = key[0]
-      let y = key[1]
       xAvg += key[0];
       yAvg += key[1];
-      inputs.push(x);
-      inputs.push(y);
+      poseInputs.push(key[0]);
+      poseInputs.push(key[1]);
     })
-    brain.classify(inputs, gotResult);
-
-    gestureBox = {
-      x0: pose[0].boundingBox.topLeft[0],
-      y0: pose[0].boundingBox.topLeft[1],
-      x1: pose[0].boundingBox.bottomRight[0],
-      y1: pose[0].boundingBox.bottomRight[1],
-    }
+    brain.classify(poseInputs, gotResult);
+    // setGestureBox(pose[0])
   } else {
+    // setGestureBox(null)
+  }
+}
+
+setGestureBox = (pose) =>{
+  if(!pose){
+    gestureBox = { x0: 0,  y0: 0,  x1: 0,  y1: 0, }
+  }else{
     gestureBox = {
-      x0: 0,
-      y0: 0,
-      x1: 0,
-      y1: 0,
+      x0: pose.boundingBox.topLeft[0],
+      y0: pose.boundingBox.topLeft[1],
+      x1: pose.boundingBox.bottomRight[0],
+      y1: pose.boundingBox.bottomRight[1],
     }
   }
+
 }
 
 classifyCreatedPose = () => {
@@ -302,8 +299,6 @@ startCollecting = (arg) => {
   })
 }
 
-const trainingTime = 4000
-let trainingCountdown = 4
 
 setCountdown = () => {
   trainingCountdown = 4
@@ -410,44 +405,10 @@ swipeToRoute = (route) => {
   window.location.hash = `/${route}`
 }
 
-document.body.onkeyup = function (e) {
-  if (e.keyCode == 32) {
-    createPopup();
-  }
-}
-
-let popup;
-
-createPopup = () => {
-  popup = document.createElement("DIV");
-  popup.classList.add('popup')
-  popup.innerText = '11811...'
-}
-
-destroyPopup = () => {
-
-}
 
 document.documentElement.addEventListener('keydown', function (e) {
   if ((e.keycode || e.which) == 32) {
     e.preventDefault();
-    createPopup();
     alert('„Nr. 11811, Sie gehen sofort an die Maschine zurück und vergessen, dass Sie sie jemals verlassen haben – verstanden?“ ... Metropolis [Film], Fritz Lang, 1927 ')
   }
 }, false);
-
-
-// random functions
-
-wait = (ms) => {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-
-hide = (el) => {
-  el.style.display = 'none'
-}
-
-show = (el) => {
-  el.style.display = 'inline-block'
-}

@@ -8,8 +8,6 @@ window.draw  = draw;
 new p5();
 
 
-
-
 function setup(){
   createCanvas(width, height);
   video = createCapture(VIDEO);
@@ -28,13 +26,11 @@ function setup(){
     dots.push(new Dot())
   }
 
-
   frameRate(30);
 }
 
 function draw() {
   if(!modelIsLoaded) return
-  let beforeSwipe = null
   let swipe = null
   background(col__dark_01);
   push();
@@ -56,7 +52,6 @@ function draw() {
 
 
   if(gesturalInteractionEnabled){
-    beforeSwipe = detectBeforeSwipe();
     swipe = detectSwipe();
     detectClick();
     detectScroll()
@@ -67,15 +62,18 @@ function draw() {
   }
 
 
-  if(beforeSwipe){
+  if(detectBeforeSwipeLeft()){
     noStroke()
     fill(255, 255, 255, 30)
-    if(beforeSwipe==='beforeLeft'){
-      ellipse(0, height/2, 400, height)
-    }else if(beforeSwipe==='beforeRight'){
-      ellipse(width,height/2, 400, height)
-    }
+    ellipse(0, height/2, 400, height)
   }
+
+  if(detectBeforeSwipeRight()){
+    noStroke()
+    fill(255, 255, 255, 30)
+    ellipse(width,height/2, 400, height)
+  }
+
 
   if(swipe){
     if(swipe==='swipeLeft'){

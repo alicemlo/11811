@@ -24,55 +24,62 @@ const Gestures = {
         </article>
         
         
-        <article>
-          <h1>Gestenerkennung</h1>
-          <p>die Gestensteuerung auf dieser Webseite basiert auf 2 Posen: Hand offen und Hand zu. </p>
-<!--          <div>-->
-<!--            <img class="hand-icon" src="../../assets/images/hand-closeds.png" alt="Hand geschlossen"/>-->
-<!--            <img class="hand-icon" src="../../assets/images/hand-open.png" alt="Hand offen"/>-->
-<!--          </div>-->
+
+        
+        <article class="gestures-grid">
+          <h1 class="title">Interaktionen</h1>
+          <div class="title">
+            <p><strong>Swipen</strong></p>
+            <p>Mit dieser Gesten kannst du zwischen den Seiten hin und her wechseln</p>
+            <p>Halte die Hand geöffnet und bewege sie von rechts nach links bzw. von links nach rechts.</p>
+          </div>
+          <div>
+             <p>Swipe nach links</p>
+             <img src="../../assets/images/gesture-swipe-left.png" alt="Swipe links"/>
+          </div>
+          <div>
+             <p>Swipe nach rechts</p>
+             <img src="../../assets/images/gesture-swipe-right.png" alt="Swipe rechts"/>
+          </div>
+          <div>
+             <p>Swipe auflösen</p>
+             <p>Wenn du die Hand schliesst, löst du die Geste auf</p>
+          </div>
         </article>
         
-        <article>
-          <h1>Interaktionen</h1>
-          <p><strong>Klicken</strong></p>
-<!--          <div>-->
-<!--            <img class="hand-icon" src="../../assets/images/hand-closeds.png" alt="Hand geschlossen"/>-->
-<!--            <img class="hand-icon" src="../../assets/images/hand-open.png" alt="Hand offen"/>-->
-<!--          </div>-->
-          <p><strong>Scrollen</strong></p>
-
-          <p><strong>Swipen</strong></p>
-
+        <article class="gestures-grid">
+          <div class="title">
+            <p><strong>Scrollen</strong></p>
+            <p>Halte die Hand geschlossen oder zu einer Faust geballt und halte sie tief unten oder weit oben, um auf der Seite zu scrollen.</p>
+          </div>
+          <div>
+             <p>nach unten scrollen</p>
+             <img src="../../assets/images/gesture-scroll-down.png" alt="Swipe links"/>
+          </div>
+          <div>
+             <p>nach oben scrollen</p>
+             <img src="../../assets/images/gesture-scroll-up.png" alt="Swipe rechts"/>
+          </div>
+          <div>
+             <p>Scroll auflösen</p>
+             <p>Sobald du deine Hand geöffnet hältst, hörst du auf zu scrollen.</p>
+          </div>
         </article>
         
-        
+        <article class="gestures-grid">
+          <div class="title">
+            <p><strong>Klicken</strong></p>
+            <p>Du kannst auf ein Element (Link oder Button) klicken, wenn du deinen Zeigefinger drauf hältst.</p>
+          </div>
+          <div>
+             <img src="../../assets/images/gesture-click.png" alt="Swipe links"/>
+          </div>
+          <div>
+             <p>Klick auflösen</p>
+             <p>Entferne deinen Zeigefinger vom Element oder schliesse deine Hand</p>
+          </div>
+        </article>
                 
-        <article class="hand-poses">
-          <img class="hand-icon" src="../../assets/images/hand-closeds.png" alt="Hand zu"/>
-          <p>Mit geöffneter Hand kannst du von links nach rechts bzw. von rechts nach links swipen. </p>
-        </article>
-        
-        <article class="hand-poses">
-          <img class="hand-icon" src="../../assets/images/hand-open.png" alt="Hand zu"/>
-          <p>Wenn du mit geschlossener Hand lange auf einem Button bleibst, löst das ein Klick aus. </p>
-        </article>
-<!--       <article>-->
-<!--          <h1>Gestensteuerung</h1>-->
-<!--          <h3>Was du wissen mussst:</h3>-->
-<!--          <p>- <strong>Lasse die Webcam an.</strong> Die Kamera braucht es, um die Position deiner Hand zu erkennen und zu verfolgen. Das Videomaterial wird nicht Umständen gespeichert und wird niemanden weitergegeben.</p>-->
-<!--          <p>- <strong>Sorge für gute Lichtverhältnisse.</strong> Deine Hand muss sich gut vom Hintergrund abheben können, damit sie gut erkannt wird. Es darf nicht zu hell oder zu dunkel sein, damit der Kontrast optimal bleibt.</p>-->
-<!--          <p>Video->Licht überprüfen</p>-->
-<!--          <p>- <strong>Verwende nur eine Hand auf einmal.</strong> Wenn zwei Hände in Bild sind, funktioniert die Gestenerkennnung nicht. Es spielt dabei keine Rolle, ob du die rechte oder die linke Hand benutzt.</p>-->
-<!--          <p>- <strong>Es braucht ein bisschen Zeit, bis du dich and die Gestensteuerung gewöhnt hast.</strong> Ausserdem funktioniert die Gestenerkennung und -interpretation nicht immer perfekt. Sei offen für Fehler.</p>-->
-<!--        </article>-->
-<!--        <article>-->
-<!--          <h1>Gesten</h1>-->
-<!--         -->
-<!--          <h3><a href="/#/gestures/swipe">- Swipe</a></h3>-->
-<!--          <h3><a href="/#/gestures/click">- Klick</a></h3>-->
-<!--   -->
-<!--        </article>-->
       </section>
     `;
   },

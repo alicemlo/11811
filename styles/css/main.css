@@ -581,6 +581,21 @@ section.gestures {
     gap: 2rem; }
   section.gestures img.hand-icon {
     width: 8rem; }
+  section.gestures article.gestures-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4rem;
+    margin-bottom: 10rem; }
+    section.gestures article.gestures-grid .title {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      margin-bottom: 2rem; }
+    section.gestures article.gestures-grid > div {
+      width: 100%; }
+    section.gestures article.gestures-grid img {
+      margin-top: 1rem;
+      max-width: 100%;
+      max-height: 23rem; }
 
 section.buzzwords {
   margin: 2rem 0 10rem 0; }

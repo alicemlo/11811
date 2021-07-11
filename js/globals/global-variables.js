@@ -25,6 +25,7 @@ let dots = [];
 
 
 
+
 // gestures
 let gestureSwipeLeftIndex = 0
 let gestureSwipeRightIndex = 0
@@ -51,7 +52,8 @@ let yAvg = 0
 let xIndex = 0
 let yIndex = 0
 
-
+let poseInputs = []
+let poseInputsOld = []
 
 
 
@@ -65,8 +67,14 @@ const trainingOptions = {
 }
 let stateTestModel = false
 
+const trainingTime = 4000
+let trainingCountdown = 4
+
 
 // dom
 let trainingDataEpochs, trainingDataLoss, trainingDataAccuracy, trainingSaveData, trainedPoseLabel
 let eventButtons = []
 let mobileLinkEnabled = false
+let scriptsLoaded = false
+
+const giToggleEvent = new Event("giToggle");
