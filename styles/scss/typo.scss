@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1{
-  font-size: 1.7rem;
+  font-size: 2rem;
   margin: 1rem 0 1.5rem 0;
   font-weight: normal;
   @include mobile-down{
@@ -48,11 +48,15 @@ p{
   }
 }
 
+input, textarea, button, select, a, .gclick, .panel-header{
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.05) !important;
+}
 
 a{
   color: $col--main-01;
   text-decoration: none;
   padding: 0.1rem 0.2rem;
+
   &:hover, &.exact-link{
     background: rgba(82, 125, 111, 0.3);
     color: $col--main-01;
@@ -138,4 +142,8 @@ input{
   &:hover::after{
     content: attr(data-info);
   }
+}
+
+.pe-none{
+  pointer-events: none;
 }

@@ -14,10 +14,13 @@ main#page_root::before {
   background: #1C1922;
   position: fixed;
   top: 0;
-  left: 0; }
+  left: 0;
+  backdrop-filter: blur(4px);
+  background: #1c19225e; }
   @media (max-width: 48em) {
     main#page_root::before {
-      background: transparent; } }
+      background: transparent;
+      backdrop-filter: none; } }
 
 header {
   top: 0;
@@ -131,7 +134,7 @@ footer {
       content: 'Gestenerkennung deaktivieren'; }
   footer .mobile-link {
     position: absolute;
-    bottom: 1rem;
+    bottom: 0.9rem;
     right: 1rem;
     display: none;
     font-size: 0.9rem; }
@@ -157,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
 h1 {
-  font-size: 1.7rem;
+  font-size: 2rem;
   margin: 1rem 0 1.5rem 0;
   font-weight: normal; }
   @media (max-width: 48em) {
@@ -180,6 +183,9 @@ p {
     p {
       font-size: 1.05rem;
       line-height: 1.4rem; } }
+
+input, textarea, button, select, a, .gclick, .panel-header {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.05) !important; }
 
 a {
   color: #3BBA7D;
@@ -250,6 +256,9 @@ input {
   cursor: pointer; }
   .expand-info:hover::after {
     content: attr(data-info); }
+
+.pe-none {
+  pointer-events: none; }
 
 canvas {
   position: fixed;
@@ -322,7 +331,16 @@ section.home a:last-of-type {
   left: 20%; }
 
 section.home .sub-title, section.home h5, section.home .title {
+  pointer-events: none;
   color: #527D6F; }
+
+section.home span.web-browser-info {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 1rem; }
+
+section.home span.web-browser-info.invisible {
+  display: none; }
 
 @media (max-width: 48em) {
   section.home h3 {
@@ -331,15 +349,12 @@ section.home .sub-title, section.home h5, section.home .title {
   section.home a:first-of-type {
     left: 40%; }
   section.home a:last-of-type {
-    left: 5%; } }
+    left: 5%; }
+  section.home span.web-browser-info {
+    display: none !important; } }
 
 section.project {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 11; }
+  margin: 10rem 0 5rem 0; }
   @media (min-width: 88em) {
     section.project {
       padding: 0 4rem; } }
@@ -352,8 +367,11 @@ section.project {
   @media (max-width: 48em) {
     section.project {
       padding: 0 1rem; } }
-  section.project > article:first-of-type {
-    margin-top: 5rem; }
+  section.project > article {
+    margin: 4rem 0;
+    max-width: 30rem; }
+  section.project > article:nth-child(2n) {
+    margin-left: 5rem; }
 
 section.machine-learning .ct-ml {
   padding: 3rem 0; }
@@ -364,7 +382,7 @@ section.machine-learning .ct-fixed {
   max-width: 80rem;
   margin: 0 auto;
   position: sticky;
-  top: 2.8rem;
+  top: 3.3rem;
   z-index: 8; }
   section.machine-learning .ct-fixed .expand-info {
     font-size: 0.9rem;
@@ -372,7 +390,8 @@ section.machine-learning .ct-fixed {
     background: transparent; }
   @media (max-width: 48em) {
     section.machine-learning .ct-fixed {
-      top: -2px; } }
+      top: -2px;
+      padding-left: 1rem; } }
   section.machine-learning .ct-fixed .expand-info {
     padding: 2px 0;
     font-size: 1rem; }
@@ -393,7 +412,7 @@ section.machine-learning .ct-content {
 section.machine-learning .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 5rem 0 3rem 0;
+  margin: 7rem 0 4rem 0;
   grid-column-gap: 2rem; }
   @media (min-width: 62em) {
     section.machine-learning .content {
@@ -446,7 +465,9 @@ section.machine-learning .col-sources {
   section.machine-learning .col-sources .title {
     cursor: pointer;
     color: #527D6F;
-    text-align: right; }
+    text-align: right;
+    align-self: flex-end;
+    width: fit-content; }
     section.machine-learning .col-sources .title:hover {
       color: #3BBA7D; }
   section.machine-learning .col-sources .sources {
@@ -455,6 +476,10 @@ section.machine-learning .col-sources {
     align-items: flex-end;
     opacity: 1;
     transition: opacity 200ms; }
+    section.machine-learning .col-sources .sources a {
+      align-self: flex-end;
+      width: fit-content;
+      text-align: right; }
   section.machine-learning .col-sources .sources.hidden {
     opacity: 0;
     pointer-events: none; }
@@ -482,11 +507,14 @@ section.machine-learning .col-sources {
       border-top: 1px solid #3BBA7D;
       border-left: 1px solid #527D6F;
       color: #3BBA7D; }
+    @media (max-width: 48em) {
+      .panel .panel-header > div {
+        word-break: break-word; } }
   .panel .panel-body {
     margin-top: 0.2rem;
     padding: 0.5rem; }
   .panel .panel-image {
-    margin-top: 2rem; }
+    padding: 1rem; }
     .panel .panel-image svg {
       max-width: 35rem; }
 
@@ -743,6 +771,9 @@ html {
   html {
     scrollbar-color: #527D6F rgba(0, 0, 0, 0);
     scrollbar-width: thin; }
+  @media (max-width: 48em) {
+    html {
+      overflow-x: hidden; } }
 
 body {
   color: #3BBA7D;
@@ -820,6 +851,9 @@ svg {
   border-radius: 50%;
   transition: transform 700ms;
   border: 1px solid #fb888d; }
+  @media (max-width: 48em) {
+    .gclick::before {
+      display: none !important; } }
 
 .gclick::after {
   position: absolute;
@@ -832,6 +866,9 @@ svg {
   border-radius: 50%;
   opacity: 0;
   transition: opacity 200ms; }
+  @media (max-width: 48em) {
+    .gclick::after {
+      display: none !important; } }
 
 .gclick.click-animation::before {
   transform: scale(1); }
@@ -839,11 +876,22 @@ svg {
 .gclick.click-animation::after {
   opacity: 1; }
 
+@media (max-width: 48em) {
+  .mb-dashed {
+    pointer-events: none;
+    cursor: crosshair;
+    text-decoration: line-through;
+    color: #527D6F;
+    opacity: 0.9; } }
+
 body:not(.gi) .ng-dashed {
   cursor: crosshair;
   text-decoration: line-through;
   color: #527D6F;
   opacity: 0.9; }
+  @media (max-width: 48em) {
+    body:not(.gi) .ng-dashed {
+      display: none; } }
 
 body:not(.gi) .ng-invisible {
   display: none; }

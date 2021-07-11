@@ -36,8 +36,8 @@ const MachineLearning = {
     </div>
     
 <a href="#/buzzwords" class="banner">
-  <div> 
-    <p>
+  <div class="gclick" data-id="bannb-12345">  
+    <p data-id="bannb-12345">
       (falls du eine kleine Auffrischung über die wichtigsten Buzzwords im Zusammenhang mit KI brauchst: Auf der Seite "Buzzwords"
       kannst du dich durch eine Grafik durchklicken, welche dir die wichtigsten Schlagwörter kurz erklärt) 
     </p>
@@ -77,10 +77,10 @@ const MachineLearning = {
       </div>
       
       <div class="col-sources">
-        <span class="title">-> Mehr dazu lesen</span>
+        <span class="title gclick" data-id="mehrd-89341">-> Mehr dazu lesen</span>
         <div class="sources hidden">   
-            <a target="_blank" href="https://www.medica.de/de/News/Archiv/Deep_Learning_Algorithmen_entlasten_Radiologen">Algorithmen entlasten Radiologen</a> 
-            <a target="_blank" href="https://corporate.zalando.com/de/newsroom/de/news-storys/smart-shoppen-dank-kuenstlicher-intelligenzn">Zalando: Smart Shoppen dank künstlicher Intelligenz</a>    
+            <a class="gclick" data-id="mehrd-12343" target="_blank" href="https://www.medica.de/de/News/Archiv/Deep_Learning_Algorithmen_entlasten_Radiologen">Algorithmen entlasten Radiologen</a> 
+            <a class="gclick" data-id="mehrd-93837" target="_blank" href="https://corporate.zalando.com/de/newsroom/de/news-storys/smart-shoppen-dank-kuenstlicher-intelligenzn">Zalando: Smart Shoppen dank künstlicher Intelligenz</a>    
         </div>
       </div>
       
@@ -285,10 +285,10 @@ const MachineLearning = {
       </div>
       
       <div class="col-sources">
-        <span class="title">-> Mehr dazu lesen</span>
+        <span class="title gclick" data-id="mehrd-29583" >-> Mehr dazu lesen</span>
         <div class="sources hidden">   
-            <a target="_blank" href="https://datasolut.com/wiki/clusteranalyse/">Clusteranalyse einfach erklärt</a> 
-            <a target="_blank" href="https://www.oracle.com/ch-de/data-science/machine-learning/what-is-machine-learning/#link6">Machine Learning – definiert</a> 
+            <a class="gclick" data-id="mehrd-29482" target="_blank" href="https://datasolut.com/wiki/clusteranalyse/">Clusteranalyse einfach erklärt</a> 
+            <a class="gclick" data-id="mehrd-47774" target="_blank" href="https://www.oracle.com/ch-de/data-science/machine-learning/what-is-machine-learning/#link6">Machine Learning – definiert</a> 
         </div>
        </div>
   
@@ -318,10 +318,10 @@ const MachineLearning = {
       </div>
       
       <div class="col-sources">
-        <span class="title">-> Mehr dazu lesen</span>
+        <span class="title gclick" data-id="mehrd-24828" >-> Mehr dazu lesen</span>
         <div class="sources hidden">   
-            <a target="_blank" href="https://netflixtechblog.com/artwork-personalization-c589f074ad76">Artwork Personalization at Netflix</a> 
-            <a target="_blank" href="https://becominghuman.ai/how-netflix-uses-ai-and-machine-learning-a087614630fe">How Netflix Uses AI, Data Science, and Machine Learning</a> 
+            <a class="gclick" data-id="mehrd-09839" target="_blank" href="https://netflixtechblog.com/artwork-personalization-c589f074ad76">Artwork Personalization at Netflix</a> 
+            <a class="gclick" data-id="mehrd-09990" target="_blank" href="https://becominghuman.ai/how-netflix-uses-ai-and-machine-learning-a087614630fe">How Netflix Uses AI, Data Science, and Machine Learning</a> 
         </div>
      </div>
      
@@ -341,10 +341,10 @@ const MachineLearning = {
   </div>
   
   <div class="col-sources">
-        <span class="title">-> Mehr dazu lesen</span>
+        <span class="title gclick" data-id="mehrd-93844">-> Mehr dazu lesen</span>
         <div class="sources hidden">   
-            <a target="_blank" href="https://towardsdatascience.com/machine-learning-for-beginners-d247a9420dab">Machine Learning For Beginners</a> 
-            <a target="_blank" href="https://medium.com/technology-nineleaps/some-key-machine-learning-definitions-b524eb6cb48">Some Key Machine Learning Definitions</a> 
+            <a data-id="mehrd-09823" class="gclick" target="_blank" href="https://towardsdatascience.com/machine-learning-for-beginners-d247a9420dab">Machine Learning For Beginners</a> 
+            <a data-id="mehrd-44422" class="gclick" target="_blank" href="https://medium.com/technology-nineleaps/some-key-machine-learning-definitions-b524eb6cb48">Some Key Machine Learning Definitions</a> 
         </div>
   </div>
   
@@ -379,10 +379,10 @@ const MachineLearning = {
       </div>
       <div class="col-2"></div>
       <div class="col-sources">
-        <span class="title">-> Mehr dazu lesen</span>
+        <span class="title gclick" data-id="mehrd-86767">-> Mehr dazu lesen</span>
         <div class="sources hidden">   
-            <a target="_blank" href="https://ncube.com/blog/big-data-and-ai">How Big Data and AI Work Together</a> 
-            <a target="_blank" href="https://online.maryville.edu/blog/big-data-is-too-big-without-ai/">Big Data is to big without AI</a> 
+            <a data-id="mehrd-57575" class="gclick" target="_blank" href="https://ncube.com/blog/big-data-and-ai">How Big Data and AI Work Together</a> 
+            <a data-id="mehrd-57234" class="gclick" target="_blank" href="https://online.maryville.edu/blog/big-data-is-too-big-without-ai/">Big Data is to big without AI</a> 
         </div>
      </div>
     </div>
@@ -407,11 +407,6 @@ const MachineLearning = {
           können dennoch diskriminierten Prognosen auftreten. 
         </p>
         <p>
-          Beispielsweise wurde die Modelle zur Erkennung von Gesichtern nur mit männlichen, hellhäutigen Gesichtern trainiert. 
-          Das hat bis heute zur Folge, dass die Gesichtserkennung bei Männern mit heller Haut besser funktioniert als bei Frauen oder
-          bei Leuten mit dunklerer Hautfarbe.
-        </p>
-        <p>
           Diese Verzerrungen treten auf, wenn die Trainingsdaten unvollständig, nicht konsistet oder einseitig sind oder falsch Gewichtet wurden. 
         </p>
         <p>
@@ -420,10 +415,7 @@ const MachineLearning = {
         </p>
       </div>
       <div class="col-2">
-        Reale Beispiele (Panel)
-        - COMPAS (Polizei)
-        - Rassismus Beispiel
-        - Soziales Beispiel
+           <div class="panel" data-name="panel-discrimination"></div>
       </div>
       
       <div class="col-sources">
@@ -431,6 +423,8 @@ const MachineLearning = {
         <div class="sources hidden">   
             <a target="_blank" href="https://www.telusinternational.com/articles/7-types-of-data-bias-in-machine-learning?INTCMP=ti_lbai">7 Types of Data Bias in Machine Learning</a> 
             <a target="_blank" href="https://hbr.org/2019/10/what-do-we-do-about-the-biases-in-ai">What Do We Do About the Biases in AI?</a> 
+            <a target="_blank" href="https://www.plattform-lernende-systeme.de/publikationen-details/kuenstliche-intelligenz-und-diskriminierung-herausforderungen-und-loesungsansaetze.html?file=files/Downloads/Publikationen/AG3_Whitepaper_250619.pdf">Künstliche Intelligenz und Diskriminierung (PDF)</a> 
+<!--       https://www.zeit.de/arbeit/2018-10/bewerbungsroboter-kuenstliche-intelligenz-amazon-frauen-diskriminierung?utm_referrer=https%3A%2F%2Fwww.google.com%2F-->
         </div>
      </div>
    
@@ -518,7 +512,8 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Werden wir in Zukunft alle arbeitslos sein?</h1>
         <p>
-          Die kurze Antwort: Nein, werden wir nicht. Auf jeden Fall nicht so bald.  
+
+...
         </p>
         <p>
           
@@ -534,6 +529,7 @@ const MachineLearning = {
     `;
   },
   after_render: async () => {
+    mobileLinkEnabled = true
     gesturalInteractionEnabled = true
     gestureLabelingEnabled = false
 

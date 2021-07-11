@@ -69,3 +69,4 @@ let stateTestModel = false
 // dom
 let trainingDataEpochs, trainingDataLoss, trainingDataAccuracy, trainingSaveData, trainedPoseLabel
 let eventButtons = []
+let mobileLinkEnabled = false

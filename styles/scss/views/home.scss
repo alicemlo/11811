@@ -26,8 +26,20 @@ section.home{
     left: 20%;
   }
   .sub-title , h5, .title{
+    pointer-events: none;
     color: $col--main-02;
   }
+
+  span.web-browser-info{
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  span.web-browser-info.invisible{
+    display: none;
+  }
+
   @include mobile-down{
     h3{
       left: 20%;
@@ -39,5 +51,9 @@ section.home{
     a:last-of-type{
       left: 5%;
     }
+    span.web-browser-info{
+      display: none !important;
+    }
+    
   }
 }

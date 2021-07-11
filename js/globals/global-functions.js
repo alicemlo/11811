@@ -96,7 +96,7 @@ createLabelsX = () => {
 
 
 detectClick = () => {
-  const hoveredElement = document.elementFromPoint(xIndex, yIndex)
+  const hoveredElement = document.elementFromPoint(xIndex, yIndex-50)
   if(!hoveredElement) return
   const id = hoveredElement.getAttribute('data-id');
   if (!id) {

@@ -24,7 +24,7 @@ const COLLECTION_TRAIN_MODEL = [
     'event': 'Weiter',
     'class': '',
     'back': false,
-    'col2': `<form autocomplete="off" spellcheck="false"><label id="pose-1"><input placeholder="1. Geste" name="pose-1" type="text"></label></form><form autocomplete="off" spellcheck="false"><label id="pose-2"><input placeholder="2. Geste" name="pose-2" type="text"></label><p>👋, ✌, 🤙️</p></form>`,
+    'col2': `<form autocomplete="off" spellcheck="false" data-id="labl-12345"><label id="pose-1" data-id="labl-12345"><input placeholder="1. Geste" name="pose-1" type="text" class="gclick" data-id="labl-12345"></label></form><form autocomplete="off" spellcheck="false" data-id="labl-54321"><label id="pose-2" data-id="labl-54321"><input placeholder="2. Geste" name="pose-2" type="text" class="gclick" data-id="labl-54321"></label><p>👋, ✌, 🤙️</p></form>`,
     getState() {
       let v1 = document.querySelector('#pose-1 input')?.value
       let v2 = document.querySelector('#pose-2 input')?.value
@@ -50,6 +50,8 @@ const COLLECTION_TRAIN_MODEL = [
     },
     setInit(){
       disableTrainEvent()
+      gesturalInteractionEnabled = false
+      gestureLabelingEnabled = false
       document.querySelector('.btn-collect-start').onclick = () => startCollecting()
       document.querySelector('.btn-collect-restart').onclick = () => startCollecting('restart')
     }
@@ -108,7 +110,6 @@ const COLLECTION_TRAIN_MODEL = [
     'class': '',
     setInit() {
       trainedPoseLabel = document.querySelector('.pose-created')
-
       stateTestModel = true
     },
     getState() {

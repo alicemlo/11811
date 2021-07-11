@@ -10,7 +10,7 @@ section.machine-learning {
     max-width: 80rem;
     margin: 0 auto;
     position: sticky;
-    top: 2.8rem;
+    top: 3.3rem;
     z-index: 8;
 
     .expand-info {
@@ -21,6 +21,7 @@ section.machine-learning {
 
     @include mobile-down{
       top: -2px;
+      padding-left: 1rem;
     }
     .expand-info {
       padding: 2px 0;
@@ -48,7 +49,7 @@ section.machine-learning {
   .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 5rem 0 3rem 0;
+    margin: 7rem 0 4rem 0;
     grid-column-gap: 2rem;
     @include tablet-up{
       grid-column-gap: 4rem;
@@ -115,6 +116,8 @@ section.machine-learning {
       cursor: pointer;
       color: $col--main-02;
       text-align: right;
+      align-self: flex-end;
+      width: fit-content;
       &:hover{
         color: $col--main-01;
       }
@@ -126,6 +129,12 @@ section.machine-learning {
       align-items: flex-end;
       opacity: 1;
       transition: opacity 200ms;
+
+      a{
+        align-self: flex-end;
+        width: fit-content;
+        text-align: right;
+      }
     }
 
     .sources.hidden{
@@ -168,6 +177,10 @@ section.machine-learning {
       border-left: 1px solid $col--main-02;
       color: $col--main-01;
     }
+
+    @include mobile-down{
+      word-break: break-word;
+    }
   }
 
   .panel-body{
@@ -176,7 +189,8 @@ section.machine-learning {
   }
 
   .panel-image{
-    margin-top: 2rem;
+    // margin-top: 2rem;
+    padding: 1rem;
     svg{
       max-width: 35rem;
     }

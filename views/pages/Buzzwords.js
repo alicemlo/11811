@@ -110,6 +110,7 @@ const Buzzwords = {
   after_render: async () => {
     gesturalInteractionEnabled = true
     gestureLabelingEnabled = false
+    mobileLinkEnabled = true
 
     const cps = document.querySelectorAll('.component')
     const ct = document.querySelector('section .container')

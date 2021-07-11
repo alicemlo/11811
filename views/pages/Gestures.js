@@ -81,6 +81,7 @@ const Gestures = {
    * This is a separate call as these can be registered only after the DOM has been painted.
    */
   after_render: async () => {
+    mobileLinkEnabled = false
     gesturalInteractionEnabled = false
     gestureLabelingEnabled = true
   }

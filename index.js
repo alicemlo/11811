@@ -52,22 +52,28 @@ const router = async () => {
     (verb ? '/' + verb : '');
 
   // set links active
-  let rewriteResource = resource || ''
-  let activeLinks = document.querySelectorAll(`a[href='/#/${rewriteResource}']`)
+  const rewriteResource = resource || ''
+  const activeLinks = document.querySelectorAll(`a[href='/#/${rewriteResource}']`)
   activeLinks.forEach(link => link.classList.add('exact-link'))
 
   // add header attribute
-  let headerItemIndex = headerLinks.find((item, index)=>{
+  const headerItemIndex = headerLinks.find((item, index)=>{
     return item.ref===parsedUrl
   })?.index ?? 'no-index'
   header.setAttribute('data-index', headerItemIndex)
 
   // mobile-link
-  let mobileLink = document.querySelector('.mobile-link a')
-  let routeIndex = routes__story_mobile.indexOf(lastStory)
-  let mobileIndex = routeIndex===1 ? 0 : 1
-  mobileLink.href= '#'+routes__story_mobile[mobileIndex]
-  mobileLink.innerHTML=`${routes__story_mobile[mobileIndex]} >`
+  const mobileLink = document.querySelector('.mobile-link a')
+  const routeIndex = routes__story_mobile.indexOf(lastStory)
+  const mobileIndex = routeIndex===1 ? 0 : 1
+
+  if(mobileLinkEnabled){
+    mobileLink.href= '#'+routes__story_mobile[mobileIndex]
+    mobileLink.innerHTML=`${routes__story_mobile[mobileIndex]} >`
+    mobileLink.classList.remove("invisible")
+  }else{
+    mobileLink.classList.add("invisible")
+  }
 
   // Render the page from map of supported routes or render 404 page.
   const page = routes[parsedUrl] || Error404;

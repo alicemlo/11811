@@ -15,8 +15,12 @@ main#page_root::before{
   position: fixed;
   top: 0;
   left: 0;
+  backdrop-filter: blur(4px);
+  background: #1c19225e;
+
   @include mobile-down{
     background: transparent;
+    backdrop-filter: none;
   }
 }
 
@@ -173,7 +177,7 @@ footer{
 
   .mobile-link{
     position: absolute;
-    bottom: 1rem;
+    bottom: 0.9rem;
     right: 1rem;
     display: none;
     font-size: 0.9rem;

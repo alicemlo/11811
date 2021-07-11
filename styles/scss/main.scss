@@ -28,7 +28,12 @@
 html {
   @include scrollbars(5px, $col--main-02, rgba(0,0,0,0));
   cursor: crosshair;
+
+  @include mobile-down{
+    overflow-x: hidden;
+  }
 }
+
 
 body{
   color: $col--main-01;
@@ -107,6 +112,10 @@ svg{
    border-radius: 50%;
    transition: transform 700ms;
    border: 1px solid rgba(251, 136, 141, 1);
+
+   @include mobile-down{
+     display: none!important;
+   }
  }
 
   &::after{
@@ -120,6 +129,10 @@ svg{
     border-radius: 50%;
     opacity: 0;
     transition: opacity 200ms;
+
+    @include mobile-down{
+      display: none!important;
+    }
   }
 }
 
@@ -132,6 +145,16 @@ svg{
   }
 }
 
+@include mobile-down{
+  .mb-dashed{
+    pointer-events: none;
+    cursor: crosshair;
+    text-decoration: line-through;
+    color: $col--main-02;
+    opacity: 0.9;
+  }
+}
+
 
 body:not(.gi){
   .ng-dashed{
@@ -140,6 +163,10 @@ body:not(.gi){
     text-decoration: line-through;
     color: $col--main-02;
     opacity: 0.9;
+
+    @include mobile-down{
+      display: none;
+    }
   }
 
   .ng-invisible{

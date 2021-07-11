@@ -53,6 +53,27 @@ class CollectionPanel{
 
 const COLLECTION_PANELS = [
   {
+    name: 'panel-discrimination',
+    content: [
+      {
+        title: 'Gesichtserkennung',
+        text: 'Modelle zur Erkennung von Gesichtern wurden lange nur mit männlichen, hellhäutigen Gesichtern trainiert. Das hat bis heute zur Folge, dass die Gesichtserkennung bei Männern mit heller Haut besser funktioniert als bei Frauen oder bei Leuten mit dunklerer Hautfarbe.'
+      },
+      {
+        title: "Amazon",
+        text: 'Amazon hat einen Bewerbungsroboter entwickelt, der für die Recruiter eine Vorauswahl an Bewerbern getroffen hat. Das System verglich die neuen Bewerbungen mit den erfolgreichen Neueinstellungen der letzten zehn Jahre. Da die meisten Mitarbeiter bei Amazon männlich waren, zog der Roboter den Schluss, dass Männer besser geeignet seien als Frauen und bevorzgte demnach Bewerbungen von Männern. Nach der Aufdeckung dieses Fehlers wird dieses System heute nur noch sehr eingeschränk eingesetzt.'
+      },
+      {
+        title: 'COMPAS',
+        text: 'Compas ist eine Software aus den USA, welche die Rückfallwahrscheinlichkeit von Angeklagten bestimmt. Diese soll den RichterInnen helfen einzuschätzen, mit welcher Wahrscheinlichkeit die angeklagte Person erneut eine Straftat begeht. Auch dieses Modell basiert auf den Daten der letzten Jahre. Das hat zur Folge, dass das System bei der Einschätzung der Rückfallswahrscheinlichkeit die Hautfarbe der angeklagten Person miteinbezieht. Dadruch wird das Risiko einer erneuten Straftat bei dunkelhäutige Personen automatisch höher eingeschätzt als bei hellhäutigen. '
+      },
+      {
+        title: '..',
+        text: '...'
+      },
+    ]
+  },
+  {
     name: 'panel-0',
     content: [
       {

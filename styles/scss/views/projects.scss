@@ -1,12 +1,16 @@
 section.project{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 11;
+  margin: 10rem 0 5rem 0;
+
   @include page-padding;
-  >article:first-of-type{
-    margin-top: 5rem;
+
+
+  >article{
+    margin: 4rem 0;
+    max-width: 30rem;
   }
+
+  >article:nth-child(2n){
+    margin-left: 5rem;
+  }
+
 }
