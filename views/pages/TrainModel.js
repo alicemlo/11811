@@ -89,7 +89,7 @@ class CollectionTrainModel{
 
     this.ctTitle.innerText = content.title
     this.ctText.innerText = content.text
-    this.ctInfo.innerText = content.info
+    this.ctInfo.innerHTML = content.info
     this.ctButton.innerText = content.event
     if(content.class) this.ctCol2.classList.add(content.class)
 

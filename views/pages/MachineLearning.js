@@ -527,7 +527,6 @@ const MachineLearning = {
     mobileLinkEnabled = true
     enableAllGesturalInteraction()
 
-
     // term collection
     const collection_terms = document.querySelectorAll('.term-collection')
     collection_terms.forEach(collection => {
@@ -567,7 +566,6 @@ const MachineLearning = {
     sources.forEach(it => {
       const title = it.firstElementChild
       const content = it.lastElementChild
-
       title.onclick = () => {
         content.classList.toggle('hidden')
         it.classList.toggle('border')
@@ -576,7 +574,6 @@ const MachineLearning = {
 
     // external links
     const externalLinks = document.querySelectorAll('.sources .gclick')
-    console.log(externalLinks)
     externalLinks.forEach(link => {
       const arrow = document.createElement('DIV')
       arrow.classList.add('external-link-icon')

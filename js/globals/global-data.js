@@ -54,6 +54,6 @@ const col__dark_01 = [28, 25, 34]
 const col__dark_02 = [38, 46, 49]
 const col__main_01 = [58, 186, 125]
 const col__main_02 = [82, 125, 111]
-const col__accent = [251, 136, 141]
+let col__accent = [251, 136, 141]
 
 

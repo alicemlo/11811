@@ -221,8 +221,7 @@ detectSwipeLeft = () => {
     stateSwipeLeft = 0
     return
   }
-  let x = xAvg / 22
-  if(x >= breakpointsSwipeLeft[stateSwipeLeft] && x < breakpointsSwipeLeft[stateSwipeLeft+1]) stateSwipeLeft++
+  if(xAvg >= breakpointsSwipeLeft[stateSwipeLeft] && xAvg < breakpointsSwipeLeft[stateSwipeLeft+1]) stateSwipeLeft++
   if(stateSwipeLeft >= 5){
     document.dispatchEvent(eventSwipeLeft)
     stateSwipeLeft = 0
@@ -234,8 +233,7 @@ detectSwipeRight = () => {
     stateSwipeRight = 0
     return
   }
-  let x = xAvg / 22
-  if(x < breakpointsSwipeRight[stateSwipeRight] && x >= breakpointsSwipeRight[stateSwipeRight+1]) stateSwipeRight++
+  if(xAvg < breakpointsSwipeRight[stateSwipeRight] && xAvg >= breakpointsSwipeRight[stateSwipeRight+1]) stateSwipeRight++
 
   if(stateSwipeRight >= 5){
     document.dispatchEvent(eventSwipeRight)
@@ -321,14 +319,36 @@ gotResultBrainCreated = (error, results) => {
     labelCreatedPose = results[0].label
     if (stateTestModel) setPoseLabelModelCreated(true)
     console.log(labelCreatedPose)
+    const index = train_model_data.poseLabels.indexOf(labelCreatedPose)
+    if(index === 0) changeColorDots()
+    if(index === 1) resetColorDots()
   }
 
 }
 
-
 setPoseLabelModelCreated = (pose) => {
   trainedPoseLabel.innerText = pose ? labelCreatedPose : '-'
 }
+
+
+const accentColor = [ [166, 214, 255], [255, 180, 199], [255, 241, 116], [215, 47, 78], [213, 197, 255]]
+let accentColorIndex = 0
+
+changeColorDots = () => {
+  col__accent = accentColor[accentColorIndex]
+  accentColorIndex++
+  if(accentColorIndex >= accentColor.length) accentColorIndex = 0
+}
+
+resetColorDots = () => {
+  col__accent = [251, 136, 141]
+  accentColorIndex = 0
+}
+
+// detectCreatedPose = () => {
+//   console.log(labelCreatedPose)
+//   console.log(train_model_data)
+// }
 
 
 stopCollecting = () => {
@@ -419,8 +439,8 @@ whileTraining = (epoch, loss) => {
   // console.log(`epoch: ${epoch}, loss:${loss}`);
   // console.log(loss)
   trainingDataEpochs.innerText = epoch
-  trainingDataLoss.innerText = loss.acc
-  trainingDataAccuracy.innerText = loss.loss
+  trainingDataAccuracy.innerText = loss.acc
+  trainingDataLoss.innerText = loss.loss
 
   if (loss.loss < 0.001) trainingDataLoss.innerText += '(gut)'
   if (loss.acc > 0.7) trainingDataAccuracy.innerText += '(gut)'

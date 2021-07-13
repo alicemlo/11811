@@ -38,8 +38,8 @@ let gestureBox = {
 let gesturePushStates = [false, false, false];
 
 // swipe
-const breakpointsSwipeRight = [640, 480, 380, 280, 120, 0]
-const breakpointsSwipeLeft = [0, 180, 280, 380, 440, 640]
+const breakpointsSwipeRight = [14080, 9700, 7040, 6000, 4000, 0]
+const breakpointsSwipeLeft = [0, 4000, 6000, 7040, 9700, 14080]
 
 const eventSwipeRight = new Event('swiperight');
 const eventSwipeLeft = new Event('swipeleft');

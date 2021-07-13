@@ -77,6 +77,9 @@ function draw() {
     ellipse(width,height/2, 400, height)
   }
 
+  if(brainCreated){
+   // detectCreatedPose()
+  }
 
   // if(swipe){
   //   // if(swipe==='swipeLeft'){

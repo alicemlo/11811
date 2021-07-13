@@ -5,8 +5,8 @@ let train_model_data = {
 
 const COLLECTION_TRAIN_MODEL = [
   {
-    'title': 'Bringe dem Modell deine Gesten bei',
-    'text': 'Auf dieser Seite kannst du die Gestensteuerung personalisieren. Definiere deine eigenen Gesten, um zwischen dark und light mode zu switchen.',
+    'title': 'Trainiere deine eigenen Gesten',
+    'text': 'Hier kannst du die Gestensteuerung personalisieren. Definiere deine eigenen Gesten, um die Akzentfarbe deiner Hand zu wechseln.',
     'info': 'Kurzer Disclaimer: die generierten Daten werden nicht gespeichert und auch nicht an andere weitergegeben. Soabld das Browserfenster neu lädt oder sobald du diese Seite verlässt, werden alle Daten gelöscht.',
     'event': 'Weiter',
     'class': '',
@@ -19,7 +19,7 @@ const COLLECTION_TRAIN_MODEL = [
   },
   {
     'title': 'Gesten definieren',
-    'text': 'Als Grundlage braucht braucht das Modell Daten. Definiere und bennene hierfür zwei Handgesten, die du dem Modell beibringen möchtest.',
+    'text': 'Als erstes musst du deine beiden neuen Gesten bennen. Überlege dir vorher, wie die Gesten aussehen sollten.',
     'info': 'Wichtig: Diese beiden Handgesten sollten sich gut voneinander unterscheiden. Ausserdem müssen die Gesten statisch sein. Es werden keine Bewegungsabläufe erkannt.',
     'event': 'Weiter',
     'class': '',
@@ -28,19 +28,39 @@ const COLLECTION_TRAIN_MODEL = [
     getState() {
       let v1 = document.querySelector('#pose-1 input')?.value
       let v2 = document.querySelector('#pose-2 input')?.value
+
       train_model_data.poseLabels.push(v1)
       train_model_data.poseLabels.push(v2)
       return v1 !== '' && v2 !== '' && v1 !== v2
     },
     setInit() {
+      disableTrainEvent()
       const form = document.querySelector('form')
       function handleForm(event) { event.preventDefault(); }
       form.addEventListener('submit', handleForm);
+
+      const input1 = document.querySelector('#pose-1 input')
+      const input2 = document.querySelector('#pose-2 input')
+
+      let input1valid = false
+      let input2valid = false
+
+      input1.addEventListener ("input", function () {
+        input1valid = input1.value !== ''
+        if(input1valid && input2valid) enableTrainEvent()
+        else disableTrainEvent()
+      });
+
+      input2.addEventListener ("input", function () {
+        input2valid = input2.value !== ''
+        if(input1valid && input2valid) enableTrainEvent()
+        else disableTrainEvent()
+      });
     }
   },
   {
-    'title': 'Trainiere ',
-    'text': 'Bereite deine Geste vor, bevor du auf Start klickst. Die Datensammlung startet direkt nachdem du auf Start klickst. Je ruhiger du deine Hand hältsts, desto sauberer werden die Daten und desto besser können deine Gesten später klassifiziert werden. Deine Geste wird während 4 Sekunden verfolgt.',
+    'title': 'Sammle die Daten für ',
+    'text': 'Bereite deine Geste im Feld rechts vor, bevor du auf Start klickst. Die Datensammlung startet direkt nachdem du auf Start geklickt hast. Je ruhiger du deine Hand hältsts, desto sauberer werden die Daten und desto besser können deine Gesten später klassifiziert werden. Deine Geste wird während 4 Sekunden verfolgt.',
     'info': '',
     'event': 'Weiter',
     'back': false,
@@ -62,8 +82,8 @@ const COLLECTION_TRAIN_MODEL = [
     }
   },
   {
-    'title': 'Trainiere ',
-    'text': 'Bereite deine Geste vor, bevor du auf Start klickst. Die Datensammlung startet direkt nachdem du auf Start klickst. Je ruhiger du deine Hand hältsts, desto sauberer werden die Daten und desto besser können deine Gesten später klassifiziert werden. Deine Geste wird während 4 Sekunden verfolgt.',
+    'title': 'Sammle die Daten für ',
+    'text': 'Das Gleiche machen wir noch mit der zweiten Geste. Halte deine Hand ruhig im Feld rechts während 4 Sekunden. Bereite deine Geste vor, bevor du auf Start klickst.',
     'info': '',
     'event': 'Weiter',
     'class': 'border',
@@ -86,8 +106,10 @@ const COLLECTION_TRAIN_MODEL = [
   },
   {
     'title': 'Training',
-    'text': 'Nun kommt der einfachste Teil: Lasse das Modell trainieren. Wenn du magst, kann du hier noch ein paar Einstellungen vornehmen. Zum Beispiel kannst du die Anzahl Epochs oder die  Learning Rate anpassen. Für diesen Aufgabe reichen aber die vorgegebenen Werte.',
-    'info': 'input epochs, input learning rate',
+    'text': 'Nun kommt der einfachste Teil: Lasse das Modell trainieren. Alles was du dafür tun musst, ist auf Trainieren zu klicken.',
+    'info': '<strong>Epochs:</strong> Definiert die Anzahl Runden, die das Modell mit dem vollständigen Datensatz trainiert wird. Je höher dieser Wert, desto besser wird das Modell trainiert.\n ' +
+      '<strong>Accuracy:</strong> Dieser Wert gibt an, wie viele richtige Vorhersagen das Modell gemacht hat (in Prozent). Bei einem Wert von 1 (100%) kannst du dir sicher sein, dass alle Vorhersagen stimmen werden.\n' +
+      '<strong>Loss:</strong> Dieser Wert sollte so tief wie möglich sein, denn er gibt die Summe aller Fehlinterpretationen während des Trainings an.',
     'event': 'Model ausprobieren',
     'back': false,
     'class': '',
