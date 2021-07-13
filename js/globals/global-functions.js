@@ -1,11 +1,28 @@
-toggleGi = (item, button) => {
-  const body = document.querySelector('body')
+toggleGi = (arg) => {
+  body = document.querySelector('body')
+  giEnableButton = document.querySelector('.enable-gi')
   loader = document.querySelector('#loader')
-  giEnabled = !giEnabled;
-  if (button) giEnabled ? button.classList.add('active') : button.classList.remove('active')
-  giEnabled ? body.classList.add('gi') : body.classList.remove('gi')
-  if(!scriptsLoaded && giEnabled) appendScripts(item);
-  if(scriptsLoaded) document.dispatchEvent(giToggleEvent);
+
+  if(arg || !giEnabled){
+    setGiActive()
+  }else {
+    setGiInactive()
+  }
+}
+
+setGiActive = () => {
+  giEnabled = true
+  giEnableButton.classList.add('active')
+  body.classList.add('gi')
+  document.dispatchEvent(giToggleEvent);
+  if(!scriptsLoaded) appendScripts(body);
+}
+
+setGiInactive = () => {
+  giEnabled = false
+  giEnableButton.classList.remove('active')
+  body.classList.remove('gi')
+  document.dispatchEvent(giToggleEvent);
 }
 
 appendScripts = (item) => {
@@ -79,7 +96,8 @@ createParticles = () => {
 }
 
 detectClick = () => {
-  const hoveredElement = document.elementFromPoint(xIndex, yIndex-80)
+  if (labelHandPose === 'X') return
+  const hoveredElement = document.elementFromPoint(xIndex, yIndex-50)
   if(!hoveredElement) return
   const id = hoveredElement.getAttribute('data-id');
   if (!id) {
@@ -100,6 +118,7 @@ setHoveredElementID = (id) => {
   hoveredElementID = id
   document.querySelectorAll('.click-animation')?.forEach(it => it.classList.remove('click-animation'))
   const el = document.querySelector(`.gclick[data-id=${id}]`)
+
   if(el) el.classList.add('click-animation')
   clickTimeout = setTimeout(function () {
     if(el) {
@@ -183,11 +202,11 @@ detectSwipe = () => {
 
 
 detectBeforeSwipeRight = () => {
-  return gestureSwipeRightIndex === 2;
+  return labelHandPose === 'Y' && gestureSwipeRightIndex === 2;
 }
 
 detectBeforeSwipeLeft = () => {
-  return gestureSwipeLeftIndex === 2;
+  return labelHandPose === 'Y' && gestureSwipeLeftIndex === 2;
 }
 
 

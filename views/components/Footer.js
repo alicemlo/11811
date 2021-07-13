@@ -52,7 +52,7 @@ const Footer = {
 
     if(!gesturalInteractionEnabled) document.querySelector('.gi-not-active').classList.remove('invisible')
 
-    giEnabler.onclick = () => toggleGi(document.body, giEnabler);
+    giEnabler.onclick = () => toggleGi();
     giEnabled ? giEnabler.classList.add('active')  : giEnabler.classList.remove('active')
 
   }

@@ -14,16 +14,16 @@ section.buzzwords{
 
   aside{
     height: 80%;
-    width: 100%;
+    width: 20rem;
     position: fixed;
     top: 10%;
-    left: 70%;
+    left: 1rem;
     display: flex;
     align-items: center;
     pointer-events: none;
-    >div{
-      width: 25%;
-    }
+    //>div{
+    //  width: 25%;
+    //}
     i.keyword, .def-content{
       font-size: 0.9rem;
       margin: 0.8rem 0;
@@ -34,6 +34,7 @@ section.buzzwords{
       background: rgba(28, 25, 34, 0.2);
       backdrop-filter: blur(10px);
       padding: 1rem;
+      border: 3px solid $col--main-01;
       &.inactive{
         display:none
       }
@@ -52,7 +53,7 @@ section.buzzwords{
 
   .no-comp{
     >div.flex{
-      justify-content: flex-start;
+      justify-content: flex-end;
       @include mobile-up{
         margin-left: 10%;
       }
@@ -94,7 +95,8 @@ section.buzzwords{
     padding: 1rem;
     //background: rgba(82, 125, 111, 0.45);
     border: 1.5px solid rgba(82, 125, 111, 0.45);
-    max-width: 72rem;
+    max-width: calc(100vw - 20rem);
+    margin: auto 1rem auto auto;
     &.no-comp{
       border: 1px solid transparent;
     }
@@ -104,12 +106,12 @@ section.buzzwords{
   }
 
   .component{
-    padding: 0.7rem 1rem;
+    padding: 1rem;
     background: rgba(82, 125, 111, 0.25);
     margin: 1rem;
     min-width: 17rem;
     cursor: pointer;
-    border: 1.5px solid transparent;
+    border: 3px solid transparent;
     transition: all 150ms;
 
     @include mobile-down{
@@ -124,15 +126,16 @@ section.buzzwords{
     }
 
     &.active-buzz{
-      border: 1.5px solid rgba(59, 186, 125, 0.6);
+      border: 3px solid rgba(59, 186, 125, 0.6);
+      background: rgba(59, 186, 125, 0.2);
     }
 
     >.component{
       margin: 1rem 0;
-      padding: 0.5rem;
+      padding: 0.7rem;
       min-width: 10rem;
       &.active-buzz{
-        border: 1.5px solid transparent;
+        border: 3px solid transparent;
         background: rgba(59, 186, 125, 0.6);
         color: $col--dark-01;
       }

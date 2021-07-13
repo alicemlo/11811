@@ -26,7 +26,7 @@ const Home = {
     if(!isChromium) webBrowserInfo.classList.remove('invisible')
 
     const toggleGI = document.querySelector('.toggle-gi');
-    toggleGI.onclick = () => toggleGi(document.body, toggleGI)
+    toggleGI.onclick = () => toggleGi(true)
   }
 };
 export default Home;

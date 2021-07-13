@@ -45,7 +45,7 @@ const options = {
 }
 
 
-const breakpoints = [180, 320, 460] // 0 - 640
+const breakpoints = [120, 320, 480] // 0 - 640
 const story = ['buzzwords', 'machine-learning', 'train-model']
 
 

@@ -147,7 +147,7 @@ const MachineLearning = {
           Dafür müssen wir bestimmten, was der Input ist und was der Output sein sollte. 
         </p>
         <p>
-          Um das System möglichst einfach zu gestaltet, besteht der Input nur aus zwei Werten: LAUTSTÄRKE und TEMPO. 
+          Um das System möglichst einfach zu gestalten, besteht der Input nur aus zwei Werten: LAUTSTÄRKE und TEMPO. 
           Jeder einzelner Song definiert sich alleine durch diese zwei Werte.
         </p>
         <p>
@@ -368,12 +368,12 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Ohne Daten geht gar nichts</h1>
         <p>
-          Machine Learning funktioniert nur mit Daten. Und je mehr Daten vorhanden sind, desto bessere Modelle können trainiert werden. 
+          Machine Learning funktioniert nur mit Daten. Und je mehr Daten vorhanden sind, desto bessere Modelle können trainiert werden (insbesondere bei der unüberwachten Lernmethode). 
           Das zieht Probleme mit sich, denn die Sammlung und die Verwaltung dieser Datenmengen ist nicht immer ganz transparent und steht 
           oft im Zielkonflikt mit unserer Vorstellung von Datenschutz und mit Privatsphäre.
         </p>
         <p>
-          Ausserdem stellt auch die Qualität der Daten eine grosse Herausforderung dar. Wenn Modelle mit unvollständigen oder schlechten Daten trainiert werden,
+          Zudem stellt auch die Sicherstellung der Qualität der Trainingsdaten eine grosse Herausforderung dar. Wenn Modelle mit unvollständigen oder schlechten Daten trainiert werden,
           kann das zu verzerrten Prognosen führen. 
         </p>
       </div>
@@ -442,21 +442,13 @@ const MachineLearning = {
   <div class="ct-content">
     <div class="content">
       <div class="col-1">
-        <h1>Wieso brauchen wir ML</h1>
+        <h1>Wieso brauchen wir Machine Learning</h1>
         <p>
-          Es gibt Aufgaben, bei denen Computer und intelligente Systeme dem Menschen deutlich überlegen sind. 
-          Zum Beispiel die Analyse und Handhabung grosser Datenmengen. Aber auch bei der Automatisierung repetitiver Prozesse 
-          macht der Einsatz computerbaiser
-           Zum Beispiel ... Genau für diese Aufgaben macht der Einsatz von künstlicher Intelligenz
-          sehr viel Sinn. Automatisierung, etc.  
-        </p>
-        <p>
-          -> Unterstützt den Menschen
-          -> Häufigste Anwendungsfelder
-        </p>
-        <p>
-          Es wird jedoch auch immer Sachen geben, die sich nicht leicht durch Systeme ersetzen lassen. 
-          Sprachverarbeitung sehr schwierig, Logisches Denken verknüpft mit Weltwissen, etc.
+          Es gibt Aufgaben, bei denen computerbasierte bzw. intelligente Systeme dem Menschen deutlich überlegen sind. Zum Beispiel bei der Analyse und bei der Handhabung grosser Datenmengen, 
+          sowie bei der Automatisierung repetitiver Prozesse. Beim Handling grosser Datenmengen (die auch ständig immer grösser werden) 
+          helfen uns machschinelle Lernverfahren. 
+          Diese können Daten sehr effizient analysieren können, ohne dass jemand dafür ein komplexes Programm schreiben muss, 
+          welches letztendlich nicht skalierbar ist und mit hoher Wahrscheinlichkeit eine hohe Fehlerquote aufweist.
         </p>
       </div>
     </div>
@@ -474,38 +466,41 @@ const MachineLearning = {
     <div class="content">
       <div class="col-1">
         <h1>Starke vs. Schwache Intelligenz</h1>
-        <p>
-          Diese Unterscheidung sollte für dich jetzt nicht mehr so schwierig zu verstehen sein. Wenn du das verstanden hast, 
-          hast du eine wichtige Unterscheidung verstanden, für das Verständig von KI sehr wichtig ist. 
-        </p>
-        <p>
-          "Schwache" künstlich intelligte Systeme können genau eines: sie berechnen einen Output anhand eines Inputs, der sich von 
-          seiner Art nicht verändert. Eine KI, welche trainiert wurde, verschiedene Tiere auf einem Bild zu erkennen wird immer nur
-          Tiere auf einem Bild erkennen. Aber sie wird nicht plötzlich unterschiedliche Gegenstände erkennen können, solange sie nicht dazu
-          trainiert wurde.  
-         </p>
-         <p>Eine starke KI - oder auch Superintelligenz - gibt es heute nicht wirklich. </p>
+        <p>...</p>
+
+<!--        <p>-->
+<!--          Diese Unterscheidung sollte für dich jetzt nicht mehr so schwierig zu verstehen sein. Wenn du das verstanden hast, -->
+<!--          hast du eine wichtige Unterscheidung verstanden, für das Verständig von KI sehr wichtig ist. -->
+<!--        </p>-->
+<!--        <p>-->
+<!--          "Schwache" künstlich intelligte Systeme können genau eines: sie berechnen einen Output anhand eines Inputs, der sich von -->
+<!--          seiner Art nicht verändert. Eine KI, welche trainiert wurde, verschiedene Tiere auf einem Bild zu erkennen wird immer nur-->
+<!--          Tiere auf einem Bild erkennen. Aber sie wird nicht plötzlich unterschiedliche Gegenstände erkennen können, solange sie nicht dazu-->
+<!--          trainiert wurde.  -->
+<!--         </p>-->
+<!--         <p>Eine starke KI - oder auch Superintelligenz - gibt es heute nicht wirklich. </p>-->
       </div>
     </div>
     
     
     <div class="content">
       <div class="col-1">
-        <h1>Angst vor der Superintelligenz</h1>
-        <p>
-          Ein künstliche trainiertes System ist dafür gemacht, Probleme zu lösen, für die es trainiert wurde. Man kann heute ohne Probleme
-          eine intelligentes System generieren, dass mit hoher Wahrscheinlichkeit einen Hund von einer Katze unterscheiden kann. ...
-        </p>
-        <p>
-          Ein künstlich trainiertes System wird nur in dem gut sein, was seine Aufgabe ist. Ein künstliches Modell zur Wetterprognose wird sehr gut Wettervorhersagen machen können. 
-          Es wird jedoch in keinem anderen Bereich jemals gut sein. 
-        </p>
-        <p>
-          Zum aktuellen Zeitpunkt ist sehr gut erforscht, wie gute intelligente Modelle generiert werden können, die auf Zahlen und Logik beruhen. 
-          Es ist jedoch immernoch unglaublich schwierig eine KI zu erzeugen, welche logische Prognosen mit Weltwissen verknüpfen kann. Zum Beispiel ist es
-          viel einfacher einen Schachcomputer zu bauen, als eine Sprachverarbeitungssoftware. 
-        </p>
-      </div>
+        <h1>Die Superintelligenz</h1>
+        <p>...</p>
+<!--        <p>-->
+<!--          Ein künstliche trainiertes System ist dafür gemacht, Probleme zu lösen, für die es trainiert wurde. Man kann heute ohne Probleme-->
+<!--          eine intelligentes System generieren, dass mit hoher Wahrscheinlichkeit einen Hund von einer Katze unterscheiden kann. ...-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          Ein künstlich trainiertes System wird nur in dem gut sein, was seine Aufgabe ist. Ein künstliches Modell zur Wetterprognose wird sehr gut Wettervorhersagen machen können. -->
+<!--          Es wird jedoch in keinem anderen Bereich jemals gut sein. -->
+<!--        </p>-->
+<!--        <p>-->
+<!--          Zum aktuellen Zeitpunkt ist sehr gut erforscht, wie gute intelligente Modelle generiert werden können, die auf Zahlen und Logik beruhen. -->
+<!--          Es ist jedoch immernoch unglaublich schwierig eine KI zu erzeugen, welche logische Prognosen mit Weltwissen verknüpfen kann. Zum Beispiel ist es-->
+<!--          viel einfacher einen Schachcomputer zu bauen, als eine Sprachverarbeitungssoftware. -->
+<!--        </p>-->
+      </div>    
     </div>
   
     <div class="content">
@@ -577,6 +572,16 @@ const MachineLearning = {
         content.classList.toggle('hidden')
         it.classList.toggle('border')
       }
+    })
+
+    // external links
+    const externalLinks = document.querySelectorAll('.sources .gclick')
+    console.log(externalLinks)
+    externalLinks.forEach(link => {
+      const arrow = document.createElement('DIV')
+      arrow.classList.add('external-link-icon')
+      arrow.innerHTML = `<img src="../../assets/icons/arrow.svg" alt="externer Link"/>`
+      link.prepend(arrow)
     })
 
   }

@@ -433,7 +433,8 @@ section.machine-learning p {
   margin: 1rem 0; }
 
 section.machine-learning button {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  text-align: left; }
 
 section.machine-learning .randomised {
   display: flex;
@@ -476,6 +477,13 @@ section.machine-learning .col-sources {
     align-items: flex-end;
     opacity: 1;
     transition: opacity 200ms; }
+    section.machine-learning .col-sources .sources .external-link-icon {
+      display: inline-block;
+      height: 1rem;
+      margin-right: 0.7rem; }
+    section.machine-learning .col-sources .sources .external-link-icon img {
+      transform: rotate(-45deg);
+      height: 100%; }
     section.machine-learning .col-sources .sources a {
       align-self: flex-end;
       width: fit-content;
@@ -607,15 +615,13 @@ section.buzzwords {
     align-items: center; }
   section.buzzwords aside {
     height: 80%;
-    width: 100%;
+    width: 20rem;
     position: fixed;
     top: 10%;
-    left: 70%;
+    left: 1rem;
     display: flex;
     align-items: center;
     pointer-events: none; }
-    section.buzzwords aside > div {
-      width: 25%; }
     section.buzzwords aside i.keyword, section.buzzwords aside .def-content {
       font-size: 0.9rem;
       margin: 0.8rem 0; }
@@ -623,7 +629,8 @@ section.buzzwords {
       height: fit-content;
       background: rgba(28, 25, 34, 0.2);
       backdrop-filter: blur(10px);
-      padding: 1rem; }
+      padding: 1rem;
+      border: 3px solid #3BBA7D; }
       section.buzzwords aside .definition.inactive {
         display: none; }
   section.buzzwords article {
@@ -632,7 +639,7 @@ section.buzzwords {
       width: 15rem;
       height: 15rem; }
   section.buzzwords .no-comp > div.flex {
-    justify-content: flex-start; }
+    justify-content: flex-end; }
     @media (min-width: 48em) {
       section.buzzwords .no-comp > div.flex {
         margin-left: 10%; } }
@@ -657,18 +664,19 @@ section.buzzwords {
   section.buzzwords .ct-buzz {
     padding: 1rem;
     border: 1.5px solid rgba(82, 125, 111, 0.45);
-    max-width: 72rem; }
+    max-width: calc(100vw - 20rem);
+    margin: auto 1rem auto auto; }
     section.buzzwords .ct-buzz.no-comp {
       border: 1px solid transparent; }
     section.buzzwords .ct-buzz > h4 {
       text-align: center; }
   section.buzzwords .component {
-    padding: 0.7rem 1rem;
+    padding: 1rem;
     background: rgba(82, 125, 111, 0.25);
     margin: 1rem;
     min-width: 17rem;
     cursor: pointer;
-    border: 1.5px solid transparent;
+    border: 3px solid transparent;
     transition: all 150ms; }
     @media (max-width: 48em) {
       section.buzzwords .component {
@@ -677,13 +685,14 @@ section.buzzwords {
       background: rgba(59, 186, 125, 0.2);
       -webkit-tap-highlight-color: transparent; }
     section.buzzwords .component.active-buzz {
-      border: 1.5px solid rgba(59, 186, 125, 0.6); }
+      border: 3px solid rgba(59, 186, 125, 0.6);
+      background: rgba(59, 186, 125, 0.2); }
     section.buzzwords .component > .component {
       margin: 1rem 0;
-      padding: 0.5rem;
+      padding: 0.7rem;
       min-width: 10rem; }
       section.buzzwords .component > .component.active-buzz {
-        border: 1.5px solid transparent;
+        border: 3px solid transparent;
         background: rgba(59, 186, 125, 0.6);
         color: #1C1922; }
     section.buzzwords .component.no-mw {
@@ -854,36 +863,27 @@ section.fixed {
 svg {
   max-width: 30rem; }
 
-.gclick::before {
+.gclick::before, .gclick::after {
   position: absolute;
-  top: -0.6rem;
-  left: -0.6rem;
+  top: -0.8rem;
+  left: -0.8rem;
   content: '';
-  width: 0.6rem;
-  height: 0.6rem;
-  transform: scale(0);
-  background: #fb888d;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
-  transition: transform 700ms;
   border: 1px solid #fb888d; }
   @media (max-width: 48em) {
-    .gclick::before {
+    .gclick::before, .gclick::after {
       display: none !important; } }
 
+.gclick::before {
+  transform: scale(0);
+  background: #fb888d;
+  transition: transform 1000ms; }
+
 .gclick::after {
-  position: absolute;
-  top: -0.6rem;
-  left: -0.6rem;
-  content: '';
-  width: 0.6rem;
-  height: 0.6rem;
-  border: 1px solid #fb888d;
-  border-radius: 50%;
   opacity: 0;
   transition: opacity 200ms; }
-  @media (max-width: 48em) {
-    .gclick::after {
-      display: none !important; } }
 
 .gclick.click-animation::before {
   transform: scale(1); }
@@ -899,13 +899,13 @@ svg {
     color: #527D6F;
     opacity: 0.9; } }
 
-body:not(.gi) .ng-dashed {
+body:not(.gi) .ng-dashed, body:not(.gi) .ng-dashed > a {
   cursor: crosshair;
   text-decoration: line-through;
   color: #527D6F;
   opacity: 0.9; }
   @media (max-width: 48em) {
-    body:not(.gi) .ng-dashed {
+    body:not(.gi) .ng-dashed, body:not(.gi) .ng-dashed > a {
       display: none; } }
 
 body:not(.gi) .ng-invisible {

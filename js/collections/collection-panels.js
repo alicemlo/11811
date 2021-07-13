@@ -148,7 +148,7 @@ const COLLECTION_PANELS = [
       }
 
       .klas-2, .klas-5, .klas-7, .klas-8 {
-        font-family: FiraMono-Regular, Fira Mono;
+        font-family: droid-sans-mono, monospace;
       }
 
       .klas-4 {
@@ -235,7 +235,7 @@ const COLLECTION_PANELS = [
 
       .reg-2, .reg-5, .reg-6, .reg-7 {
         fill: #3bba7d;
-        font-family: FiraMono-Regular, Fira Mono;
+        font-family: droid-sans-mono, monospace;
       }
 
       .reg-4 {
@@ -300,7 +300,7 @@ const COLLECTION_PANELS = [
 
       .clus-2 {
         font-size: 12px;
-        font-family: FiraMono-Regular, Fira Mono;
+        font-family: droid-sans-mono, monospace;
       }
 
       .clus-2, .clus-5 {

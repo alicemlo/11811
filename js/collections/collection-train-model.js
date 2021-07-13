@@ -24,13 +24,18 @@ const COLLECTION_TRAIN_MODEL = [
     'event': 'Weiter',
     'class': '',
     'back': false,
-    'col2': `<form autocomplete="off" spellcheck="false" data-id="labl-12345"><label id="pose-1" data-id="labl-12345"><input placeholder="1. Geste" name="pose-1" type="text" class="gclick" data-id="labl-12345"></label></form><form autocomplete="off" spellcheck="false" data-id="labl-54321"><label id="pose-2" data-id="labl-54321"><input placeholder="2. Geste" name="pose-2" type="text" class="gclick" data-id="labl-54321"></label><p>👋, ✌, 🤙️</p></form>`,
+    'col2': `<form autocomplete="off" spellcheck="false" data-id="labl-12345"><label id="pose-1" data-id="labl-12345"><input placeholder="1. Geste" name="pose-1" type="text" class="gclick" data-id="labl-12345"></label><label id="pose-2" data-id="labl-54321"><input placeholder="2. Geste" name="pose-2" type="text" class="gclick" data-id="labl-54321"></label><p>👋, ✌, 🤙️</p></form>`,
     getState() {
       let v1 = document.querySelector('#pose-1 input')?.value
       let v2 = document.querySelector('#pose-2 input')?.value
       train_model_data.poseLabels.push(v1)
       train_model_data.poseLabels.push(v2)
       return v1 !== '' && v2 !== '' && v1 !== v2
+    },
+    setInit() {
+      const form = document.querySelector('form')
+      function handleForm(event) { event.preventDefault(); }
+      form.addEventListener('submit', handleForm);
     }
   },
   {
@@ -46,7 +51,7 @@ const COLLECTION_TRAIN_MODEL = [
     },
     preInit(){
       train_model_data.activePoseLabel = train_model_data.poseLabels[0]
-      this.title = `Trainiere "${train_model_data.activePoseLabel}"`
+      this.title = `Sammle die Daten für die Geste "${train_model_data.activePoseLabel}"`
     },
     setInit(){
       disableTrainEvent()
@@ -69,7 +74,7 @@ const COLLECTION_TRAIN_MODEL = [
     },
     preInit(){
       train_model_data.activePoseLabel = train_model_data.poseLabels[1]
-      this.title = `Trainiere "${train_model_data.activePoseLabel}"`
+      this.title = `Sammle die Daten für die Geste "${train_model_data.activePoseLabel}"`
     },
     setInit(){
       disableTrainEvent();

@@ -72,7 +72,7 @@ let trainingCountdown = 4
 
 
 // dom
-let trainingDataEpochs, trainingDataLoss, trainingDataAccuracy, trainingSaveData, trainedPoseLabel
+let trainingDataEpochs, trainingDataLoss, trainingDataAccuracy, trainingSaveData, trainedPoseLabel, body, giEnableButton
 let eventButtons = []
 let mobileLinkEnabled = false
 let scriptsLoaded = false

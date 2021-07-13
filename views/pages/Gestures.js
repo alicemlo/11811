@@ -14,13 +14,13 @@ const Gestures = {
           <p>- <strong>Die Hand darf nicht zu nah an der Webcam sein.</strong> Eine Distanz von ca. 30cm zwischen Hand und Webcam ist ausreichend.</p>
             <p>Video->Licht überprüfen</p>
               <p>- <strong>Verwende nur eine Hand auf einmal.</strong> Wenn zwei Hände in Bild sind, funktioniert die Gestenerkennnung nicht. Es spielt dabei keine Rolle, ob du die rechte oder die linke Hand benutzt.</p>
-           <p>- <strong>Es braucht ein bisschen Zeit, bis du dich and die Gestensteuerung gewöhnt hast.</strong> Ausserdem funktioniert die Gestenerkennung und -interpretation nicht immer perfekt. Sei offen für Fehler.</p>
+           <p>- <strong>Es braucht ein bisschen Zeit, bis du dich and die Gestensteuerung gewöhnt hast.</strong> Ausserdem funktioniert die Gestenerkennung und -interpretation nicht immer perfekt.</p>
           </div>
           
         </article>
         
         <article>
-          <p>Du merkst schnell, wenn die Handerkennung nicht funktioniert: Die rosa Punkte stocken oder sind nicht sichtbar, wenn keine Hand erkannt wird. Versuche dann die Hand besser zu positionieren, die Lichtverhältnisse anzupassen und überprüfe den Abstand der Hand zur Kamera.</p>
+          <p>Du merkst schnell, wenn die Handerkennung nicht funktioniert: Die rosa Punkte stocken oder sind nicht sichtbar, wenn keine Hand erkannt wird. Versuche dann die Hand besser zu positionieren, die Lichtverhältnisse anzupassen und überprüfe den Abstand zwischen Hand und Kamera.</p>
         </article>
         
         
@@ -69,7 +69,7 @@ const Gestures = {
         <article class="gestures-grid">
           <div class="title">
             <p><strong>Klicken</strong></p>
-            <p>Du kannst auf ein Element (Link oder Button) klicken, wenn du deinen Zeigefinger drauf hältst.</p>
+            <p>Du kannst auf ein Element (Link oder Button) klicken, wenn du deinen Zeigefinger ca. 1 Sekunde drauf hältst.</p>
           </div>
           <div>
              <img src="../../assets/images/gesture-click.png" alt="Swipe links"/>

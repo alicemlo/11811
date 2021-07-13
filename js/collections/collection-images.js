@@ -5,6 +5,7 @@ class CollectionImage{
     this.content = data.content;
     this.sourceName = data.content.source
     this.indications = data.content.indications
+    this.startIndex = data.start_index || null;
     this.source = SVGS.find(item => item.name===this.sourceName).content
     this.text = data.content.text
 
@@ -12,7 +13,7 @@ class CollectionImage{
     this.nextButton = document.createElement('BUTTON')
     this.ctText = document.createElement('DIV')
 
-    this.index = -1
+    this.index =  -1
     this.layers = null
     this.length = null
   }
@@ -30,6 +31,7 @@ class CollectionImage{
     this.ctText.appendChild(this.nextButton)
     this.layers = document.querySelectorAll(`.${this.sourceName}-layer`)
     this.length = this.layers.length-1
+    if(this.startIndex) this.update(this.index++);
   }
 
   create(){
@@ -37,11 +39,16 @@ class CollectionImage{
   }
 
   reset(){
-    this.index=-1
+    if(this.startIndex) this.index = 0
+    else this.index=-1
+  }
+
+  checkIndex(){
+    if(this.index>this.length) this.reset()
   }
 
   update(){
-    if(this.index>this.length) this.reset()
+    this.checkIndex()
     this.layers.forEach(layer => layer.classList.remove('visible'))
     this.setContent();
   }
@@ -93,16 +100,24 @@ const COLLECTION_IMAGES = [
   },
   {
     name: 'supervised-unsupervised',
+    start_index: 1,
     content: {
-      indications:['Vergleich anschauen', 'Ausganglage', 'Vorbereitung', 'Einsatz', "Übersicht", "Beispiele" , "Von vorne"],
+      indications:['-', 'Vorbereitung des Trainings', 'Output', 'Einsatz', "Lernverfahren", "wann sich welches Verfahren eignet" , "von vorne beginnen"],
       source: 'super',
       text: [
-        "Die Überwachung bezieht sich auf das Trainieren des Modells. Hier wird veranschaulicht, wie sich diese beiden Lernprozesse unterscheiden und für was die generierten Modelle eingesetzt werden können",
-        "Zum einen unterscheidet sich die Ausganglage. Für das unüberwachten Lernen werden viel mehr Beispieldaten benötigt als beim überwachten Lernen",
-        "Beim überwachten Lernen muss der Output für jeden einzelnen Datensatz im Vorhinein definiert werden. Diese Vorbereitung fällt beim unüberwachten Lernen weg, da das Modell die Strukturierung übernimmt. Dafür müssen dem Modell jedoch viel mehr Daten zur Verfügung stehen als beim überwachten Lernen.",
-        "Das hat zur Folge, dass bei der unüberwachten Lernmethode vorher nicht klar ist, wie der Output aussehen wird, während der Output bei der überwachten Methode immer definiert ist.",
-        "Da die Trainingsdaten beim überwachten Lernverfahren vorbereitet werden müssen, kann dieser Prozess nicht in Echtzeit stattfinden. Beim unüberwachten Lernen lernt das Modell fortlaufend, während es im Einsatz ist und kann sich stetig verbessern.",
-        "",
+        "-",
+        "Der entscheidende Unterschied dieser beiden Lernmethoden besteht bei den Trainingsdaten, anhand derer die Modelle trainiert werden. ",
+        "Bei der überwachten Methode werden die Daten vor dem Training strukturiert. Daher werden bei dieser Methode viel weniger Daten eingesetzt als beim unüberwachten Training. \n" +
+        "\n" +
+        "Dahingegen braucht es beim unüberwachten Lernen keine Vorbereitung. Da sehr viele Daten zur Verfügung stehen, kann die KI von alleine Muster in den Daten erkennen.",
+        "Beim Strukturieren der Daten wird jeder Datensatz mit einem Label beschriftet oder einem Wert zugewiesen. Diese geben dem Modell vor, wie es lernen sollte. \n" +
+        "\n" +
+        "Da das Modell bei der unüberwachten Lernmethode selber Muster erkennt, kennen wir den Output bzw. die Vorhersage des Modells (noch) nicht.",
+        "Ein Modell, das mit strukturierten Daten trainiert wurde, wird nur einmal trainiert, bevor man es einsetzt. Es richtet seine Vorhersagen immer nach den Beispieldaten, mit denen es trainiert wurde. \n" +
+        "\n" +
+        "Anders sieht es bei der unüberwachten Methode aus: Zum einem benötigt das Modell sehr viele Daten, bis die Mustererkennung gut funktioniert. Anschliessend kann es in Echtzeit mit immer mehr Daten gefüttert werden, anhand derer es sich verbessern kann. Hier liegt der entscheidende Vorteil dieser Methode.",
+        "Bei beiden Methoden können unterschiedliche Verfahren eingesetzt werden. Jedes Verfahren hat seinen Einsatzbereich. In der Darstellung sind die Relevantesten aufgeführt.",
+        "Um herauszufinden, wann man welches Verfahren braucht, fragt man sich am Besten, welches Ziel man mit seinem Modell erreichen möchte.",
         "",
       ]
     }
@@ -140,7 +155,7 @@ const SVGS = [
       }
 
       .super-1, .super-12, .super-7 {
-        font-family: FiraMono-Regular, Fira Mono;
+        font-family: droid-sans-mono, monospace;
       }
 
       .super-10, .super-13, .super-2, .super-20, .super-21, .super-3, .super-6, .super-8 {
@@ -1146,7 +1161,7 @@ const SVGS = [
       }
 
       #song .cls-11, .cls-14, .cls-19, .cls-2, .cls-5, .cls-7, .cls-9 {
-        font-family: FiraMono-Regular, Fira Mono;
+        font-family: droid-sans-mono, monospace;
       }
 
       #song .cls-10, .cls-15, .cls-16, .cls-17, .cls-18, .cls-20, .cls-3, .cls-4 {
@@ -1419,7 +1434,7 @@ const SVGS = [
 
       .io-4 {
         font-size: 12px;
-        font-family: FiraMono-Regular, Fira Mono;
+        font-family: droid-sans-mono, monospace;
       }
     </style>
   </defs>

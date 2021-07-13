@@ -58,7 +58,7 @@ const Buzzwords = {
           <h5 data-id="deepl-43435">Deep Learning</h5>
         </div>
         <div class="component gclick" data-id="reinfl-43435">
-          <h5 data-id="reinfl-43435">Reinforcement Lerning</h5>
+          <h5 data-id="reinfl-43435">Reinforcement Learning</h5>
         </div>        
         <div class="component gclick" data-id="zielv-43435">
           <h5 data-id="zielv-43435">Zielvariable</h5>
@@ -69,9 +69,9 @@ const Buzzwords = {
       </div>
       
       <div class="component gclick" data-id="mustera-43435">
-        <h4 data-id="mustera-43435">Musteranalyse</h4>
+        <h4 data-id="mustera-43435">Mustererkennung</h4>
         <div class="component gclick" data-id="langp-43435">
-          <h5 data-id="langp-43435">Language Processing</h5>
+          <h5 data-id="langp-43435">Natural Language Processing</h5>
         </div>
         <div class="component gclick" data-id="bildv-43435">
           <h5 data-id="bildv-43435">Bildverarbeitung</h5>
@@ -88,8 +88,8 @@ const Buzzwords = {
         <h4 data-id="robot-43435">Robotik</h4>
       </div>
       
-      <div class="component" data-id="superi-43435">
-        <h4 data-id="superi-43435" class="gclick">Superintelligenz</h4>
+      <div class="component gclick" data-id="superi-43435">
+        <h4 data-id="superi-43435">Superintelligenz</h4>
       </div>
     </div>
   </article>
