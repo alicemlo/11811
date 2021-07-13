@@ -67,10 +67,6 @@ const COLLECTION_PANELS = [
         title: 'COMPAS',
         text: 'Compas ist eine Software aus den USA, welche die Rückfallwahrscheinlichkeit von Angeklagten bestimmt. Diese soll den RichterInnen helfen einzuschätzen, mit welcher Wahrscheinlichkeit die angeklagte Person erneut eine Straftat begeht. Auch dieses Modell basiert auf den Daten der letzten Jahre. Das hat zur Folge, dass das System bei der Einschätzung der Rückfallswahrscheinlichkeit die Hautfarbe der angeklagten Person miteinbezieht. Dadruch wird das Risiko einer erneuten Straftat bei dunkelhäutige Personen automatisch höher eingeschätzt als bei hellhäutigen. '
       },
-      {
-        title: '..',
-        text: '...'
-      },
     ]
   },
   {

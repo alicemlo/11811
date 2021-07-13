@@ -70,6 +70,7 @@ const Gestures = {
           <div class="title">
             <p><strong>Klicken</strong></p>
             <p>Du kannst auf ein Element (Link oder Button) klicken, wenn du deinen Zeigefinger ca. 1 Sekunde drauf hältst.</p>
+            <p>Es erscheint ein roter Punkt in der oberen linken Ecke des Elements. Wenn dieser erscheint zählt die Sekunde ab.</p>
           </div>
           <div>
              <img src="../../assets/images/gesture-click.png" alt="Swipe links"/>

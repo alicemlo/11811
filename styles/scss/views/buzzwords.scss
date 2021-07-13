@@ -38,6 +38,9 @@ section.buzzwords{
       &.inactive{
         display:none
       }
+      @include mobile-down{
+        border: none;
+      }
     }
 
   }
@@ -102,11 +105,13 @@ section.buzzwords{
       border: 1px solid transparent;
     }
     >h4{
-      text-align: center;
+      text-align: right;
+      margin-right: 1rem;
     }
 
     @include mobile-down{
       max-width: unset;
+      width: 100%;
     }
   }
 

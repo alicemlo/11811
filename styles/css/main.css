@@ -106,6 +106,9 @@ footer {
     margin-left: 5rem;
     justify-self: flex-end;
     text-align: right; }
+    @media (max-width: 48em) {
+      footer .gi-not-active {
+        display: none; } }
   footer .enable-gi {
     position: fixed;
     bottom: 1rem;
@@ -633,6 +636,9 @@ section.buzzwords {
       border: 3px solid #3BBA7D; }
       section.buzzwords aside .definition.inactive {
         display: none; }
+      @media (max-width: 48em) {
+        section.buzzwords aside .definition {
+          border: none; } }
   section.buzzwords article {
     margin: 1rem; }
     section.buzzwords article.placeholder {
@@ -670,10 +676,12 @@ section.buzzwords {
     section.buzzwords .ct-buzz.no-comp {
       border: 1px solid transparent; }
     section.buzzwords .ct-buzz > h4 {
-      text-align: center; }
+      text-align: right;
+      margin-right: 1rem; }
     @media (max-width: 48em) {
       section.buzzwords .ct-buzz {
-        max-width: unset; } }
+        max-width: unset;
+        width: 100%; } }
   section.buzzwords .component {
     padding: 1rem;
     background: rgba(82, 125, 111, 0.25);

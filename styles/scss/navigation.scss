@@ -139,6 +139,10 @@ footer{
     margin-left: 5rem;
     justify-self: flex-end;
     text-align: right;
+
+    @include mobile-down{
+      display: none;
+    }
   }
 
   .enable-gi{
