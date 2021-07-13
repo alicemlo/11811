@@ -108,6 +108,8 @@ const Buzzwords = {
   },
 
   after_render: async () => {
+    swipeRightEnabled = false
+    swipeLeftEnabled = true
     gesturalInteractionEnabled = true
     gestureLabelingEnabled = false
     mobileLinkEnabled = true

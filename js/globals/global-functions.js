@@ -96,7 +96,7 @@ createParticles = () => {
 }
 
 detectClick = () => {
-  if (labelHandPose === 'X') return
+  // if (labelHandPose === 'X') return
   const hoveredElement = document.elementFromPoint(xIndex, yIndex-50)
   if(!hoveredElement) return
   const id = hoveredElement.getAttribute('data-id');
@@ -154,6 +154,20 @@ setIndexPoints = () => {
   // }
 }
 
+enableAllGesturalInteraction = () => {
+  swipeRightEnabled = true
+  swipeLeftEnabled = true
+  gesturalInteractionEnabled = true
+  gestureLabelingEnabled = false
+}
+
+disableGestureInteraction = () => {
+  swipeRightEnabled = false
+  swipeLeftEnabled = false
+  gesturalInteractionEnabled = false
+  gestureLabelingEnabled = false
+}
+
 detectScroll = () => {
   let y = 0
   if(pose[0]){
@@ -165,48 +179,77 @@ detectScroll = () => {
   }
 }
 
-detectSwipe = () => {
+// detectSwipe = () => {
+//   let x = xAvg / 22
+//   if (labelHandPose === 'Y') {
+//     if (x > breakpoints[2]) {
+//       // area 3
+//       if (gestureSwipeLeftIndex === 2) gestureSwipeLeftIndex = 3
+//       gestureSwipeRightIndex = 0
+//     } else if (x < breakpoints[0]) {
+//       // area 0
+//       gestureSwipeLeftIndex = 0
+//       if (gestureSwipeRightIndex === 2) gestureSwipeRightIndex = 3
+//     } else if (x >= breakpoints[0] && x < breakpoints[1]) {
+//       // area 1
+//       if (gestureSwipeLeftIndex === 0) gestureSwipeLeftIndex = 1
+//       if (gestureSwipeRightIndex === 1) gestureSwipeRightIndex = 2
+//     } else if (x >= breakpoints[1] && x < breakpoints[2]) {
+//       // area 2
+//       if (gestureSwipeLeftIndex === 1) gestureSwipeLeftIndex = 2
+//       if (gestureSwipeRightIndex === 0) gestureSwipeRightIndex = 1
+//     }
+//   } else {
+//     gestureSwipeLeftIndex = 0
+//     gestureSwipeRightIndex = 0
+//   }
+//   if (gestureSwipeRightIndex === 3) {
+//     gestureSwipeRightIndex = 0
+//     return "swipeRight"
+//   }
+//   if (gestureSwipeLeftIndex === 3) {
+//     gestureSwipeLeftIndex = 0
+//     return "swipeLeft"
+//   }
+//   return null
+// }
+
+
+
+detectSwipeLeft = () => {
+  if(labelHandPose === 'X'){
+    stateSwipeLeft = 0
+    return
+  }
   let x = xAvg / 22
-  if (labelHandPose === 'Y') {
-    if (x > breakpoints[2]) {
-      // area 3
-      if (gestureSwipeLeftIndex === 2) gestureSwipeLeftIndex = 3
-      gestureSwipeRightIndex = 0
-    } else if (x < breakpoints[0]) {
-      // area 0
-      gestureSwipeLeftIndex = 0
-      if (gestureSwipeRightIndex === 2) gestureSwipeRightIndex = 3
-    } else if (x >= breakpoints[0] && x < breakpoints[1]) {
-      // area 1
-      if (gestureSwipeLeftIndex === 0) gestureSwipeLeftIndex = 1
-      if (gestureSwipeRightIndex === 1) gestureSwipeRightIndex = 2
-    } else if (x >= breakpoints[1] && x < breakpoints[2]) {
-      // area 2
-      if (gestureSwipeLeftIndex === 1) gestureSwipeLeftIndex = 2
-      if (gestureSwipeRightIndex === 0) gestureSwipeRightIndex = 1
-    }
-  } else {
-    gestureSwipeLeftIndex = 0
-    gestureSwipeRightIndex = 0
+  if(x >= breakpointsSwipeLeft[stateSwipeLeft] && x < breakpointsSwipeLeft[stateSwipeLeft+1]) stateSwipeLeft++
+  if(stateSwipeLeft >= 5){
+    document.dispatchEvent(eventSwipeLeft)
+    stateSwipeLeft = 0
   }
-  if (gestureSwipeRightIndex === 3) {
-    gestureSwipeRightIndex = 0
-    return "swipeRight"
+}
+
+detectSwipeRight = () => {
+  if(labelHandPose === 'X'){
+    stateSwipeRight = 0
+    return
   }
-  if (gestureSwipeLeftIndex === 3) {
-    gestureSwipeLeftIndex = 0
-    return "swipeLeft"
+  let x = xAvg / 22
+  if(x < breakpointsSwipeRight[stateSwipeRight] && x >= breakpointsSwipeRight[stateSwipeRight+1]) stateSwipeRight++
+
+  if(stateSwipeRight >= 5){
+    document.dispatchEvent(eventSwipeRight)
+    stateSwipeRight = 0
   }
-  return null
 }
 
 
 detectBeforeSwipeRight = () => {
-  return labelHandPose === 'Y' && gestureSwipeRightIndex === 2;
+  return labelHandPose === 'Y' && stateSwipeRight === 4;
 }
 
 detectBeforeSwipeLeft = () => {
-  return labelHandPose === 'Y' && gestureSwipeLeftIndex === 2;
+  return labelHandPose === 'Y' && stateSwipeLeft === 4;
 }
 
 

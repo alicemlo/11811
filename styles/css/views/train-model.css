@@ -24,3 +24,5 @@ article.create {
     width: fit-content; }
   article.create .btn-train-start, article.create .train-save {
     max-width: unset; }
+  article.create form label {
+    display: block; }

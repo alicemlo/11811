@@ -42,8 +42,7 @@ const Project = {
   },
   after_render: async () => {
     mobileLinkEnabled = false
-    gesturalInteractionEnabled = true
-    gestureLabelingEnabled = false
+    disableGestureInteraction()
   }
 };
 export default Project;

@@ -525,8 +525,8 @@ const MachineLearning = {
   },
   after_render: async () => {
     mobileLinkEnabled = true
-    gesturalInteractionEnabled = true
-    gestureLabelingEnabled = false
+    enableAllGesturalInteraction()
+
 
     // term collection
     const collection_terms = document.querySelectorAll('.term-collection')

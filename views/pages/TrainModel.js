@@ -20,6 +20,10 @@ const TrainModel = {
   },
   after_render: async () => {
     mobileLinkEnabled = false
+    swipeRightEnabled = true
+    swipeLeftEnabled = false
+    gesturalInteractionEnabled = true
+    gestureLabelingEnabled = false
 
     const container = document.querySelector('article.create')
     const col1 = document.querySelector('.col-1')

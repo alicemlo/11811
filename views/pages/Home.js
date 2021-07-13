@@ -17,8 +17,7 @@ const Home = {
   },
   after_render: async () => {
     mobileLinkEnabled = false
-    gesturalInteractionEnabled = true
-    gestureLabelingEnabled = false
+    disableGestureInteraction()
 
     const webBrowserInfo = document.querySelector('.web-browser-info')
 

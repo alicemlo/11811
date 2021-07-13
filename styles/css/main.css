@@ -606,15 +606,15 @@ section.gestures {
       max-height: 23rem; }
 
 section.buzzwords {
-  margin: 2rem 0 10rem 0; }
+  margin: 3rem 0 15rem 0; }
   @media (max-width: 48em) {
     section.buzzwords {
+      margin: 15rem 0;
       display: block; } }
   section.buzzwords > div.container {
     justify-content: space-around;
     align-items: center; }
   section.buzzwords aside {
-    height: 80%;
     width: 20rem;
     position: fixed;
     top: 10%;
@@ -628,7 +628,7 @@ section.buzzwords {
     section.buzzwords aside .definition {
       height: fit-content;
       background: rgba(28, 25, 34, 0.2);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(4px);
       padding: 1rem;
       border: 3px solid #3BBA7D; }
       section.buzzwords aside .definition.inactive {
@@ -644,7 +644,7 @@ section.buzzwords {
       section.buzzwords .no-comp > div.flex {
         margin-left: 10%; } }
   section.buzzwords .no-comp:nth-child(2n) > div.flex {
-    justify-content: flex-end; }
+    justify-content: flex-start; }
     @media (min-width: 48em) {
       section.buzzwords .no-comp:nth-child(2n) > div.flex {
         margin-right: 30%; } }
@@ -664,12 +664,15 @@ section.buzzwords {
   section.buzzwords .ct-buzz {
     padding: 1rem;
     border: 1.5px solid rgba(82, 125, 111, 0.45);
-    max-width: calc(100vw - 20rem);
+    max-width: calc(100vw - 16rem);
     margin: auto 1rem auto auto; }
     section.buzzwords .ct-buzz.no-comp {
       border: 1px solid transparent; }
     section.buzzwords .ct-buzz > h4 {
       text-align: center; }
+    @media (max-width: 48em) {
+      section.buzzwords .ct-buzz {
+        max-width: unset; } }
   section.buzzwords .component {
     padding: 1rem;
     background: rgba(82, 125, 111, 0.25);
@@ -771,6 +774,8 @@ article.create {
     width: fit-content; }
   article.create .btn-train-start, article.create .train-save {
     max-width: unset; }
+  article.create form label {
+    display: block; }
 
 * {
   position: relative;

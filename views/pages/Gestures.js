@@ -89,8 +89,7 @@ const Gestures = {
    */
   after_render: async () => {
     mobileLinkEnabled = false
-    gesturalInteractionEnabled = false
-    gestureLabelingEnabled = true
+    disableGestureInteraction()
   }
 };
 export default Gestures;

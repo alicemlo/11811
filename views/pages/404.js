@@ -8,8 +8,7 @@ const Error404 = {
   },
   after_render: async () => {
     mobileLinkEnabled = false
-    gesturalInteractionEnabled = true
-    gestureLabelingEnabled = false
+    enableAllGesturalInteraction()
   }
 };
 export default Error404;

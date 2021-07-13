@@ -37,6 +37,10 @@ article.create{
   .btn-train-start, .train-save{
     max-width: unset;
   }
+  
+  form label{
+    display: block;
+  }
 
 }
 

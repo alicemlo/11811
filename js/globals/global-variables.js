@@ -37,6 +37,19 @@ let gestureBox = {
 }
 let gesturePushStates = [false, false, false];
 
+// swipe
+const breakpointsSwipeRight = [640, 480, 380, 280, 120, 0]
+const breakpointsSwipeLeft = [0, 180, 280, 380, 440, 640]
+
+const eventSwipeRight = new Event('swiperight');
+const eventSwipeLeft = new Event('swipeleft');
+
+let stateSwipeRight = 0
+let stateSwipeLeft = 0
+
+let swipeRightEnabled = true
+let swipeLeftEnabled = true
+
 
 // height + width
 let width = window.innerWidth

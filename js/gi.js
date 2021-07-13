@@ -52,10 +52,13 @@ function draw() {
 
 
   if(gesturalInteractionEnabled){
-    swipe = detectSwipe();
+    //swipe = detectSwipe();
     detectClick();
     detectScroll()
   }
+
+  if(swipeRightEnabled) detectSwipeRight()
+  if(swipeLeftEnabled) detectSwipeLeft()
 
   if(gestureLabelingEnabled){
    // drawLabels();
@@ -75,19 +78,29 @@ function draw() {
   }
 
 
-  if(swipe){
-    if(swipe==='swipeLeft'){
-      if(storyIndex<story.length-1) storyIndex++
-      swipeToRoute(story[storyIndex])
-    }
-    if(swipe ==='swipeRight'){
-      if(storyIndex>0) storyIndex--
-      swipeToRoute(story[storyIndex])
-    }
-  }
+  // if(swipe){
+  //   // if(swipe==='swipeLeft'){
+  //   //   if(storyIndex<story.length-1) storyIndex++
+  //   //   swipeToRoute(story[storyIndex])
+  //   // }
+  //   if(swipe ==='swipeRight'){
+  //     if(storyIndex>0) storyIndex--
+  //     swipeToRoute(story[storyIndex])
+  //   }
+  // }
 
 }
 
+
+document.addEventListener('swipeleft', function () {
+  if(storyIndex<story.length-1) storyIndex++
+  swipeToRoute(story[storyIndex])
+})
+
+document.addEventListener('swiperight', function () {
+  if(storyIndex>0) storyIndex--
+  swipeToRoute(story[storyIndex])
+})
 
 document.addEventListener("giToggle", function() {
   if(giEnabled) showP5();
