@@ -96,6 +96,10 @@ const COLLECTION_PANELS = [
       {
         title: 'Intelligente Chatbots',
         text: 'Das Verstehen und Verarbeiten von Text und Sprache ist auch ein Teilgebiet von KI. Dadurch können Chatbots gebaut werden, welche die Fragen und Anliegen von Kunden verstehen und dementsprechend antworten.'
+      },
+      {
+        title: "Smartphone Anwendungen",
+        text: "Textvorschläge, Sprachassistenten, Übersetzungsapps, automatische Einordnung von E-Mails oder Fotos sind einige der Features, welche durch KI zustande kommen und die du mit hoher Wahrscheinlichkeit nutzt oder bereits ausprobiert hast.",
       }
     ]
   },

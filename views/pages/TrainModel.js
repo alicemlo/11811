@@ -75,8 +75,6 @@ class CollectionTrainModel{
   update(){
     const content = this.data[this.index]
     if(this.index >= this.data.length-1) {
-      gesturalInteractionEnabled = ture
-      gestureLabelingEnabled = false
       window.location.hash = `/machine-learning`
     }
     else if(content.getState()) this.setContent(this.index++)

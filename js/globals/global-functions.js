@@ -1,3 +1,4 @@
+
 toggleGi = (arg) => {
   body = document.querySelector('body')
   giEnableButton = document.querySelector('.enable-gi')
@@ -311,7 +312,7 @@ gotResult = (error, results) => {
 }
 
 gotResultBrainCreated = (error, results) => {
-  if (!results.length) return
+  if (!results.length || !results) return
   if (results[0].confidence < 0.9) {
     labelCreatedPose = ''
     setPoseLabelModelCreated(false)
@@ -392,7 +393,7 @@ setCountdown = () => {
     i--;
     if (i <= 0) clearInterval(timer);
     else pre.innerText = `${i}`
-    if (i === 0) pre.innerText = "Sammlung fertig"
+    if (i === 0) pre.innerText = "Sammlung fertig" // TODO Text grösser
   }, 1000);
 
 }

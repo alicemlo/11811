@@ -14,7 +14,7 @@ const Gestures = {
           <p>- <strong>Die Hand darf nicht zu nah an der Webcam sein.</strong> Eine Distanz von ca. 30cm zwischen Hand und Webcam ist ausreichend.</p>
             <p>Video->Licht überprüfen</p>
               <p>- <strong>Verwende nur eine Hand auf einmal.</strong> Wenn zwei Hände in Bild sind, funktioniert die Gestenerkennnung nicht. Es spielt dabei keine Rolle, ob du die rechte oder die linke Hand benutzt.</p>
-           <p>- <strong>Es braucht ein bisschen Zeit, bis du dich and die Gestensteuerung gewöhnt hast.</strong> Ausserdem funktioniert die Gestenerkennung und -interpretation nicht immer perfekt.</p>
+           <p>- <strong>Es braucht ein bisschen Zeit, bis du dich an die Gestensteuerung gewöhnt hast.</strong> Ausserdem funktioniert die Gestenerkennung und -interpretation nicht immer perfekt.</p>
           </div>
           
         </article>

@@ -421,9 +421,9 @@ const MachineLearning = {
       <div class="col-sources">
         <span class="title">-> Mehr dazu lesen</span>
         <div class="sources hidden">   
-            <a target="_blank" href="https://www.telusinternational.com/articles/7-types-of-data-bias-in-machine-learning?INTCMP=ti_lbai">7 Types of Data Bias in Machine Learning</a> 
-            <a target="_blank" href="https://hbr.org/2019/10/what-do-we-do-about-the-biases-in-ai">What Do We Do About the Biases in AI?</a> 
-            <a target="_blank" href="https://www.plattform-lernende-systeme.de/publikationen-details/kuenstliche-intelligenz-und-diskriminierung-herausforderungen-und-loesungsansaetze.html?file=files/Downloads/Publikationen/AG3_Whitepaper_250619.pdf">Künstliche Intelligenz und Diskriminierung (PDF)</a> 
+            <a target="_blank" class="gclick" href="https://www.telusinternational.com/articles/7-types-of-data-bias-in-machine-learning?INTCMP=ti_lbai">7 Types of Data Bias in Machine Learning</a> 
+            <a target="_blank" class="gclick" href="https://hbr.org/2019/10/what-do-we-do-about-the-biases-in-ai">What Do We Do About the Biases in AI?</a> 
+            <a target="_blank" class="gclick" href="https://www.plattform-lernende-systeme.de/publikationen-details/kuenstliche-intelligenz-und-diskriminierung-herausforderungen-und-loesungsansaetze.html?file=files/Downloads/Publikationen/AG3_Whitepaper_250619.pdf">Künstliche Intelligenz und Diskriminierung (PDF)</a> 
 <!--       https://www.zeit.de/arbeit/2018-10/bewerbungsroboter-kuenstliche-intelligenz-amazon-frauen-diskriminierung?utm_referrer=https%3A%2F%2Fwww.google.com%2F-->
         </div>
      </div>
@@ -451,6 +451,34 @@ const MachineLearning = {
           welches letztendlich nicht skalierbar ist und mit hoher Wahrscheinlichkeit eine hohe Fehlerquote aufweist.
         </p>
       </div>
+    </div>
+    
+    <div class="content">
+      <div class="col-1">
+        <h1>Durch KI bedrohte Arbeitsplätze</h1>
+        <p>
+          Es gibt Arbeiten, die sich in der Theorie einfacher durch maschinelle Prozesse oder durch Roboter ersetzt lassen als anderen.
+          Zur ersteren Gruppe zählen insbesondere Tätigkeiten, welche physische Aktivitäten erfordern und zudem in bekannten und vorhersehbaren
+           Umgebungen stattfinden. Das beträfe zum Beispiel die Industrie (zum Beispiel das Verpacken von Waren), die Gatronomie (das Kochen
+           oder das Servieren) oder den Einzelhandel (Logistik). Zudem lassen sich Tätigkeiten, die mit dem Handling von Daten oder mit Berechnungen
+           zu tun haben, gut automatisieren. Das betrifft dann eher den Finanzsektor oder Aufgaben bei Versicherungen.  
+        </p>
+        <p>
+          In Bereichen, wo Entscheidungen getroffen werden müssen, bei organisatorische Aufgaben oder in kreativen Berufen ist das Potenzial von 
+          Automatisierungen am geringsten. Diese Tätigkeiten basieren auf Wissen, dass keiner KI einfach so beigebracht werden kann. Auch
+          Berufen, die auf menschlicher Interaktion beruhen (Gesundheitswesen oder Ausbildung) können schlecht durch maschinelle Prozesse 
+          ersetzt werden. 
+        </p>
+        
+      </div>
+      
+      <div class="col-sources">
+        <span class="title gclick" data-id="mehrd-89341">-> Mehr dazu lesen</span>
+        <div class="sources hidden">   
+            <a class="gclick" data-id="mehrd-93837" target="_blank" href="https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/where-machines-could-replace-humans-and-where-they-cant-yet">Where machines could replace humans—and where they can’t (yet)</a>    
+        </div>
+      </div>
+      
     </div>
   
     <div class="content">

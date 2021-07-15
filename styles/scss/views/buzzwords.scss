@@ -39,6 +39,7 @@ section.buzzwords{
         display:none
       }
       @include mobile-down{
+        backdrop-filter: blur(14px);
         border: none;
       }
     }
@@ -170,6 +171,8 @@ section.buzzwords{
     }
 
   }
+
+
 
   @include mobile-down{
     >.container{
