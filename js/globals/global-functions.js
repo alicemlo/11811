@@ -414,6 +414,16 @@ swipeToRoute = (route) => {
 }
 
 
+setRandomEmojis = (holder1, holder2, selection) => {
+  const randomEmoji1 = selection[getRandomInt(0,5)].innerText
+  const randomEmoji2 = selection[getRandomInt(6,11)].innerText
+  train_model_data.selectedEmojis[0] = randomEmoji1
+  train_model_data.selectedEmojis[1] = randomEmoji2
+  holder1.innerText = randomEmoji1
+  holder2.innerText = randomEmoji2
+}
+
+
 document.documentElement.addEventListener('keydown', function (e) {
   if ((e.keycode || e.which) == 32) {
     e.preventDefault();

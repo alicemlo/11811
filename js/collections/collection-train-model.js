@@ -1,45 +1,3 @@
-let train_model_data = {
-  poseLabels: [],
-  selectedEmojis: [],
-  activePoseLabel: null
-}
-
-let showEmojis = false
-
-
-
-arraysEqual = (a, b) => {
-  if (a === b) return true;
-  if (a == null || b == null) return false;
-  if (a.length !== b.length) return false;
-
-  const same = b.filter(it =>{
-    return a.includes(it)
-  })
-
-  return same.length === b.length;
-}
-
-removeItem = (array, item) => {
-  array.forEach((i, index) => {
-    if (i === item) array.splice(index, 1)
-  })
-}
-
-getRandomInt = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-
-setRandomEmojis = (holder1, holder2, selection) => {
-  const randomEmoji1 = selection[getRandomInt(0,5)].innerText
-  const randomEmoji2 = selection[getRandomInt(6,11)].innerText
-  train_model_data.selectedEmojis[0] = randomEmoji1
-  train_model_data.selectedEmojis[1] = randomEmoji2
-  holder1.innerText = randomEmoji1
-  holder2.innerText = randomEmoji2
-}
 
 const COLLECTION_TRAIN_MODEL = [
   {
@@ -213,8 +171,3 @@ const COLLECTION_TRAIN_MODEL = [
   }
 ]
 
-
-checkActiveTrainedPose = () => {
-  console.log("CHECK POSE")
-  console.log(checkActiveTrainedPose)
-}

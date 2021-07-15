@@ -83,6 +83,14 @@ let stateTestModel = false
 const trainingTime = 4000
 let trainingCountdown = 4
 
+let train_model_data = {
+  poseLabels: [],
+  selectedEmojis: [],
+  activePoseLabel: null
+}
+
+let showEmojis = false
+
 
 // dom
 let trainingDataEpochs, trainingDataLoss, trainingDataAccuracy, trainingSaveData, trainedPoseLabel, trainedPoseEmoji, body, giEnableButton, emojiHolder

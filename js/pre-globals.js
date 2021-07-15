@@ -17,3 +17,28 @@ hide = (el) => {
 show = (el) => {
   el.style.display = 'inline-block'
 }
+
+
+arraysEqual = (a, b) => {
+  if (a === b) return true;
+  if (a == null || b == null) return false;
+  if (a.length !== b.length) return false;
+
+  const same = b.filter(it =>{
+    return a.includes(it)
+  })
+
+  return same.length === b.length;
+}
+
+removeItem = (array, item) => {
+  array.forEach((i, index) => {
+    if (i === item) array.splice(index, 1)
+  })
+}
+
+getRandomInt = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
