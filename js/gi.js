@@ -60,10 +60,9 @@ function draw() {
   if(swipeRightEnabled) detectSwipeRight()
   if(swipeLeftEnabled) detectSwipeLeft()
 
-  if(gestureLabelingEnabled){
-   // drawLabels();
-  }
-
+  // if(gestureLabelingEnabled){
+  //  // drawLabels();
+  // }
 
   if(detectBeforeSwipeLeft()){
     noStroke()
@@ -77,20 +76,10 @@ function draw() {
     ellipse(width,height/2, 400, height)
   }
 
-  if(brainCreated){
-   // detectCreatedPose()
+  if(brainCreated && showEmojis){
+    showEmojiRainfall()
   }
 
-  // if(swipe){
-  //   // if(swipe==='swipeLeft'){
-  //   //   if(storyIndex<story.length-1) storyIndex++
-  //   //   swipeToRoute(story[storyIndex])
-  //   // }
-  //   if(swipe ==='swipeRight'){
-  //     if(storyIndex>0) storyIndex--
-  //     swipeToRoute(story[storyIndex])
-  //   }
-  // }
 
 }
 

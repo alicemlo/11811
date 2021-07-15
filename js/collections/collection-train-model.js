@@ -4,6 +4,8 @@ let train_model_data = {
   activePoseLabel: null
 }
 
+let showEmojis = false
+
 
 
 arraysEqual = (a, b) => {
@@ -193,16 +195,19 @@ const COLLECTION_TRAIN_MODEL = [
     'title': 'Modell Ausprobieren',
     'text': 'Das Modell ist fertig trainiert und sollte nun deine Gesten erkennen. Probiere die Gesten aus, die du gerade trainiert hast!',
     'info': '',
-    'event': 'Training abschliessen',
+    'event': 'Kehre auf die Hauptseite zurück',
     'back': false,
-    'col2': `<div> <div class="pose-created">Erkannte Geste: <span>-</span></div></div>`,
+    'col2': `<div><div class="pose-created">Erkannte Geste: <span>-</span></div><span class="pose-created-emoji"></span></div>`,
     'class': '',
     setInit() {
       trainedPoseLabel = document.querySelector('.pose-created')
+      trainedPoseEmoji = document.querySelector('.pose-created-emoji')
       stateTestModel = true
+      showEmojis = true
     },
     getState() {
       stateTestModel = false
+      showEmojis = false
       return true
     }
   }

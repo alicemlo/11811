@@ -27,6 +27,7 @@ const Footer = {
 
     return /*html*/ `
         <footer>
+          <span class="emoji-holder"></span>
           <nav class="nav-footer">
             <ul>
               ${navLinks}
@@ -49,6 +50,8 @@ const Footer = {
       elUl.appendChild(elBack)
       elBack.onclick = () => window.location.href = '/#'+lastStory
     }
+
+    emojiHolder = document.querySelector('.emoji-holder')
 
     if(!gesturalInteractionEnabled) document.querySelector('.gi-not-active').classList.remove('invisible')
 

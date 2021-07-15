@@ -83,17 +83,8 @@ transformLandmarks = () => {
 
 createParticles = () => {
   if (!transformedLandmarks) return
-  //if(!pose[0] || !landmarks || !landmarksOld) return
   if (pose[0].handInViewConfidence < 0.95) return
-
   transformedLandmarks.forEach(key => particles.push(new Particle(key.x, key.y, col__accent)))
-
-  // dots.forEach((dot, index) =>{
-  //   const x = lerp(landmarks[index][0], landmarksOld[index][0], 0.5) / 640 * width
-  //   const y = lerp(landmarks[index][1], landmarksOld[index][1], 0.5) / 420 * height
-  //   dot.update(x, y)
-  // })
-
 }
 
 detectClick = () => {
@@ -130,9 +121,6 @@ setHoveredElementID = (id) => {
 }
 
 setIndexPoints = () => {
-  const oldXIndex = xIndex
-  const oldYIndex = yIndex
-
   if(!pose[0]){
     xIndex = 0
     yIndex = 0
@@ -140,19 +128,6 @@ setIndexPoints = () => {
     xIndex = map(pose[0].annotations.indexFinger[3][0], 640, 0, 0, width)
     yIndex = map(pose[0].annotations.indexFinger[3][1], 0, 420, 0, height)
   }
-
-  // if(!pose[0]){
-  //   xIndex = 0
-  //   yIndex = 0
-  // }else if(oldXIndex === 0){
-  //   xIndex = map(pose[0].annotations.indexFinger[3][0], 640, 0, 0, width)
-  //   yIndex = map(pose[0].annotations.indexFinger[3][1], 0, 420, 0, height)
-  // }else {
-  //   const xNew = map(pose[0].annotations.indexFinger[3][0], 640, 0, 0, width)
-  //   const yNew = map(pose[0].annotations.indexFinger[3][1], 0, 420, 0, height)
-  //   xIndex = lerp(xNew, oldXIndex, 0.5)
-  //   yIndex = lerp(yNew, oldYIndex, 0.5)
-  // }
 }
 
 enableAllGesturalInteraction = () => {
@@ -179,42 +154,6 @@ detectScroll = () => {
     else if(y < 100)window.scroll({ top: window.scrollY-15,  left: 0});
   }
 }
-
-// detectSwipe = () => {
-//   let x = xAvg / 22
-//   if (labelHandPose === 'Y') {
-//     if (x > breakpoints[2]) {
-//       // area 3
-//       if (gestureSwipeLeftIndex === 2) gestureSwipeLeftIndex = 3
-//       gestureSwipeRightIndex = 0
-//     } else if (x < breakpoints[0]) {
-//       // area 0
-//       gestureSwipeLeftIndex = 0
-//       if (gestureSwipeRightIndex === 2) gestureSwipeRightIndex = 3
-//     } else if (x >= breakpoints[0] && x < breakpoints[1]) {
-//       // area 1
-//       if (gestureSwipeLeftIndex === 0) gestureSwipeLeftIndex = 1
-//       if (gestureSwipeRightIndex === 1) gestureSwipeRightIndex = 2
-//     } else if (x >= breakpoints[1] && x < breakpoints[2]) {
-//       // area 2
-//       if (gestureSwipeLeftIndex === 1) gestureSwipeLeftIndex = 2
-//       if (gestureSwipeRightIndex === 0) gestureSwipeRightIndex = 1
-//     }
-//   } else {
-//     gestureSwipeLeftIndex = 0
-//     gestureSwipeRightIndex = 0
-//   }
-//   if (gestureSwipeRightIndex === 3) {
-//     gestureSwipeRightIndex = 0
-//     return "swipeRight"
-//   }
-//   if (gestureSwipeLeftIndex === 3) {
-//     gestureSwipeLeftIndex = 0
-//     return "swipeLeft"
-//   }
-//   return null
-// }
-
 
 
 detectSwipeLeft = () => {
@@ -315,41 +254,27 @@ gotResultBrainCreated = (error, results) => {
   if (!results.length || !results) return
   if (results[0].confidence < 0.9) {
     labelCreatedPose = ''
-    setPoseLabelModelCreated(false)
   } else if (results[0].confidence > 0.93 && results[0].label !== labelCreatedPose) {
     labelCreatedPose = results[0].label
-    if (stateTestModel) setPoseLabelModelCreated(true)
-    console.log(labelCreatedPose)
     const index = train_model_data.poseLabels.indexOf(labelCreatedPose)
-    if(index === 0) changeColorDots()
-    if(index === 1) resetColorDots()
+    setEmojiLabelFooter(index)
   }
-
 }
 
-setPoseLabelModelCreated = (pose) => {
-  trainedPoseLabel.innerText = pose ? labelCreatedPose : '-'
+showEmojiRainfall = () => {
+  const index = train_model_data.poseLabels.indexOf(labelCreatedPose)
+  if(index >= 0){
+    trainedPoseLabel.innerText = labelCreatedPose
+    trainedPoseEmoji.innerText = train_model_data.selectedEmojis[index]
+  }else{
+    trainedPoseLabel.innerText = ""
+    trainedPoseEmoji.innerText = ""
+  }
 }
 
-
-const accentColor = [ [166, 214, 255], [255, 180, 199], [255, 241, 116], [215, 47, 78], [213, 197, 255]]
-let accentColorIndex = 0
-
-changeColorDots = () => {
-  col__accent = accentColor[accentColorIndex]
-  accentColorIndex++
-  if(accentColorIndex >= accentColor.length) accentColorIndex = 0
+setEmojiLabelFooter = (index) => {
+  emojiHolder.innerText = train_model_data.selectedEmojis[index]
 }
-
-resetColorDots = () => {
-  col__accent = [251, 136, 141]
-  accentColorIndex = 0
-}
-
-// detectCreatedPose = () => {
-//   console.log(labelCreatedPose)
-//   console.log(train_model_data)
-// }
 
 
 stopCollecting = () => {
@@ -393,7 +318,7 @@ setCountdown = () => {
     i--;
     if (i <= 0) clearInterval(timer);
     else pre.innerText = `${i}`
-    if (i === 0) pre.innerText = "Sammlung fertig" // TODO Text grösser
+    if (i === 0) pre.innerText = "Sammlung fertig"
   }, 1000);
 
 }

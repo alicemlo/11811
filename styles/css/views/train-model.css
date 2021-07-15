@@ -40,3 +40,7 @@ article.create {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center; }
+  article.create .pose-created {
+    font-size: 2rem; }
+  article.create .pose-created-emoji {
+    font-size: 9rem; }
