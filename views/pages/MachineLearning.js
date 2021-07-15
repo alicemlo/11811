@@ -458,14 +458,14 @@ const MachineLearning = {
         <h1>Durch KI bedrohte Arbeitsplätze</h1>
         <p>
           Es gibt Arbeiten, die sich in der Theorie einfacher durch maschinelle Prozesse oder durch Roboter ersetzt lassen als anderen.
-          Zur ersteren Gruppe zählen insbesondere Tätigkeiten, welche physische Aktivitäten erfordern und zudem in bekannten und vorhersehbaren
-           Umgebungen stattfinden. Das beträfe zum Beispiel die Industrie (zum Beispiel das Verpacken von Waren), die Gatronomie (das Kochen
-           oder das Servieren) oder den Einzelhandel (Logistik). Zudem lassen sich Tätigkeiten, die mit dem Handling von Daten oder mit Berechnungen
-           zu tun haben, gut automatisieren. Das betrifft dann eher den Finanzsektor oder Aufgaben bei Versicherungen.  
+          Zur ersteren Gruppe zählen insbesondere Tätigkeiten, welche physische Aktivitäten erfordern und in bekannten und vorhersehbaren
+           Umgebungen stattfinden. Das beträfe zum Beispiel die Industrie (bsp. das Verpacken von Waren), die Gastronomie (bsp. das Kochen
+           oder das Servieren) oder den Einzelhandel (bsp. Logistik). Zudem lassen sich Tätigkeiten, die mit dem Handling von Daten oder mit Berechnungen
+           zu tun haben, gut automatisieren. Das betrifft dann zum Beispiel den Finanzsektor oder Aufgaben bei Versicherungen.  
         </p>
         <p>
           In Bereichen, wo Entscheidungen getroffen werden müssen, bei organisatorische Aufgaben oder in kreativen Berufen ist das Potenzial von 
-          Automatisierungen am geringsten. Diese Tätigkeiten basieren auf Wissen, dass keiner KI einfach so beigebracht werden kann. Auch
+          Automatisierungen am geringsten. Diese Tätigkeiten basieren auf Wissen und Erfahrung, dass keiner KI einfach so beigebracht werden kann. Auch
           Berufen, die auf menschlicher Interaktion beruhen (Gesundheitswesen oder Ausbildung) können schlecht durch maschinelle Prozesse 
           ersetzt werden. 
         </p>
@@ -485,7 +485,9 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Potenzial, Prognose</h1>
         <p>
-          -> Zahlen und Fakten zu ML
+            In den letzten Jahren hat sich die Forschung an KI insbesondere auf mathematische und logische Prozesse, 
+            sowie auf die Sprachverarbeitung fokussiert. Einer der nächsten Schritte wird sein, an emotionale Intelligenz zu forschen. 
+            Emotionale Intelligenz könnte in Sprachassistenten oder Chatbots eingebaut werden, um die Interaktion zwischen Mensch und Computer zu verbessern. 
         </p>
 
       </div>
@@ -493,20 +495,31 @@ const MachineLearning = {
     
     <div class="content">
       <div class="col-1">
-        <h1>Starke vs. Schwache Intelligenz</h1>
-        <p>...</p>
-
-<!--        <p>-->
-<!--          Diese Unterscheidung sollte für dich jetzt nicht mehr so schwierig zu verstehen sein. Wenn du das verstanden hast, -->
-<!--          hast du eine wichtige Unterscheidung verstanden, für das Verständig von KI sehr wichtig ist. -->
-<!--        </p>-->
-<!--        <p>-->
-<!--          "Schwache" künstlich intelligte Systeme können genau eines: sie berechnen einen Output anhand eines Inputs, der sich von -->
-<!--          seiner Art nicht verändert. Eine KI, welche trainiert wurde, verschiedene Tiere auf einem Bild zu erkennen wird immer nur-->
-<!--          Tiere auf einem Bild erkennen. Aber sie wird nicht plötzlich unterschiedliche Gegenstände erkennen können, solange sie nicht dazu-->
-<!--          trainiert wurde.  -->
-<!--         </p>-->
-<!--         <p>Eine starke KI - oder auch Superintelligenz - gibt es heute nicht wirklich. </p>-->
+        <h1>Starke vs. Schwache KI</h1>
+        <p>
+         Mittlerweile sollte dir klar sein, dass ein intelligentes System anhand von Daten trainiert wird, die der Mensch definiert. 
+         Mit anderen Worten: ein intelligentes System wird generiert, um genau eine konkrete Aufgabe zu lösen. Beispielsweise wird eine KI, 
+         welche auf einem Bild einen Hund von einer Katze unterscheiden kann nicht plötzlich Vögel und Hasen unterscheiden können, 
+         wenn ihr das nicht beigebracht wurde. Genau hier liegt die Definition einer schwachen KI: Sie kann einen klar definierten 
+         Aufgabenbereich mit einer bestimmten Methode lösen. 
+         Alle intelligenten Systeme, die heute existieren, gelten als schwache intelligente Systeme (die macht sie keinesfall wertlos).
+        </p>
+        <p>
+          Starke intelligente Systeme gibt es zum aktuellen Zeitpunkt nur in der Theorie. 
+          Dabei definiert sich eine starke KI durch die Fähigkeit, Probleme zu erkennen und dafür eigenständig (kreative) 
+          Lösungen entwickeln zu können. Ein solches System müsste unter anderem logisch Denken können, 
+          entscheidungsfähig sein und eigenständig mit der Umwelt interagieren können.
+          
+        
+        </p>
+      </div>
+      
+      <div class="col-sources">
+        <span class="title gclick" data-id="mehrd-89341">-> Mehr dazu lesen</span>
+        <div class="sources hidden">   
+            <a class="gclick" data-id="mehrd-93837" target="_blank" href="https://jaai.de/starke-ki-schwache-ki-was-kann-kuenstliche-intelligenz-261/">Starke KI, Schwache KI – Was kann Künstliche Inzelligenz?</a>    
+            <a class="gclick" data-id="mehrd-93837" target="_blank" href="https://ki.fhws.de/thematik/starke-vs-schwache-ki-eine-definition/">Schwache vs. Starke KI</a>    
+        </div>
       </div>
     </div>
     
@@ -514,29 +527,21 @@ const MachineLearning = {
     <div class="content">
       <div class="col-1">
         <h1>Die Superintelligenz</h1>
-        <p>...</p>
-<!--        <p>-->
-<!--          Ein künstliche trainiertes System ist dafür gemacht, Probleme zu lösen, für die es trainiert wurde. Man kann heute ohne Probleme-->
-<!--          eine intelligentes System generieren, dass mit hoher Wahrscheinlichkeit einen Hund von einer Katze unterscheiden kann. ...-->
-<!--        </p>-->
-<!--        <p>-->
-<!--          Ein künstlich trainiertes System wird nur in dem gut sein, was seine Aufgabe ist. Ein künstliches Modell zur Wetterprognose wird sehr gut Wettervorhersagen machen können. -->
-<!--          Es wird jedoch in keinem anderen Bereich jemals gut sein. -->
-<!--        </p>-->
-<!--        <p>-->
-<!--          Zum aktuellen Zeitpunkt ist sehr gut erforscht, wie gute intelligente Modelle generiert werden können, die auf Zahlen und Logik beruhen. -->
-<!--          Es ist jedoch immernoch unglaublich schwierig eine KI zu erzeugen, welche logische Prognosen mit Weltwissen verknüpfen kann. Zum Beispiel ist es-->
-<!--          viel einfacher einen Schachcomputer zu bauen, als eine Sprachverarbeitungssoftware. -->
-<!--        </p>-->
+        <p>
+          Eine extremes Beispiel einer starken KI wäre die intelligentes System, die dem Menschen in jeglicher Hinsicht überlegen ist.
+          Dieses (noch) sehr weit von der Realität entfernte Konzept einer Superintelligenz könnte Probleme besser lösen, 
+          wäre kreative und sozial kompetener als der Mensch. 
+        </p>
+
       </div>    
     </div>
   
     <div class="content">
       <div class="col-1">
-        <h1>Werden wir in Zukunft alle arbeitslos sein?</h1>
+        <h1>...</h1>
         <p>
-
-...
+        
+        ...
         </p>
         <p>
           
@@ -546,6 +551,30 @@ const MachineLearning = {
   
   </div>
   
+  </article>
+  
+  <article class="ct-ml story-5">
+  
+  <div class="ct-fixed">
+    <div class="chapter"><p><span class="expand-info">Epilog</span></p></div>
+  </div>
+  
+  <div class="ct-content">
+    <div class="content">
+      <div class="col-1">
+        <h1>Die Gestensteuerung auf dieser Webseite</h1>
+        <p>
+          Zur Erkennung deiner Hand und zur Klassifizierung der Gesten laufen zwei unterschiedliche Prozesse ab, die auf maschinellen Lernverfahren beruhen. 
+          Zum Einen wird deine Hand von einem Model erkannt, welches 21 Punkte auf deiner Hand zuordnen kann: 4 pro Finger und ein Punkt auf der Handfläche. 
+        </p>
+        <p>
+          Ein weiteres Datenmodell wird gebraucht, um aus bestimmten Kombinationen bzw. Positionen dieser 21 Punkte bestimmte 
+          Gesten klassifizieren zu können. Die Gestensteuerung basiert auf den zwei Gesten "Hand offen" und "Hand geschlossen". 
+          Du kannst dem Modell zwei weitere Gesten im Bereich "Training" beibringen. 
+         
+        </p>  
+      </div>
+    </div>
   </article>
 
 </section>

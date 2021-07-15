@@ -24,6 +24,7 @@ const TrainModel = {
     swipeLeftEnabled = false
     gesturalInteractionEnabled = true
     gestureLabelingEnabled = false
+    col__accent = [251, 136, 141]
 
     const container = document.querySelector('article.create')
     const col1 = document.querySelector('.col-1')

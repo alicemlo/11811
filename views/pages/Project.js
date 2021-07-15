@@ -43,6 +43,7 @@ const Project = {
   after_render: async () => {
     mobileLinkEnabled = false
     disableGestureInteraction()
+    removeBeforeMain()
   }
 };
 export default Project;

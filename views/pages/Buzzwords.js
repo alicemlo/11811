@@ -113,6 +113,7 @@ const Buzzwords = {
     gesturalInteractionEnabled = true
     gestureLabelingEnabled = false
     mobileLinkEnabled = true
+    col__accent = [251, 136, 141]
 
     const cps = document.querySelectorAll('.component')
     const ct = document.querySelector('section .container')

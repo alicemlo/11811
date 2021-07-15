@@ -9,6 +9,7 @@ const Error404 = {
   after_render: async () => {
     mobileLinkEnabled = false
     enableAllGesturalInteraction()
+    removeBeforeMain()
   }
 };
 export default Error404;

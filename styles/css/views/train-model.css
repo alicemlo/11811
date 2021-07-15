@@ -15,10 +15,12 @@ article.create {
   article.create .col-2.border {
     border: 2px solid rgba(82, 125, 111, 0.45);
     padding: 3rem 1rem; }
-  article.create .col-2 pre {
+  article.create .col-2 .instruction {
     position: absolute;
     top: 1rem;
-    font-size: 2rem; }
+    font-size: 1.5rem;
+    width: 100%;
+    line-height: inherit; }
   article.create button {
     margin-right: 1rem;
     margin-top: 2rem;

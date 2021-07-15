@@ -23,10 +23,12 @@ article.create{
     padding: 3rem 1rem;
   }
 
-  .col-2 pre{
+  .col-2 .instruction{
     position: absolute;
     top: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    width: 100%;
+    line-height: inherit;
   }
 
   button{

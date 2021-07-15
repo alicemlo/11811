@@ -87,7 +87,7 @@ const COLLECTION_TRAIN_MODEL = [
     'event': 'Weiter',
     'back': false,
     'class': 'border',
-    'col2': `<div class="collect-data-info"><p>Positioniere deine Hand vor dem Start im diesem Feld. Halte sie während der Aufnahme so ruhig wie möglich.</p></div><div class="collect-data-controls pose-1"><button class="btn-collect-start" data-pose="1">Start</button><button class="btn-collect-restart invisible" data-pose="2">Daten neu sammeln</button></div><pre>...</pre>`,
+    'col2': `<div class="collect-data-info"><p></p></div><div class="collect-data-controls pose-1"><button class="btn-collect-start" data-pose="1">Start</button><button class="btn-collect-restart invisible" data-pose="2">Daten neu sammeln</button></div><p class="instruction">Positioniere deine Hand vor dem Start im diesem Feld. Halte sie während der Aufnahme so ruhig wie möglich.</p>`,
     getState() {
       return poseCollected
     },
@@ -110,7 +110,7 @@ const COLLECTION_TRAIN_MODEL = [
     'event': 'Weiter',
     'class': 'border',
     'back': false,
-    'col2': `<div class="collect-data-info"><p>Positioniere deine Hand vor dem Start im grauen Bereich. Halte sie während der Aufnahme so ruhig wie möglich.</p></div><div class="collect-data-controls pose-2"><button class="btn-collect-start" data-pose="2">Start</button><button class="btn-collect-restart invisible" data-pose="2">Daten neu sammeln</button></div><pre>...</pre>`,
+    'col2': `<div class="collect-data-info"><p></p></div><div class="collect-data-controls pose-2"><button class="btn-collect-start" data-pose="2">Start</button><button class="btn-collect-restart invisible" data-pose="2">Daten neu sammeln</button></div><p class="instruction">Positioniere deine Hand vor dem Start im diesem Feld. Halte sie während der Aufnahme so ruhig wie möglich.</p>`,
     getState() {
       return poseCollected
     },

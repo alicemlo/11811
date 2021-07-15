@@ -135,6 +135,7 @@ enableAllGesturalInteraction = () => {
   swipeLeftEnabled = true
   gesturalInteractionEnabled = true
   gestureLabelingEnabled = false
+  col__accent = [251, 136, 141]
 }
 
 disableGestureInteraction = () => {
@@ -142,6 +143,7 @@ disableGestureInteraction = () => {
   swipeLeftEnabled = false
   gesturalInteractionEnabled = false
   gestureLabelingEnabled = false
+  col__accent = [200, 200, 200]
 }
 
 detectScroll = () => {
@@ -307,10 +309,14 @@ startCollecting = (arg) => {
   })
 }
 
+removeBeforeMain = () => {
+  document.querySelector('#page_root').classList.add('no-before')
+}
+
 
 setCountdown = () => {
   trainingCountdown = 4
-  const pre = document.querySelector('.col-2 pre')
+  const pre = document.querySelector('.col-2 .instruction')
   let i = trainingCountdown
   pre.innerText = i
 

@@ -19,10 +19,9 @@ let gesturalInteractionEnabled = true
 let gestureLabelingEnabled = false
 let hoveredElementID = null
 let clickTimeout = null;
+let showVideo = false
 
 let dots = [];
-
-
 
 
 
@@ -99,3 +98,4 @@ let mobileLinkEnabled = false
 let scriptsLoaded = false
 
 const giToggleEvent = new Event("giToggle");
+

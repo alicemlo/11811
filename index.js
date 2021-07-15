@@ -75,6 +75,9 @@ const router = async () => {
     mobileLink.classList.add("invisible")
   }
 
+  // set video to false
+  showVideo = false
+
   // Render the page from map of supported routes or render 404 page.
   const page = routes[parsedUrl] || Error404;
   content.innerHTML = await page.render();

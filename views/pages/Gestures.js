@@ -80,7 +80,8 @@ const Gestures = {
              <p>Entferne deinen Zeigefinger vom Element oder schliesse deine Hand</p>
           </div>
         </article>
-                
+        
+        <button class="toggle-video">Checke deine Lichtverhältnisse</button>      
       </section>
     `;
   },
@@ -90,7 +91,13 @@ const Gestures = {
    */
   after_render: async () => {
     mobileLinkEnabled = false
-    disableGestureInteraction()
+    disableGestureInteraction();
+    removeBeforeMain()
+
+    const btnToggleVideo = document.querySelector('.toggle-video')
+    btnToggleVideo.onclick = () => showVideo = ! showVideo
   }
 };
 export default Gestures;
+
+

@@ -22,9 +22,9 @@ function setup(){
   brainCreate = ml5.neuralNetwork(options);
   fraction = 640*width
 
-  for (let i = 0; i<21; i++){
-    dots.push(new Dot())
-  }
+  // for (let i = 0; i<21; i++){
+  //   dots.push(new Dot())
+  // }
 
   frameRate(30);
 }
@@ -36,7 +36,6 @@ function draw() {
   push();
   translate(width, 0);
   scale(-1, 1);
-  //image(video, 0, 0, 64, 48);
   createParticles();
   setIndexPoints()
 
@@ -80,6 +79,9 @@ function draw() {
     showEmojiRainfall()
   }
 
+  if(showVideo){
+    image(video, 20, height-330, 256, 200);
+  }
 
 }
 

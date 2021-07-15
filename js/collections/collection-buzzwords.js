@@ -105,7 +105,7 @@ const COLLECTION_BUZZWORDS = [
     content:
       `  
         <p>Erforschung von computergestützter Verarbeitung von Text und Sprache</p>
-        <p>Dazu gehört Spracherkennung, Textvervollständigung, Übersetzungstools, Dialoganalyse, etc.</p>
+        <p>Dazu gehört Spracherkennung, Textvervollständigung, Generierung von gesprochener Sprache, Chatbots, Übersetzungstools, Dialoganalyse, etc.</p>
       `
   },
   {

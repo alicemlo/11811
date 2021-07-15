@@ -6,7 +6,7 @@ header, footer {
   height: 3rem;
   z-index: 1; }
 
-main#page_root::before {
+main#page_root:not(.no-before)::before {
   content: '';
   z-index: 1;
   height: 3rem;
@@ -18,7 +18,7 @@ main#page_root::before {
   backdrop-filter: blur(4px);
   background: #1c19225e; }
   @media (max-width: 48em) {
-    main#page_root::before {
+    main#page_root:not(.no-before)::before {
       background: transparent;
       backdrop-filter: none; } }
 
@@ -606,7 +606,13 @@ section.gestures {
     section.gestures article.gestures-grid img {
       margin-top: 1rem;
       max-width: 100%;
-      max-height: 23rem; }
+      max-height: 23rem;
+      opacity: 0.9; }
+  section.gestures .toggle-video {
+    position: fixed;
+    bottom: 4rem;
+    right: 20px;
+    max-width: 256px; }
 
 section.buzzwords {
   margin: 3rem 0 15rem 0; }
@@ -775,10 +781,12 @@ article.create {
   article.create .col-2.border {
     border: 2px solid rgba(82, 125, 111, 0.45);
     padding: 3rem 1rem; }
-  article.create .col-2 pre {
+  article.create .col-2 .instruction {
     position: absolute;
     top: 1rem;
-    font-size: 2rem; }
+    font-size: 1.5rem;
+    width: 100%;
+    line-height: inherit; }
   article.create button {
     margin-right: 1rem;
     margin-top: 2rem;
