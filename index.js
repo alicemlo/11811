@@ -1,13 +1,15 @@
+/**
+*  @Author: https://github.com/managervcf/vanilla-js-single-page-app
+*/
+
 // Import pages, components and helper functions.
 import Home from './views/pages/Home.js';
 import Error404 from './views/pages/404.js';
 import Project from './views/pages/Project.js';
 import Gestures from './views/pages/Gestures.js';
-import GesturesViews from './views/pages/GesturesID.js';
 import MachineLearning from './views/pages/MachineLearning.js';
 import Buzzwords from './views/pages/Buzzwords.js';
 import TrainModel from './views/pages/TrainModel.js';
-
 import Header from './views/components/Header.js';
 import Footer from './views/components/Footer.js';
 
@@ -20,11 +22,9 @@ const routes = {
   '/machine-learning': MachineLearning,
   '/buzzwords': Buzzwords,
   '/gestures': Gestures,
-  '/gestures/:id': GesturesViews,
   '/train-model': TrainModel,
 };
 
-let links= null
 
 /**
  * The router code. Takes a URL, checks against the list of

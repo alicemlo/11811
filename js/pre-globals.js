@@ -1,3 +1,8 @@
+/*
+* In dieser Datei werden Funktionen gesammelt, die von Anfang an verfügbar sein müssen
+* Das sind alles sehr generalistische Funktionen, die man immer irgendwie brauchen kann.
+* */
+
 randomNumber = (min, max) => {
   return Math.random() * (max - min) + min;
 }
@@ -41,4 +46,10 @@ getRandomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function appendChildren(parent, nodeList){
+  nodeList.forEach(item => {
+    parent.appendChild(item);
+  })
 }

@@ -4,7 +4,7 @@ const COLLECTION_BUZZWORDS = [
     keyword: 'Methoden zum Trainieren von Datenmodellen',
     content:
       `
-        <p>Es gibt verschiedene maschinelle Lernmethoden, anhand derer künstlich intelligente Systeme generiert werdne können.</p>
+        <p>Es gibt verschiedene maschinelle Lernmethoden, anhand derer künstlich intelligente Systeme generiert werden können.</p>
         <p>Grob unterscheidet man zwischen überwachten Lernmethoden, unüberwachten Lernmethoden und Reinforcement Learning.</p>
       `
   },
@@ -20,7 +20,7 @@ const COLLECTION_BUZZWORDS = [
   },
   {
     title: 'Algorithmus',
-    keyword: 'Eine Folge von Anweisungen, Prozedur, Konzept zur Lösung eines Problem',
+    keyword: 'Eine Folge von Anweisungen, Prozedur, Konzept zur Lösung eines Problems',
     content:
       `
         <p>Ein Algorithmus besteht aus einer Folge von Anweisungen, welche man ausführt, um ein bestimmtes Problem zu lösen. Ein Rezept ist beispielsweise ein Algorithmus, wobei die einzelnen Schritte des Rezepts als Anweisungen anzusehen sind um ein Gericht zu erhalten.</p>
@@ -77,7 +77,7 @@ const COLLECTION_BUZZWORDS = [
     content:
       `
         <p>In der Robotik wird eine Verbindung zwischen Mechanik und Computern geschaffen. Ein künstlich intelligenter Roboter ist dazu in der Lage, 
-        selbstständige mechanische Vorgänge durchführen. </p>
+        selbstständig mechanische Vorgänge durchführen. </p>
         <p>Roboter können beispielsweise als Assistenzsysteme eingesetzt werden oder können in der Landwirtschaft unterstützend eingesetzt werden. </p>
         <p>Zudem bietet sich der Einsatz von Robotern in gefährlichen Umgebungen bzw. Situationen an oder in Bereichen, die dem Menschen nicht zugänglich sind.</p>
       `
@@ -145,7 +145,7 @@ const COLLECTION_BUZZWORDS = [
     content:
       `
         <p>
-        Angeleht an die neuronale Struktur unseres Gehirns können Neuroanle Netze sehr schnell Daten auswerten, indem sie die
+        Angeleht an die neuronale Struktur unseres Gehirns können Neuronale Netze sehr schnell Daten auswerten, indem sie die
         Daten des Inputs verarbeiten und einen Output ausgeben. Sie werden beim Trainieren eines künstlichen Datenmodells generiert.
         <p>
       `
@@ -156,7 +156,7 @@ const COLLECTION_BUZZWORDS = [
     content:
       `
         <p>
-          Deep Learning stellt keine eine eigene Lernmethode dar, sondern steht für ein maschinelles Lernverfahren, dass
+          Deep Learning stellt keine eigene Lernmethode dar, sondern steht für ein maschinelles Lernverfahren, dass
           auf künstlichen neuronalen Netzen aufgebaut ist. Dies kann bei überwachten sowie unüberwachten Lernmethoden der Fall sein.
         </p>
       `

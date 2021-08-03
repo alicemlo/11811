@@ -1,3 +1,9 @@
+/*
+* In dieser Datei befindet sich alles, was direkt mit p5 zu tun hat.
+* Diese Datei wird erst geladen, wenn die Gestensteuerung das erse Mal aktiv ist.
+*
+* */
+
 p5.disableFriendlyErrors = true;
 
 let fraction = 1;
@@ -22,16 +28,11 @@ function setup(){
   brainCreate = ml5.neuralNetwork(options);
   fraction = 640*width
 
-  // for (let i = 0; i<21; i++){
-  //   dots.push(new Dot())
-  // }
-
   frameRate(30);
 }
 
 function draw() {
   if(!modelIsLoaded) return
-  let swipe = null
   background(col__dark_01);
   push();
   translate(width, 0);
@@ -51,7 +52,6 @@ function draw() {
 
 
   if(gesturalInteractionEnabled){
-    //swipe = detectSwipe();
     detectClick();
     detectScroll()
   }
@@ -59,9 +59,6 @@ function draw() {
   if(swipeRightEnabled) detectSwipeRight()
   if(swipeLeftEnabled) detectSwipeLeft()
 
-  // if(gestureLabelingEnabled){
-  //  // drawLabels();
-  // }
 
   if(detectBeforeSwipeLeft()){
     noStroke()
@@ -85,6 +82,7 @@ function draw() {
 
 }
 
+// custom events
 
 document.addEventListener('swipeleft', function () {
   if(storyIndex<story.length-1) storyIndex++
@@ -99,17 +97,23 @@ document.addEventListener('swiperight', function () {
 document.addEventListener("giToggle", function() {
   if(giEnabled) showP5();
   else hideP5()
-});
+})
 
-hideP5 = () => {
+
+
+hideP5 = () => { // hide sketch aka Gestensteuerung
   noLoop();
   document.querySelector('CANVAS').classList.add('hidden')
 }
 
-showP5 = () => {
+showP5 = () => { // show sketch aka Gestensteuerung
   loop()
   document.querySelector('CANVAS').classList.remove('hidden')
 }
+
+
+
+// might be useful (but not in use)
 
 drawLabels = () => {
   const x0Inversed = map(xAvg, 0, 14080, 0, width)

@@ -1,3 +1,6 @@
+/*
+* In dieser Datei werden alle spezifischen Funktionen gesammelt für die Gestensteuerung
+* */
 
 toggleGi = (arg) => {
   body = document.querySelector('body')
@@ -50,9 +53,6 @@ handModelLoaded = () => {
   console.log('handpose model ready');
 }
 
-let landmarksOld = null
-let landmarks = null
-let transformedLandmarks = null
 
 getPoses = (p) => {
   poseOld = pose
@@ -175,6 +175,7 @@ detectSwipeRight = () => {
     stateSwipeRight = 0
     return
   }
+
   if(xAvg < breakpointsSwipeRight[stateSwipeRight] && xAvg >= breakpointsSwipeRight[stateSwipeRight+1]) stateSwipeRight++
 
   if(stateSwipeRight >= 5){
@@ -368,17 +369,12 @@ trainCollection = () => {
 
 
 whileTraining = (epoch, loss) => {
-  // console.log(`epoch: ${epoch}, loss:${loss}`);
-  // console.log(loss)
   trainingDataEpochs.innerText = epoch
   trainingDataAccuracy.innerText = loss.acc
   trainingDataLoss.innerText = loss.loss
 
   if (loss.loss < 0.001) trainingDataLoss.innerText += '(gut)'
   if (loss.acc > 0.7) trainingDataAccuracy.innerText += '(gut)'
-  // loss should get smaller and accuracy should get higher
-  //  If the errors are high, the loss will be high, which means that the model does not do a good job. Otherwise, the lower it is, the
-  // better our model works.
 }
 
 finishedTraining = () => {

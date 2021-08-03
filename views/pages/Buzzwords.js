@@ -6,103 +6,95 @@ const Buzzwords = {
     lastStory = this.slug
 
     return `
-      <section class="buzzwords">
-<div class="container">
-  <article class="ct-buzz no-comp" data-id="alg-12345">
-    <div class="flex" data-id="alg-12345">
+
+<section class="buzzwords">
+  <div class="container">
+    <article class="ct-buzz no-comp" data-id="alg-12345">
+      <div class="flex" data-id="alg-12345">
         <div class="component no-mw gclick" data-id="alg-12345">
           <h4 data-id="alg-12345">Algorithmus</h4>
         </div>
-    </div>
-  </article>
-  
-  <article class="ct-buzz no-comp">
-    <div class="flex" data-id="datas-23455">
+      </div>
+    </article>
+
+    <article class="ct-buzz no-comp">
+      <div class="flex" data-id="datas-23455">
         <div class="component gclick" data-id="datas-23455">
           <h4 data-id="datas-23455">Data Science</h4>
           <div class="component gclick" data-id="datam-34592">
-              <h5 data-id="datam-34592">Data Modelling</h5>
-            </div>
+            <h5 data-id="datam-34592">Data Modelling</h5>
           </div>
-    </div>
-  </article>
-    
-  <article class="ct-buzz no-comp">
-    <div class="flex" data-id="bigd-23455">
-      <div class="component gclick" data-id="bigd-23455">
-        <h4 data-id="bigd-23455">Big Data</h4>
-        <div class="component gclick" data-id="datam-43435">
-          <h5 data-id="datam-43435">Data Mining</h5>
-        </div>
-        <div class="component gclick" data-id="textm-12339">
-          <h5 data-id="textm-12339">Text Mining</h5>
         </div>
       </div>
-    </div>
-  </article>
-  
-  <article class="ct-buzz">
-    <h4>Künstliche Intelligenz</h4>
-    
-    <div class="flex">
-          
-      <div class="component gclick" data-id="machl-43435">
-        <h4 data-id="machl-43435">Machine Learning</h4>
-        <div class="component gclick" data-id="lernm-43435">
-          <h5 data-id="lernm-43435">Lernmethoden</h5>
-        </div>
-        <div class="component gclick" data-id="neuron-43435">
-          <h5 data-id="neuron-43435">Neuronale Netze</h5>
-        </div> 
-        <div class="component gclick" data-id="deepl-43435">
-          <h5 data-id="deepl-43435">Deep Learning</h5>
-        </div>
-        <div class="component gclick" data-id="reinfl-43435">
-          <h5 data-id="reinfl-43435">Reinforcement Learning</h5>
-        </div>        
-<!--        <div class="component gclick" data-id="zielv-43435">-->
-<!--          <h5 data-id="zielv-43435">Zielvariable</h5>-->
-<!--        </div>  -->
-<!--        <div class="component gclick" data-id="cluste-43435">-->
-<!--          <h5 data-id="cluste-43435">Clusteranalyse</h5>-->
-<!--        </div>     -->
-      </div>  
-      
-      <div class="component gclick" data-id="mustera-43435">
-        <h4 data-id="mustera-43435">Mustererkennung</h4>
-        <div class="component gclick" data-id="langp-43435">
-          <h5 data-id="langp-43435">Natural Language Processing</h5>
-        </div>
-        <div class="component gclick" data-id="bildv-43435">
-          <h5 data-id="bildv-43435">Bildverarbeitung</h5>
-        </div>
-      </div>   
- 
+    </article>
 
-      <div class="component gclick" data-id="turin-43435">
-        <h4 data-id="turin-43435">Turing Test</h4>
+    <article class="ct-buzz no-comp">
+      <div class="flex" data-id="bigd-23455">
+        <div class="component gclick" data-id="bigd-23455">
+          <h4 data-id="bigd-23455">Big Data</h4>
+          <div class="component gclick" data-id="datam-43435">
+            <h5 data-id="datam-43435">Data Mining</h5>
+          </div>
+          <div class="component gclick" data-id="textm-12339">
+            <h5 data-id="textm-12339">Text Mining</h5>
+          </div>
+        </div>
       </div>
-      
+    </article>
 
-      <div class="component gclick" data-id="robot-43435">
-        <h4 data-id="robot-43435">Robotik</h4>
-      </div>
-      
-      <div class="component gclick" data-id="superi-43435">
-        <h4 data-id="superi-43435">Superintelligenz</h4>
-      </div>
-    </div>
-  </article>
-</div>
+    <article class="ct-buzz">
+      <h4>Künstliche Intelligenz</h4>
 
-<aside>
-  <div class="definition">
-    <i class="keyword">Keywords</i>
-    <div class="def-content"></div>
+      <div class="flex">
+        <div class="component gclick" data-id="machl-43435">
+          <h4 data-id="machl-43435">Machine Learning</h4>
+          <div class="component gclick" data-id="lernm-43435">
+            <h5 data-id="lernm-43435">Lernmethoden</h5>
+          </div>
+          <div class="component gclick" data-id="neuron-43435">
+            <h5 data-id="neuron-43435">Neuronale Netze</h5>
+          </div>
+          <div class="component gclick" data-id="deepl-43435">
+            <h5 data-id="deepl-43435">Deep Learning</h5>
+          </div>
+          <div class="component gclick" data-id="reinfl-43435">
+            <h5 data-id="reinfl-43435">Reinforcement Learning</h5>
+          </div>
+        </div>
+
+        <div class="component gclick" data-id="mustera-43435">
+          <h4 data-id="mustera-43435">Mustererkennung</h4>
+          <div class="component gclick" data-id="langp-43435">
+            <h5 data-id="langp-43435">Natural Language Processing</h5>
+          </div>
+          <div class="component gclick" data-id="bildv-43435">
+            <h5 data-id="bildv-43435">Bildverarbeitung</h5>
+          </div>
+        </div>
+        
+        <div class="component gclick" data-id="turin-43435">
+          <h4 data-id="turin-43435">Turing Test</h4>
+        </div>
+        
+        <div class="component gclick" data-id="robot-43435">
+          <h4 data-id="robot-43435">Robotik</h4>
+        </div>
+
+        <div class="component gclick" data-id="superi-43435">
+          <h4 data-id="superi-43435">Superintelligenz</h4>
+        </div>
+      </div>
+    </article>
   </div>
-</aside>
 
-      </section>
+  <aside>
+    <div class="definition">
+      <i class="keyword">Keywords</i>
+      <div class="def-content"></div>
+    </div>
+  </aside>
+
+</section>
 
     `;
   },

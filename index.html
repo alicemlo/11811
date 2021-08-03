@@ -5,48 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>11811</title>
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="robots" content="noindex, nofollow"/>
   <meta name="theme-color" content="#1C1922">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="stylesheet" href="./styles/css/main.css"/>
   <script type="module" src="./index.js"></script>
 </head>
+
 <body>
 
+  <div id="loader" class="invisible">
+    <span></span>
+    <p>lädt Modell für Gestenerkennung...</p>
+  </div>
 
-<div id="loader" class="invisible"><span></span><p>lädt Modell für Gestenerkennung...</p></div>
-<header id="header_root"></header>
-<main id="page_root"></main>
-<footer id="footer_root"></footer>
+  <header id="header_root"></header>
+  <main id="page_root"></main>
+  <footer id="footer_root"></footer>
 
-<!-- p5 -->
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
-<!-- ml5 -->
-<script async src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  <!-- p5 -->
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+  <!-- ml5 -->
+  <script async src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 
-<!-- pre globals -->
-<script src="js/pre-globals.js"></script>
+  <!-- pre globals -->
+  <script src="js/pre-globals.js"></script>
 
+  <!-- classes -->
+  <script src="js/classes/Particle.js"></script>
+  <script src="js/classes/Dot.js"></script>
 
-<!-- classes -->
-<script src="js/classes/Particle.js"></script>
-<script src="js/classes/Dot.js"></script>
+  <!-- data -->
+  <script src="js/collections/collection-buzzwords.js"></script>
+  <script src="js/collections/collection-terms.js"></script>
+  <script src="js/collections/collection-panels.js"></script>
+  <script src="js/collections/collection-images.js"></script>
+  <script src="js/collections/collection-train-model.js"></script>
 
+  <!-- global -->
+  <script src="js/globals/global-data.js"></script>
+  <script src="js/globals/global-variables.js"></script>
+  <script src="js/globals/global-functions.js"></script>
 
-<!-- data -->
-<script src="js/collections/collection-buzzwords.js"></script>
-<script src="js/collections/collection-terms.js"></script>
-<script src="js/collections/collection-panels.js"></script>
-<script src="js/collections/collection-images.js"></script>
-<script src="js/collections/collection-train-model.js"></script>
-
-<!-- global -->
-<script src="js/globals/global-data.js"></script>
-<script src="js/globals/global-variables.js"></script>
-<script src="js/globals/global-functions.js"></script>
-
-<!-- front page sketch  -->
-<!--<script src="js/front-sketch.js"></script>-->
 
 </body>
 </html>

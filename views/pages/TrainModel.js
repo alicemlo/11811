@@ -5,17 +5,12 @@ const TrainModel = {
   async render(){
     lastStory = this.slug
     return `
-      <section class="section-create">
-   
-<article class="create ct-col">
-
-  <div class="col-1"></div>
-
-  <div class="col-2"></div>
-
-</article>
-
-      </section>
+<section class="section-create">   
+  <article class="create ct-col">
+    <div class="col-1"></div>
+    <div class="col-2"></div>
+  </article>
+</section>
     `;
   },
   after_render: async () => {
@@ -35,12 +30,6 @@ const TrainModel = {
   }
 
 };
-
-function appendChildren(parent, nodeList){
-  nodeList.forEach(item => {
-    parent.appendChild(item);
-  })
-}
 
 
 class CollectionTrainModel{

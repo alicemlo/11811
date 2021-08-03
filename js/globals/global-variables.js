@@ -1,3 +1,7 @@
+/*
+* In dieser Datei werden alle Variablen gesammelt bzw. initialisiert
+* */
+
 let giEnabled = false
 let loader;
 let lastStory = ''
@@ -48,6 +52,11 @@ let stateSwipeLeft = 0
 
 let swipeRightEnabled = true
 let swipeLeftEnabled = true
+
+
+let landmarksOld = null
+let landmarks = null
+let transformedLandmarks = null
 
 
 // height + width

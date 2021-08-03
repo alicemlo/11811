@@ -1,4 +1,5 @@
 /**
+ * @Author: https://github.com/managervcf/vanilla-js-single-page-app
  * Parse current url and break it into resource, id and verb.
  * @return {Object} Path params.
  */
