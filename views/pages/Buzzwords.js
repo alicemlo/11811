@@ -60,13 +60,13 @@ const Buzzwords = {
         <div class="component gclick" data-id="reinfl-43435">
           <h5 data-id="reinfl-43435">Reinforcement Learning</h5>
         </div>        
-        <div class="component gclick" data-id="zielv-43435">
-          <h5 data-id="zielv-43435">Zielvariable</h5>
-        </div>  
-        <div class="component gclick" data-id="cluste-43435">
-          <h5 data-id="cluste-43435">Clusteranalyse</h5>
-        </div>     
-      </div>
+<!--        <div class="component gclick" data-id="zielv-43435">-->
+<!--          <h5 data-id="zielv-43435">Zielvariable</h5>-->
+<!--        </div>  -->
+<!--        <div class="component gclick" data-id="cluste-43435">-->
+<!--          <h5 data-id="cluste-43435">Clusteranalyse</h5>-->
+<!--        </div>     -->
+      </div>  
       
       <div class="component gclick" data-id="mustera-43435">
         <h4 data-id="mustera-43435">Mustererkennung</h4>

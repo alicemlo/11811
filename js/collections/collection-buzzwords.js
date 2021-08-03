@@ -23,7 +23,7 @@ const COLLECTION_BUZZWORDS = [
     keyword: 'Eine Folge von Anweisungen, Prozedur, Konzept zur Lösung eines Problem',
     content:
       `
-        <p>Ein Algorithmus besteht aus eine Folge von Anweisungen, welche man ausführt, um ein bestimmtes Problem zu lösen. Ein Rezept ist beispielsweise ein Algorithmus betrachten, wobei die einzelnen Schritte des Rezepts als Anweisungen anzusehen sind um ein Gericht zu erhalten.</p>
+        <p>Ein Algorithmus besteht aus einer Folge von Anweisungen, welche man ausführt, um ein bestimmtes Problem zu lösen. Ein Rezept ist beispielsweise ein Algorithmus, wobei die einzelnen Schritte des Rezepts als Anweisungen anzusehen sind um ein Gericht zu erhalten.</p>
         <p>Algorithmen spielen in der Informatik eine grosse Rolle, weil sie die Grundlage der Programmierung bilden.</p>
       `
   },
@@ -42,15 +42,15 @@ const COLLECTION_BUZZWORDS = [
     content:
       `
         <p>Bei diesem Test führt ein Mensch Gespräche mit zwei unterschiedlichen Gesprächspartnern über ein Computer-Interface und stellt beiden Fragen. Der eine Gesprächspartner ist ein Mensch und der andere
-        eine Maschine. Kann der Fragesteller am Ende des Gesrächs nicht herausfinden, welcher der beiden Gesprächspartner der Computer ist, hat der Computer (bzw. die Maschine) den Turing-Test bestanden.</p>
+        eine Maschine. Kann der Fragesteller am Ende des Gesprächs nicht herausfinden, welcher der beiden Gesprächspartner der Computer ist, hat der Computer (bzw. die Maschine) den Turing-Test bestanden.</p>
       `
   },
   {
     title: 'Data Modelling',
-    keyword: 'Informationssysteme',
+    keyword: 'Verfahren zur Abbildung von Daten',
     content:
       `
-        <p>Data modeling is the process of producing a descriptive diagram of relationships between various types of information that are to be stored in a database. One of the goals of data modeling is to create the most efficient method of storing information while still providing for complete access and reporting.</p>
+        <p>Durch Datenmodellierung werden Datenstätze zueinander in Beziehung gesetzt und visuell sinnvoll und übersichtlich präsentiert.</p>
       `
   },
   {
@@ -77,9 +77,9 @@ const COLLECTION_BUZZWORDS = [
     content:
       `
         <p>In der Robotik wird eine Verbindung zwischen Mechanik und Computern geschaffen. Ein künstlich intelligenter Roboter ist dazu in der Lage, 
-        selbstständiges mechanische Vorgänge durchführen. </p>
+        selbstständige mechanische Vorgänge durchführen. </p>
         <p>Roboter können beispielsweise als Assistenzsysteme eingesetzt werden oder können in der Landwirtschaft unterstützend eingesetzt werden. </p>
-        <p>Zudem bietet sich der Einsatz von Robotern in gefährtlichen Umgebungen bzw. Situationen an oder in Bereichen, die dem Menschen nicht zugänglich sind.</p>
+        <p>Zudem bietet sich der Einsatz von Robotern in gefährlichen Umgebungen bzw. Situationen an oder in Bereichen, die dem Menschen nicht zugänglich sind.</p>
       `
   },
   {
@@ -146,7 +146,7 @@ const COLLECTION_BUZZWORDS = [
       `
         <p>
         Angeleht an die neuronale Struktur unseres Gehirns können Neuroanle Netze sehr schnell Daten auswerten, indem sie die
-        Daten des Inputs verarbeiten und einen Output ausgeben. Sie werden durch beim Trainieren eines künstlichen Datenmodells generiert.
+        Daten des Inputs verarbeiten und einen Output ausgeben. Sie werden beim Trainieren eines künstlichen Datenmodells generiert.
         <p>
       `
   },
@@ -167,7 +167,7 @@ const COLLECTION_BUZZWORDS = [
     content:
       `
         <p>
-        Reinforcement Lerning stellt neben der überwachte und der unüberwachten Lernmethode eine eigene Lernmethode dar.
+        Reinforcement Lerning stellt neben der überwachten und der unüberwachten Lernmethode eine eigene Lernmethode dar.
         Im Gegensatz zu den anderen beide Verfahren werden hier keine Input-Daten an sich benötigt, sondern es werden nach dem Trial-and-Error 
         Prinzip verschiedene Simulationen getestet. Das System lernt, indem "gutes" Verhalten belohnt wird.
         </p>
@@ -178,8 +178,9 @@ const COLLECTION_BUZZWORDS = [
     keyword: 'Eine dem Menschen überlegene Intelligenz, eine starke künstliche Intelligenz',
     content:
       `
-        <p>...</p>
-        <p>In Bezug auf KI: die Schaffung einer umfassenden, allgemeinen Intelligenz</p>
+        <p>Eine Superintelligenz ist dem Menschen in jeglicher Hinsicht überlegen (auch in Bezug auf Emotionalität und Kreativität). 
+        Wir sind heute weit davon entfernt, ein superintelligentes System schaffen zu können.  
+       </p>
       `
   }
 ]

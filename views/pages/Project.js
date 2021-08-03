@@ -16,12 +16,10 @@ const Project = {
         
         <article>
           <h3>Ressourcen</h3>
-          <p>Einige der Quellen oder weiterführende Ressources sind direkt beim Content verlinkt. Weitere Informationen gibt es bei:  </p>
-          <ul>
-            <li>...</li>
-            <li>...</li>
-            <li>...</li>
-          </ul>
+          <p>Einige der Quellen oder weiterführende Ressources sind direkt beim Content verlinkt.
+          Ausserdem habe ich mich für meine Recherche oft auf dem Blog von <a target="_blank" href="https://datasolut.com/blog/">datasolut</a> aufgehalten oder durch das
+          <a target="_blank" href="https://medium.com/topic/machine-learning">Medium Magazine</a> durchgestöbert. Eine der wichtigsten Ressourcen, welche mir das
+          Thema KI und ML nähergebracht hat, ist <a target="_blank" href="https://www.zeit.de/digital/2020-11/richard-socher-kuenstliche-intelligenz-interviewpodcast-alles-gesagt">diese Podcast Folge mit dem KI-Forscher Richard Socher</a>.  
         </article>
         
         <article class="container">

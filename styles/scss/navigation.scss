@@ -16,7 +16,7 @@ main#page_root:not(.no-before)::before{
   top: 0;
   left: 0;
   backdrop-filter: blur(4px);
-  background: #1c19225e;
+  background: #17131f5e;
 
   @include mobile-down{
     background: transparent;

@@ -7,7 +7,7 @@ const COLLECTION_TRAIN_MODEL = [
     'event': 'Weiter',
     'class': '',
     'back': false,
-    'col2': `<div class="select-methods"><button class="method">Regression</button><button class="method">unüberwacht</button><button class="method">Assoziationsanalyse</button><button class="method">überwacht</button><button class="method">Klassifikation</button><button class="method">Anomalieerkennung</button><button class="method">Clusteranalyse</button></div>`,
+    'col2': `<div class="select-methods"><button class="method gclick" data-id="sel-43435">Regression</button><button class="method gclick" data-id="sel-23523">unüberwacht</button><button class="method gclick" data-id="sel-04938">Assoziationsanalyse</button><button class="method gclick" data-id="sel-93858">überwacht</button><button class="method gclick" data-id="sel-12309">Klassifikation</button><button class="method gclick" data-id="sel-34097">Anomalieerkennung</button><button class="method gclick" data-id="sel-10293">Clusteranalyse</button></div>`,
     'state': true,
     getState() {
       return true
@@ -35,7 +35,7 @@ const COLLECTION_TRAIN_MODEL = [
     'event': 'Weiter',
     'class': '',
     'back': false,
-    'col2': `<form autocomplete="off" spellcheck="false" data-id="labl-12345"><label id="pose-1" data-id="labl-12345"><input placeholder="1. Geste" name="pose-1" type="text" class="gclick" data-id="labl-12345"><span class="emoji"></span><p class="select-emoji select-emoji-1"><span data-opt="1">👋</span><span data-opt="1">🤘</span><span data-opt="1">🤔</span><span data-opt="1">🦒</span><span data-opt="1">❕</span><span data-opt="1">👍</span></p></label><label id="pose-2" data-id="labl-54321"><input placeholder="2. Geste" name="pose-2" type="text" class="gclick" data-id="labl-54321"><span class="emoji"></span><p class="select-emoji select-emoji-2"><span data-opt="2">❔</span><span data-opt="2">🤛</span><span data-opt="2">✌</span><span data-opt="2">✨</span><span data-opt="2">🥂</span><span data-opt="2">🤙</span></p></label></form>`,
+    'col2': `<form autocomplete="off" spellcheck="false" data-id="labl-12345"><label id="pose-1" data-id="labl-12345"><input placeholder="1. Geste" name="pose-1" type="text" class="gclick" data-id="labl-12345"><span class="emoji"></span><p class="select-emoji select-emoji-1"><span data-opt="1">👉</span><span data-opt="1">🥄</span><span data-opt="1">🦞</span><span data-opt="1">🔥</span><span data-opt="1">🦒</span><span data-opt="1">🎸</span><span data-opt="1">🤏</span></p></label><label id="pose-2" data-id="labl-54321"><input placeholder="2. Geste" name="pose-2" type="text" class="gclick" data-id="labl-54321"><span class="emoji"></span><p class="select-emoji select-emoji-2"><span data-opt="2">🐐</span><span data-opt="2">🛹</span><span data-opt="2">🧟‍</span><span data-opt="2">🤙</span><span data-opt="2">✌️</span><span data-opt="2">🚬</span><span data-opt="2">🤙</span></p></label></form>`,
     getState() {
       train_model_data.poseLabels[0] = document.querySelector('#pose-1 input').value
       train_model_data.poseLabels[1] = document.querySelector('#pose-2 input').value

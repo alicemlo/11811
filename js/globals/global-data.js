@@ -50,7 +50,7 @@ const story = ['buzzwords', 'machine-learning', 'train-model']
 
 
 // colors
-const col__dark_01 = [28, 25, 34]
+const col__dark_01 = [23, 19, 31]
 const col__dark_02 = [38, 46, 49]
 const col__main_01 = [58, 186, 125]
 const col__main_02 = [82, 125, 111]

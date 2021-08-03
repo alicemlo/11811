@@ -65,7 +65,7 @@ const COLLECTION_PANELS = [
       },
       {
         title: 'COMPAS',
-        text: 'Compas ist eine Software aus den USA, welche die Rückfallwahrscheinlichkeit von Angeklagten bestimmt. Diese soll den RichterInnen helfen einzuschätzen, mit welcher Wahrscheinlichkeit die angeklagte Person erneut eine Straftat begeht. Auch dieses Modell basiert auf den Daten der letzten Jahre. Das hat zur Folge, dass das System bei der Einschätzung der Rückfallswahrscheinlichkeit die Hautfarbe der angeklagten Person miteinbezieht. Dadruch wird das Risiko einer erneuten Straftat bei dunkelhäutige Personen automatisch höher eingeschätzt als bei hellhäutigen. '
+        text: 'Compas ist eine Software aus den USA, welche die Rückfallwahrscheinlichkeit von Angeklagten bestimmt. Diese soll den RichterInnen helfen einzuschätzen, mit welcher Wahrscheinlichkeit die angeklagte Person erneut eine Straftat begeht. Dieses Modell basiert auf den (unbereiningten) Daten der letzten Jahre. Das hat zur Folge, dass das System bei der Einschätzung der Rückfallswahrscheinlichkeit die Hautfarbe der angeklagten Person miteinbezieht. Dadruch wird das Risiko einer erneuten Straftat bei dunkelhäutige Personen automatisch höher eingeschätzt als bei hellhäutigen. '
       },
     ]
   },
@@ -87,11 +87,11 @@ const COLLECTION_PANELS = [
     content: [
       {
         title: 'KI in der Radiologie - Krebsfrüherkennung',
-        text: 'Künstlich intelligente Systeme können Abweichungen in einer Menge von Datensätzen gtu erkennen. In der Radiologie kann diese Mustererkennung sehr hilfreich sein, krankhafte Verändernungen (bsp. Tumore) auf Bildern zu identifizieren.'
+        text: 'Künstlich intelligente Systeme können Abweichungen in einer Menge von Datensätzen gut erkennen. In der Radiologie kann diese Mustererkennung sehr hilfreich sein, krankhafte Verändernungen (bsp. Tumore) auf Bildern zu identifizieren.'
       },
       {
         title: 'Wie Zalando KI einsetzt',
-        text: 'Zalando setzt KI ein, um jedem Kunden ein personalisiertes Kauferlebnis zu ermöglichen. [ Lernmethode: unüberwacht, Assoziation ]'
+        text: 'Zalando setzt KI ein, um jedem Kunden ein personalisiertes Kauferlebnis zu ermöglichen.'
       },
       {
         title: 'Intelligente Chatbots',
@@ -99,7 +99,7 @@ const COLLECTION_PANELS = [
       },
       {
         title: "Smartphone Anwendungen",
-        text: "Textvorschläge, Sprachassistenten, Übersetzungsapps, automatische Einordnung von E-Mails oder Fotos sind einige der Features, welche durch KI zustande kommen und die du mit hoher Wahrscheinlichkeit nutzt oder bereits ausprobiert hast.",
+        text: "Textvorschläge, Sprachassistenten, Übersetzungsapps, automatische Einordnung von E-Mails oder Fotos sind einige der Features, welche durch KI zustande kommen und die du mit hoher Wahrscheinlichkeit auf deinem Smartphone nutzt oder bereits ausprobiert hast.",
       }
     ]
   },
@@ -108,7 +108,7 @@ const COLLECTION_PANELS = [
     content: [
       {
         title: 'Visuelle Intelligenz',
-        text: 'Visuelle Intelligenz kann man auch als intelligente Bildverarbeitung beschreiben: Ein Algorithmus ist dabei fähig, Formen bzw. Muster auf Bildern zu erkennen. Ein einfaches Beispiel dafür ist die Unterscheidung zwischen Hund und Katze (Objekterkennung) auf einem Bild. Visuelle Intelligenz kann aber auch für Gesichtserkennung eingesetzt werden.',
+        text: 'Visuelle Intelligenz kann man auch als intelligente Bildverarbeitung beschreiben: Ein Algorithmus ist dabei fähig, Formen bzw. Muster auf Bildern zu erkennen. Ein einfaches Beispiel dafür ist die Unterscheidung zwischen Hund und Katze (Objekterkennung) auf einem Bild.',
       },
       {
         title: 'Sprachliche Intelligenz',

@@ -1,8 +1,12 @@
 const Error404 = {
   render: async () => {
     return /*html*/ `
-      <section>
-        <h1 class="text-center">a glitch... </h1>
+      <section class="page-404">
+        <div>
+          <span class="404">a glitch... </span>
+          <span class="404">a glitch... </span>
+          <span class="404">a glitch... </span>
+        </div>
       </section>
     `;
   },

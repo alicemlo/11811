@@ -21,7 +21,7 @@ const MachineLearning = {
         <h1>Wieso du über Machine Learning Bescheid wissen solltest</h1>
         <p>
           Themen wie Künstliche Intelligenz (KI) und Machine Learning gewinnen immer mehr an Relevanz und werden immer häufiger in alltäglichen Anwendungen 
-          eingesetzt, ohne dass uns das wirklich bewusst ist. Beispielweise werden uns Serien- und Filmsempfehlungen auf Netflix
+          eingesetzt, ohne dass uns das wirklich bewusst ist. Beispielweise werden uns Serien- und Filmempfehlungen auf Netflix
           von einem künstlich trainierten System angezeigt. 
         </p>
         <p>
@@ -49,7 +49,7 @@ const MachineLearning = {
         <h1>Was ist Intelligenz?</h1>
         <p>
           Anhand von Machine Learning wird "Intelligenz" künstlich geschaffen. Um dieses Prozess zu nachzuvollziehen, muss man zuerst den Begriff Intelligenz definieren.
-          Dies ist allerdings nicht ganz so einfach, da sich diese Defintion immer wieder verändert. (Wir Menschen selber verstehen noch nicht ganz, was Intelligenz ist.)
+          Dies ist allerdings nicht ganz so einfach, da sich diese Defintion immer wieder verändert (wir Menschen selber verstehen noch nicht ganz, was Intelligenz ist).
         </p>
         <p>
           Ein Anhaltspunkt ist die Lernfähigkeit eines Systems. Es ist eines des Merkmale, welches ein intelligentes Wesen oder eine intelligente Maschine auszeichnet. 
@@ -216,7 +216,7 @@ const MachineLearning = {
         </p>
         <p>
           Bevor ein Modell mit dieser Methode trainiert werden kann, müssen die Trainigsdaten strukturiert werden. Der erfordert auf der 
-          einen Seite Aufwand, bedeutet aber auch einen kontrollierten Trainingsablauft. 
+          einen Seite Aufwand, garantiert aber auch einen kontrollierten Trainingsablauf. 
         </p>
         <p>
           Im Vergleich zu anderen Lernmethoden ist diese Methode schon sehr weit entwickelt und kann relativ schnell durchgeführt werden. 
@@ -254,7 +254,7 @@ const MachineLearning = {
           Dies ist gerade für die Verarbeitung grosser Datenmengen von Vorteil, da die Struktierung grosser Datenmengen natürlich sehr schnell sehr aufwendig wird. 
         </p>
         <p>
-          Diese Methode wird eingesetzt, wenn es darum geht, in komplexen und unorganisierten Datensätzen neue Muster aufzudecken. Wir könnten diese Methode zum Beispiel dafür einsetzten, aus ganz vielen Wetterdaten neue Zusammenhänge zu erkennen. 
+          Diese Methode wird eingesetzt, wenn es darum geht, in komplexen und unorganisierten Datensätzen neue Muster aufzudecken. Wir könnten diese Methode zum Beispiel dafür einsetzten, um aus ganz vielen Wetterdaten neue Zusammenhänge zu erkennen. 
         </p>
         <p>
           Ein weiterer Vorteil dieser Methode: Sie kann in Echtzeit angewendet werden. Beispielweise wird der Netflix-Algorithmus (der unüberwacht trainiert wird)
@@ -305,13 +305,13 @@ const MachineLearning = {
           Clustering trainiert (unüberwachtes Lernen), dass anhand deiner Sehgewohnheiten neue Film- und Serienvorschläge generiert. 
         </p>
         <p>
-          Dabei sammelt das Modell ständig die Daten deiner Sehgewohnheiten, lernt anhand dieser Daten und berechnet dir so neue Filmempfehlungen. 
+          Dabei sammelt das Modell ständig die Daten deiner Sehgewohnheiten, lernt anhand dieser Daten und berechnet dir neue Filmempfehlungen. 
           Das Modell kann ständig evaluieren, wie gut die Empfehlungen bei dir ankommen und kann so seine Vorhersagen verbessern.
-          Es lernt also ständig weiter und bleibt so dynamisch.
+          Es lernt also ständig weiter und bleibt dynamisch.
         </p>
         <p>
           Würde Netflix kein Machine Learning dafür einsetzten, müssten sie von Hand Parameter und Regeln definieren, nach denen deine Vorschläge berechnet werden.
-          Das würde nicht nur viel länger dauern, sondern auch ständig veraltet sein und niemals so genau sein, wie ein künstlich generiertes Modell.
+          Das würde nicht nur viel länger dauern, sondern es wäre auch ständig veraltet, fehleranfällig und niemals so genau, wie ein künstlich generiertes Modell.
         </p>
       </div>
       <div class="col-2">
@@ -404,7 +404,7 @@ const MachineLearning = {
         <p>
           "Die KI ist nur so gut wie ihre Trainingsdaten." So sieht das der KI-Forscher Richard Socher. 
           Künstlich intelligente Systeme diskriminieren nicht. Doch wenn sie mit unvollständigen oder einseitigen Daten trainiert werden,
-          können dennoch diskriminierten Prognosen auftreten. 
+          werden die Prognosen des Modells dementsprechend schlecht sein und unter Umständen diskriminierend. 
         </p>
         <p>
           Diese Verzerrungen treten auf, wenn die Trainingsdaten unvollständig, nicht konsistet oder einseitig sind oder falsch Gewichtet wurden. 
@@ -442,7 +442,7 @@ const MachineLearning = {
   <div class="ct-content">
     <div class="content">
       <div class="col-1">
-        <h1>Wieso brauchen wir Machine Learning</h1>
+        <h1>Wieso wir Machine Learning brauchen</h1>
         <p>
           Es gibt Aufgaben, bei denen computerbasierte bzw. intelligente Systeme dem Menschen deutlich überlegen sind. Zum Beispiel bei der Analyse und bei der Handhabung grosser Datenmengen, 
           sowie bei der Automatisierung repetitiver Prozesse. Beim Handling grosser Datenmengen (die auch ständig immer grösser werden) 
@@ -457,14 +457,14 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Durch KI bedrohte Arbeitsplätze</h1>
         <p>
-          Es gibt Arbeiten, die sich in der Theorie einfacher durch maschinelle Prozesse oder durch Roboter ersetzt lassen als anderen.
+          Es gibt Arbeiten, die sich einfacher durch maschinelle Prozesse oder durch Roboter ersetzt lassen als anderen.
           Zur ersteren Gruppe zählen insbesondere Tätigkeiten, welche physische Aktivitäten erfordern und in bekannten und vorhersehbaren
            Umgebungen stattfinden. Das beträfe zum Beispiel die Industrie (bsp. das Verpacken von Waren), die Gastronomie (bsp. das Kochen
            oder das Servieren) oder den Einzelhandel (bsp. Logistik). Zudem lassen sich Tätigkeiten, die mit dem Handling von Daten oder mit Berechnungen
            zu tun haben, gut automatisieren. Das betrifft dann zum Beispiel den Finanzsektor oder Aufgaben bei Versicherungen.  
         </p>
         <p>
-          In Bereichen, wo Entscheidungen getroffen werden müssen, bei organisatorische Aufgaben oder in kreativen Berufen ist das Potenzial von 
+          In Bereichen, in welchen differenzierte Entscheidungen getroffen werden müssen, bei organisatorische Aufgaben oder in kreativen Berufen ist das Potenzial von 
           Automatisierungen am geringsten. Diese Tätigkeiten basieren auf Wissen und Erfahrung, dass keiner KI einfach so beigebracht werden kann. Auch
           Berufen, die auf menschlicher Interaktion beruhen (Gesundheitswesen oder Ausbildung) können schlecht durch maschinelle Prozesse 
           ersetzt werden. 
@@ -486,7 +486,7 @@ const MachineLearning = {
         <h1>Potenzial, Prognose</h1>
         <p>
             In den letzten Jahren hat sich die Forschung an KI insbesondere auf mathematische und logische Prozesse, 
-            sowie auf die Sprachverarbeitung fokussiert. Einer der nächsten Schritte wird sein, an emotionale Intelligenz zu forschen. 
+            sowie auf die Sprachverarbeitung fokussiert. Einer der nächsten Schritte wird sein, an emotionaler Intelligenz zu forschen. 
             Emotionale Intelligenz könnte in Sprachassistenten oder Chatbots eingebaut werden, um die Interaktion zwischen Mensch und Computer zu verbessern. 
         </p>
 
@@ -497,20 +497,21 @@ const MachineLearning = {
       <div class="col-1">
         <h1>Starke vs. Schwache KI</h1>
         <p>
-         Mittlerweile sollte dir klar sein, dass ein intelligentes System anhand von Daten trainiert wird, die der Mensch definiert. 
-         Mit anderen Worten: ein intelligentes System wird generiert, um genau eine konkrete Aufgabe zu lösen. Beispielsweise wird eine KI, 
-         welche auf einem Bild einen Hund von einer Katze unterscheiden kann nicht plötzlich Vögel und Hasen unterscheiden können, 
-         wenn ihr das nicht beigebracht wurde. Genau hier liegt die Definition einer schwachen KI: Sie kann einen klar definierten 
+         Ein intelligentes System wird generiert, um genau eine konkrete Aufgabe zu lösen und mit Daten, die der Mensch vorgibt. 
+         Ein KI, die auf einem Bild ein Hund von einer Katze unterscheiden kann, wird nicht plötzlich Vögel und Hasen unterscheiden können, 
+         wenn ihr das nicht entsprechend beigebracht wurde. Genau hier liegt die Definition einer schwachen KI: Sie kann einen klar definierten 
          Aufgabenbereich mit einer bestimmten Methode lösen. 
-         Alle intelligenten Systeme, die heute existieren, gelten als schwache intelligente Systeme (die macht sie keinesfall wertlos).
+         Alle intelligenten Systeme, die heute existieren, gelten als schwache intelligente Systeme (dies macht sie keinesfall wertlos).
         </p>
         <p>
           Starke intelligente Systeme gibt es zum aktuellen Zeitpunkt nur in der Theorie. 
           Dabei definiert sich eine starke KI durch die Fähigkeit, Probleme zu erkennen und dafür eigenständig (kreative) 
           Lösungen entwickeln zu können. Ein solches System müsste unter anderem logisch Denken können, 
-          entscheidungsfähig sein und eigenständig mit der Umwelt interagieren können.
-          
-        
+          entscheidungsfähig sein und eigenständig mit der Umwelt interagieren können.   
+        </p>
+        <p>
+        Eine extremes Beispiel einer starken KI wäre die Superintelligenz. Dieses sehr weit von der Realität entfernte Konzept einer 
+        Superintelligenz könnte Probleme besser lösen, wäre kreativer und sozial kompetener als der Mensch.
         </p>
       </div>
       
@@ -522,32 +523,7 @@ const MachineLearning = {
         </div>
       </div>
     </div>
-    
-    
-    <div class="content">
-      <div class="col-1">
-        <h1>Die Superintelligenz</h1>
-        <p>
-          Eine extremes Beispiel einer starken KI wäre die intelligentes System, die dem Menschen in jeglicher Hinsicht überlegen ist.
-          Dieses (noch) sehr weit von der Realität entfernte Konzept einer Superintelligenz könnte Probleme besser lösen, 
-          wäre kreative und sozial kompetener als der Mensch. 
-        </p>
-
-      </div>    
-    </div>
-  
-    <div class="content">
-      <div class="col-1">
-        <h1>...</h1>
-        <p>
-        
-        ...
-        </p>
-        <p>
-          
-        </p>
-      </div>
-    </div>
+   
   
   </div>
   
@@ -558,6 +534,21 @@ const MachineLearning = {
   <div class="ct-fixed">
     <div class="chapter"><p><span class="expand-info">Epilog</span></p></div>
   </div>
+  
+    <div class="ct-content">
+    <div class="content">
+      <div class="col-1">
+        <p>
+          Falls du es bis hier her geschafft hast, hoffe ich, dass dir das Konzept Machine Learning durch diese Webseite 
+          etwas klarer wurde. Falls du noch mehr über das Thema Machine Learning & KI wissen willst, findest du einige gute Quellen und
+          Webseiten auf der Unterseite <a href="#/project">Projekt</a>. 
+        </p>
+        <p>
+          
+        </p>
+      </div>
+    </div>
+    </div>
   
   <div class="ct-content">
     <div class="content">
