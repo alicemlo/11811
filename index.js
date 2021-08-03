@@ -31,6 +31,8 @@ const routes = {
  * supported routes and then renders the corresponding content page.
  */
 const router = async () => {
+
+  console.log("ad")
   // Lazy load view element:
   const header = document.getElementById('header_root');
   const content = document.getElementById('page_root');

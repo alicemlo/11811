@@ -12,11 +12,26 @@ section.page-404 {
   div {
     width: 16ch;
     font-size: 4rem;
+    cursor: pointer;
 
     @include mobile-down{
       width: 16ch;
       font-size: 2rem;
       max-width: 80%;
+    }
+
+    &:hover{
+      span:nth-child(1) {
+        transform: translate(0, 0);
+      }
+
+      span:nth-child(2) {
+        transform: translate(0, 0);
+      }
+    }
+
+    a:hover{
+      background: transparent !important;
     }
   }
 
@@ -27,6 +42,7 @@ section.page-404 {
     position: absolute;
     top: 0;
     left: 0;
+    transition: transform 150ms;
   }
 
   span:nth-child(1) {

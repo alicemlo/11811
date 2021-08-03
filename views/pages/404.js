@@ -3,10 +3,13 @@ const Error404 = {
     return /*html*/ `
       <section class="page-404">
         <div>
-          <span class="404">a glitch... </span>
-          <span class="404">a glitch... </span>
-          <span class="404">a glitch... </span>
+          <a href="#/machine-learning">
+            <span class="404">a glitch... </span>
+            <span class="404">a glitch... </span>
+            <span class="404">a glitch... </span>
+          </a>    
         </div>
+
       </section>
     `;
   },
