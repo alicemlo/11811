@@ -36,7 +36,7 @@ arraysEqual = (a, b) => {
   return same.length === b.length;
 }
 
-removeItem = (array, item) => {
+removeStringFromArray = (array, item) => {
   array.forEach((i, index) => {
     if (i === item) array.splice(index, 1)
   })

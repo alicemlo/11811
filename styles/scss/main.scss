@@ -15,74 +15,79 @@
 @import "views/train-model.scss";
 
 
-
 * {
   position: relative;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  &:focus{
+
+  &:focus {
     outline: none;
   }
 }
 
 html {
-  @include scrollbars(5px, $col--main-02, rgba(0,0,0,0));
+  @include scrollbars(5px, $col--main-02, rgba(0, 0, 0, 0));
   cursor: crosshair;
 
-  @include mobile-down{
+  @include mobile-down {
     overflow-x: hidden;
   }
 }
 
 
-body{
+body {
   color: $col--main-01;
   background: $col--dark-01;
 }
-main#page_root{
+
+main#page_root {
   padding: 4rem 0 2rem 0;
   min-height: 90vh;
 }
 
-article.container{
+article.container {
   max-width: 30rem;
 }
 
-.invisible{
+.invisible {
   display: none;
 }
 
-.opacity-25{
+.opacity-25 {
   opacity: 0.25;
   pointer-events: none;
   cursor: unset;
 }
 
-.opacity-50{
+.opacity-50 {
   opacity: 0.50;
   pointer-events: none;
   cursor: unset;
 }
 
-.opacity-75{
+.opacity-75 {
   opacity: 0.75;
   pointer-events: none;
   cursor: unset;
 }
 
-header[data-index='no-index'] + main#page_root section{
+header[data-index='no-index'] + main#page_root section {
   animation-name: pageUp;
   animation-duration: 400ms;
 }
 
 @keyframes pageUp {
-  from {transform: translateY(3rem)}
-  to {transform: translateY(0)}
+  from {
+    transform: translateY(3rem)
+  }
+  to {
+    transform: translateY(0)
+  }
 }
 
 
-section.fixed{
+section.fixed {
   position: fixed;
   top: 0;
   left: 0;
@@ -90,18 +95,19 @@ section.fixed{
   height: 100%;
   z-index: 11;
   @include page-padding;
-  >article:first-of-type{
+
+  > article:first-of-type {
     margin-top: 5rem;
   }
 }
 
-svg{
+svg {
   max-width: 30rem;
 }
 
-.gclick{
+.gclick {
 
-  &::before, &::after{
+  &::before, &::after {
     position: absolute;
     top: -0.8rem;
     left: -0.8rem;
@@ -111,34 +117,35 @@ svg{
     border-radius: 50%;
     border: 1px solid rgba(251, 136, 141, 1);
 
-    @include mobile-down{
-      display: none!important;
+    @include mobile-down {
+      display: none !important;
     }
   }
 
- &::before{
-   transform: scale(0);
-   background: rgba(251, 136, 141, 1);
-   transition: transform 1000ms;
- }
+  &::before {
+    transform: scale(0);
+    background: rgba(251, 136, 141, 1);
+    transition: transform 1000ms;
+  }
 
-  &::after{
+  &::after {
     opacity: 0;
     transition: opacity 200ms;
   }
 }
 
-.gclick.click-animation{
-  &::before{
+.gclick.click-animation {
+  &::before {
     transform: scale(1);
   }
-  &::after{
+
+  &::after {
     opacity: 1;
   }
 }
 
-@include mobile-down{
-  .mb-dashed{
+@include mobile-down {
+  .mb-dashed {
     pointer-events: none;
     cursor: crosshair;
     text-decoration: line-through;
@@ -148,29 +155,34 @@ svg{
 }
 
 
-body:not(.gi){
-  .ng-dashed, .ng-dashed>a{
-    //pointer-events: none;
+body:not(.gi) {
+  .ng-dashed, .ng-dashed > a {
+    pointer-events: none;
+
     cursor: crosshair;
     text-decoration: line-through;
     color: $col--main-02;
     opacity: 0.9;
 
-    @include mobile-down{
+    @include mobile-down {
       display: none;
     }
   }
 
-  .ng-invisible{
+  .gi-not-active {
     display: none;
   }
 
-  .ng-hidden{
+  .ng-invisible, .emoji-holder {
+    display: none;
+  }
+
+  .ng-hidden {
     opacity: 0;
   }
 }
 
-.emoji-holder{
+.emoji-holder {
   position: fixed;
   top: 2.5rem;
   right: 0.4rem;

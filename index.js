@@ -31,8 +31,6 @@ const routes = {
  * supported routes and then renders the corresponding content page.
  */
 const router = async () => {
-
-  console.log("ad")
   // Lazy load view element:
   const header = document.getElementById('header_root');
   const content = document.getElementById('page_root');
@@ -69,7 +67,7 @@ const router = async () => {
   const routeIndex = routes__story_mobile.indexOf(lastStory)
   const mobileIndex = routeIndex===1 ? 0 : 1
 
-  if(mobileLinkEnabled){
+  if(mobileLink && mobileLinkEnabled){
     mobileLink.href= '#'+routes__story_mobile[mobileIndex]
     mobileLink.innerHTML=`${routes__story_mobile[mobileIndex]} >`
     mobileLink.classList.remove("invisible")

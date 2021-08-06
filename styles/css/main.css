@@ -1020,6 +1020,7 @@ svg {
     opacity: 0.9; } }
 
 body:not(.gi) .ng-dashed, body:not(.gi) .ng-dashed > a {
+  pointer-events: none;
   cursor: crosshair;
   text-decoration: line-through;
   color: #527D6F;
@@ -1028,7 +1029,10 @@ body:not(.gi) .ng-dashed, body:not(.gi) .ng-dashed > a {
     body:not(.gi) .ng-dashed, body:not(.gi) .ng-dashed > a {
       display: none; } }
 
-body:not(.gi) .ng-invisible {
+body:not(.gi) .gi-not-active {
+  display: none; }
+
+body:not(.gi) .ng-invisible, body:not(.gi) .emoji-holder {
   display: none; }
 
 body:not(.gi) .ng-hidden {

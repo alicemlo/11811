@@ -21,7 +21,7 @@ const COLLECTION_TRAIN_MODEL = [
         btn.onclick = () => {
           btn.classList.toggle('active')
           if(btn.classList.contains('active')) selected.push(btn.innerText)
-          else removeItem(selected, btn.innerText)
+          else removeStringFromArray(selected, btn.innerText)
           if(arraysEqual(selectedSolution, selected)) enableTrainEvent()
           else disableTrainEvent()
         }
