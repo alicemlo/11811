@@ -326,9 +326,9 @@ section.page-404 {
         font-size: 2rem;
         max-width: 80%; } }
     section.page-404 div:hover span:nth-child(1) {
-      transform: translate(0, 0); }
+      animation: glitchy-1 800ms ease-in-out infinite; }
     section.page-404 div:hover span:nth-child(2) {
-      transform: translate(0, 0); }
+      animation: glitchy-2 800ms ease-in-out infinite; }
     section.page-404 div a:hover {
       background: transparent !important; }
   section.page-404 span {
@@ -340,11 +340,39 @@ section.page-404 {
     left: 0;
     transition: transform 150ms; }
   section.page-404 span:nth-child(1) {
-    transform: translate(-5px, -5px); }
+    animation-play-state: paused;
+    transform: translate(3px, 3px); }
   section.page-404 span:nth-child(2) {
-    transform: translate(5px, 5px); }
+    animation-play-state: paused;
+    transform: translate(-3px, -3px); }
   section.page-404 span:nth-child(3) {
     opacity: 0.6; }
+  section.page-404 a {
+    display: inherit; }
+
+@keyframes glitchy-1 {
+  0% {
+    transform: translate(0, 0); }
+  55% {
+    transform: translate(3px, 3px); }
+  75% {
+    transform: translate(0, 0); }
+  95% {
+    transform: translate(-3px, -3px); }
+  100% {
+    transform: translate(0, 0); } }
+
+@keyframes glitchy-2 {
+  0% {
+    transform: translate(0, 0); }
+  25% {
+    transform: translate(-3px, -3px); }
+  65% {
+    transform: translate(0, 0); }
+  90% {
+    transform: translate(3px, 3px); }
+  100% {
+    transform: translate(0, 0); } }
 
 section.home {
   display: grid;

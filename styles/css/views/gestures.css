@@ -1,9 +1,0 @@
-section.gestures article {
-  margin: 2rem 0;
-  max-width: 80rem; }
-
-section.gestures article:nth-child(2) {
-  padding-left: 3rem; }
-
-section.gestures img.hand-icon {
-  width: 8rem; }
