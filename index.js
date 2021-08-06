@@ -1,6 +1,6 @@
 /**
-*  @Author: https://github.com/managervcf/vanilla-js-single-page-app
-*/
+ *  @Author: https://github.com/managervcf/vanilla-js-single-page-app
+ */
 
 // Import pages, components and helper functions.
 import Home from './views/pages/Home.js';
@@ -13,7 +13,7 @@ import TrainModel from './views/pages/TrainModel.js';
 import Header from './views/components/Header.js';
 import Footer from './views/components/Footer.js';
 
-import { parseRequestUrl } from './services/utils.js';
+import {parseRequestUrl} from './services/utils.js';
 
 // List of supported routes. Any url other than these will render 404 page.
 const routes = {
@@ -43,7 +43,7 @@ const router = async () => {
   await Footer.after_render();
 
   // Destructure the parsed URl from the addressbar.
-  const { resource, id, verb } = parseRequestUrl();
+  const {resource, id, verb} = parseRequestUrl();
 
   // Parse the URL and if it has an id part, change it with the string ":id".
   const parsedUrl =
@@ -57,21 +57,21 @@ const router = async () => {
   activeLinks.forEach(link => link.classList.add('exact-link'))
 
   // add header attribute
-  const headerItemIndex = headerLinks.find((item, index)=>{
-    return item.ref===parsedUrl
+  const headerItemIndex = headerLinks.find((item, index) => {
+    return item.ref === parsedUrl
   })?.index ?? 'no-index'
   header.setAttribute('data-index', headerItemIndex)
 
   // mobile-link
   const mobileLink = document.querySelector('.mobile-link a')
   const routeIndex = routes__story_mobile.indexOf(lastStory)
-  const mobileIndex = routeIndex===1 ? 0 : 1
+  const mobileIndex = routeIndex === 1 ? 0 : 1
 
-  if(mobileLink && mobileLinkEnabled){
-    mobileLink.href= '#'+routes__story_mobile[mobileIndex]
-    mobileLink.innerHTML=`${routes__story_mobile[mobileIndex]} >`
+  if (mobileLink && mobileLinkEnabled) {
+    mobileLink.href = '#' + routes__story_mobile[mobileIndex]
+    mobileLink.innerHTML = `${routes__story_mobile[mobileIndex]} >`
     mobileLink.classList.remove("invisible")
-  }else{
+  } else {
     mobileLink.classList.add("invisible")
   }
 

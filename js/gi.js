@@ -9,12 +9,12 @@ p5.disableFriendlyErrors = true;
 let fraction = 1;
 
 window.setup = setup;
-window.draw  = draw;
+window.draw = draw;
 
 new p5();
 
 
-function setup(){
+function setup() {
   createCanvas(width, height);
   video = createCapture(VIDEO);
   video.hide();
@@ -26,13 +26,13 @@ function setup(){
   brain.load(modelHandPose, handModelLoaded);
 
   brainCreate = ml5.neuralNetwork(options);
-  fraction = 640*width
+  fraction = 640 * width
 
   frameRate(30);
 }
 
 function draw() {
-  if(!modelIsLoaded) return
+  if (!modelIsLoaded) return
   background(col__dark_01);
   push();
   translate(width, 0);
@@ -40,44 +40,44 @@ function draw() {
   createParticles();
   setIndexPoints()
 
-  particles.forEach((p, index) =>{
+  particles.forEach((p, index) => {
     p.show()
     p.update()
-    if(p.destroy()) particles.splice(index, 1)
+    if (p.destroy()) particles.splice(index, 1)
   })
 
   if (collectionState === 'collecting') collectPose()
-  if(brainCreated) classifyCreatedPose();
+  if (brainCreated) classifyCreatedPose();
   classifyPose();
 
 
-  if(gesturalInteractionEnabled){
+  if (gesturalInteractionEnabled) {
     detectClick();
     detectScroll()
   }
 
-  if(swipeRightEnabled) detectSwipeRight()
-  if(swipeLeftEnabled) detectSwipeLeft()
+  if (swipeRightEnabled) detectSwipeRight()
+  if (swipeLeftEnabled) detectSwipeLeft()
 
 
-  if(detectBeforeSwipeLeft()){
+  if (detectBeforeSwipeLeft()) {
     noStroke()
     fill(255, 255, 255, 30)
-    ellipse(0, height/2, 400, height)
+    ellipse(0, height / 2, 400, height)
   }
 
-  if(detectBeforeSwipeRight()){
+  if (detectBeforeSwipeRight()) {
     noStroke()
     fill(255, 255, 255, 30)
-    ellipse(width,height/2, 400, height)
+    ellipse(width, height / 2, 400, height)
   }
 
-  if(brainCreated && showEmojis){
+  if (brainCreated && showEmojis) {
     showEmojiRainfall()
   }
 
-  if(showVideo){
-    image(video, 20, height-330, 256, 200);
+  if (showVideo) {
+    image(video, 20, height - 330, 256, 200);
   }
 
 }
@@ -85,20 +85,19 @@ function draw() {
 // custom events
 
 document.addEventListener('swipeleft', function () {
-  if(storyIndex<story.length-1) storyIndex++
+  if (storyIndex < story.length - 1) storyIndex++
   swipeToRoute(story[storyIndex])
 })
 
 document.addEventListener('swiperight', function () {
-  if(storyIndex>0) storyIndex--
+  if (storyIndex > 0) storyIndex--
   swipeToRoute(story[storyIndex])
 })
 
-document.addEventListener("giToggle", function() {
-  if(giEnabled) showP5();
+document.addEventListener("giToggle", function () {
+  if (giEnabled) showP5();
   else hideP5()
 })
-
 
 
 hideP5 = () => { // hide sketch aka Gestensteuerung
@@ -110,7 +109,6 @@ showP5 = () => { // show sketch aka Gestensteuerung
   loop()
   document.querySelector('CANVAS').classList.remove('hidden')
 }
-
 
 
 // might be useful (but not in use)
@@ -129,4 +127,10 @@ drawLabels = () => {
   //   text("<- nach links", xAvg/22+100, yAvg/22+100);
   //   text("nach rechts ->", xAvg/22-100, yAvg/22+100);
   // }
+}
+
+window.onresize = () => {
+  width = window.innerWidth
+  height = window.innerHeight
+  resizeCanvas(width, height);
 }
