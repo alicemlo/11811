@@ -3,6 +3,9 @@
 ## Single Page Application (vanilla js)
 Das Grundgerüst dieser Seite funktioniert ohne Framework, sondern basiert auf diesem [SPA-Setup](https://github.com/managervcf/vanilla-js-single-page-app).
 
+## Installation
+- node packages installieren mit `npm install`
+- live server installieren mit `npm i live-server`
 
 ## Live Server
 `npm run dev` -> bringt den Live Server zum Laufen
@@ -15,4 +18,4 @@ das zwischen einer geschlossenen Hand und einer Faust unterscheiden kann (data/m
 `/js` -> In diesem Ordner befinden sind alle Scrips für Klassen, Collections, Funktionen und Variablen
 `/services` -> beinhaltet nur eine Datei für das SPA Setup
 `/style` -> beinhaltet alles, was zu CSS / SCSS gehört
-`/views` -> beinhaltet alle Seiten, sowie Footer- und Header-Komponente
+`/views` -> beinhaltet alle Seiten, sowie Footer- und Header-Komponenten
