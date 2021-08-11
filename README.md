@@ -1,4 +1,5 @@
 ## 11811
+[Github repo](https://github.com/alicemlo/11811)
 
 ## Single Page Application (vanilla js)
 Das Grundgerüst dieser Seite funktioniert ohne Framework, sondern basiert auf diesem [SPA-Setup](https://github.com/managervcf/vanilla-js-single-page-app).
@@ -9,7 +10,6 @@ Das Grundgerüst dieser Seite funktioniert ohne Framework, sondern basiert auf d
 
 ## Live Server
 `npm run dev` -> bringt den Live Server zum Laufen
-
 
 ## Ordnerstruktur
 `/assets` -> Bilder & Icons
