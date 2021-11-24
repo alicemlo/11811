@@ -558,7 +558,7 @@ const MachineLearning = {
           <p>
             Zur Erkennung deiner Hand und zur Klassifizierung der Gesten laufen zwei unterschiedliche Prozesse ab, die auf maschinellen
             Lernverfahren beruhen.
-            Zum Einen wird deine Hand von einem Model erkannt, welches 21 Punkte auf deiner Hand zuordnen kann: 4 pro Finger und ein Punkt
+            Zum einen wird deine Hand von einem Model erkannt, welches 21 Punkte auf deiner Hand zuordnen kann: 4 pro Finger und ein Punkt
             auf der Handfläche.
           </p>
           <p>

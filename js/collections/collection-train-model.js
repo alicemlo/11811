@@ -63,7 +63,7 @@ const COLLECTION_TRAIN_MODEL = [
         opt.onclick = () => {
           train_model_data.selectedEmojis[group-1] = opt.innerText
           holder.innerText = opt.innerText
-          console.log(train_model_data.selectedEmojis)
+         // console.log(train_model_data.selectedEmojis)
         }
       })
 

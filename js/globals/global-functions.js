@@ -45,12 +45,12 @@ modelLoaded = () => {
   loader = document.querySelector('#loader')
   loader.classList.add('invisible')
   modelIsLoaded = true;
-  console.log('ml5js model ready');
+ // console.log('ml5js model ready');
 }
 
 handModelLoaded = () => {
   handModelIsLoaded = true;
-  console.log('handpose model ready');
+//  console.log('handpose model ready');
 }
 
 
@@ -282,13 +282,13 @@ setEmojiLabelFooter = (index) => {
 
 stopCollecting = () => {
   collectionState = 'waiting'
-  console.log(collectionState)
+//  console.log(collectionState)
 }
 
 startCollecting = (arg) => {
   const activeLabel = train_model_data.activePoseLabel
   if (arg && arg === 'restart') {
-    console.log(brainCreate)
+ //   console.log(brainCreate)
     brainCreate.neuralNetworkData.data.raw = brainCreate.neuralNetworkData.data.raw.filter(input => input.ys[0] !== activeLabel)
   }
   if (!activeLabel) return
@@ -345,14 +345,14 @@ disableButton = (btnClass) => {
   const classname = "." + btnClass
   const button = document.querySelector(classname)
   if (button) button.classList.add('opacity-25')
-  else console.log("no button found")
+ // else console.log("no button found")
 }
 
 enableButton = (btnClass) => {
   const classname = "." + btnClass
   const button = document.querySelector(classname)
   if (button) button.classList.remove('opacity-25')
-  else console.log("no button found")
+ // else console.log("no button found")
 }
 
 
@@ -363,7 +363,7 @@ trainingSaveData = () => {
 trainCollection = () => {
   collectionState = 'waiting'
   brainCreate.normalizeData();
-  console.log(brainCreate)
+//  console.log(brainCreate)
   brainCreate.train(trainingOptions, whileTraining, finishedTraining)
 }
 
@@ -411,7 +411,7 @@ gestureSize = () => {
 
 
 swipeToRoute = (route) => {
-  console.log(route)
+ // console.log(route)
   window.location.hash = `/${route}`
 }
 
